@@ -29,6 +29,8 @@ const { data, error, loading } = useQuery("patches", props.patch)
 
 watch(data, (value, previous) => {
   if (previous?.released !== true && value?.released === true) {
+    document.title = `${props.patch} is out!`
+
     new Notification(`PATCH ${props.patch} IS OUT!`)
   }
 })

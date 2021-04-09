@@ -13,6 +13,8 @@ import Main from "./components/main.vue"
 import Notifications from "./components/notifications.vue"
 
 const patch = "7.29"
+
+document.title = `Is ${patch} out yet?`
 </script>
 
 <style>
