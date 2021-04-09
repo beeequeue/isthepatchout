@@ -9,4 +9,7 @@ module.exports = {
     "plugin:@beequeue/vue",
     "plugin:@beequeue/typescript",
   ],
+  rules: {
+    "vue/max-attributes-per-line": "off",
+  },
 }
