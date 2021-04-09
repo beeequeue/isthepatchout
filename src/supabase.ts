@@ -1,6 +1,6 @@
-import { ref } from "vue"
+import { onUnmounted, ref } from "vue"
 
-import { SupabaseClient } from "@supabase/supabase-js"
+import { SupabaseClient, SupabaseRealtimePayload } from "@supabase/supabase-js"
 
 export const supabase = new SupabaseClient(
   import.meta.env.VITE_SUPABASE_URL as string,
@@ -15,7 +15,7 @@ type PostgrestError = {
 }
 
 export const useQuery = (table: string, patch: string) => {
-  const data = ref<Record<string, unknown>[] | null>(null)
+  const data = ref<Record<string, unknown> | null>(null)
   const error = ref<PostgrestError | null>(null)
   const loading = ref(true)
 
@@ -35,6 +35,21 @@ export const useQuery = (table: string, patch: string) => {
 
       loading.value = false
     })
+
+  const handler = (payload: SupabaseRealtimePayload<Record<string, unknown>>) => {
+    console.log(payload)
+    data.value = payload.new
+  }
+
+  const subscription = supabase
+    .from(`${table}:id=eq.${patch}`)
+    .on("UPDATE", handler)
+    .on("INSERT", handler)
+    .subscribe()
+
+  onUnmounted(() => {
+    subscription.unsubscribe()
+  })
 
   return {
     data,

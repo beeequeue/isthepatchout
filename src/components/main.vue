@@ -3,44 +3,29 @@
     <div class="question">
       Is
       <br />
-      <span class="big">{{ data.id }}</span>
+      <span class="big">{{ patch }}</span>
       <br />
       out yet?
     </div>
 
     <div v-if="loading">Loading...</div>
-
     <div v-else-if="error">
       {{ error }}
     </div>
-
     <div v-else class="answer">
       {{ data.released === true ? "Yes!" : "No." }}
     </div>
   </section>
-
-  <section class="disclaimer">
-    <i>The page will automatically update when the patch is released!</i>
-  </section>
-
-  <button @click="test">test</button>
 </template>
 
 <script lang="ts" setup name="Main">
-import { supabase, useQuery } from "../supabase"
+import { defineProps } from "vue"
 
-const { data, error, loading } = useQuery("patches", "7.29")
+import { useQuery } from "../supabase"
 
-const test = async () => {
-  const result = await supabase
-    .from("patches")
-    .update({
-      released: true,
-    })
-    .eq("id", "7.29")
+const props = defineProps<{ patch: string }>()
 
-  console.log(result)
-}
+const { data, error, loading } = useQuery("patches", props.patch)
 </script>
 
 <style>

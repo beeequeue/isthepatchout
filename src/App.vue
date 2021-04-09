@@ -1,27 +1,16 @@
 <template>
-  <Main />
+  <Main :patch="patch" />
 
   <section class="disclaimer">
     <i>The page will automatically update when the patch is released!</i>
   </section>
-
-  <button @click="test">test</button>
 </template>
 
 <script lang="ts" setup>
 import Main from "./components/main.vue"
 import { supabase } from "./supabase"
 
-const test = async () => {
-  const result = await supabase
-    .from("patches")
-    .update({
-      released: true,
-    })
-    .eq("id", "7.29")
-
-  console.log(result)
-}
+const patch = "7.29"
 </script>
 
 <style>
