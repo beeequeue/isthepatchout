@@ -37,7 +37,6 @@ export const useQuery = (table: string, patch: string) => {
     })
 
   const handler = (payload: SupabaseRealtimePayload<Record<string, unknown>>) => {
-    console.log(payload)
     data.value = payload.new
   }
 

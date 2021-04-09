@@ -4,11 +4,13 @@
   <section class="disclaimer">
     <i>The page will automatically update when the patch is released!</i>
   </section>
+
+  <notifications />
 </template>
 
 <script lang="ts" setup>
 import Main from "./components/main.vue"
-import { supabase } from "./supabase"
+import Notifications from "./components/notifications.vue"
 
 const patch = "7.29"
 </script>
@@ -32,25 +34,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1.5em;
 
   text-align: center;
-}
-
-.big {
-  font-size: 2em;
-}
-
-.main {
-  margin-bottom: 1em;
-}
-
-.question {
-  font-size: 2em;
-}
-
-.answer {
-  font-size: 10em;
-  font-weight: 800;
-  line-height: 100%;
 }
 </style>

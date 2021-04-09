@@ -13,50 +13,30 @@
       {{ error }}
     </div>
     <div v-else class="answer">
-      {{ data.released === true ? "Yes!" : "No." }}
+      {{ data?.released === true ? "Yes!" : "No." }}
     </div>
   </section>
 </template>
 
 <script lang="ts" setup name="Main">
-import { defineProps } from "vue"
+import { defineProps, watch } from "vue"
 
 import { useQuery } from "../supabase"
 
 const props = defineProps<{ patch: string }>()
 
 const { data, error, loading } = useQuery("patches", props.patch)
+
+watch(data, (value, previous) => {
+  if (previous?.released !== true && value?.released === true) {
+    new Notification(`PATCH ${props.patch} IS OUT!`)
+  }
+})
 </script>
 
-<style>
-html,
-body,
-#app {
-  height: 100%;
-  width: 100%;
-}
-
-body {
-  background: #111;
-  color: #eee;
-  text-shadow: 0 0 2px rgba(255, 255, 255, 0.15);
-}
-
-#app {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-}
-
+<style scoped>
 .big {
   font-size: 2em;
-}
-
-.main {
-  margin-bottom: 1em;
 }
 
 .question {
