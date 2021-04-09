@@ -8,8 +8,9 @@ module.exports = {
     "plugin:@beequeue/base",
     "plugin:@beequeue/vue",
     "plugin:@beequeue/typescript",
+    "plugin:@beequeue/prettier",
   ],
   rules: {
-    "vue/max-attributes-per-line": "off",
+    "prettier/prettier": "off",
   },
 }
