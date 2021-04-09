@@ -2024,6 +2024,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fathom-client@npm:3.0.0":
+  version: 3.0.0
+  resolution: "fathom-client@npm:3.0.0"
+  checksum: edbeb15daa71340c939b96c7c8b84f107cc7a47eb2d4d8d4e7e36cb7794892f1fb512890f8e888ef3c7f10cacf771ca315cc36a834ae354fad82bbc6c588c8d3
+  languageName: node
+  linkType: hard
+
 "figures@npm:^3.2.0":
   version: 3.2.0
   resolution: "figures@npm:3.2.0"
@@ -2700,6 +2707,7 @@ fsevents@~2.3.1:
     "@vitejs/plugin-vue": 1.2.1
     "@vue/compiler-sfc": 3.0.11
     eslint: 7.23.0
+    fathom-client: 3.0.0
     lint-staged: 10.5.4
     modern-normalize: 1.0.0
     prettier: 2.2.1
