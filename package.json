@@ -4,6 +4,9 @@
   "author": "BeeeQueue <adam@haglund.dev>",
   "license": "MIT",
   "private": true,
+  "engines": {
+    "node": ">=14"
+  },
   "simple-git-hooks": {
     "pre-commit": "yarn lint-staged"
   },
