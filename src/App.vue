@@ -5,7 +5,7 @@
     <i>The page will automatically update when the patch is released!</i>
   </section>
 
-  <notifications />
+  <Notifications />
 </template>
 
 <script lang="ts" setup>
@@ -26,7 +26,7 @@ body,
 }
 
 body {
-  background: #111;
+  background: #0c0c0c;
   color: #eee;
   text-shadow: 0 0 2px rgba(255, 255, 255, 0.15);
 }
