@@ -10,7 +10,26 @@ module.exports = {
     "plugin:@beequeue/typescript",
     "plugin:@beequeue/prettier",
   ],
-  rules: {
-    "prettier/prettier": "off",
-  },
+  overrides: [
+    {
+      files: ["api/**/*.ts"],
+      extends: [
+        "plugin:@beequeue/base",
+        "plugin:@beequeue/node",
+        "plugin:@beequeue/typescript",
+        "plugin:@beequeue/prettier",
+      ],
+      parserOptions: {
+        project: "api/tsconfig.json",
+      },
+      rules: {
+        "import/no-extraneous-dependencies": [
+          "off",
+          {
+            devDependencies: ["**/*"],
+          },
+        ],
+      },
+    },
+  ],
 }
