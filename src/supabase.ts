@@ -2,6 +2,8 @@ import { onUnmounted, ref } from "vue"
 
 import { SupabaseClient, SupabaseRealtimePayload } from "@supabase/supabase-js"
 
+import { Patch } from "./types"
+
 export const supabase = new SupabaseClient(
   import.meta.env.VITE_SUPABASE_URL as string,
   import.meta.env.VITE_SUPABASE_PUBLIC_KEY as string,
@@ -20,7 +22,7 @@ export const useQuery = (table: string, patch: string) => {
   const loading = ref(true)
 
   void supabase
-    .from(table)
+    .from<Patch>(table)
     .select()
     .eq("id", patch)
     .single()
@@ -41,7 +43,7 @@ export const useQuery = (table: string, patch: string) => {
   }
 
   const subscription = supabase
-    .from(`${table}:id=eq.${patch}`)
+    .from<Patch>(`${table}:id=eq.${patch}`)
     .on("UPDATE", handler)
     .on("INSERT", handler)
     .subscribe()

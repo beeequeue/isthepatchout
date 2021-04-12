@@ -1,6 +1,9 @@
 {
   "name": "isthepatchout",
   "version": "0.0.0",
+  "author": "BeeeQueue <adam@haglund.dev>",
+  "license": "MIT",
+  "private": true,
   "simple-git-hooks": {
     "pre-commit": "yarn lint-staged"
   },
@@ -14,7 +17,8 @@
     "build": "vue-tsc --noEmit && vite build",
     "lint": "eslint src",
     "postinstall": "simple-git-hooks",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "typegen": "openapi-typescript --output src/generated.ts \"https://kyxgnkqidepgglspsihc.supabase.co/rest/v1/?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYxNzk4NzU1MiwiZXhwIjoxOTMzNTYzNTUyfQ.WKriKsWCVyoZyH7tRjJuFiPartTnRvaiS-1f_moc8CY\""
   },
   "dependencies": {
     "@supabase/supabase-js": "1.9.0",
@@ -28,6 +32,7 @@
     "@vue/compiler-sfc": "3.0.11",
     "eslint": "7.23.0",
     "lint-staged": "10.5.4",
+    "openapi-typescript": "3.2.2",
     "prettier": "2.2.1",
     "simple-git-hooks": "2.3.1",
     "typescript": "4.2.4",
