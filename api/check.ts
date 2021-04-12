@@ -6,15 +6,17 @@ import type { VercelRequest, VercelResponse } from "@vercel/node"
 
 import type { Patch } from "../src/types"
 
+const { CHECK_TOKEN, SUPABASE_SERVICE_KEY, VITE_SUPABASE_URL } = process.env
+
 const authParam = new URLSearchParams({
-  apikey: process.env.SUPABASE_SERVICE_KEY as string,
+  apikey: SUPABASE_SERVICE_KEY as string,
 })
 
 const getPatchesToCheck = async (): Promise<Patch[] | null> => {
   try {
     const response = await fetch(
       `${
-        process.env.VITE_SUPABASE_URL as string
+        VITE_SUPABASE_URL as string
       }/rest/v1/patches?released=eq.false&${authParam.toString()}`,
     )
     const body = await response.json()
@@ -54,7 +56,7 @@ const checkAndUpdatePatch = async (patch: string) => {
 
   const updateResponse = await fetch(
     `${
-      process.env.VITE_SUPABASE_URL as string
+      VITE_SUPABASE_URL as string
     }/rest/v1/patches?id=eq.${patch}&${authParam.toString()}`,
     {
       method: "PATCH",
@@ -69,6 +71,10 @@ const checkAndUpdatePatch = async (patch: string) => {
 }
 
 export default async (_request: VercelRequest, response: VercelResponse) => {
+  if (CHECK_TOKEN == null || _request.headers.authorization !== `Bearer ${CHECK_TOKEN}`) {
+    return response.status(403).json({ ok: false, message: "Forbidden" })
+  }
+
   const patches = await getPatchesToCheck()
 
   if (patches == null) {
