@@ -3,7 +3,7 @@
  * Do not make direct changes to the file.
  */
 
-export type paths = {
+export interface paths {
   "/": {
     get: {
       responses: {
@@ -107,7 +107,7 @@ export type paths = {
   }
 }
 
-export type definitions = {
+export interface definitions {
   patches: {
     /**
      * Note:
@@ -115,11 +115,11 @@ export type definitions = {
      */
     id: string
     released: boolean
-    links?: string
+    links: string
   }
 }
 
-export type parameters = {
+export interface parameters {
   /** Preference */
   preferParams: "params=single-object"
   /** Preference */
@@ -147,4 +147,4 @@ export type parameters = {
   "rowFilter.patches.links": string
 }
 
-export type operations = {}
+export interface operations {}

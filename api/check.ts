@@ -52,9 +52,20 @@ const checkAndUpdatePatch = async (patch: Patch) => {
 
   if (data?.patch_timestamp == null) return
 
+  const links = JSON.parse(patch.links) as string[]
+
+  links.push(`https://dota2.com/patches/${patch.id}`)
+
+  if (data.patch_website != null) {
+    links.push(`https://dota2.com/${data.patch_website as string}`)
+  }
+
   const updateResponse = await supabase
     .from<Patch>("patches")
-    .update({ released: true })
+    .update({
+      released: true,
+      links: JSON.stringify(Array.from(new Set(links))),
+    })
     .eq("id", patch.id)
 
   if (updateResponse.error != null) {
