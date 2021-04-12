@@ -8,7 +8,7 @@
   </section>
 </template>
 
-<script lang="ts" setup name="Button">
+<script lang="ts" setup>
 import { ref } from "vue"
 
 const canUseNotifications = "Notification" in window
