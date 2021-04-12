@@ -25,14 +25,14 @@ export const useQuery = (table: string, patch: string) => {
     .from<Patch>(table)
     .select()
     .eq("id", patch)
-    .single()
     .then((result) => {
       if (result.error != null) {
         error.value = result.error
         data.value = null
       } else {
         error.value = null
-        data.value = result.data
+        // eslint-disable-next-line prefer-destructuring
+        data.value = result.data[0]
       }
 
       loading.value = false
