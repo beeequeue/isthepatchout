@@ -1,0 +1,18 @@
+{
+  "extends": ["config:js-app", "helpers:disableTypesNodeMajor"],
+  "prConcurrentLimit": 5,
+  "branchConcurrentLimit": 5,
+  "schedule": ["before 11am"],
+  "labels": ["dependencies"],
+  "baseBranches": ["main"],
+  "packageRules": [
+    {
+      "sourceUrlPrefixes": ["https://github.com/vitejs/vite"],
+      "groupName": "Vite"
+    },
+    {
+      "packagePatterns": ["eslint"],
+      "groupName": "ESLint"
+    }
+  ]
+}

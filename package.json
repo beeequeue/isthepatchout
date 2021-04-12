@@ -17,7 +17,7 @@
   },
   "scripts": {
     "build": "vue-tsc --noEmit && vite build",
-    "lint": "eslint src",
+    "lint": "eslint {src,app}",
     "postinstall": "simple-git-hooks",
     "serve": "vite preview",
     "start": "vite",
