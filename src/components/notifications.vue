@@ -32,7 +32,7 @@ button {
   padding: 18px 20px;
   border-radius: 15px;
   background: linear-gradient(145deg, #0f0f0f, #121212);
-  box-shadow: 8px 8px 16px #0c0c0c, -8px -8px 16px #161616;
+  box-shadow: 8px 8px 16px #070707, -6px -6px 16px #161616;
 
   cursor: pointer;
 
