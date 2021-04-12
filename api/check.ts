@@ -19,8 +19,14 @@ const getPatchesToCheck = async (): Promise<Patch[] | null> => {
     )
     const body = await response.json()
 
-    return response.ok ? body : null
-  } catch {
+    if (!response.ok) {
+      console.error(body)
+      return null
+    }
+
+    return body
+  } catch (err) {
+    console.error(err)
     return null
   }
 }
@@ -44,7 +50,6 @@ const checkAndUpdatePatch = async (patch: string) => {
 
   const data = await dataResponse.json()
 
-  console.log(data)
   if (data?.patch_timestamp == null) return
 
   const updateResponse = await fetch(
@@ -67,7 +72,7 @@ export default async (_request: VercelRequest, response: VercelResponse) => {
   const patches = await getPatchesToCheck()
 
   if (patches == null) {
-    return
+    return response.status(500).json({ ok: false, message: "Could not get patches" })
   }
 
   await Promise.all(patches.map((patch) => checkAndUpdatePatch(patch.id)))
