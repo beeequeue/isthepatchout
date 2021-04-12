@@ -1,5 +1,6 @@
 import { URLSearchParams } from "url"
 
+import Bottleneck from "bottleneck"
 import fetch from "make-fetch-happen"
 
 import type { VercelRequest, VercelResponse } from "@vercel/node"
@@ -7,6 +8,11 @@ import type { VercelRequest, VercelResponse } from "@vercel/node"
 import type { Patch } from "../src/types"
 
 const { CHECK_TOKEN, SUPABASE_SERVICE_KEY, VITE_SUPABASE_URL } = process.env
+
+const dotaApiScheduler = new Bottleneck({
+  minTime: 1000,
+  maxConcurrent: 3,
+})
 
 const authParam = new URLSearchParams({
   apikey: SUPABASE_SERVICE_KEY as string,
@@ -70,18 +76,30 @@ const checkAndUpdatePatch = async (patch: string) => {
   }
 }
 
+const checkAndUpdatePatches = async () => {
+  const patches = await getPatchesToCheck()
+
+  if (patches == null) {
+    throw new Error("Could not get patches")
+  }
+
+  await Promise.all(
+    patches.map((patch) =>
+      dotaApiScheduler.schedule(() => checkAndUpdatePatch(patch.id)),
+    ),
+  )
+}
+
 export default async (_request: VercelRequest, response: VercelResponse) => {
   if (CHECK_TOKEN == null || _request.headers.authorization !== `Bearer ${CHECK_TOKEN}`) {
     return response.status(403).json({ ok: false, message: "Forbidden" })
   }
 
-  const patches = await getPatchesToCheck()
-
-  if (patches == null) {
-    return response.status(500).json({ ok: false, message: "Could not get patches" })
+  try {
+    await checkAndUpdatePatches()
+  } catch (err) {
+    return response.status(500).json({ ok: false, message: err.message })
   }
-
-  await Promise.all(patches.map((patch) => checkAndUpdatePatch(patch.id)))
 
   response.status(200).json({ ok: true })
 }
