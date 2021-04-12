@@ -21,7 +21,7 @@
     "typegen": "openapi-typescript --output src/generated.ts \"https://kyxgnkqidepgglspsihc.supabase.co/rest/v1/?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYxNzk4NzU1MiwiZXhwIjoxOTMzNTYzNTUyfQ.WKriKsWCVyoZyH7tRjJuFiPartTnRvaiS-1f_moc8CY\""
   },
   "dependencies": {
-    "@supabase/supabase-js": "1.9.0",
+    "@supabase/supabase-js": "1.10.0",
     "fathom-client": "3.0.0",
     "modern-normalize": "1.0.0",
     "vue": "3.0.11"
@@ -30,13 +30,13 @@
     "@beequeue/eslint-plugin": "0.1.3",
     "@vitejs/plugin-vue": "1.2.1",
     "@vue/compiler-sfc": "3.0.11",
-    "eslint": "7.23.0",
+    "eslint": "7.24.0",
     "lint-staged": "10.5.4",
     "openapi-typescript": "3.2.2",
     "prettier": "2.2.1",
     "simple-git-hooks": "2.3.1",
     "typescript": "4.2.4",
     "vite": "2.1.5",
-    "vue-tsc": "0.0.21"
+    "vue-tsc": "0.0.23"
   }
 }
