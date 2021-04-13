@@ -40,4 +40,8 @@ body {
 
   text-align: center;
 }
+
+a {
+  color: cornflowerblue;
+}
 </style>
