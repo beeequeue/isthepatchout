@@ -3,6 +3,7 @@ import { SupabaseClient } from "@supabase/supabase-js"
 import type { Patch } from "../src/types"
 
 import type { PatchData } from "./_dota"
+import { Logger } from "./_logger"
 
 const { SUPABASE_SERVICE_KEY, VITE_SUPABASE_URL } = process.env
 
@@ -12,17 +13,22 @@ export const supabase = new SupabaseClient(
 )
 
 export const getPatchesToCheck = async (): Promise<Patch[] | null> => {
+  Logger.debug("Getting unreleased patches...")
   const response = await supabase.from<Patch>("patches").select().eq("released", false)
 
   if (response.error != null) {
-    console.error(response.error)
+    Logger.error(response.error)
     return null
   }
+
+  Logger.debug(response.data.map((p) => p.id))
 
   return response.data
 }
 
 export const updatePatchData = async (patch: Patch, data: PatchData) => {
+  Logger.info(`Updating ${patch.id}...`)
+
   const links = JSON.parse(patch.links) as string[]
 
   links.push(`https://dota2.com/patches/${patch.id}`)
@@ -31,15 +37,19 @@ export const updatePatchData = async (patch: Patch, data: PatchData) => {
     links.push(`https://dota2.com/${data.patch_website}`)
   }
 
+  const newData = {
+    released: true,
+    links: JSON.stringify(Array.from(new Set(links))),
+  }
+
+  Logger.debug(newData)
+
   const response = await supabase
     .from<Patch>("patches")
-    .update({
-      released: true,
-      links: JSON.stringify(Array.from(new Set(links))),
-    })
+    .update(newData)
     .eq("id", patch.id)
 
   if (response.error != null) {
-    console.error(response.error)
+    Logger.error(response.error)
   }
 }

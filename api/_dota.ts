@@ -1,6 +1,8 @@
 import Bottleneck from "bottleneck"
 import HttpClient from "got"
 
+import { Logger } from "./_logger"
+
 const dotaApiScheduler = new Bottleneck({
   minTime: 1000,
   maxConcurrent: 3,
@@ -32,8 +34,10 @@ type PatchDataError = {
 }
 
 export const getPatchData = async (version: string) => {
+  Logger.info(`Checking patch ${version}...`)
+
   const request = () =>
-    http.get<PatchData | PatchDataError>("/patchnotes", {
+    http.get<PatchData | PatchDataError>("patchnotes", {
       headers: { Host: "www.dota2.com" },
       searchParams: {
         language: "english",
@@ -45,13 +49,17 @@ export const getPatchData = async (version: string) => {
   const response = await dotaApiScheduler.schedule(request)
 
   if (response.statusCode >= 400) {
-    console.error(response.statusCode, response.body)
+    Logger.error("Request failed", {
+      status: response.statusCode,
+      body: response.body,
+    })
     return
   }
 
+  Logger.debug(response.body)
+
   if (!response.body.success) {
-    console.error(response.body.message)
-    return
+    return null
   }
 
   return response.body
