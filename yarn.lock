@@ -1382,44 +1382,43 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/gotrue-js@npm:^1.13.0":
-  version: 1.13.0
-  resolution: "@supabase/gotrue-js@npm:1.13.0"
+"@supabase/gotrue-js@npm:^1.13.1":
+  version: 1.13.1
+  resolution: "@supabase/gotrue-js@npm:1.13.1"
   dependencies:
     cross-fetch: ^3.0.6
-  checksum: 75bda38c97a17f3eeba7e1115e40ce501c431f14a423606f9568e55da29d2deebb82b05c562a4a4abfdb59c05844eca1b25f0059466f82214e778c441127df2d
+  checksum: bef4f5afa90133169a2f4994c16dbc2b68383eddcb72715b3dbfd2db824c5285b9c8e4125b33427347b2bd6b187ed2c160c14901d2374a7a6a8429c4bbdc7be8
   languageName: node
   linkType: hard
 
-"@supabase/postgrest-js@npm:^0.28.0":
-  version: 0.28.0
-  resolution: "@supabase/postgrest-js@npm:0.28.0"
+"@supabase/postgrest-js@npm:^0.28.1":
+  version: 0.28.1
+  resolution: "@supabase/postgrest-js@npm:0.28.1"
   dependencies:
     cross-fetch: ^3.0.6
-  checksum: 6586481f39f57e4aeea48969e4f6217dca749d9517f7670364fea392ce6aa7e26b3db64d9257f48d296056ed48047a825a189624a99f04810a611170b4f45585
+  checksum: 014e968b407440e8a751119026b5129d302d951932744fc51e68ff47b9b789c2274772dbb5fc568ebbf24f660a995076d4c14e879a5229015b46dfd003656325
   languageName: node
   linkType: hard
 
-"@supabase/realtime-js@npm:^1.0.6":
-  version: 1.0.6
-  resolution: "@supabase/realtime-js@npm:1.0.6"
+"@supabase/realtime-js@npm:^1.0.7":
+  version: 1.0.7
+  resolution: "@supabase/realtime-js@npm:1.0.7"
   dependencies:
     "@types/websocket": ^1.0.1
-    query-string: ^6.12.1
     websocket: ^1.0.31
-  checksum: 3e5096c3ef299c86f40bb417da191bae318371500e184123ae6da62ef45452f274c0a939dc1193b01b716a03739972bfff7036f188de51d4345bd84ad8d23427
+  checksum: b148c27d2d938ea2373fed5eac9abfa5ceffe38b2bd0b98d50a995b0ae7b271ea1ab177d25554050a1ba06f161bac3bcc8ba602c73199a64e6465449a60ff813
   languageName: node
   linkType: hard
 
-"@supabase/supabase-js@npm:1.11.0":
-  version: 1.11.0
-  resolution: "@supabase/supabase-js@npm:1.11.0"
+"@supabase/supabase-js@npm:1.11.2":
+  version: 1.11.2
+  resolution: "@supabase/supabase-js@npm:1.11.2"
   dependencies:
-    "@supabase/gotrue-js": ^1.13.0
-    "@supabase/postgrest-js": ^0.28.0
-    "@supabase/realtime-js": ^1.0.6
+    "@supabase/gotrue-js": ^1.13.1
+    "@supabase/postgrest-js": ^0.28.1
+    "@supabase/realtime-js": ^1.0.7
     cross-fetch: ^3.1.0
-  checksum: b3ac330482fc26977a6c6fac943cf8460caefcf9471349516fd82b95323e92ef6136d8f3e43ddce408c1da78c659fa41b92d07e62969d834504f8facdf94a71c
+  checksum: 910b88009749d3fe7ae5acdf1c80f1b3bfd27c8fb3a1646edb4840f0d452d989fc24a251c1cd9e6acb9a9a9b5ab976b1d79dc23bf2475c5763070560c0b350b6
   languageName: node
   linkType: hard
 
@@ -2697,13 +2696,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"decode-uri-component@npm:^0.2.0":
-  version: 0.2.0
-  resolution: "decode-uri-component@npm:0.2.0"
-  checksum: f3749344ab9305ffcfe4bfe300e2dbb61fc6359e2b736812100a3b1b6db0a5668cba31a05e4b45d4d63dbf1a18dfa354cd3ca5bb3ededddabb8cd293f4404f94
-  languageName: node
-  linkType: hard
-
 "decompress-response@npm:^6.0.0":
   version: 6.0.0
   resolution: "decompress-response@npm:6.0.0"
@@ -3489,13 +3481,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"filter-obj@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "filter-obj@npm:1.1.0"
-  checksum: cf2104a7c45ff48e7f505b78a3991c8f7f30f28bd8106ef582721f321f1c6277f7751aacd5d83026cb079d9d5091082f588d14a72e7c5d720ece79118fa61e10
-  languageName: node
-  linkType: hard
-
 "find-up@npm:^2.0.0, find-up@npm:^2.1.0":
   version: 2.1.0
   resolution: "find-up@npm:2.1.0"
@@ -4212,7 +4197,7 @@ fsevents@~2.3.1:
   resolution: "isthepatchout@workspace:."
   dependencies:
     "@beequeue/eslint-plugin": 0.1.3
-    "@supabase/supabase-js": 1.11.0
+    "@supabase/supabase-js": 1.11.2
     "@types/node": 14.14.37
     "@types/pino": 6.3.7
     "@vercel/node": 1.9.1
@@ -5629,18 +5614,6 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"query-string@npm:^6.12.1":
-  version: 6.14.1
-  resolution: "query-string@npm:6.14.1"
-  dependencies:
-    decode-uri-component: ^0.2.0
-    filter-obj: ^1.1.0
-    split-on-first: ^1.0.0
-    strict-uri-encode: ^2.0.0
-  checksum: f2c7347578fa0f3fd4eaace506470cb4e9dc52d409a7ddbd613f614b9a594d750877e193b5d5e843c7477b3b295b857ec328903c943957adc41a3efb6c929449
-  languageName: node
-  linkType: hard
-
 "queue-microtask@npm:^1.2.2":
   version: 1.2.3
   resolution: "queue-microtask@npm:1.2.3"
@@ -6300,13 +6273,6 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"split-on-first@npm:^1.0.0":
-  version: 1.1.0
-  resolution: "split-on-first@npm:1.1.0"
-  checksum: 16ff85b54ddcf17f9147210a4022529b343edbcbea4ce977c8f30e38408b8d6e0f25f92cd35b86a524d4797f455e29ab89eb8db787f3c10708e0b47ebf528d30
-  languageName: node
-  linkType: hard
-
 "split2@npm:^3.1.1":
   version: 3.2.2
   resolution: "split2@npm:3.2.2"
@@ -6329,13 +6295,6 @@ fsevents@~2.3.1:
   dependencies:
     minipass: ^3.1.1
   checksum: bc447f5af814fa9713aa201ec2522208ae0f4d8f3bda7a1f445a797c7b929a02720436ff7c478fb5edc4045adb02b1b88d2341b436a80798734e2494f1067b36
-  languageName: node
-  linkType: hard
-
-"strict-uri-encode@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "strict-uri-encode@npm:2.0.0"
-  checksum: eaac4cf978b6fbd480f1092cab8b233c9b949bcabfc9b598dd79a758f7243c28765ef7639c876fa72940dac687181b35486ea01ff7df3e65ce3848c64822c581
   languageName: node
   linkType: hard
 
