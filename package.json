@@ -21,7 +21,7 @@
     "postinstall": "simple-git-hooks",
     "serve": "vite preview",
     "start": "vite",
-    "typegen": "openapi-typescript --output src/generated.ts \"https://kyxgnkqidepgglspsihc.supabase.co/rest/v1/?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYxNzk4NzU1MiwiZXhwIjoxOTMzNTYzNTUyfQ.WKriKsWCVyoZyH7tRjJuFiPartTnRvaiS-1f_moc8CY\""
+    "typegen": "openapi-typescript --output src/generated.ts \"https://kyxgnkqidepgglspsihc.supabase.co/rest/v1/?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYxNzk4NzU1MiwiZXhwIjoxOTMzNTYzNTUyfQ.WKriKsWCVyoZyH7tRjJuFiPartTnRvaiS-1f_moc8CY\" && prettier --write src/generated.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "1.11.6",
