@@ -1504,14 +1504,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*":
-  version: 14.14.37
-  resolution: "@types/node@npm:14.14.37"
-  checksum: 647e671ac3815f428a07ae9353ebab93c5335d4d0a461ca837a79eebf55c04f28bee80f0c43881cdd8696f595feb112bc8eb74f6124125e02f79a7677374c187
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:14.14.39":
+"@types/node@npm:*, @types/node@npm:14.14.39":
   version: 14.14.39
   resolution: "@types/node@npm:14.14.39"
   checksum: 57e56ceb7b8747cb8c2d83dad04f3435c8286063f58f6ebaa531e3f5dfb3c3ed6d1abbb31ec2e9d268047a68a7c45eb6d692664e059af7ebeb03519ce99f07e4
@@ -4223,7 +4216,7 @@ fsevents@~2.3.1:
     simple-git-hooks: 2.3.1
     typescript: 4.2.4
     vite: 2.1.5
-    vite-plugin-pwa: 0.7.0
+    vite-plugin-pwa: 0.7.2
     vue: 3.0.11
     vue-tsc: 0.0.24
   languageName: unknown
@@ -6929,9 +6922,9 @@ typescript@4.2.4:
   languageName: node
   linkType: hard
 
-"vite-plugin-pwa@npm:0.7.0":
-  version: 0.7.0
-  resolution: "vite-plugin-pwa@npm:0.7.0"
+"vite-plugin-pwa@npm:0.7.2":
+  version: 0.7.2
+  resolution: "vite-plugin-pwa@npm:0.7.2"
   dependencies:
     debug: ^4.3.2
     fast-glob: ^3.2.5
@@ -6941,7 +6934,7 @@ typescript@4.2.4:
     workbox-window: ^6.1.2
   peerDependencies:
     vite: ^2.0.0
-  checksum: a34c368afdc1ef98ef5e19cf2f046756285f51374483cabe207a55df2ea7ff57e470e64a5199bf1ad49aeca762c5de8927bb3287ea64ebe99c804d7c8eb5d7e8
+  checksum: fe57f7143c8eb3a29b4d17b2379763b8a709d0a7565e8fe83fb51f0c73790d47ab3ac9a92f273ef9aa5210c57adfc4d5349b2e35d59bd8b12f6f85929c740ba9
   languageName: node
   linkType: hard
 
