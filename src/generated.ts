@@ -18,9 +18,9 @@ export interface paths {
         query: {
           /** The patch ID, e.g. `7.00`, `7.28c`, `7.29` */
           id?: parameters["rowFilter.patches.id"]
-          released?: parameters["rowFilter.patches.released"]
           links?: parameters["rowFilter.patches.links"]
           createdAt?: parameters["rowFilter.patches.createdAt"]
+          releasedAt?: parameters["rowFilter.patches.releasedAt"]
           /** Filtering Columns */
           select?: parameters["select"]
           /** Ordering */
@@ -73,9 +73,9 @@ export interface paths {
         query: {
           /** The patch ID, e.g. `7.00`, `7.28c`, `7.29` */
           id?: parameters["rowFilter.patches.id"]
-          released?: parameters["rowFilter.patches.released"]
           links?: parameters["rowFilter.patches.links"]
           createdAt?: parameters["rowFilter.patches.createdAt"]
+          releasedAt?: parameters["rowFilter.patches.releasedAt"]
         }
         header: {
           /** Preference */
@@ -92,9 +92,9 @@ export interface paths {
         query: {
           /** The patch ID, e.g. `7.00`, `7.28c`, `7.29` */
           id?: parameters["rowFilter.patches.id"]
-          released?: parameters["rowFilter.patches.released"]
           links?: parameters["rowFilter.patches.links"]
           createdAt?: parameters["rowFilter.patches.createdAt"]
+          releasedAt?: parameters["rowFilter.patches.releasedAt"]
         }
         body: {
           /** patches */
@@ -122,9 +122,9 @@ export interface definitions {
      * This is a Primary Key.<pk/>
      */
     id: string
-    released: boolean
     links: string
     createdAt: string
+    releasedAt?: string
   }
 }
 
@@ -153,9 +153,9 @@ export interface parameters {
   "body.patches": definitions["patches"]
   /** The patch ID, e.g. `7.00`, `7.28c`, `7.29` */
   "rowFilter.patches.id": string
-  "rowFilter.patches.released": string
   "rowFilter.patches.links": string
   "rowFilter.patches.createdAt": string
+  "rowFilter.patches.releasedAt": string
 }
 
 export interface operations {}

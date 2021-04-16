@@ -33,13 +33,13 @@ const props = defineProps<{ patch: string }>()
 
 const { data, error, loading } = useQuery("patches", props.patch)
 
-const released = computed(() => data.value?.released === true)
+const released = computed(() => data.value?.releasedAt != null)
 const links = computed(() =>
   data.value?.links != null ? ((data.value.links as unknown) as string[]) : null,
 )
 
 watch(data, (value, previous) => {
-  if (previous?.released === false && value?.released === true) {
+  if (previous?.releasedAt == null && value?.releasedAt != null) {
     document.title = `${props.patch} is out!`
 
     new Notification(`PATCH ${props.patch} IS OUT!`)

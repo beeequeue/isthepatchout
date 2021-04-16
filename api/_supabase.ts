@@ -14,7 +14,7 @@ export const supabase = new SupabaseClient(
 
 export const getPatchesToCheck = async (): Promise<Patch[] | null> => {
   Logger.debug("Getting unreleased patches...")
-  const response = await supabase.from<Patch>("patches").select().eq("released", false)
+  const response = await supabase.from<Patch>("patches").select().is("releasedAt", null)
 
   if (response.error != null) {
     Logger.error(response.error)
@@ -37,8 +37,8 @@ export const updatePatchData = async (patch: Patch, data: PatchData) => {
     links.push(`https://dota2.com/${data.patch_website}`)
   }
 
-  const newData = {
-    released: true,
+  const newData: Partial<Patch> = {
+    releasedAt: new Date(data.patch_timestamp).toISOString(),
     links: JSON.stringify(Array.from(new Set(links))),
   }
 
