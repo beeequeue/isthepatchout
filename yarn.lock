@@ -1410,15 +1410,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/supabase-js@npm:1.11.3":
-  version: 1.11.3
-  resolution: "@supabase/supabase-js@npm:1.11.3"
+"@supabase/supabase-js@npm:1.11.6":
+  version: 1.11.6
+  resolution: "@supabase/supabase-js@npm:1.11.6"
   dependencies:
     "@supabase/gotrue-js": ^1.13.1
     "@supabase/postgrest-js": ^0.28.1
     "@supabase/realtime-js": ^1.0.8
     cross-fetch: ^3.1.0
-  checksum: e52dc1d62d2f9ba19bb6a3183780d399c7a1a2bdc267e10f031a4cf89689460fa07c9e7e2f9d840e31c7fba2e481d0f37eddba4b97a07ac9cbada1102779b820
+  checksum: 74cc8786d9543599c8cf8abaf55311e0e81eedcbaf52c47234aa943f712c5193b171b448fe3b1d57de96555aaf433d9caf5f8c612a0cd0b6b234bc93399ceaf1
   languageName: node
   linkType: hard
 
@@ -4197,7 +4197,7 @@ fsevents@~2.3.1:
   resolution: "isthepatchout@workspace:."
   dependencies:
     "@beequeue/eslint-plugin": 0.1.3
-    "@supabase/supabase-js": 1.11.3
+    "@supabase/supabase-js": 1.11.6
     "@types/node": 14.14.39
     "@types/pino": 6.3.7
     "@vercel/node": 1.9.1
