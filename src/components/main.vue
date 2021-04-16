@@ -2,9 +2,10 @@
   <section class="main">
     <div class="question">
       Is
-      <br />
-      <span class="big">{{ patch }}</span>
-      <br />
+      <div v-for="(patch, i) in relevantPatches" :key="patch?.id" class="patch">
+        <span class="patch-number">{{ patch?.id }}</span>
+        <span v-if="i + 1 !== relevantPatches.length">{{ " " }}or{{ " " }}</span>
+      </div>
       out yet?
     </div>
 
@@ -13,10 +14,10 @@
       {{ error }}
     </div>
     <div v-else class="answer">
-      {{ released ? "Yes!" : "No." }}
+      {{ recentlyReleased ? "Yes!" : "No." }}
     </div>
 
-    <ul v-if="released" class="links">
+    <ul v-if="recentlyReleased" class="links">
       <li v-for="link in links" :key="link">
         <a :href="link" target="_blank" rel="noopener">{{ link }}</a>
       </li>
@@ -24,36 +25,55 @@
   </section>
 </template>
 
-<script lang="ts" setup name="Main">
-import { computed, defineProps, watch } from "vue"
+<script lang="ts" setup>
+import { differenceInDays } from "date-fns"
+import { computed, watch } from "vue"
 
-import { useQuery } from "../supabase"
+import { usePatches } from "../supabase"
 
-const props = defineProps<{ patch: string }>()
+const { last, upNext, error, loading } = usePatches()
 
-const { data, error, loading } = useQuery("patches", props.patch)
-
-const released = computed(() => data.value?.releasedAt != null)
-const links = computed(() =>
-  data.value?.links != null ? ((data.value.links as unknown) as string[]) : null,
+const recentlyReleased = computed(
+  () =>
+    last.value != null &&
+    differenceInDays(Date.now(), new Date(last.value.releasedAt!)) < 10,
 )
 
-watch(data, (value, previous) => {
-  if (previous?.releasedAt == null && value?.releasedAt != null) {
-    document.title = `${props.patch} is out!`
+const relevantPatches = computed(
+  () => (recentlyReleased.value ? [last.value] : upNext.value) ?? [],
+)
 
-    new Notification(`PATCH ${props.patch} IS OUT!`)
+const links = computed(() =>
+  last.value?.links != null ? ((last.value.links as unknown) as string[]) : null,
+)
+
+watch(recentlyReleased, (isRecentlyReleased) => {
+  if (isRecentlyReleased) {
+    document.title = `${last.value!.id} is out!`
+    new Notification(`PATCH ${last.value!.id} IS OUT!`)
   }
 })
 </script>
 
 <style scoped>
-.big {
-  font-size: 2em;
+.patch-number {
+  font-size: 2.5em;
+  min-width: 200px;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.25);
+  font-weight: 700;
 }
 
 .question {
-  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+
+  font-size: 1.75em;
+  color: #ccc;
+}
+
+.question .patch {
+  display: flex;
+  flex-direction: column;
 }
 
 .answer {

@@ -1,8 +1,9 @@
-import { onUnmounted, ref } from "vue"
+import { isAfter } from "date-fns"
+import { computed, onUnmounted, ref } from "vue"
 
 import { SupabaseClient, SupabaseRealtimePayload } from "@supabase/supabase-js"
 
-import { definitions } from "./generated"
+import { Patch } from "./types"
 
 export const supabase = new SupabaseClient(
   import.meta.env.VITE_SUPABASE_URL as string,
@@ -16,40 +17,42 @@ type PostgrestError = {
   code: string
 }
 
-export const useQuery = <
-  Table extends keyof definitions,
-  Data extends definitions[Table]
->(
-  table: Table,
-  id: string,
-) => {
-  const data = ref<Data | null>(null)
+export const usePatches = () => {
+  const data = ref<Patch[]>([])
   const error = ref<PostgrestError | null>(null)
   const loading = ref(true)
 
   void supabase
-    .from<Data>(table)
+    .from<Patch>("patches")
     .select()
-    .eq("id", id as any)
+    .limit(3)
+    .order("number", { ascending: false })
     .then((result) => {
       if (result.error != null) {
+        console.error(result.error)
         error.value = result.error
-        data.value = null
+        data.value = []
       } else {
         error.value = null
-        // eslint-disable-next-line prefer-destructuring
-        data.value = result.data[0] as any
+        // Reverse the order for easier usage in stuff like reduce
+        data.value = result.data.reverse()
       }
 
       loading.value = false
     })
 
-  const handler = (payload: SupabaseRealtimePayload<Data>) => {
-    data.value = payload.new as any
+  const handler = (payload: SupabaseRealtimePayload<Patch>) => {
+    const relevantPatchIndex = data.value.findIndex(
+      (patch) => patch.id === payload.new.id,
+    )
+
+    if (relevantPatchIndex === -1) return
+
+    data.value[relevantPatchIndex] = payload.new
   }
 
   const subscription = supabase
-    .from<Data>(`${table}:id=eq.${id}`)
+    .from<Patch>("patches")
     .on("UPDATE", handler)
     .on("INSERT", handler)
     .subscribe()
@@ -58,8 +61,23 @@ export const useQuery = <
     subscription.unsubscribe()
   })
 
+  const last = computed(() =>
+    data.value.reduce(
+      (accum, patch) =>
+        accum == null ||
+        (patch.releasedAt != null &&
+          isAfter(new Date(patch.releasedAt), new Date(accum.releasedAt!)))
+          ? patch
+          : accum,
+      null as Patch | null,
+    ),
+  )
+
+  const upNext = computed(() => data.value.filter((patch) => patch.releasedAt == null))
+
   return {
-    data,
+    last,
+    upNext,
     error,
     loading,
   }

@@ -19,8 +19,8 @@ export interface paths {
           /** The patch ID, e.g. `7.00`, `7.28c`, `7.29` */
           id?: parameters["rowFilter.patches.id"]
           links?: parameters["rowFilter.patches.links"]
-          createdAt?: parameters["rowFilter.patches.createdAt"]
           releasedAt?: parameters["rowFilter.patches.releasedAt"]
+          number?: parameters["rowFilter.patches.number"]
           /** Filtering Columns */
           select?: parameters["select"]
           /** Ordering */
@@ -74,8 +74,8 @@ export interface paths {
           /** The patch ID, e.g. `7.00`, `7.28c`, `7.29` */
           id?: parameters["rowFilter.patches.id"]
           links?: parameters["rowFilter.patches.links"]
-          createdAt?: parameters["rowFilter.patches.createdAt"]
           releasedAt?: parameters["rowFilter.patches.releasedAt"]
+          number?: parameters["rowFilter.patches.number"]
         }
         header: {
           /** Preference */
@@ -93,8 +93,8 @@ export interface paths {
           /** The patch ID, e.g. `7.00`, `7.28c`, `7.29` */
           id?: parameters["rowFilter.patches.id"]
           links?: parameters["rowFilter.patches.links"]
-          createdAt?: parameters["rowFilter.patches.createdAt"]
           releasedAt?: parameters["rowFilter.patches.releasedAt"]
+          number?: parameters["rowFilter.patches.number"]
         }
         body: {
           /** patches */
@@ -123,8 +123,8 @@ export interface definitions {
      */
     id: string
     links: string
-    createdAt: string
     releasedAt?: string
+    number?: number
   }
 }
 
@@ -154,8 +154,8 @@ export interface parameters {
   /** The patch ID, e.g. `7.00`, `7.28c`, `7.29` */
   "rowFilter.patches.id": string
   "rowFilter.patches.links": string
-  "rowFilter.patches.createdAt": string
   "rowFilter.patches.releasedAt": string
+  "rowFilter.patches.number": string
 }
 
 export interface operations {}

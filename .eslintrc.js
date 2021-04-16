@@ -10,6 +10,9 @@ module.exports = {
     "plugin:@beequeue/typescript",
     "plugin:@beequeue/prettier",
   ],
+  rules: {
+    "@typescript-eslint/no-non-null-assertion": "off",
+  },
   overrides: [
     {
       files: ["api/**/*.ts"],

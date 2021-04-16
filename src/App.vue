@@ -1,5 +1,5 @@
 <template>
-  <Main :patch="patch" />
+  <Main />
 
   <section class="disclaimer">
     <i>The page will automatically update when the patch is released!</i>
@@ -11,10 +11,6 @@
 <script lang="ts" setup>
 import Main from "./components/main.vue"
 import Notifications from "./components/notifications.vue"
-
-const patch = "7.29a"
-
-document.title = `Is ${patch} out yet?`
 </script>
 
 <style>

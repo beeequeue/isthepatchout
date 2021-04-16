@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "@supabase/supabase-js": "1.11.6",
+    "date-fns": "2.21.1",
     "fathom-client": "3.0.0",
     "modern-normalize": "1.0.0",
     "vue": "3.0.11"
