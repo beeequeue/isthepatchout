@@ -1,28 +1,19 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node"
 
-import type { Patch } from "../src/types"
-
-import { getPatchData } from "./_dota"
-import { getPatchesToCheck, updatePatchData } from "./_supabase"
+import { getPatchList } from "./_dota"
+import { formatPatchData, upsertPatches } from "./_supabase"
 
 const { CHECK_TOKEN } = process.env
 
-const checkAndUpdatePatch = async (patch: Patch) => {
-  const data = await getPatchData(patch.id)
-
-  if (data?.patch_timestamp == null) return
-
-  await updatePatchData(patch, data)
-}
-
 const checkAndUpdatePatches = async () => {
-  const patches = await getPatchesToCheck()
+  const releasedPatches = await getPatchList()
 
-  if (patches == null) {
+  if (releasedPatches == null) {
     throw new Error("Could not get patches")
   }
 
-  await Promise.all(patches.map((patch) => checkAndUpdatePatch(patch)))
+  const formattedPatches = releasedPatches.map(formatPatchData)
+  await upsertPatches(formattedPatches)
 }
 
 /**
