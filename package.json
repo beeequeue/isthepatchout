@@ -44,7 +44,7 @@
     "got": "11.8.2",
     "lint-staged": "10.5.4",
     "openapi-typescript": "3.2.3",
-    "pino": "6.11.2",
+    "pino": "6.11.3",
     "pino-pretty": "4.7.1",
     "prettier": "2.2.1",
     "simple-git-hooks": "2.3.1",
