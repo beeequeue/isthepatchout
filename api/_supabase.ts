@@ -29,7 +29,7 @@ export const getPatchesToCheck = async (): Promise<Patch[] | null> => {
 export const updatePatchData = async (patch: Patch, data: PatchData) => {
   Logger.info(`Updating ${patch.id}...`)
 
-  const links = JSON.parse(patch.links) as string[]
+  const links = [...patch.links]
 
   links.push(`https://dota2.com/patches/${patch.id}`)
 
@@ -38,8 +38,8 @@ export const updatePatchData = async (patch: Patch, data: PatchData) => {
   }
 
   const newData: Partial<Patch> = {
-    releasedAt: new Date(data.patch_timestamp).toISOString(),
-    links: JSON.stringify(Array.from(new Set(links))),
+    releasedAt: new Date(data.patch_timestamp * 1000).toISOString(),
+    links: Array.from(new Set(links)),
   }
 
   Logger.debug(newData)

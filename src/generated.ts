@@ -122,7 +122,7 @@ export interface definitions {
      * This is a Primary Key.<pk/>
      */
     id: string
-    links: string
+    links: string[]
     releasedAt?: string
     number?: number
   }

@@ -33,12 +33,19 @@ type PatchDataError = {
   message: string
 }
 
+export const cleanPatchData = (data: PatchData | PatchDataError) => {
+  // eslint-disable-next-line @typescript-eslint/naming-convention,@typescript-eslint/no-explicit-any
+  const { heroes, items, generic, neutral_items, ...rest } = data as any
+  return rest
+}
+
 export const getPatchData = async (version: string) => {
   Logger.info(`Checking patch ${version}...`)
 
   const request = () =>
     http.get<PatchData | PatchDataError>("patchnotes", {
       headers: { Host: "www.dota2.com" },
+      responseType: "json",
       searchParams: {
         language: "english",
         version,
@@ -56,7 +63,7 @@ export const getPatchData = async (version: string) => {
     return
   }
 
-  Logger.debug(response.body)
+  Logger.debug(cleanPatchData(response.body))
 
   if (!response.body.success) {
     return null
