@@ -4296,7 +4296,7 @@ fsevents@~2.3.1:
     lint-staged: 10.5.4
     modern-normalize: 1.0.0
     openapi-typescript: 3.2.3
-    pino: 6.11.2
+    pino: 6.11.3
     pino-pretty: 4.7.1
     prettier: 2.2.1
     simple-git-hooks: 2.3.1
@@ -5497,19 +5497,19 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"pino@npm:6.11.2":
-  version: 6.11.2
-  resolution: "pino@npm:6.11.2"
+"pino@npm:6.11.3":
+  version: 6.11.3
+  resolution: "pino@npm:6.11.3"
   dependencies:
     fast-redact: ^3.0.0
     fast-safe-stringify: ^2.0.7
     flatstr: ^1.0.12
     pino-std-serializers: ^3.1.0
-    quick-format-unescaped: 4.0.1
+    quick-format-unescaped: ^4.0.3
     sonic-boom: ^1.0.2
   bin:
-    pino: ./bin.js
-  checksum: a6dfa04aa2d6c90a0efc9d1414781a94930a9f00dbfd3eced339804c460a5f8f84087333e55c4522ae61147f3edd139c1a946c1adc5f9695c433e5a84c3f1d13
+    pino: bin.js
+  checksum: 6fb82f11d4ebd7e4314cacb3b2acb8047e00dc0e4e31f08f5ad54f63d2e6f17464ae57bac4624a095f5cd87b8658ef1d810ca7c7026647048b422f63566218b2
   languageName: node
   linkType: hard
 
@@ -5728,10 +5728,10 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"quick-format-unescaped@npm:4.0.1":
-  version: 4.0.1
-  resolution: "quick-format-unescaped@npm:4.0.1"
-  checksum: 6b7ef315e817edc0b7ae95ef16a698d9b3a67b4248a49f1b7bd77d227bed1d85f5b430b3d99b944e1dbc567ac88940c0315d5e6f3882548bb7dfd92fe4a64dc9
+"quick-format-unescaped@npm:^4.0.3":
+  version: 4.0.3
+  resolution: "quick-format-unescaped@npm:4.0.3"
+  checksum: 28dd3f3fbfec385cdca779e905d48c1a4623ee1f8071f060c7b38625eded5b5472433ae38ec09b8f8d968b443dfda7aa156811c59c4dfe0b52b73c3bc6d714ed
   languageName: node
   linkType: hard
 
