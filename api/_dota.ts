@@ -74,18 +74,29 @@ export class DotaVersion {
     this.type = this.patch === 0 ? (this.minor === 0 ? "major" : "minor") : "patch"
   }
 
+  static from(version: DotaVersion) {
+    return new DotaVersion(version.toString())
+  }
+
   increment(type: PatchType) {
+    const newVersion = DotaVersion.from(this)
+
     switch (type) {
       case "major":
-        this.major++
+        newVersion.major++
+        newVersion.minor = 0
+        newVersion.patch = 0
         break
       case "minor":
-        this.minor++
+        newVersion.minor++
+        newVersion.patch = 0
         break
       case "patch":
-        this.patch++
+        newVersion.patch++
         break
     }
+
+    return newVersion
   }
 
   toNumber() {

@@ -1,7 +1,12 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node"
 
 import { getPatchList } from "./_dota"
-import { formatPatchData, upsertPatches } from "./_supabase"
+import {
+  formatPatchData,
+  insertUpcomingPatches,
+  removeUnreleasedPatches,
+  upsertPatches,
+} from "./_supabase"
 
 const { CHECK_TOKEN } = process.env
 
@@ -14,6 +19,9 @@ const checkAndUpdatePatches = async () => {
 
   const formattedPatches = releasedPatches.map(formatPatchData)
   await upsertPatches(formattedPatches)
+
+  await removeUnreleasedPatches()
+  await insertUpcomingPatches()
 }
 
 /**
