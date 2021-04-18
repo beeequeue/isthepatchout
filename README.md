@@ -4,7 +4,7 @@ A website that automatically notifies when a new patch is released.
 
 ## Architecture
 
-![](./architecture.png)
+![](./.github/img/architecture.png)
 
 ## Development
 
