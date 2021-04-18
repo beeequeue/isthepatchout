@@ -36,7 +36,7 @@ const { last, upNext, error, loading } = usePatches()
 const recentlyReleased = computed(
   () =>
     last.value != null &&
-    differenceInDays(Date.now(), new Date(last.value.releasedAt!)) < 10,
+    differenceInDays(Date.now(), new Date(last.value.releasedAt!)) < 7,
 )
 
 const relevantPatches = computed(
