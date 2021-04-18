@@ -29,9 +29,12 @@
 import { differenceInDays } from "date-fns"
 import { computed, watch } from "vue"
 
-import { usePatches } from "../supabase"
+import { useLastReleasedPatch, useUnreleasedPatches } from "../supabase"
 
-const { last, upNext, error, loading } = usePatches()
+const { last, loading: lastPatchLoading } = useLastReleasedPatch()
+const { upNext, error, loading: upcomingLoading } = useUnreleasedPatches()
+
+const loading = computed(() => lastPatchLoading.value || upcomingLoading.value)
 
 const recentlyReleased = computed(
   () =>

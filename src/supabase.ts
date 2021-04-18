@@ -1,4 +1,3 @@
-import { isAfter } from "date-fns"
 import { computed, onUnmounted, ref } from "vue"
 
 import { SupabaseClient, SupabaseRealtimePayload } from "@supabase/supabase-js"
@@ -17,7 +16,7 @@ type PostgrestError = {
   code: string
 }
 
-export const usePatches = () => {
+export const useUnreleasedPatches = () => {
   const data = ref<Patch[]>([])
   const error = ref<PostgrestError | null>(null)
   const loading = ref(true)
@@ -25,7 +24,8 @@ export const usePatches = () => {
   void supabase
     .from<Patch>("patches")
     .select()
-    .limit(3)
+    .is("releasedAt", null)
+    .limit(2)
     .order("number", { ascending: false })
     .then((result) => {
       if (result.error != null) {
@@ -61,23 +61,61 @@ export const usePatches = () => {
     subscription.unsubscribe()
   })
 
-  const last = computed(() =>
-    data.value.reduce(
-      (accum, patch) =>
-        accum == null ||
-        (patch.releasedAt != null &&
-          isAfter(new Date(patch.releasedAt), new Date(accum.releasedAt!)))
-          ? patch
-          : accum,
-      null as Patch | null,
-    ),
-  )
-
   const upNext = computed(() => data.value.filter((patch) => patch.releasedAt == null))
 
   return {
-    last,
     upNext,
+    error,
+    loading,
+  }
+}
+
+export const useLastReleasedPatch = () => {
+  const data = ref<Patch | null>(null)
+  const error = ref<PostgrestError | null>(null)
+  const loading = ref(true)
+
+  void supabase
+    .from<Patch>("patches")
+    .select()
+    .not("releasedAt", "is", null)
+    .order("number", { ascending: false })
+    .limit(1)
+    .single()
+    .then((result) => {
+      if (result.error != null) {
+        console.error(result.error)
+        error.value = result.error
+        data.value = null
+      } else {
+        error.value = null
+        data.value = result.data
+      }
+
+      loading.value = false
+    })
+
+  const handler = (payload: SupabaseRealtimePayload<Patch>) => {
+    if (
+      payload.new.releasedAt != null &&
+      payload.new.number >= (data.value?.number ?? 0)
+    ) {
+      data.value = payload.new
+    }
+  }
+
+  const subscription = supabase
+    .from<Patch>("patches")
+    .on("UPDATE", handler)
+    .on("INSERT", handler)
+    .subscribe()
+
+  onUnmounted(() => {
+    subscription.unsubscribe()
+  })
+
+  return {
+    last: data,
     error,
     loading,
   }

@@ -124,7 +124,7 @@ export interface definitions {
     id: string
     links: string[]
     releasedAt?: string
-    number?: number
+    number: number
   }
 }
 
