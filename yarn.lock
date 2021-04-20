@@ -4304,7 +4304,7 @@ fsevents@~2.3.1:
     vite: 2.2.1
     vite-plugin-pwa: 0.7.2
     vue: 3.0.11
-    vue-tsc: 0.0.24
+    vue-tsc: 0.0.25
   languageName: unknown
   linkType: soft
 
@@ -7079,14 +7079,14 @@ typescript@4.2.4:
   languageName: node
   linkType: hard
 
-"vue-tsc@npm:0.0.24":
-  version: 0.0.24
-  resolution: "vue-tsc@npm:0.0.24"
+"vue-tsc@npm:0.0.25":
+  version: 0.0.25
+  resolution: "vue-tsc@npm:0.0.25"
   dependencies:
     unzipper: 0.10.11
   bin:
     vue-tsc: vue-tsc.js
-  checksum: 5dd72277a51006991933354c9ac862647df2793b2ece204c5841de2036e30e0a1b8cb8e31a2b46068de2617e496f8323fec6f20d412644b97d2cebfde4c7b5d5
+  checksum: 6e7f634b22c96b9ca1e095e87bcc0fbb1c212d64ef8487e805d462ec980db69b0927396c3c676d587d5b5348e224722977480241367d358ded1cf3a8b614f1d5
   languageName: node
   linkType: hard
 
