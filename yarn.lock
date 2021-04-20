@@ -4301,7 +4301,7 @@ fsevents@~2.3.1:
     prettier: 2.2.1
     simple-git-hooks: 2.3.1
     typescript: 4.2.4
-    vite: 2.1.5
+    vite: 2.2.1
     vite-plugin-pwa: 0.7.2
     vue: 3.0.11
     vue-tsc: 0.0.24
@@ -7045,9 +7045,9 @@ typescript@4.2.4:
   languageName: node
   linkType: hard
 
-"vite@npm:2.1.5":
-  version: 2.1.5
-  resolution: "vite@npm:2.1.5"
+"vite@npm:2.2.1":
+  version: 2.2.1
+  resolution: "vite@npm:2.2.1"
   dependencies:
     esbuild: ^0.9.3
     fsevents: ~2.3.1
@@ -7059,7 +7059,7 @@ typescript@4.2.4:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: aec249dfb371cb3ef8a83bfa4593e372c4d32b9b73248ab931bfbc8fe6dbda305b503b56c8c1d4b760f67ca1d1b13e7430338466ebd3a5669d27bda2e8fc1f4b
+  checksum: dbb7a28ac1b1caced9050cc2b1763be103ff2fdb069e4d36ddb51e49c2a59ec63cfe4dcd440b61251d70d315f83ab1ce51f05d2a3ded41dab1c7cbbff2526986
   languageName: node
   linkType: hard
 
