@@ -1400,25 +1400,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/realtime-js@npm:^1.0.8":
-  version: 1.0.8
-  resolution: "@supabase/realtime-js@npm:1.0.8"
+"@supabase/realtime-js@npm:^1.0.9":
+  version: 1.0.9
+  resolution: "@supabase/realtime-js@npm:1.0.9"
   dependencies:
     "@types/websocket": ^1.0.1
     websocket: ^1.0.34
-  checksum: aef1a0a7ca0c97eabce808733d37ffdf1af2c7a676e77af24579649715c21063cfbacdfa63ffbc5b30b9ee78028711d229c0f57f2aae0e8c7ec063ee55f2917b
+  checksum: d564844de6a852a4c9ab9ccd4bf805d67c16c55737a21bbe4ef47ed7f7f0425728ff146775775d0f06bb0be4474365004e3a5d1e60593408816af7e1317d57da
   languageName: node
   linkType: hard
 
-"@supabase/supabase-js@npm:1.11.6":
-  version: 1.11.6
-  resolution: "@supabase/supabase-js@npm:1.11.6"
+"@supabase/supabase-js@npm:1.11.7":
+  version: 1.11.7
+  resolution: "@supabase/supabase-js@npm:1.11.7"
   dependencies:
     "@supabase/gotrue-js": ^1.13.1
     "@supabase/postgrest-js": ^0.28.1
-    "@supabase/realtime-js": ^1.0.8
+    "@supabase/realtime-js": ^1.0.9
     cross-fetch: ^3.1.0
-  checksum: 74cc8786d9543599c8cf8abaf55311e0e81eedcbaf52c47234aa943f712c5193b171b448fe3b1d57de96555aaf433d9caf5f8c612a0cd0b6b234bc93399ceaf1
+  checksum: 9c793f60be06e93fb836b6692e201b7551b4e95bdf541f0b5aaea76671359f238187808000f9bdd4f02129a91784163e3101693d7ddc77fd9ca4b797c07fc798
   languageName: node
   linkType: hard
 
@@ -4281,7 +4281,7 @@ fsevents@~2.3.1:
   resolution: "isthepatchout@workspace:."
   dependencies:
     "@beequeue/eslint-plugin": 0.1.3
-    "@supabase/supabase-js": 1.11.6
+    "@supabase/supabase-js": 1.11.7
     "@types/node": 14.14.41
     "@types/pino": 6.3.7
     "@vercel/node": 1.9.1
