@@ -1691,14 +1691,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/node@npm:1.9.1":
-  version: 1.9.1
-  resolution: "@vercel/node@npm:1.9.1"
+"@vercel/node@npm:1.10.0":
+  version: 1.10.0
+  resolution: "@vercel/node@npm:1.10.0"
   dependencies:
     "@types/node": "*"
     ts-node: 8.9.1
     typescript: 3.9.3
-  checksum: 6a708de8fe1a5b01c75f86608934c688ab9012e73959c14f5090444f6fb99ce8375dda360173792cc1808c74979619a938f0d570c4d66fdb23375bfb922462df
+  checksum: c3e1f4e6f467ab328f11562371186c5fad32fb9b942e5b79ac3d32c783248421d478add0d392c5411da2875e4b64505b67bfd62c5cb74c32a7aa51ae87b18867
   languageName: node
   linkType: hard
 
@@ -4284,7 +4284,7 @@ fsevents@~2.3.1:
     "@supabase/supabase-js": 1.11.7
     "@types/node": 14.14.41
     "@types/pino": 6.3.7
-    "@vercel/node": 1.9.1
+    "@vercel/node": 1.10.0
     "@vitejs/plugin-vue": 1.2.1
     "@vue/compiler-sfc": 3.0.11
     bottleneck: 2.19.5
