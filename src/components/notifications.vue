@@ -9,13 +9,20 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue"
+import { ref, watch } from "vue"
 
 import alertSvg from "../assets/alert.svg"
+import { useServiceWorker } from "../hooks/use-service-worker"
 
-const canUseNotifications = "Notification" in window
+const { registration, applicationServerKey } = useServiceWorker()
+
+const canUseNotifications =
+  "Notification" in window &&
+  "showNotification" in ServiceWorkerRegistration.prototype &&
+  "PushManager" in window
 
 const canNotify = ref(Notification.permission === "granted")
+const subscription = ref<PushSubscription | null>(null)
 
 const askForPermissions = async () => {
   const result = await Notification.requestPermission()
@@ -24,6 +31,27 @@ const askForPermissions = async () => {
     canNotify.value = true
   }
 }
+
+watch(
+  () => canNotify.value && registration.value == null,
+  async () => {
+    if (!canNotify.value || registration.value == null || subscription.value != null) {
+      return
+    }
+
+    subscription.value = await registration.value.pushManager.getSubscription()
+
+    if (subscription.value) {
+      return console.table(subscription.value)
+    }
+
+    const newSubscription = await registration.value.pushManager.subscribe({
+      userVisibleOnly: true,
+      applicationServerKey,
+    })
+    console.table(newSubscription)
+  },
+)
 </script>
 
 <style scoped>
