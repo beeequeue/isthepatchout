@@ -1825,6 +1825,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vueuse/core@npm:4.9.0":
+  version: 4.9.0
+  resolution: "@vueuse/core@npm:4.9.0"
+  dependencies:
+    "@vueuse/shared": 4.9.0
+    vue-demi: latest
+  checksum: a55216f09675a31d06da2e9595d984e24562610d7b130ee7b9931629c8bda71356d5220a7d84b80e8101a39b5fd95fd878fcaf46a35aea4df3d61aff983c7593
+  languageName: node
+  linkType: hard
+
+"@vueuse/shared@npm:4.9.0":
+  version: 4.9.0
+  resolution: "@vueuse/shared@npm:4.9.0"
+  dependencies:
+    vue-demi: latest
+  checksum: aae5b7a19b777b71684bdee2551398d251d31085de1f840e3cc37627bac8839421d388ae0d9be7c5bc8a7163147f5e3cd8d33f35c328a6ce8652aa5df555d2a4
+  languageName: node
+  linkType: hard
+
 "abbrev@npm:1":
   version: 1.1.1
   resolution: "abbrev@npm:1.1.1"
@@ -4357,6 +4376,7 @@ fsevents@~2.3.1:
     "@vercel/node": 1.10.0
     "@vitejs/plugin-vue": 1.2.2
     "@vue/compiler-sfc": 3.0.11
+    "@vueuse/core": 4.9.0
     bottleneck: 2.19.5
     bundlewatch: 0.3.2
     date-fns: 2.21.1
@@ -4366,6 +4386,7 @@ fsevents@~2.3.1:
     got: 11.8.2
     lint-staged: 10.5.4
     modern-normalize: 1.1.0
+    nanoid: 3.1.22
     openapi-typescript: 3.2.3
     pino: 6.11.3
     pino-pretty: 4.7.1
@@ -5141,7 +5162,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"nanoid@npm:^3.1.22":
+"nanoid@npm:3.1.22, nanoid@npm:^3.1.22":
   version: 3.1.22
   resolution: "nanoid@npm:3.1.22"
   bin:
@@ -7168,6 +7189,22 @@ typescript@4.2.4:
   bin:
     vite: bin/vite.js
   checksum: 53b78abe279cbff00e527043ba67deaee52e6acd568714593d5a26d3912ebb218a13ee638581fc7d3e9dfb919ee7899b1286945f8cc0c21849e9d34765cf8e0b
+  languageName: node
+  linkType: hard
+
+"vue-demi@npm:latest":
+  version: 0.7.5
+  resolution: "vue-demi@npm:0.7.5"
+  peerDependencies:
+    "@vue/composition-api": ^1.0.0-beta.1
+    vue: ^2.6.0 || >=3.0.0-rc.1
+  peerDependenciesMeta:
+    "@vue/composition-api":
+      optional: true
+  bin:
+    vue-demi-fix: bin/vue-demi-fix.js
+    vue-demi-switch: bin/vue-demi-switch.js
+  checksum: 6f7eed9db42e89d1f2a62ef10b3d77ec5d8db4c4fa7d04d87e5c74467052f1a79612ee203707e6c01d8fcfb0c986a9b84335395e18189cb2b2acabeb48e92fac
   languageName: node
   linkType: hard
 

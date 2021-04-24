@@ -9,11 +9,16 @@
 </template>
 
 <script lang="ts" setup>
+import { nanoid } from "nanoid"
 import { ref, watch } from "vue"
 
+import { useLocalStorage } from "@vueuse/core"
+
 import alertSvg from "../assets/alert.svg"
+import { LocalStorageKey } from "../constants"
 import { useServiceWorker } from "../hooks/use-service-worker"
 
+const id = useLocalStorage(LocalStorageKey.ID, nanoid(15))
 const { registration, applicationServerKey } = useServiceWorker()
 
 const canUseNotifications =
@@ -22,6 +27,7 @@ const canUseNotifications =
   "PushManager" in window
 
 const canNotify = ref(Notification.permission === "granted")
+const subscribed = useLocalStorage(LocalStorageKey.Subscribed, false)
 const subscription = ref<PushSubscription | null>(null)
 
 const askForPermissions = async () => {
@@ -41,15 +47,30 @@ watch(
 
     subscription.value = await registration.value.pushManager.getSubscription()
 
-    if (subscription.value) {
-      return console.table(subscription.value)
+    if (subscription.value != null && subscribed.value) {
+      return console.log("subscribed", id.value, subscription.value)
     }
 
-    const newSubscription = await registration.value.pushManager.subscribe({
+    subscription.value = await registration.value.pushManager.subscribe({
       userVisibleOnly: true,
       applicationServerKey,
     })
-    console.table(newSubscription)
+
+    const response = await fetch(
+      `${import.meta.env.VITE_API_URL as string}/api/subscription`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          id: id.value,
+          pushEndpoint: subscription.value.endpoint,
+        }),
+      },
+    )
+
+    if (response.ok) {
+      subscribed.value = true
+    }
   },
 )
 </script>
