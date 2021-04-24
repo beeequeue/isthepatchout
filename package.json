@@ -40,7 +40,7 @@
     "@vue/compiler-sfc": "3.0.11",
     "bottleneck": "2.19.5",
     "bundlewatch": "0.3.2",
-    "eslint": "7.24.0",
+    "eslint": "7.25.0",
     "got": "11.8.2",
     "lint-staged": "10.5.4",
     "openapi-typescript": "3.2.3",
