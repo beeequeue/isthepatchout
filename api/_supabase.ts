@@ -1,6 +1,6 @@
 import { SupabaseClient } from "@supabase/supabase-js"
 
-import type { Patch } from "../src/types"
+import type { Patch, PushSubscription } from "../src/types"
 
 import type { PatchNoteListItem } from "./_dota"
 import { DotaVersion } from "./_dota"
@@ -80,6 +80,16 @@ export const upsertPatches = async (patches: Patch[]) => {
 
   if (error) {
     Logger.error(error)
+    throw new Error(error.message)
+  }
+}
+
+export const upsertSubscription = async (id: string, pushEndpoint: string) => {
+  const { error } = await supabase
+    .from<PushSubscription>("subscriptions")
+    .upsert({ id, pushEndpoint }, { onConflict: "id" })
+
+  if (error) {
     throw new Error(error.message)
   }
 }

@@ -111,6 +111,99 @@ export interface paths {
       }
     }
   }
+  "/subscriptions": {
+    get: {
+      parameters: {
+        query: {
+          id?: parameters["rowFilter.subscriptions.id"]
+          pushEndpoint?: parameters["rowFilter.subscriptions.pushEndpoint"]
+          createdAt?: parameters["rowFilter.subscriptions.createdAt"]
+          /** Filtering Columns */
+          select?: parameters["select"]
+          /** Ordering */
+          order?: parameters["order"]
+          /** Limiting and Pagination */
+          offset?: parameters["offset"]
+          /** Limiting and Pagination */
+          limit?: parameters["limit"]
+        }
+        header: {
+          /** Limiting and Pagination */
+          Range?: parameters["range"]
+          /** Limiting and Pagination */
+          "Range-Unit"?: parameters["rangeUnit"]
+          /** Preference */
+          Prefer?: parameters["preferCount"]
+        }
+      }
+      responses: {
+        /** OK */
+        200: {
+          schema: definitions["subscriptions"][]
+        }
+        /** Partial Content */
+        206: unknown
+      }
+    }
+    post: {
+      parameters: {
+        body: {
+          /** subscriptions */
+          subscriptions?: definitions["subscriptions"]
+        }
+        query: {
+          /** Filtering Columns */
+          select?: parameters["select"]
+        }
+        header: {
+          /** Preference */
+          Prefer?: parameters["preferReturn"]
+        }
+      }
+      responses: {
+        /** Created */
+        201: unknown
+      }
+    }
+    delete: {
+      parameters: {
+        query: {
+          id?: parameters["rowFilter.subscriptions.id"]
+          pushEndpoint?: parameters["rowFilter.subscriptions.pushEndpoint"]
+          createdAt?: parameters["rowFilter.subscriptions.createdAt"]
+        }
+        header: {
+          /** Preference */
+          Prefer?: parameters["preferReturn"]
+        }
+      }
+      responses: {
+        /** No Content */
+        204: never
+      }
+    }
+    patch: {
+      parameters: {
+        query: {
+          id?: parameters["rowFilter.subscriptions.id"]
+          pushEndpoint?: parameters["rowFilter.subscriptions.pushEndpoint"]
+          createdAt?: parameters["rowFilter.subscriptions.createdAt"]
+        }
+        body: {
+          /** subscriptions */
+          subscriptions?: definitions["subscriptions"]
+        }
+        header: {
+          /** Preference */
+          Prefer?: parameters["preferReturn"]
+        }
+      }
+      responses: {
+        /** No Content */
+        204: never
+      }
+    }
+  }
 }
 
 export interface definitions {
@@ -125,6 +218,16 @@ export interface definitions {
     links: string[]
     releasedAt?: string
     number: number
+  }
+  /** Web Push Notifications subscription data */
+  subscriptions: {
+    /**
+     * Note:
+     * This is a Primary Key.<pk/>
+     */
+    id: string
+    pushEndpoint: string
+    createdAt: string
   }
 }
 
@@ -156,6 +259,11 @@ export interface parameters {
   "rowFilter.patches.links": string
   "rowFilter.patches.releasedAt": string
   "rowFilter.patches.number": string
+  /** subscriptions */
+  "body.subscriptions": definitions["subscriptions"]
+  "rowFilter.subscriptions.id": string
+  "rowFilter.subscriptions.pushEndpoint": string
+  "rowFilter.subscriptions.createdAt": string
 }
 
 export interface operations {}
