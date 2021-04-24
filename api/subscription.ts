@@ -6,7 +6,9 @@ import type { PushSubscription } from "../src/types"
 
 import { upsertSubscription } from "./_supabase"
 
-const {} = process.env
+type Handler = (request: VercelRequest, response: VercelResponse) => Promise<void> | void
+
+const { VERCEL_ENV } = process.env
 
 const isUrl = (str: string) => {
   if (str.includes(" ")) {
@@ -27,6 +29,28 @@ The page could not be found
 NOT_FOUND
 `.trim()
 
+const cors = (fn: Handler): Handler => (request, response) => {
+  response.setHeader(
+    "Access-Control-Allow-Origin",
+    VERCEL_ENV === "production"
+      ? "https://isthepatchout.com"
+      : (request.headers.origin as string),
+  )
+
+  response.setHeader("Access-Control-Allow-Methods", "PUT")
+  response.setHeader(
+    "Access-Control-Allow-Headers",
+    "Accept, Accept-Version, Content-Length, Content-Type, Date",
+  )
+
+  if (request.method === "OPTIONS") {
+    response.status(200).end()
+    return
+  }
+
+  return fn(request, response)
+}
+
 const respondNotFound = (response: VercelResponse) => {
   response.status(404)
   response.setHeader("content-type", "text/plain")
@@ -42,9 +66,13 @@ const respondBadRequest = (response: VercelResponse) => {
  * POST /api/subscription
  *
  */
-export default async (request: VercelRequest, response: VercelResponse) => {
+const handler = async (request: VercelRequest, response: VercelResponse) => {
   if (request.method !== "POST") {
     return respondNotFound(response)
+  }
+
+  if (request.headers["content-type"] !== "application/json") {
+    return respondBadRequest(response)
   }
 
   let { id, pushEndpoint } = (request.body ?? {}) as Partial<PushSubscription>
@@ -64,3 +92,5 @@ export default async (request: VercelRequest, response: VercelResponse) => {
 
   response.status(200).json({ ok: true })
 }
+
+export default cors(handler)
