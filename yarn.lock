@@ -1702,12 +1702,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitejs/plugin-vue@npm:1.2.1":
-  version: 1.2.1
-  resolution: "@vitejs/plugin-vue@npm:1.2.1"
+"@vitejs/plugin-vue@npm:1.2.2":
+  version: 1.2.2
+  resolution: "@vitejs/plugin-vue@npm:1.2.2"
   peerDependencies:
     "@vue/compiler-sfc": ^3.0.6
-  checksum: b6c3a7f1ba2bd439d2c9363b9cf4d79e94a9cb5488c72fefc7535a18301db4e7699e60655773c769b945121564d0de4df5db27955f687911f8060434bc7fcb70
+  checksum: 9abe20f3df2ae05ad9d6154a3a83094f895db8d3f1204ab584429fbcd2356645b472c7fbacbed4ea325ef01664329d6c0b880e7eb9621acc072430fcb15e8a7f
   languageName: node
   linkType: hard
 
@@ -4285,7 +4285,7 @@ fsevents@~2.3.1:
     "@types/node": 14.14.41
     "@types/pino": 6.3.7
     "@vercel/node": 1.10.0
-    "@vitejs/plugin-vue": 1.2.1
+    "@vitejs/plugin-vue": 1.2.2
     "@vue/compiler-sfc": 3.0.11
     bottleneck: 2.19.5
     bundlewatch: 0.3.2
@@ -4301,7 +4301,7 @@ fsevents@~2.3.1:
     prettier: 2.2.1
     simple-git-hooks: 2.3.1
     typescript: 4.2.4
-    vite: 2.2.1
+    vite: 2.2.3
     vite-plugin-pwa: 0.7.2
     vue: 3.0.11
     vue-tsc: 0.0.25
@@ -7045,9 +7045,9 @@ typescript@4.2.4:
   languageName: node
   linkType: hard
 
-"vite@npm:2.2.1":
-  version: 2.2.1
-  resolution: "vite@npm:2.2.1"
+"vite@npm:2.2.3":
+  version: 2.2.3
+  resolution: "vite@npm:2.2.3"
   dependencies:
     esbuild: ^0.9.3
     fsevents: ~2.3.1
@@ -7059,7 +7059,7 @@ typescript@4.2.4:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: dbb7a28ac1b1caced9050cc2b1763be103ff2fdb069e4d36ddb51e49c2a59ec63cfe4dcd440b61251d70d315f83ab1ce51f05d2a3ded41dab1c7cbbff2526986
+  checksum: 53b78abe279cbff00e527043ba67deaee52e6acd568714593d5a26d3912ebb218a13ee638581fc7d3e9dfb919ee7899b1286945f8cc0c21849e9d34765cf8e0b
   languageName: node
   linkType: hard
 
