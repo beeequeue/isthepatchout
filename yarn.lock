@@ -4299,7 +4299,7 @@ fsevents@~2.3.1:
     pino: 6.11.3
     pino-pretty: 4.7.1
     prettier: 2.2.1
-    simple-git-hooks: 2.3.1
+    simple-git-hooks: 2.4.1
     typescript: 4.2.4
     vite: 2.2.3
     vite-plugin-pwa: 0.7.2
@@ -6216,12 +6216,12 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"simple-git-hooks@npm:2.3.1":
-  version: 2.3.1
-  resolution: "simple-git-hooks@npm:2.3.1"
+"simple-git-hooks@npm:2.4.1":
+  version: 2.4.1
+  resolution: "simple-git-hooks@npm:2.4.1"
   bin:
     simple-git-hooks: cli.js
-  checksum: 7a0a5095d9f43c051f7768aa911bed70bd0e47b3a81386a05a466cf573093081cc62feb4fcfcd58b64a87a1c5faef1a0f273cc73f2f8b9f55aa6a9fc1fbab12a
+  checksum: fbf906e19b521108b56e21e9d11985d56b9ac2e43699393d4afc630b00026e59bf4e86a2fc7180b6ba1b38090c0eb5509e8f8f280bf4656c18e062ba28594691
   languageName: node
   linkType: hard
 
