@@ -1,8 +1,6 @@
-import { URL } from "url"
+import Joi from "joi"
 
 import type { VercelRequest, VercelResponse } from "@vercel/node"
-
-import type { PushSubscription } from "../src/types"
 
 import { upsertSubscription } from "./_supabase"
 
@@ -10,18 +8,23 @@ type Handler = (request: VercelRequest, response: VercelResponse) => Promise<voi
 
 const { VERCEL_ENV } = process.env
 
-const isUrl = (str: string) => {
-  if (str.includes(" ")) {
-    return false
-  }
-
-  try {
-    new URL(str)
-    return true
-  } catch {
-    return false
+export type UpdateSubscriptionInput = {
+  id: string
+  endpoint: string
+  keys: {
+    auth: string
+    p256dh: string
   }
 }
+
+const schema = Joi.object<UpdateSubscriptionInput>({
+  id: Joi.string().length(25),
+  endpoint: Joi.string().uri({ scheme: ["https"] }),
+  keys: Joi.object({
+    auth: Joi.string().min(10).trim(),
+    p256dh: Joi.string().min(10),
+  }),
+})
 
 const notFoundBody = `
 The page could not be found
@@ -29,12 +32,22 @@ The page could not be found
 NOT_FOUND
 `.trim()
 
+const getCorsOrigin = (request: VercelRequest) => {
+  if (request.headers.origin) return request.headers.origin
+
+  if (request.headers["x-forwarded-host"]) {
+    const proto = request.headers["x-forwarded-proto"] as string
+    const host = request.headers["x-forwarded-host"] as string
+    return `${proto}://${host}`
+  }
+
+  return request.headers.host as string
+}
+
 const cors = (fn: Handler): Handler => (request, response) => {
   response.setHeader(
     "Access-Control-Allow-Origin",
-    VERCEL_ENV === "production"
-      ? "https://isthepatchout.com"
-      : (request.headers.origin as string),
+    VERCEL_ENV === "production" ? "https://isthepatchout.com" : getCorsOrigin(request),
   )
 
   response.setHeader("Access-Control-Allow-Methods", "PUT")
@@ -57,9 +70,9 @@ const respondNotFound = (response: VercelResponse) => {
   response.send(notFoundBody)
 }
 
-const respondBadRequest = (response: VercelResponse) => {
+const respondBadRequest = (response: VercelResponse, message = "Invalid body") => {
   response.status(400)
-  response.json({ ok: false, message: "Invalid body" })
+  response.json({ ok: false, message })
 }
 
 /**
@@ -72,23 +85,20 @@ const handler = async (request: VercelRequest, response: VercelResponse) => {
   }
 
   if (request.headers["content-type"] !== "application/json") {
-    return respondBadRequest(response)
+    return respondBadRequest(response, "Body isn't JSON")
   }
 
-  let { id, pushEndpoint } = (request.body ?? {}) as Partial<PushSubscription>
+  const { error, value } = schema.validate(request.body, {
+    abortEarly: false,
+    stripUnknown: true,
+    presence: "required",
+  })
 
-  if (id == null || pushEndpoint == null) {
-    return respondBadRequest(response)
+  if (error != null) {
+    return respondBadRequest(response, error.message)
   }
 
-  id = id.trim()
-  pushEndpoint = pushEndpoint.trim()
-
-  if (id.length !== 15 || !isUrl(pushEndpoint)) {
-    return respondBadRequest(response)
-  }
-
-  await upsertSubscription(id, pushEndpoint)
+  await upsertSubscription(value)
 
   response.status(200).json({ ok: true })
 }

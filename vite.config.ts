@@ -20,7 +20,7 @@ export default defineConfig({
       manifest: {
         name: "Is the Patch Out?",
         short_name: "isthepatchout",
-        ["gcm_sender_id" as any]: process.env.VITE_SUPABASE_ID as string,
+        ["gcm_sender_id" as any]: process.env.VITE_VAPID_PUBLIC_KEY as string,
         background_color: "#111",
         theme_color: "#111",
         icons: [

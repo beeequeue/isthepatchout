@@ -5,6 +5,7 @@ import type { Patch, PushSubscription } from "../src/types"
 import type { PatchNoteListItem } from "./_dota"
 import { DotaVersion } from "./_dota"
 import { Logger } from "./_logger"
+import { UpdateSubscriptionInput } from "./subscription"
 
 const { SUPABASE_SERVICE_KEY, VITE_SUPABASE_URL } = process.env
 
@@ -84,10 +85,14 @@ export const upsertPatches = async (patches: Patch[]) => {
   }
 }
 
-export const upsertSubscription = async (id: string, pushEndpoint: string) => {
+export const upsertSubscription = async ({
+  id,
+  endpoint,
+  keys: { auth, p256dh },
+}: UpdateSubscriptionInput) => {
   const { error } = await supabase
     .from<PushSubscription>("subscriptions")
-    .upsert({ id, pushEndpoint }, { onConflict: "id" })
+    .upsert({ id, endpoint, auth, p256dh }, { onConflict: "id" })
 
   if (error) {
     throw new Error(error.message)

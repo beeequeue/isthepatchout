@@ -116,8 +116,10 @@ export interface paths {
       parameters: {
         query: {
           id?: parameters["rowFilter.subscriptions.id"]
-          pushEndpoint?: parameters["rowFilter.subscriptions.pushEndpoint"]
+          endpoint?: parameters["rowFilter.subscriptions.endpoint"]
           createdAt?: parameters["rowFilter.subscriptions.createdAt"]
+          auth?: parameters["rowFilter.subscriptions.auth"]
+          p256dh?: parameters["rowFilter.subscriptions.p256dh"]
           /** Filtering Columns */
           select?: parameters["select"]
           /** Ordering */
@@ -169,8 +171,10 @@ export interface paths {
       parameters: {
         query: {
           id?: parameters["rowFilter.subscriptions.id"]
-          pushEndpoint?: parameters["rowFilter.subscriptions.pushEndpoint"]
+          endpoint?: parameters["rowFilter.subscriptions.endpoint"]
           createdAt?: parameters["rowFilter.subscriptions.createdAt"]
+          auth?: parameters["rowFilter.subscriptions.auth"]
+          p256dh?: parameters["rowFilter.subscriptions.p256dh"]
         }
         header: {
           /** Preference */
@@ -186,8 +190,10 @@ export interface paths {
       parameters: {
         query: {
           id?: parameters["rowFilter.subscriptions.id"]
-          pushEndpoint?: parameters["rowFilter.subscriptions.pushEndpoint"]
+          endpoint?: parameters["rowFilter.subscriptions.endpoint"]
           createdAt?: parameters["rowFilter.subscriptions.createdAt"]
+          auth?: parameters["rowFilter.subscriptions.auth"]
+          p256dh?: parameters["rowFilter.subscriptions.p256dh"]
         }
         body: {
           /** subscriptions */
@@ -226,8 +232,10 @@ export interface definitions {
      * This is a Primary Key.<pk/>
      */
     id: string
-    pushEndpoint: string
+    endpoint: string
     createdAt: string
+    auth: string
+    p256dh: string
   }
 }
 
@@ -262,8 +270,10 @@ export interface parameters {
   /** subscriptions */
   "body.subscriptions": definitions["subscriptions"]
   "rowFilter.subscriptions.id": string
-  "rowFilter.subscriptions.pushEndpoint": string
+  "rowFilter.subscriptions.endpoint": string
   "rowFilter.subscriptions.createdAt": string
+  "rowFilter.subscriptions.auth": string
+  "rowFilter.subscriptions.p256dh": string
 }
 
 export interface operations {}
