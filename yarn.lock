@@ -1543,15 +1543,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/pino@npm:*, @types/pino@npm:6.3.7":
-  version: 6.3.7
-  resolution: "@types/pino@npm:6.3.7"
+"@types/pino@npm:*, @types/pino@npm:6.3.8":
+  version: 6.3.8
+  resolution: "@types/pino@npm:6.3.8"
   dependencies:
     "@types/node": "*"
     "@types/pino-pretty": "*"
     "@types/pino-std-serializers": "*"
     "@types/sonic-boom": "*"
-  checksum: 65b2ace91db995bd0749def96d5a61909668a3be18cc37f64aa2066fdce2d13b4ba6420d6c942d3dc4fd721f03136a4919ec805854d57d760db790cc0f20ca00
+  checksum: d5772ebd96cd7c9da95ef7d5c28003fff2769de531bf3f2f4b528c75b75e0261bac9637796c41c074f8acfca0746f1b6ed65400356ba43bbaafc76d6d52b260d
   languageName: node
   linkType: hard
 
@@ -4283,7 +4283,7 @@ fsevents@~2.3.1:
     "@beequeue/eslint-plugin": 0.1.3
     "@supabase/supabase-js": 1.11.7
     "@types/node": 14.14.41
-    "@types/pino": 6.3.7
+    "@types/pino": 6.3.8
     "@vercel/node": 1.10.0
     "@vitejs/plugin-vue": 1.2.2
     "@vue/compiler-sfc": 3.0.11
