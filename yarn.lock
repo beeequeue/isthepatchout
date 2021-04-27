@@ -1504,10 +1504,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:14.14.41":
-  version: 14.14.41
-  resolution: "@types/node@npm:14.14.41"
-  checksum: 8fc205d411742fba8f12bf255423427481bdb371035b2c32db7167642fc1cff2bdfc2007ffc5ddbfe2c09f0df851d2df9f2199fac1f2b0046c1d6ccb2894cffd
+"@types/node@npm:*, @types/node@npm:14.14.42":
+  version: 14.14.42
+  resolution: "@types/node@npm:14.14.42"
+  checksum: deecd45ef52d2d84e7ed64e0263a16b39afa468fcffe6791804a9b133dfd0b3dac061849a377f4be37404a6a498e1c7b0fc5cf2c73cf9940aa481371b29cb208
   languageName: node
   linkType: hard
 
@@ -4282,7 +4282,7 @@ fsevents@~2.3.1:
   dependencies:
     "@beequeue/eslint-plugin": 0.1.3
     "@supabase/supabase-js": 1.11.7
-    "@types/node": 14.14.41
+    "@types/node": 14.14.42
     "@types/pino": 6.3.8
     "@vercel/node": 1.10.0
     "@vitejs/plugin-vue": 1.2.2
