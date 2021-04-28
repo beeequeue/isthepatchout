@@ -1,35 +1,48 @@
 <template>
   <transition>
     <section v-if="!loading && supported" class="notifications">
-      <Switch :checked="false" @change="log" />
+      <ToggleButton circle :checked="subscribed" @change="handleChange">
+        <img class="icon" :src="subscribed ? alertSvg : noAlertSvg" />
+      </ToggleButton>
 
-      <button @click="askForPermissions">
-        <img :src="alertSvg" />
-
-        Get a notification when the patch comes
-      </button>
+      Notifications
     </section>
   </transition>
 </template>
 
 <script lang="ts" setup>
 import alertSvg from "../assets/alert.svg"
+import noAlertSvg from "../assets/no-alert.svg"
 import { usePushNotifications } from "../hooks/use-push-notifications"
 
-import Clickable from "./clickable.vue"
-import Switch from "./switch.vue"
+import ToggleButton from "./toggle-button.vue"
 
-const { log } = console
+const { supported, loading, subscribed, askForPermissions } = usePushNotifications()
 
-const { supported, loading, askForPermissions } = usePushNotifications()
+const handleChange = () => {
+  if (subscribed.value) {
+    return // TODO
+  }
+
+  void askForPermissions()
+}
 </script>
 
 <style scoped>
 .notifications {
-  border-radius: 15px;
-  background: linear-gradient(145deg, #0f0f0f, #121212);
-  box-shadow: 8px 8px 16px #070707, -6px -6px 16px #161616;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  font-size: 1.25em;
+
+  & > button {
+    margin-right: 12px;
+  }
+
+  transition: opacity 1s;
+
+  &.v-enter-from {
+    opacity: 0;
+  }
 }
 
 button {

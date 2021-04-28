@@ -23,6 +23,7 @@ const askForPermissions = async () => {
 
 const { registration, applicationServerKey } = useServiceWorker()
 const subscription = ref<PushSubscription | null>(null)
+const subscribed = ref(false)
 
 const registerNewSubscription = async () => {
   const subscriptionData = JSON.parse(JSON.stringify(subscription.value))
@@ -37,24 +38,39 @@ const registerNewSubscription = async () => {
   })
 }
 
+watch(
+  registration,
+  () => {
+    if (import.meta.env.PROD && registration.value == null) return
+
+    loading.value = false
+  },
+  { immediate: true },
+)
+
 watch([permissionsGranted, registration], async () => {
   if (!permissionsGranted.value || registration.value == null) return
 
-  loading.value = false
   subscription.value = await registration.value.pushManager.getSubscription()
 
-  if (subscription.value != null) return
+  if (subscription.value != null) {
+    subscribed.value = true
+    return
+  }
 
   subscription.value = await registration.value.pushManager.subscribe({
     userVisibleOnly: true,
     applicationServerKey,
   })
 
-  void registerNewSubscription()
+  await registerNewSubscription()
+
+  subscribed.value = true
 })
 
 export const usePushNotifications = () => ({
   supported,
   loading,
+  subscribed,
   askForPermissions,
 })

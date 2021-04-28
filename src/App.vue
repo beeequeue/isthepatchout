@@ -45,7 +45,7 @@ body,
 body {
   background: var(--bg-base);
   color: var(--text-400);
-  text-shadow: 0 0 2px rgba(255, 255, 255, 0.15);
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
 }
 
 #app {
