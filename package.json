@@ -25,7 +25,7 @@
     "typegen": "openapi-typescript --output src/generated.ts \"https://kyxgnkqidepgglspsihc.supabase.co/rest/v1/?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYxNzk4NzU1MiwiZXhwIjoxOTMzNTYzNTUyfQ.WKriKsWCVyoZyH7tRjJuFiPartTnRvaiS-1f_moc8CY\" && prettier --write src/generated.ts"
   },
   "dependencies": {
-    "@supabase/supabase-js": "1.11.7",
+    "@supabase/supabase-js": "1.11.8",
     "date-fns": "2.21.1",
     "fathom-client": "3.0.0",
     "modern-normalize": "1.0.0",
