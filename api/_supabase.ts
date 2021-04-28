@@ -1,3 +1,5 @@
+import { WebPushError } from "web-push"
+
 import { SupabaseClient } from "@supabase/supabase-js"
 
 import type { Patch, PushSubscription } from "../src/types"
@@ -96,5 +98,25 @@ export const upsertSubscription = async ({
 
   if (error) {
     throw new Error(error.message)
+  }
+}
+
+export const handleSendErrors = async (errors: WebPushError[]) => {
+  Logger.debug(errors)
+
+  const expired = errors.filter((error) => error.statusCode === 410)
+  const rest = errors.filter((error) => error.statusCode !== 410)
+  Logger.info(`${expired.length} subscriptions have expired.`)
+
+  await supabase
+    .from<PushSubscription>("subscriptions")
+    .delete()
+    .in(
+      "endpoint",
+      expired.map((error) => error.endpoint),
+    )
+
+  if (rest.length) {
+    Logger.error(rest)
   }
 }

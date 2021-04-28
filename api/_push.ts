@@ -3,7 +3,7 @@ import * as WebPush from "web-push"
 import { Patch, PushEventPatch, PushSubscription } from "../src/types"
 
 import { Logger } from "./_logger"
-import { supabase } from "./_supabase"
+import { handleSendErrors, supabase } from "./_supabase"
 
 WebPush.setGCMAPIKey(process.env.GCM_API_KEY as string)
 WebPush.setVapidDetails(
@@ -44,6 +44,6 @@ export const sendNotification = async (patch: Patch) => {
     `Tried to send ${results.length} notifications. (OK: ${successful.length}, FAIL: ${failed.length})`,
   )
   if (failed.length > 0) {
-    Logger.debug(failed)
+    await handleSendErrors(failed.map((result) => result.reason))
   }
 }
