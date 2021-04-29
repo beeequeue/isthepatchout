@@ -4312,7 +4312,7 @@ fsevents@~2.3.1:
     simple-git-hooks: 2.4.1
     typescript: 4.2.4
     vite: 2.2.3
-    vite-plugin-pwa: 0.7.2
+    vite-plugin-pwa: 0.7.3
     vue: 3.0.11
     vue-tsc: 0.0.25
   languageName: unknown
@@ -6062,7 +6062,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"rollup@npm:^2.38.5, rollup@npm:^2.43.1, rollup@npm:^2.44.0":
+"rollup@npm:^2.38.5, rollup@npm:^2.43.1, rollup@npm:^2.45.2":
   version: 2.45.2
   resolution: "rollup@npm:2.45.2"
   dependencies:
@@ -7039,19 +7039,19 @@ typescript@4.2.4:
   languageName: node
   linkType: hard
 
-"vite-plugin-pwa@npm:0.7.2":
-  version: 0.7.2
-  resolution: "vite-plugin-pwa@npm:0.7.2"
+"vite-plugin-pwa@npm:0.7.3":
+  version: 0.7.3
+  resolution: "vite-plugin-pwa@npm:0.7.3"
   dependencies:
     debug: ^4.3.2
     fast-glob: ^3.2.5
     pretty-bytes: ^5.6.0
-    rollup: ^2.44.0
-    workbox-build: ^6.1.2
-    workbox-window: ^6.1.2
+    rollup: ^2.45.2
+    workbox-build: ^6.1.5
+    workbox-window: ^6.1.5
   peerDependencies:
     vite: ^2.0.0
-  checksum: fe57f7143c8eb3a29b4d17b2379763b8a709d0a7565e8fe83fb51f0c73790d47ab3ac9a92f273ef9aa5210c57adfc4d5349b2e35d59bd8b12f6f85929c740ba9
+  checksum: 1baadb922bd45b0c81047c9eb18c73ac2ed0506c2b234cc474a6e29265ea8dcde3194253c1431e515df26b50a25ef07a768d482eff6139ac4806e8bb5ac89085
   languageName: node
   linkType: hard
 
@@ -7201,7 +7201,7 @@ typescript@4.2.4:
   languageName: node
   linkType: hard
 
-"workbox-build@npm:^6.1.2":
+"workbox-build@npm:^6.1.5":
   version: 6.1.5
   resolution: "workbox-build@npm:6.1.5"
   dependencies:
@@ -7361,7 +7361,7 @@ typescript@4.2.4:
   languageName: node
   linkType: hard
 
-"workbox-window@npm:^6.1.2, workbox-window@npm:^6.1.5":
+"workbox-window@npm:^6.1.5":
   version: 6.1.5
   resolution: "workbox-window@npm:6.1.5"
   dependencies:
