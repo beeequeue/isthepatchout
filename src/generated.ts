@@ -120,6 +120,7 @@ export interface paths {
           createdAt?: parameters["rowFilter.subscriptions.createdAt"]
           auth?: parameters["rowFilter.subscriptions.auth"]
           p256dh?: parameters["rowFilter.subscriptions.p256dh"]
+          environment?: parameters["rowFilter.subscriptions.environment"]
           /** Filtering Columns */
           select?: parameters["select"]
           /** Ordering */
@@ -175,6 +176,7 @@ export interface paths {
           createdAt?: parameters["rowFilter.subscriptions.createdAt"]
           auth?: parameters["rowFilter.subscriptions.auth"]
           p256dh?: parameters["rowFilter.subscriptions.p256dh"]
+          environment?: parameters["rowFilter.subscriptions.environment"]
         }
         header: {
           /** Preference */
@@ -194,6 +196,7 @@ export interface paths {
           createdAt?: parameters["rowFilter.subscriptions.createdAt"]
           auth?: parameters["rowFilter.subscriptions.auth"]
           p256dh?: parameters["rowFilter.subscriptions.p256dh"]
+          environment?: parameters["rowFilter.subscriptions.environment"]
         }
         body: {
           /** subscriptions */
@@ -236,6 +239,7 @@ export interface definitions {
     createdAt: string
     auth: string
     p256dh: string
+    environment: string
   }
 }
 
@@ -274,6 +278,7 @@ export interface parameters {
   "rowFilter.subscriptions.createdAt": string
   "rowFilter.subscriptions.auth": string
   "rowFilter.subscriptions.p256dh": string
+  "rowFilter.subscriptions.environment": string
 }
 
 export interface operations {}

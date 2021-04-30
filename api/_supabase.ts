@@ -92,9 +92,16 @@ export const upsertSubscription = async ({
   endpoint,
   keys: { auth, p256dh },
 }: UpdateSubscriptionInput) => {
-  const { error } = await supabase
-    .from<PushSubscription>("subscriptions")
-    .upsert({ id, endpoint, auth, p256dh }, { onConflict: "id" })
+  const { error } = await supabase.from<PushSubscription>("subscriptions").upsert(
+    {
+      id,
+      endpoint,
+      auth,
+      p256dh,
+      environment: process.env.VERCEL_ENV,
+    },
+    { onConflict: "id" },
+  )
 
   if (error) {
     throw new Error(error.message)
