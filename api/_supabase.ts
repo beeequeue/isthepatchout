@@ -14,10 +14,10 @@ export const supabase = new SupabaseClient(
 )
 
 export const formatPatchData = (data: PatchNoteListItem): Patch => {
-  const links = [`https://dota2.com/patches/${data.patch_number}`]
+  let links = [`https://dota2.com/patches/${data.patch_number}`]
 
   if (data.patch_website != null) {
-    links.push(`https://dota2.com/${data.patch_website}`)
+    links = [`https://dota2.com/${data.patch_website}`, ...links]
   }
 
   return {
