@@ -27,11 +27,12 @@ const {
   subscribing,
   subscribed,
   askForPermissions,
+  unsubscribe,
 } = usePushNotifications()
 
 const handleChange = () => {
   if (subscribed.value) {
-    return // TODO
+    return unsubscribe()
   }
 
   void askForPermissions()

@@ -121,6 +121,17 @@ export const upsertSubscription = async ({
   }
 }
 
+export const deleteSubscription = async (endpoint: string) => {
+  const { error } = await supabase
+    .from<PushSubscription>("subscriptions")
+    .delete()
+    .eq("endpoint", endpoint)
+
+  if (error) {
+    throw new Error(error.message)
+  }
+}
+
 export const handleSendErrors = async (errors: WebPushError[]) => {
   Logger.debug(errors)
 

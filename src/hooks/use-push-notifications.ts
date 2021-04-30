@@ -1,5 +1,9 @@
 import { ref, watch } from "vue"
 
+import { useLocalStorage } from "@vueuse/core"
+
+import { LocalStorageKey } from "../constants"
+
 import { useId } from "./use-id"
 import { useServiceWorker } from "./use-service-worker"
 
@@ -17,6 +21,7 @@ const askForPermissions = async () => {
   const result = await Notification.requestPermission()
 
   if (result === "granted") {
+    manuallyDisabled.value = false
     permissionsGranted.value = true
   }
 }
@@ -25,6 +30,7 @@ const { registration, applicationServerKey } = useServiceWorker()
 const subscription = ref<PushSubscription | null>(null)
 const subscribing = ref(false)
 const subscribed = ref(false)
+const manuallyDisabled = useLocalStorage(LocalStorageKey.ManuallyDisabled, false)
 
 const registerNewSubscription = async () => {
   const subscriptionData = JSON.parse(JSON.stringify(subscription.value))
@@ -37,6 +43,29 @@ const registerNewSubscription = async () => {
       id: id.value,
     }),
   })
+}
+
+const unsubscribe = async () => {
+  if (subscription.value == null) return
+
+  const { endpoint } = subscription.value
+
+  await subscription.value.unsubscribe()
+  manuallyDisabled.value = true
+  subscribed.value = false
+  subscription.value = null
+
+  const params = new URLSearchParams({ endpoint })
+  const response = await fetch(
+    `${import.meta.env.VITE_API_URL as string}/api/subscription?${params.toString()}`,
+    {
+      method: "DELETE",
+    },
+  )
+
+  if (!response.ok) {
+    console.error("Could not register unsubscription with db")
+  }
 }
 
 const getIsSubscriptionValid = async (endpoint: string): Promise<boolean> => {
@@ -73,7 +102,7 @@ watch(
   { immediate: true },
 )
 
-watch([permissionsGranted, registration], async () => {
+watch([permissionsGranted, registration, manuallyDisabled], async () => {
   if (!permissionsGranted.value || registration.value == null) return
 
   subscription.value = await registration.value.pushManager.getSubscription()
@@ -82,12 +111,14 @@ watch([permissionsGranted, registration], async () => {
     subscribed.value = await getIsSubscriptionValid(subscription.value.endpoint)
 
     if (subscribed.value) return
-  } else {
-    subscription.value = await registration.value.pushManager.subscribe({
-      userVisibleOnly: true,
-      applicationServerKey,
-    })
   }
+
+  if (manuallyDisabled.value) return
+
+  subscription.value = await registration.value.pushManager.subscribe({
+    userVisibleOnly: true,
+    applicationServerKey,
+  })
 
   subscribing.value = true
 
@@ -103,4 +134,5 @@ export const usePushNotifications = () => ({
   subscribed,
   subscribing,
   askForPermissions,
+  unsubscribe,
 })

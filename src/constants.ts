@@ -1,4 +1,4 @@
 export enum LocalStorageKey {
   ID = "itpo-id",
-  Subscribed = "itpo-subscribed",
+  ManuallyDisabled = "itpo-notif-disabled",
 }
