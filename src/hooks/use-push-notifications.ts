@@ -38,6 +38,30 @@ const registerNewSubscription = async () => {
   })
 }
 
+const getIsSubscriptionValid = async (endpoint: string): Promise<boolean> => {
+  const params = new URLSearchParams({ endpoint })
+
+  const response = await fetch(
+    `${import.meta.env.VITE_API_URL as string}/api/subscription?${params.toString()}`,
+  )
+
+  if (
+    !response.ok ||
+    !response.headers.get("content-type")?.includes("application/json")
+  ) {
+    throw new Error(`Couldn't fetch subscription status (${response.statusText})`)
+  }
+
+  const data = await response.json()
+  if (!data.ok) {
+    throw new Error(
+      `Couldn't fetch subscription status\n${JSON.stringify(data, null, 2)}`,
+    )
+  }
+
+  return data.exists
+}
+
 watch(
   registration,
   () => {
@@ -54,14 +78,15 @@ watch([permissionsGranted, registration], async () => {
   subscription.value = await registration.value.pushManager.getSubscription()
 
   if (subscription.value != null) {
-    subscribed.value = true
-    return
-  }
+    subscribed.value = await getIsSubscriptionValid(subscription.value.endpoint)
 
-  subscription.value = await registration.value.pushManager.subscribe({
-    userVisibleOnly: true,
-    applicationServerKey,
-  })
+    if (subscribed.value) return
+  } else {
+    subscription.value = await registration.value.pushManager.subscribe({
+      userVisibleOnly: true,
+      applicationServerKey,
+    })
+  }
 
   await registerNewSubscription()
 

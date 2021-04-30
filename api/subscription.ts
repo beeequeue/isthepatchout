@@ -2,7 +2,7 @@ import Joi from "joi"
 
 import type { VercelRequest, VercelResponse } from "@vercel/node"
 
-import { upsertSubscription } from "./_supabase"
+import { doesSubscriptionExist, upsertSubscription } from "./_supabase"
 
 type Handler = (request: VercelRequest, response: VercelResponse) => Promise<void> | void
 
@@ -50,7 +50,7 @@ const cors = (fn: Handler): Handler => (request, response) => {
     VERCEL_ENV === "production" ? "https://isthepatchout.com" : getCorsOrigin(request),
   )
 
-  response.setHeader("Access-Control-Allow-Methods", "PUT")
+  response.setHeader("Access-Control-Allow-Methods", "GET, POST")
   response.setHeader(
     "Access-Control-Allow-Headers",
     "Accept, Accept-Version, Content-Length, Content-Type, Date",
@@ -75,15 +75,17 @@ const respondBadRequest = (response: VercelResponse, message = "Invalid body") =
   response.json({ ok: false, message })
 }
 
-/**
- * POST /api/subscription
- *
- */
-const handler = async (request: VercelRequest, response: VercelResponse) => {
-  if (request.method !== "POST") {
-    return respondNotFound(response)
+const getHandler = async (request: VercelRequest, response: VercelResponse) => {
+  if (request.query.endpoint == null || typeof request.query.endpoint !== "string") {
+    return respondBadRequest(response, "Invalid query parameters")
   }
 
+  const exists = await doesSubscriptionExist(request.query.endpoint)
+
+  response.status(200).json({ ok: true, exists })
+}
+
+const postHandler = async (request: VercelRequest, response: VercelResponse) => {
   if (request.headers["content-type"] !== "application/json") {
     return respondBadRequest(response, "Body isn't JSON")
   }
@@ -101,6 +103,22 @@ const handler = async (request: VercelRequest, response: VercelResponse) => {
   await upsertSubscription(value)
 
   response.status(200).json({ ok: true })
+}
+
+/**
+ * GET/POST /api/subscription
+ *
+ */
+const handler = async (request: VercelRequest, response: VercelResponse) => {
+  if (request.method === "GET") {
+    return getHandler(request, response)
+  }
+
+  if (request.method === "POST") {
+    return postHandler(request, response)
+  }
+
+  return respondNotFound(response)
 }
 
 export default cors(handler)
