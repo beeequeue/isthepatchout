@@ -20,10 +20,10 @@ self.addEventListener("push" as any, (e: PushEvent) => {
 
   if (data.type === "patch") {
     void target.registration.showNotification(`${data.id} has been released!`, {
-      body: "powered by isthepatchout.com",
+      body: "Check out the patch notes!",
       data,
       actions: [
-        { title: "View release notes", action: NotificationAction.ViewReleaseNotes },
+        { title: "Open patch page", action: NotificationAction.ViewReleaseNotes },
       ],
       vibrate: [1000, 250, 1000, 250, 1000],
     })
