@@ -23,6 +23,7 @@ const askForPermissions = async () => {
 
 const { registration, applicationServerKey } = useServiceWorker()
 const subscription = ref<PushSubscription | null>(null)
+const subscribing = ref(false)
 const subscribed = ref(false)
 
 const registerNewSubscription = async () => {
@@ -88,8 +89,11 @@ watch([permissionsGranted, registration], async () => {
     })
   }
 
+  subscribing.value = true
+
   await registerNewSubscription()
 
+  subscribing.value = false
   subscribed.value = true
 })
 
@@ -97,5 +101,6 @@ export const usePushNotifications = () => ({
   supported,
   loading,
   subscribed,
+  subscribing,
   askForPermissions,
 })

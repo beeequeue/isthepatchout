@@ -2,7 +2,11 @@
   <transition>
     <section v-if="!loading && supported" class="notifications">
       <ToggleButton circle :checked="subscribed" @change="handleChange">
-        <img class="icon" :src="subscribed ? alertSvg : noAlertSvg" />
+        <img
+          class="icon"
+          :class="{ subscribing }"
+          :src="subscribed ? alertSvg : noAlertSvg"
+        />
       </ToggleButton>
 
       Notifications
@@ -17,7 +21,13 @@ import { usePushNotifications } from "../hooks/use-push-notifications"
 
 import ToggleButton from "./toggle-button.vue"
 
-const { supported, loading, subscribed, askForPermissions } = usePushNotifications()
+const {
+  supported,
+  loading,
+  subscribing,
+  subscribed,
+  askForPermissions,
+} = usePushNotifications()
 
 const handleChange = () => {
   if (subscribed.value) {
@@ -45,24 +55,16 @@ const handleChange = () => {
   }
 }
 
-button {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  color: #eee;
-  border: 0;
-
-  padding: 10px 20px;
-  background: none;
-
-  cursor: pointer;
-
-  transition: transform 25ms;
-
-  & > img {
-    height: 1.5em;
-    width: 1.5em;
+@keyframes spin {
+  from {
+    transform: rotateZ(0deg);
   }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.subscribing {
+  animation: spin 0.5s linear infinite;
 }
 </style>
