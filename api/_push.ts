@@ -13,7 +13,10 @@ WebPush.setVapidDetails(
 )
 
 export const sendNotification = async (patch: Patch) => {
-  const { data } = await supabase.from<PushSubscription>("subscriptions").select()
+  const { data } = await supabase
+    .from<PushSubscription>("subscriptions")
+    .select()
+    .eq("environment", process.env.VERCEL_ENV as string)
 
   const results = await Promise.allSettled(
     data!.map(async ({ endpoint, auth, p256dh }) => {
