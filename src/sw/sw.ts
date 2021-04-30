@@ -39,5 +39,5 @@ self.addEventListener("notificationclick" as any, (e: NotificationEvent) => {
   }
 })
 
-// @ts-ignore
+// @ts-ignore: Missing type
 precacheAndRoute(self.__WB_MANIFEST)
