@@ -4303,7 +4303,7 @@ fsevents@~2.3.1:
     fathom-client: 3.0.0
     got: 11.8.2
     lint-staged: 10.5.4
-    modern-normalize: 1.0.0
+    modern-normalize: 1.1.0
     openapi-typescript: 3.2.3
     pino: 6.11.3
     pino-pretty: 4.7.1
@@ -5007,10 +5007,10 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"modern-normalize@npm:1.0.0":
-  version: 1.0.0
-  resolution: "modern-normalize@npm:1.0.0"
-  checksum: 84d421a4d47590c007f8d60cd83fafc7735f63ce2bc395fbc4668712b3fccd782bd0fab77216225ddf9f4f76c8c167f587c4a93381692f76c9c939fef3dece78
+"modern-normalize@npm:1.1.0":
+  version: 1.1.0
+  resolution: "modern-normalize@npm:1.1.0"
+  checksum: edfd40650bd7250eb4761651886a02ca3c524effca41b9832932eab9ccf9f2cfa7e5da8491c7c8bc2d58e1696e5e765adebeaf90cd9d3376444bd6bc0b0f2c99
   languageName: node
   linkType: hard
 
