@@ -1,60 +1,71 @@
 <template>
-  <section v-if="canUseNotifications && !canNotify" class="notifications">
-    <button @click="askForPermissions">
-      <img :src="alertSvg" />
+  <transition>
+    <section v-if="!loading && supported" class="notifications">
+      <ToggleButton circle :checked="subscribed" @change="handleChange">
+        <img
+          class="icon"
+          :class="{ subscribing }"
+          :src="subscribed ? alertSvg : noAlertSvg"
+        />
+      </ToggleButton>
 
-      Get a notification when the patch comes
-    </button>
-  </section>
+      Notifications
+    </section>
+  </transition>
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue"
-
 import alertSvg from "../assets/alert.svg"
+import noAlertSvg from "../assets/no-alert.svg"
+import { usePushNotifications } from "../hooks/use-push-notifications"
 
-const canUseNotifications = "Notification" in window
+import ToggleButton from "./toggle-button.vue"
 
-const canNotify = ref(Notification.permission === "granted")
+const {
+  supported,
+  loading,
+  subscribing,
+  subscribed,
+  askForPermissions,
+  unsubscribe,
+} = usePushNotifications()
 
-const askForPermissions = async () => {
-  const result = await Notification.requestPermission()
-
-  if (result === "granted") {
-    canNotify.value = true
+const handleChange = () => {
+  if (subscribed.value) {
+    return unsubscribe()
   }
+
+  void askForPermissions()
 }
 </script>
 
 <style scoped>
-button {
+.notifications {
   display: flex;
   align-items: center;
-  gap: 10px;
+  font-size: 1.25em;
 
-  color: #eee;
-  border: 0;
+  & > button {
+    margin-right: 12px;
+  }
 
-  padding: 10px 20px;
-  border-radius: 15px;
-  background: linear-gradient(145deg, #0f0f0f, #121212);
-  box-shadow: 8px 8px 16px #070707, -6px -6px 16px #161616;
+  transition: opacity 1s;
 
-  cursor: pointer;
-
-  transition: transform 25ms;
+  &.v-enter-from {
+    opacity: 0;
+  }
 }
 
-button > img {
-  height: 1.5em;
-  width: 1.5em;
+@keyframes spin {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
 }
 
-button:hover {
-  transform: scale(1.01);
-}
-
-button:active {
-  transform: scale(1);
+.subscribing {
+  animation: spin 0.5s linear infinite;
 }
 </style>

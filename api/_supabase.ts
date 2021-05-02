@@ -1,10 +1,13 @@
+import { WebPushError } from "web-push"
+
 import { SupabaseClient } from "@supabase/supabase-js"
 
-import type { Patch } from "../src/types"
+import type { Patch, PushSubscription } from "../src/types"
 
 import type { PatchNoteListItem } from "./_dota"
 import { DotaVersion } from "./_dota"
 import { Logger } from "./_logger"
+import { UpdateSubscriptionInput } from "./subscription"
 
 const { SUPABASE_SERVICE_KEY, VITE_SUPABASE_URL } = process.env
 
@@ -81,5 +84,68 @@ export const upsertPatches = async (patches: Patch[]) => {
   if (error) {
     Logger.error(error)
     throw new Error(error.message)
+  }
+}
+
+export const doesSubscriptionExist = async (endpoint: string): Promise<boolean> => {
+  const { count, error } = await supabase
+    .from<PushSubscription>("subscriptions")
+    .select("endpoint", { count: "exact" })
+    .eq("endpoint", endpoint)
+
+  if (error) {
+    throw new Error(error.message)
+  }
+
+  return (count ?? 0) > 0
+}
+
+export const upsertSubscription = async ({
+  endpoint,
+  keys: { auth, p256dh },
+}: UpdateSubscriptionInput) => {
+  const { error } = await supabase.from<PushSubscription>("subscriptions").upsert(
+    {
+      endpoint,
+      auth,
+      p256dh,
+      environment: process.env.VERCEL_ENV,
+    },
+    { onConflict: "id" },
+  )
+
+  if (error) {
+    throw new Error(error.message)
+  }
+}
+
+export const deleteSubscription = async (endpoint: string) => {
+  const { error } = await supabase
+    .from<PushSubscription>("subscriptions")
+    .delete()
+    .eq("endpoint", endpoint)
+
+  if (error) {
+    throw new Error(error.message)
+  }
+}
+
+export const handleSendErrors = async (errors: WebPushError[]) => {
+  Logger.debug(errors)
+
+  const expired = errors.filter((error) => error.statusCode === 410)
+  const rest = errors.filter((error) => error.statusCode !== 410)
+  Logger.info(`${expired.length} subscriptions have expired.`)
+
+  await supabase
+    .from<PushSubscription>("subscriptions")
+    .delete()
+    .in(
+      "endpoint",
+      expired.map((error) => error.endpoint),
+    )
+
+  if (rest.length) {
+    Logger.error(rest)
   }
 }

@@ -6,7 +6,7 @@
     },
     {
       "path": "./dist/**/*vendor*.js",
-      "maxSize": "35kb"
+      "maxSize": "37kb"
     }
   ]
 }

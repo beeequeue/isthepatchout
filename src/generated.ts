@@ -111,6 +111,105 @@ export interface paths {
       }
     }
   }
+  "/subscriptions": {
+    get: {
+      parameters: {
+        query: {
+          endpoint?: parameters["rowFilter.subscriptions.endpoint"]
+          createdAt?: parameters["rowFilter.subscriptions.createdAt"]
+          auth?: parameters["rowFilter.subscriptions.auth"]
+          p256dh?: parameters["rowFilter.subscriptions.p256dh"]
+          environment?: parameters["rowFilter.subscriptions.environment"]
+          /** Filtering Columns */
+          select?: parameters["select"]
+          /** Ordering */
+          order?: parameters["order"]
+          /** Limiting and Pagination */
+          offset?: parameters["offset"]
+          /** Limiting and Pagination */
+          limit?: parameters["limit"]
+        }
+        header: {
+          /** Limiting and Pagination */
+          Range?: parameters["range"]
+          /** Limiting and Pagination */
+          "Range-Unit"?: parameters["rangeUnit"]
+          /** Preference */
+          Prefer?: parameters["preferCount"]
+        }
+      }
+      responses: {
+        /** OK */
+        200: {
+          schema: definitions["subscriptions"][]
+        }
+        /** Partial Content */
+        206: unknown
+      }
+    }
+    post: {
+      parameters: {
+        body: {
+          /** subscriptions */
+          subscriptions?: definitions["subscriptions"]
+        }
+        query: {
+          /** Filtering Columns */
+          select?: parameters["select"]
+        }
+        header: {
+          /** Preference */
+          Prefer?: parameters["preferReturn"]
+        }
+      }
+      responses: {
+        /** Created */
+        201: unknown
+      }
+    }
+    delete: {
+      parameters: {
+        query: {
+          endpoint?: parameters["rowFilter.subscriptions.endpoint"]
+          createdAt?: parameters["rowFilter.subscriptions.createdAt"]
+          auth?: parameters["rowFilter.subscriptions.auth"]
+          p256dh?: parameters["rowFilter.subscriptions.p256dh"]
+          environment?: parameters["rowFilter.subscriptions.environment"]
+        }
+        header: {
+          /** Preference */
+          Prefer?: parameters["preferReturn"]
+        }
+      }
+      responses: {
+        /** No Content */
+        204: never
+      }
+    }
+    patch: {
+      parameters: {
+        query: {
+          endpoint?: parameters["rowFilter.subscriptions.endpoint"]
+          createdAt?: parameters["rowFilter.subscriptions.createdAt"]
+          auth?: parameters["rowFilter.subscriptions.auth"]
+          p256dh?: parameters["rowFilter.subscriptions.p256dh"]
+          environment?: parameters["rowFilter.subscriptions.environment"]
+        }
+        body: {
+          /** subscriptions */
+          subscriptions?: definitions["subscriptions"]
+        }
+        header: {
+          /** Preference */
+          Prefer?: parameters["preferReturn"]
+        }
+      }
+      responses: {
+        /** No Content */
+        204: never
+      }
+    }
+  }
 }
 
 export interface definitions {
@@ -125,6 +224,14 @@ export interface definitions {
     links: string[]
     releasedAt?: string
     number: number
+  }
+  /** Web Push Notifications subscription data */
+  subscriptions: {
+    endpoint: string
+    createdAt: string
+    auth: string
+    p256dh: string
+    environment: string
   }
 }
 
@@ -156,6 +263,13 @@ export interface parameters {
   "rowFilter.patches.links": string
   "rowFilter.patches.releasedAt": string
   "rowFilter.patches.number": string
+  /** subscriptions */
+  "body.subscriptions": definitions["subscriptions"]
+  "rowFilter.subscriptions.endpoint": string
+  "rowFilter.subscriptions.createdAt": string
+  "rowFilter.subscriptions.auth": string
+  "rowFilter.subscriptions.p256dh": string
+  "rowFilter.subscriptions.environment": string
 }
 
 export interface operations {}

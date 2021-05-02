@@ -53,7 +53,7 @@ const links = computed(() =>
 watch(recentlyReleased, (isRecentlyReleased) => {
   if (isRecentlyReleased) {
     document.title = `${last.value!.id} is out!`
-    new Notification(`PATCH ${last.value!.id} IS OUT!`)
+    // new Notification(`PATCH ${last.value!.id} IS OUT!`)
   }
 })
 </script>
