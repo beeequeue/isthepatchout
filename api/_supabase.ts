@@ -101,13 +101,11 @@ export const doesSubscriptionExist = async (endpoint: string): Promise<boolean> 
 }
 
 export const upsertSubscription = async ({
-  id,
   endpoint,
   keys: { auth, p256dh },
 }: UpdateSubscriptionInput) => {
   const { error } = await supabase.from<PushSubscription>("subscriptions").upsert(
     {
-      id,
       endpoint,
       auth,
       p256dh,

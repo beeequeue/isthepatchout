@@ -4426,7 +4426,6 @@ fsevents@~2.3.1:
     joi: 17.4.0
     lint-staged: 10.5.4
     modern-normalize: 1.1.0
-    nanoid: 3.1.22
     openapi-typescript: 3.2.3
     pino: 6.11.3
     pino-pretty: 4.7.1
@@ -5216,7 +5215,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"nanoid@npm:3.1.22, nanoid@npm:^3.1.22":
+"nanoid@npm:^3.1.22":
   version: 3.1.22
   resolution: "nanoid@npm:3.1.22"
   bin:

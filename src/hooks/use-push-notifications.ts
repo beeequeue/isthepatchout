@@ -4,10 +4,8 @@ import { useLocalStorage } from "@vueuse/core"
 
 import { LocalStorageKey } from "../constants"
 
-import { useId } from "./use-id"
 import { useServiceWorker } from "./use-service-worker"
 
-const id = useId()
 const loading = ref(true)
 
 const supported =
@@ -38,10 +36,7 @@ const registerNewSubscription = async () => {
   await fetch(`${import.meta.env.VITE_API_URL as string}/api/subscription`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      ...subscriptionData,
-      id: id.value,
-    }),
+    body: JSON.stringify(subscriptionData),
   })
 }
 

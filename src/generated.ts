@@ -115,7 +115,6 @@ export interface paths {
     get: {
       parameters: {
         query: {
-          id?: parameters["rowFilter.subscriptions.id"]
           endpoint?: parameters["rowFilter.subscriptions.endpoint"]
           createdAt?: parameters["rowFilter.subscriptions.createdAt"]
           auth?: parameters["rowFilter.subscriptions.auth"]
@@ -171,7 +170,6 @@ export interface paths {
     delete: {
       parameters: {
         query: {
-          id?: parameters["rowFilter.subscriptions.id"]
           endpoint?: parameters["rowFilter.subscriptions.endpoint"]
           createdAt?: parameters["rowFilter.subscriptions.createdAt"]
           auth?: parameters["rowFilter.subscriptions.auth"]
@@ -191,7 +189,6 @@ export interface paths {
     patch: {
       parameters: {
         query: {
-          id?: parameters["rowFilter.subscriptions.id"]
           endpoint?: parameters["rowFilter.subscriptions.endpoint"]
           createdAt?: parameters["rowFilter.subscriptions.createdAt"]
           auth?: parameters["rowFilter.subscriptions.auth"]
@@ -230,11 +227,6 @@ export interface definitions {
   }
   /** Web Push Notifications subscription data */
   subscriptions: {
-    /**
-     * Note:
-     * This is a Primary Key.<pk/>
-     */
-    id: string
     endpoint: string
     createdAt: string
     auth: string
@@ -273,7 +265,6 @@ export interface parameters {
   "rowFilter.patches.number": string
   /** subscriptions */
   "body.subscriptions": definitions["subscriptions"]
-  "rowFilter.subscriptions.id": string
   "rowFilter.subscriptions.endpoint": string
   "rowFilter.subscriptions.createdAt": string
   "rowFilter.subscriptions.auth": string

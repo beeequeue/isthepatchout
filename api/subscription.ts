@@ -13,7 +13,6 @@ type Handler = (request: VercelRequest, response: VercelResponse) => Promise<voi
 const { VERCEL_ENV } = process.env
 
 export type UpdateSubscriptionInput = {
-  id: string
   endpoint: string
   keys: {
     auth: string
@@ -22,7 +21,6 @@ export type UpdateSubscriptionInput = {
 }
 
 const schema = Joi.object<UpdateSubscriptionInput>({
-  id: Joi.string().length(25),
   endpoint: Joi.string().uri({ scheme: ["https"] }),
   keys: Joi.object({
     auth: Joi.string().min(10).trim(),
