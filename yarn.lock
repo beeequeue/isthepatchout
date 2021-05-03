@@ -2507,7 +2507,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:2.4.2, chalk@npm:^2.0.0, chalk@npm:^2.4.2":
+"chalk@npm:2.4.2, chalk@npm:^2.0.0":
   version: 2.4.2
   resolution: "chalk@npm:2.4.2"
   dependencies:
@@ -4429,7 +4429,7 @@ fsevents@~2.3.1:
     openapi-typescript: 3.2.3
     pino: 6.11.3
     pino-pretty: 4.7.1
-    postcss-nesting: 7.0.1
+    postcss-nesting: 8.0.1
     prettier: 2.2.1
     simple-git-hooks: 2.4.1
     typescript: 4.2.4
@@ -5775,12 +5775,12 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"postcss-nesting@npm:7.0.1":
-  version: 7.0.1
-  resolution: "postcss-nesting@npm:7.0.1"
-  dependencies:
-    postcss: ^7.0.2
-  checksum: 4056be95759e8b25477f19aff7202b57dd27eeef41d31f7ca14e4c87d16ffb40e4db3f518fc85bd28b20e183f5e5399b56b52fcc79affd556e13a98bbc678169
+"postcss-nesting@npm:8.0.1":
+  version: 8.0.1
+  resolution: "postcss-nesting@npm:8.0.1"
+  peerDependencies:
+    postcss: ^8
+  checksum: a96a4ef4c0a485477dbd8e262121d6423b95f2f68a6265a2d722a12700e889276a798e4db7e47bf5e6afb86aec3cc335518564edca8d655b54831cc9eaa0459e
   languageName: node
   linkType: hard
 
@@ -5800,17 +5800,6 @@ fsevents@~2.3.1:
   version: 4.1.0
   resolution: "postcss-value-parser@npm:4.1.0"
   checksum: 68a9ea27c780fa3cc350be37b47cc46385c61dd9627990909230e0e9c3debf6d5beb49006bd743a2e506cdd6fa7d07637f2d9504a394f67cc3011d1ff0134886
-  languageName: node
-  linkType: hard
-
-"postcss@npm:^7.0.2":
-  version: 7.0.35
-  resolution: "postcss@npm:7.0.35"
-  dependencies:
-    chalk: ^2.4.2
-    source-map: ^0.6.1
-    supports-color: ^6.1.0
-  checksum: 6b197769057f38b9d4d8778c7e3b8b4a56c0c2c3ac8edf7552b06ac964e1a3601567fa2c5335a54fba103492305b0fc1347ce786fd72e30903a22f09f86525ae
   languageName: node
   linkType: hard
 
@@ -6780,15 +6769,6 @@ fsevents@~2.3.1:
   dependencies:
     has-flag: ^3.0.0
   checksum: 95f6f4ba5afdf92f495b5a912d4abee8dcba766ae719b975c56c084f5004845f6f5a5f7769f52d53f40e21952a6d87411bafe34af4a01e65f9926002e38e1dac
-  languageName: node
-  linkType: hard
-
-"supports-color@npm:^6.1.0":
-  version: 6.1.0
-  resolution: "supports-color@npm:6.1.0"
-  dependencies:
-    has-flag: ^3.0.0
-  checksum: 74358f9535c83ee113fbaac354b11e808060f6e7d8722082ee43af3578469134e89d00026dce2a6b93ce4e5b89d0e9a10f638b2b9f64c7838c2fb2883a47b3d5
   languageName: node
   linkType: hard
 
