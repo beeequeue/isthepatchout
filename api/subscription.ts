@@ -2,6 +2,7 @@ import Joi from "joi"
 
 import type { VercelRequest, VercelResponse } from "@vercel/node"
 
+import { sentryWrapper } from "./_sentry"
 import {
   deleteSubscription,
   doesSubscriptionExist,
@@ -137,4 +138,4 @@ const handler = async (request: VercelRequest, response: VercelResponse) => {
   return respondNotFound(response)
 }
 
-export default cors(handler)
+export default sentryWrapper("/subscription", cors(handler))

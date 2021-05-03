@@ -3,17 +3,20 @@ import type { VercelRequest, VercelResponse } from "@vercel/node"
 import type { Patch } from "../src/types"
 
 import { sendNotification } from "./_push"
+import { sentryWrapper } from "./_sentry"
 import { supabase } from "./_supabase"
 
 const { CHECK_TOKEN, VERCEL_ENV } = process.env
 
-export default async (request: VercelRequest, response: VercelResponse) => {
+const handler = async (request: VercelRequest, response: VercelResponse) => {
   if (
     VERCEL_ENV === "production" ||
     CHECK_TOKEN == null ||
     request.headers.authorization !== `Bearer ${CHECK_TOKEN}`
   ) {
-    return response.status(403).json({ ok: false, message: "Forbidden" })
+    response.status(403).json({ ok: false, message: "Forbidden" })
+
+    return
   }
 
   const { data } = await supabase
@@ -27,3 +30,5 @@ export default async (request: VercelRequest, response: VercelResponse) => {
 
   response.status(200).json({ ok: true })
 }
+
+export default sentryWrapper("/send-notification", handler)

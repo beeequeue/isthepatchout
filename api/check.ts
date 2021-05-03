@@ -1,6 +1,7 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node"
 
 import { getPatchList } from "./_dota"
+import { sentryWrapper } from "./_sentry"
 import {
   formatPatchData,
   insertUpcomingPatches,
@@ -32,16 +33,22 @@ const checkAndUpdatePatches = async () => {
  * If a new patch is released, we update it with `released: true`, new links,
  * and add new patches to check in the future.
  */
-export default async (request: VercelRequest, response: VercelResponse) => {
+const handler = async (request: VercelRequest, response: VercelResponse) => {
   if (CHECK_TOKEN == null || request.headers.authorization !== `Bearer ${CHECK_TOKEN}`) {
-    return response.status(403).json({ ok: false, message: "Forbidden" })
+    response.status(403).json({ ok: false, message: "Forbidden" })
+
+    return
   }
 
   try {
     await checkAndUpdatePatches()
   } catch (err) {
-    return response.status(500).json({ ok: false, message: err.message })
+    response.status(500).json({ ok: false, message: err.message })
+
+    return
   }
 
   response.status(200).json({ ok: true })
 }
+
+export default sentryWrapper("/check", handler)
