@@ -1,11 +1,12 @@
 import {
   captureException,
+  flush,
   getCurrentHub,
   init,
   Integrations,
   setContext,
-  startTransaction,
   setTag,
+  startTransaction,
 } from "@sentry/node"
 import type { VercelRequest, VercelResponse } from "@vercel/node"
 
@@ -29,7 +30,6 @@ export const sentryWrapper = (path: string, handler: Handler): Handler => async 
   req,
   res,
 ) => {
-  let error: Error | null = null
   const trx = startTransaction({
     name: path,
     op: "transaction",
@@ -37,28 +37,21 @@ export const sentryWrapper = (path: string, handler: Handler): Handler => async 
 
   try {
     await handler(req, res)
-  } catch (foundError) {
-    error = foundError
+  } catch (error) {
     res.status(500).send({ ok: false, message: error?.message })
-  }
 
-  setContext("response", {
-    status: res.statusCode,
-  })
+    setContext("response", {
+      status: res.statusCode,
+    })
 
-  if (res.statusCode >= 500) {
-    console.error(res.statusCode)
-    console.error(error)
-
-    console.error(
-      "sentry: ",
-      captureException(
-        error ? error : new Error(`Returned a ${res.statusCode} response`),
-      ),
-    )
+    captureException(error)
   }
 
   trx.finish()
+
+  await flush(5000)
+
+  console.log("3", new Date().toISOString())
 }
 
 export const startTask = (name: string) => {
