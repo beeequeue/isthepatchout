@@ -18,7 +18,7 @@
   "scripts": {
     "build": "vite build",
     "bundlewatch": "bundlewatch --config .bundlewatchrc",
-    "lint": "eslint {src,app}",
+    "lint": "eslint {api,src}",
     "postinstall": "simple-git-hooks",
     "serve": "vite preview",
     "start": "vite",

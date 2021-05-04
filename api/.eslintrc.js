@@ -1,16 +1,24 @@
 module.exports = {
-  root: true,
   env: {
     es2021: true,
-    browser: true,
+    node: true,
   },
   extends: [
     "plugin:@beequeue/base",
-    "plugin:@beequeue/vue",
+    "plugin:@beequeue/node",
     "plugin:@beequeue/typescript",
     "plugin:@beequeue/prettier",
   ],
+  parserOptions: {
+    project: "api/tsconfig.json",
+  },
   rules: {
     "@typescript-eslint/no-non-null-assertion": "off",
+    "import/no-extraneous-dependencies": [
+      "off",
+      {
+        devDependencies: ["**/*"],
+      },
+    ],
   },
 }
