@@ -15,9 +15,9 @@ type Handler = (request: VercelRequest, response: VercelResponse) => Promise<voi
 
 init({
   debug: true,
-  enabled: process.env.VERCEL_ENV !== "development" && !!process.env.VITE_SENTRY_DSN,
+  enabled: process.env.VERCEL_ENV !== "development" && !!process.env.SENTRY_DSN,
   release: process.env.VERCEL_GIT_COMMIT_SHA,
-  dsn: process.env.VITE_SENTRY_DSN,
+  dsn: process.env.SENTRY_DSN,
   environment: process.env.VERCEL_ENV as string,
   integrations: [new Integrations.Http({ tracing: true })],
   tracesSampleRate: 1.0,

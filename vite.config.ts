@@ -13,6 +13,8 @@ export default defineConfig({
     sourcemap: true,
   },
   define: {
+    "import.meta.env.SENTRY_DSN": s(process.env.SENTRY_DSN),
+    "import.meta.env.VERCEL_ENV": s(process.env.VERCEL_ENV),
     "import.meta.env.VERCEL_GIT_COMMIT_SHA": s(process.env.VERCEL_GIT_COMMIT_SHA),
   },
   plugins: [

@@ -11,19 +11,17 @@ const app = createApp(App)
 
 init({
   debug: true,
-  enabled:
-    import.meta.env.VITE_VERCEL_ENV !== "development" &&
-    !!import.meta.env.VITE_SENTRY_DSN,
-  dsn: import.meta.env.VITE_SENTRY_DSN as string | undefined,
+  enabled: import.meta.env.VERCEL_ENV !== "development" && !!import.meta.env.SENTRY_DSN,
+  dsn: import.meta.env.SENTRY_DSN as string | undefined,
   release: import.meta.env.VERCEL_GIT_COMMIT_SHA as string | undefined,
-  environment: import.meta.env.VITE_VERCEL_ENV as string,
+  environment: import.meta.env.VERCEL_ENV as string,
   Vue: app as any,
 })
 
 setTag("app", "ui")
 
 app.config.errorHandler = (error, _, info) => {
-  if (import.meta.env.VITE_VERCEL_ENV !== "production") console.error(error)
+  if (import.meta.env.VERCEL_ENV !== "production") console.error(error)
 
   setTag("info", info)
   captureException(error)
