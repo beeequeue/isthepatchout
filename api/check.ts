@@ -40,6 +40,8 @@ const handler = async (request: VercelRequest, response: VercelResponse) => {
     return
   }
 
+  throw new Error("Test error #2")
+
   try {
     await checkAndUpdatePatches()
   } catch (err) {

@@ -31,6 +31,8 @@ const {
 } = usePushNotifications()
 
 const handleChange = () => {
+  throw new Error("Test error #1")
+
   if (subscribed.value) {
     return unsubscribe()
   }
