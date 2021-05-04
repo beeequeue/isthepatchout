@@ -31,6 +31,7 @@ const {
 } = usePushNotifications()
 
 const handleChange = () => {
+  // eslint-disable-next-line no-unreachable
   if (subscribed.value) {
     return unsubscribe()
   }

@@ -1,7 +1,9 @@
 import Joi from "joi"
 
+import { badRequest, notFound } from "@hapi/boom"
 import type { VercelRequest, VercelResponse } from "@vercel/node"
 
+import { CustomHandler, sentryWrapper } from "./_sentry"
 import {
   deleteSubscription,
   doesSubscriptionExist,
@@ -27,12 +29,6 @@ const schema = Joi.object<UpdateSubscriptionInput>({
     p256dh: Joi.string().min(10),
   }),
 })
-
-const notFoundBody = `
-The page could not be found
-
-NOT_FOUND
-`.trim()
 
 const getCorsOrigin = (request: VercelRequest) => {
   if (request.headers.origin) return request.headers.origin
@@ -66,30 +62,19 @@ const cors = (fn: Handler): Handler => (request, response) => {
   return fn(request, response)
 }
 
-const respondNotFound = (response: VercelResponse) => {
-  response.status(404)
-  response.setHeader("content-type", "text/plain")
-  response.send(notFoundBody)
-}
-
-const respondBadRequest = (response: VercelResponse, message = "Invalid body") => {
-  response.status(400)
-  response.json({ ok: false, message })
-}
-
-const getHandler = async (request: VercelRequest, response: VercelResponse) => {
+const getHandler: CustomHandler = async (request) => {
   if (request.query.endpoint == null || typeof request.query.endpoint !== "string") {
-    return respondBadRequest(response, "Invalid query parameters")
+    return badRequest("Invalid query parameters")
   }
 
   const exists = await doesSubscriptionExist(request.query.endpoint)
 
-  response.status(200).json({ ok: true, exists })
+  return { exists }
 }
 
-const postHandler = async (request: VercelRequest, response: VercelResponse) => {
+const postHandler: CustomHandler = async (request) => {
   if (request.headers["content-type"] !== "application/json") {
-    return respondBadRequest(response, "Body isn't JSON")
+    return badRequest("Body isn't JSON")
   }
 
   const { error, value } = schema.validate(request.body, {
@@ -99,42 +84,38 @@ const postHandler = async (request: VercelRequest, response: VercelResponse) => 
   })
 
   if (error != null) {
-    return respondBadRequest(response, error.message)
+    return badRequest(error.message)
   }
 
   await upsertSubscription(value)
-
-  response.status(200).json({ ok: true })
 }
 
-const deleteHandler = async (request: VercelRequest, response: VercelResponse) => {
+const deleteHandler: CustomHandler = async (request) => {
   if (request.query.endpoint == null || typeof request.query.endpoint !== "string") {
-    return respondBadRequest(response, "Invalid query parameters")
+    return badRequest("Invalid query parameters")
   }
 
   await deleteSubscription(request.query.endpoint)
-
-  response.status(200).json({ ok: true })
 }
 
 /**
  * GET/POST /api/subscription
  *
  */
-const handler = async (request: VercelRequest, response: VercelResponse) => {
+const handler: CustomHandler = async (request) => {
   if (request.method === "GET") {
-    return getHandler(request, response)
+    return getHandler(request)
   }
 
   if (request.method === "POST") {
-    return postHandler(request, response)
+    return postHandler(request)
   }
 
   if (request.method === "DELETE") {
-    return deleteHandler(request, response)
+    return deleteHandler(request)
   }
 
-  return respondNotFound(response)
+  return notFound()
 }
 
-export default cors(handler)
+export default cors(sentryWrapper("/subscription", handler))

@@ -1254,6 +1254,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@hapi/boom@npm:9.1.2":
+  version: 9.1.2
+  resolution: "@hapi/boom@npm:9.1.2"
+  dependencies:
+    "@hapi/hoek": 9.x.x
+  checksum: 168bb08ab76ec3ae398608abea3a41d6a9ab9f4d9c3eefef9a989b7da2be8d1f9905df629ea01568da9a408641c423d4d326845b0a76344f32aacae3e0c9fc89
+  languageName: node
+  linkType: hard
+
 "@hapi/bourne@npm:^2.0.0":
   version: 2.0.0
   resolution: "@hapi/bourne@npm:2.0.0"
@@ -1268,17 +1277,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@hapi/hoek@npm:9.x.x, @hapi/hoek@npm:^9.0.0":
+  version: 9.2.0
+  resolution: "@hapi/hoek@npm:9.2.0"
+  checksum: 57103bb5074d24ffd876f559bac6b312f2f58fe0f21dbfb0b8941032cba4fd37d92249db366516e1f68e2033834b87001c1558f523b48130b21f823f1e35b91a
+  languageName: node
+  linkType: hard
+
 "@hapi/hoek@npm:^8.2.4, @hapi/hoek@npm:^8.3.0":
   version: 8.5.1
   resolution: "@hapi/hoek@npm:8.5.1"
   checksum: 8f8ce36be4f5e5d7a712072d4a028a4a95beec7a7da3a7a6e9a0c07d697f04c19b37d93751db352c314ea831f7e2120569a035dc6a351ed8c0444f1d3b275621
-  languageName: node
-  linkType: hard
-
-"@hapi/hoek@npm:^9.0.0":
-  version: 9.2.0
-  resolution: "@hapi/hoek@npm:9.2.0"
-  checksum: 57103bb5074d24ffd876f559bac6b312f2f58fe0f21dbfb0b8941032cba4fd37d92249db366516e1f68e2033834b87001c1558f523b48130b21f823f1e35b91a
   languageName: node
   linkType: hard
 
@@ -1412,6 +1421,117 @@ __metadata:
   peerDependencies:
     rollup: ^1.20.0||^2.0.0
   checksum: 8be16e27863c219edbb25a4e6ec2fe0e1e451d9e917b6a43cf2ae5bc025a6b8faaa40f82a6e53b66d0de37b58ff472c6c3d57a83037ae635041f8df959d6d9aa
+  languageName: node
+  linkType: hard
+
+"@sentry/browser@npm:6.3.5":
+  version: 6.3.5
+  resolution: "@sentry/browser@npm:6.3.5"
+  dependencies:
+    "@sentry/core": 6.3.5
+    "@sentry/types": 6.3.5
+    "@sentry/utils": 6.3.5
+    tslib: ^1.9.3
+  checksum: d86995c828e7fc0c414d6a47daf3067dee6208fb532d39a3515adf1e7c4b1045b2df8ed6d558a9fcc4f1159c9aca6fdcb2bb871519bb61606378816f49e9fac9
+  languageName: node
+  linkType: hard
+
+"@sentry/core@npm:6.3.5":
+  version: 6.3.5
+  resolution: "@sentry/core@npm:6.3.5"
+  dependencies:
+    "@sentry/hub": 6.3.5
+    "@sentry/minimal": 6.3.5
+    "@sentry/types": 6.3.5
+    "@sentry/utils": 6.3.5
+    tslib: ^1.9.3
+  checksum: 1c90261e230b4d62ff28cb55f8009cc27ef3fc5ff6bbf9df65ccbd403550ec826f77c491afe033987b03aaad5fd995a762a5af33428d5e02de1fa1dd5545e3d8
+  languageName: node
+  linkType: hard
+
+"@sentry/hub@npm:6.3.5":
+  version: 6.3.5
+  resolution: "@sentry/hub@npm:6.3.5"
+  dependencies:
+    "@sentry/types": 6.3.5
+    "@sentry/utils": 6.3.5
+    tslib: ^1.9.3
+  checksum: 46cb22a2a65605e7a1457991af5b36d8dd824225be917e614d2d496aedfb2ae5dd358c009d07a7fdaaa0f3c9eef458b635b137727a7df1d542e7ae2e0d409e3b
+  languageName: node
+  linkType: hard
+
+"@sentry/minimal@npm:6.3.5":
+  version: 6.3.5
+  resolution: "@sentry/minimal@npm:6.3.5"
+  dependencies:
+    "@sentry/hub": 6.3.5
+    "@sentry/types": 6.3.5
+    tslib: ^1.9.3
+  checksum: d3b26f8a3b314bb7f072b27b9a147203fc098f26ae9f87530935beb31157b331851dc1f595f122625f19796b1b5625fa2f46e022fed45ffb9aabff3512765bf9
+  languageName: node
+  linkType: hard
+
+"@sentry/node@npm:6.3.5":
+  version: 6.3.5
+  resolution: "@sentry/node@npm:6.3.5"
+  dependencies:
+    "@sentry/core": 6.3.5
+    "@sentry/hub": 6.3.5
+    "@sentry/tracing": 6.3.5
+    "@sentry/types": 6.3.5
+    "@sentry/utils": 6.3.5
+    cookie: ^0.4.1
+    https-proxy-agent: ^5.0.0
+    lru_map: ^0.3.3
+    tslib: ^1.9.3
+  checksum: 6ebb1d783c75518fe5fd746a658668a10e8ceb8a4843233b335760ef846fde9b0dcec7e3e06a582ef8f805a104dee28cd9b31e4a726a449957ef25d54b24e27c
+  languageName: node
+  linkType: hard
+
+"@sentry/tracing@npm:6.3.5":
+  version: 6.3.5
+  resolution: "@sentry/tracing@npm:6.3.5"
+  dependencies:
+    "@sentry/hub": 6.3.5
+    "@sentry/minimal": 6.3.5
+    "@sentry/types": 6.3.5
+    "@sentry/utils": 6.3.5
+    tslib: ^1.9.3
+  checksum: d20be3ab8a7925e2c61904d9f85e9be7ee118b06d925f1594ac1d5bc0c1abfb6779d22f3adeb76f5ae77e1e87305220beec973dcfa2aad870e9643451e3daeb6
+  languageName: node
+  linkType: hard
+
+"@sentry/types@npm:6.3.5":
+  version: 6.3.5
+  resolution: "@sentry/types@npm:6.3.5"
+  checksum: 088467a9dd2dd78dfcdd63085e45056f17fd50214a1cb9f32599250d6c63da798c9d871e5e31e2548e1b9c788bbd6f7a57efeb76f6245e8fabaa06b8e58b91eb
+  languageName: node
+  linkType: hard
+
+"@sentry/utils@npm:6.3.5":
+  version: 6.3.5
+  resolution: "@sentry/utils@npm:6.3.5"
+  dependencies:
+    "@sentry/types": 6.3.5
+    tslib: ^1.9.3
+  checksum: 8e7b588525cf0ae52f44943012d362bf185060eea6d50d63d453fc4dd5876870c7a7c22e497416a695d6d0bdda9c6ab54838665d4aeac484db73e1a4e749e73e
+  languageName: node
+  linkType: hard
+
+"@sentry/vue@npm:6.3.5":
+  version: 6.3.5
+  resolution: "@sentry/vue@npm:6.3.5"
+  dependencies:
+    "@sentry/browser": 6.3.5
+    "@sentry/core": 6.3.5
+    "@sentry/minimal": 6.3.5
+    "@sentry/types": 6.3.5
+    "@sentry/utils": 6.3.5
+    tslib: ^1.9.3
+  peerDependencies:
+    vue: 2.x
+    vue-router: 3.x
+  checksum: 1d5e22c8e1d95aa81ce7fdebb5e2b571dfc71571bdbc5d1eb14a9c163ffc9d8deefe5012c27f415bb59393845cc15d3fe6919a63d5b6e874e46e9b37f93d7c31
   languageName: node
   linkType: hard
 
@@ -3111,6 +3231,13 @@ __metadata:
   dependencies:
     safe-buffer: ~5.1.1
   checksum: bcd2e3ea7d37f96b85a6e362c8a89402ccc73757256e3ee53aa2c22fe915adb854c66b1f81111be815a3a6a6ce3c58e8001858e883c9d5b4fe08a853fa865967
+  languageName: node
+  linkType: hard
+
+"cookie@npm:^0.4.1":
+  version: 0.4.1
+  resolution: "cookie@npm:0.4.1"
+  checksum: bd7c47f5d94ab70ccdfe8210cde7d725880d2fcda06d8e375afbdd82de0c8d3b73541996e9ce57d35f67f672c4ee6d60208adec06b3c5fc94cebb85196084cf8
   languageName: node
   linkType: hard
 
@@ -5270,6 +5397,10 @@ fsevents@~2.3.1:
   resolution: "isthepatchout@workspace:."
   dependencies:
     "@beequeue/eslint-plugin": 0.1.3
+    "@hapi/boom": 9.1.2
+    "@sentry/node": 6.3.5
+    "@sentry/tracing": 6.3.5
+    "@sentry/vue": 6.3.5
     "@supabase/supabase-js": 1.11.9
     "@types/node": 14.14.42
     "@types/pino": 6.3.8
@@ -5877,6 +6008,13 @@ fsevents@~2.3.1:
   dependencies:
     yallist: ^4.0.0
   checksum: f97f499f898f23e4585742138a22f22526254fdba6d75d41a1c2526b3b6cc5747ef59c5612ba7375f42aca4f8461950e925ba08c991ead0651b4918b7c978297
+  languageName: node
+  linkType: hard
+
+"lru_map@npm:^0.3.3":
+  version: 0.3.3
+  resolution: "lru_map@npm:0.3.3"
+  checksum: ca9dd43c65ed7a4f117c548028101c5b6855e10923ea9d1f635af53ad20c5868ff428c364d454a7b57fe391b89c704982275410c3c5099cca5aeee00d76e169a
   languageName: node
   linkType: hard
 
@@ -8448,7 +8586,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"tslib@npm:^1.8.1, tslib@npm:^1.9.0":
+"tslib@npm:^1.8.1, tslib@npm:^1.9.0, tslib@npm:^1.9.3":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: dbe628ef87f66691d5d2959b3e41b9ca0045c3ee3c7c7b906cc1e328b39f199bb1ad9e671c39025bd56122ac57dfbf7385a94843b1cc07c60a4db74795829acd

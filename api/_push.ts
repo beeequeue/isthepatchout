@@ -3,6 +3,7 @@ import * as WebPush from "web-push"
 import { Patch, PushEventPatch, PushSubscription } from "../src/types"
 
 import { Logger } from "./_logger"
+import { startTask } from "./_sentry"
 import { handleSendErrors, supabase } from "./_supabase"
 
 WebPush.setGCMAPIKey(process.env.GCM_API_KEY as string)
@@ -13,6 +14,8 @@ WebPush.setVapidDetails(
 )
 
 export const sendNotification = async (patch: Patch) => {
+  const sendingTask = startTask("sendNotifications")
+
   const { data } = await supabase
     .from<PushSubscription>("subscriptions")
     .select()
@@ -43,10 +46,16 @@ export const sendNotification = async (patch: Patch) => {
     (result): result is PromiseRejectedResult => result.status === "rejected",
   )
 
+  sendingTask.finish()
+
+  const handlingTask = startTask("handleNotificationErrors")
+
   Logger.info(
     `Tried to send ${results.length} notifications. (OK: ${successful.length}, FAIL: ${failed.length})`,
   )
   if (failed.length > 0) {
     await handleSendErrors(failed.map((result) => result.reason))
   }
+
+  handlingTask.finish()
 }

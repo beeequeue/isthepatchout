@@ -1,6 +1,7 @@
-import type { VercelRequest, VercelResponse } from "@vercel/node"
+import { forbidden, internal } from "@hapi/boom"
 
 import { getPatchList } from "./_dota"
+import { CustomHandler, sentryWrapper } from "./_sentry"
 import {
   formatPatchData,
   insertUpcomingPatches,
@@ -32,16 +33,16 @@ const checkAndUpdatePatches = async () => {
  * If a new patch is released, we update it with `released: true`, new links,
  * and add new patches to check in the future.
  */
-export default async (request: VercelRequest, response: VercelResponse) => {
+const handler: CustomHandler = async (request) => {
   if (CHECK_TOKEN == null || request.headers.authorization !== `Bearer ${CHECK_TOKEN}`) {
-    return response.status(403).json({ ok: false, message: "Forbidden" })
+    return forbidden()
   }
 
   try {
     await checkAndUpdatePatches()
   } catch (err) {
-    return response.status(500).json({ ok: false, message: err.message })
+    return internal(err.message, err)
   }
-
-  response.status(200).json({ ok: true })
 }
+
+export default sentryWrapper("/check", handler)
