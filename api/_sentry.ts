@@ -1,3 +1,4 @@
+import { Boom, internal, isBoom } from "@hapi/boom"
 import {
   captureException,
   flush,
@@ -13,6 +14,11 @@ import type { VercelRequest, VercelResponse } from "@vercel/node"
 import "@sentry/tracing"
 
 type Handler = (request: VercelRequest, response: VercelResponse) => Promise<void> | void
+type CustomResponse = Record<string, unknown> & { message?: string; statusCode?: number }
+type CustomHandlerResponse = undefined | CustomResponse | Boom<null>
+export type CustomHandler = (
+  request: VercelRequest,
+) => Promise<CustomHandlerResponse> | CustomHandlerResponse
 
 init({
   debug: true,
@@ -26,19 +32,21 @@ init({
 
 setTag("app", "api")
 
-export const sentryWrapper = (path: string, handler: Handler): Handler => async (
+export const sentryWrapper = (path: string, handler: CustomHandler): Handler => async (
   req,
   res,
 ) => {
+  let response: NonNullable<CustomHandlerResponse>
+
   const trx = startTransaction({
     name: path,
     op: "transaction",
   })
 
   try {
-    await handler(req, res)
+    response = (await handler(req)) ?? {}
   } catch (error) {
-    res.status(500).send({ ok: false, message: error?.message })
+    response = internal(error.message)
 
     setContext("response", {
       status: res.statusCode,
@@ -49,9 +57,24 @@ export const sentryWrapper = (path: string, handler: Handler): Handler => async 
 
   trx.finish()
 
-  await flush(5000)
+  await flush(1000)
 
-  console.log("3", new Date().toISOString())
+  if (!isBoom(response)) {
+    response.statusCode ??= 200
+
+    res.status(response.statusCode).json({
+      ...response,
+      ok: true,
+    })
+  } else {
+    const { payload, statusCode, headers } = response.output
+
+    for (const [key, value] of Object.entries(headers)) {
+      res.setHeader(key, value!)
+    }
+
+    res.status(statusCode).json({ ...payload, ok: false })
+  }
 }
 
 export const startTask = (name: string) => {
