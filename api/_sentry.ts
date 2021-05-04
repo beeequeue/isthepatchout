@@ -12,11 +12,18 @@ import "@sentry/tracing"
 
 type Handler = (request: VercelRequest, response: VercelResponse) => Promise<void> | void
 
+console.log(
+  Object.entries(process.env).filter(
+    ([key]) => key.includes("VERCEL") || key.includes("VITE") || key.includes("SENTRY"),
+  ),
+)
 init({
+  debug: true,
   enabled: process.env.VERCEL_ENV !== "development" && !!process.env.VITE_SENTRY_DSN,
   dsn: process.env.VITE_SENTRY_DSN,
   environment: process.env.VERCEL_ENV as string,
   integrations: [new Integrations.Http({ tracing: true })],
+  sampleRate: 1.0,
   tracesSampleRate: 1.0,
 })
 

@@ -10,12 +10,17 @@ import "modern-normalize"
 const app = createApp(App)
 
 init({
-  enabled: import.meta.env.PROD && !!import.meta.env.VITE_SENTRY_DSN,
+  debug: true,
+  enabled:
+    import.meta.env.VITE_VERCEL_ENV !== "development" &&
+    !!import.meta.env.VITE_SENTRY_DSN,
   dsn: import.meta.env.VITE_SENTRY_DSN as string | undefined,
-  environment: import.meta.env.VITE_VERCEL_MODE as string,
+  environment: import.meta.env.VITE_VERCEL_ENV as string,
 })
 
 app.config.errorHandler = (error, _, info) => {
+  if (import.meta.env.VITE_VERCEL_ENV !== "production") console.error(error)
+
   setTag("info", info)
   captureException(error)
 }
