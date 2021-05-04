@@ -5,10 +5,15 @@ import { VitePWA } from "vite-plugin-pwa"
 
 config()
 
+const s = JSON.stringify
+
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
     sourcemap: true,
+  },
+  define: {
+    "import.meta.env.VERCEL_GIT_COMMIT_SHA": s(process.env.VERCEL_GIT_COMMIT_SHA),
   },
   plugins: [
     vue(),

@@ -15,8 +15,12 @@ init({
     import.meta.env.VITE_VERCEL_ENV !== "development" &&
     !!import.meta.env.VITE_SENTRY_DSN,
   dsn: import.meta.env.VITE_SENTRY_DSN as string | undefined,
+  release: import.meta.env.VERCEL_GIT_COMMIT_SHA as string | undefined,
   environment: import.meta.env.VITE_VERCEL_ENV as string,
+  Vue: app as any,
 })
+
+setTag("app", "ui")
 
 app.config.errorHandler = (error, _, info) => {
   if (import.meta.env.VITE_VERCEL_ENV !== "production") console.error(error)
