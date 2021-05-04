@@ -1,4 +1,7 @@
 {
+  "ci": {
+    "trackBranches": ["main"]
+  },
   "files": [
     {
       "path": "./dist/**/*.js",
