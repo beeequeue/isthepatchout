@@ -66,6 +66,8 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
 
+      - run: yarn typecheck
+
       - run: yarn build
 
       - run: yarn bundlewatch

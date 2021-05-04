@@ -34,15 +34,15 @@ export const sentryWrapper = (path: string, handler: Handler): Handler => async 
     await handler(req, res)
   } catch (foundError) {
     error = foundError
-    res.status(500).send({ ok: false, message: error.message })
+    res.status(500).send({ ok: false, message: error?.message })
   }
 
   setContext("response", {
     status: res.statusCode,
   })
 
-  if (error) {
-    captureException(error)
+  if (res.statusCode >= 500) {
+    captureException(error ? error : new Error(`Returned a ${res.statusCode} response`))
   }
 
   trx.finish()
