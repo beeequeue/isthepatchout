@@ -5,11 +5,11 @@
   "files": [
     {
       "path": "./dist/**/*.js",
-      "maxSize": "25kb"
+      "maxSize": "6kb"
     },
     {
       "path": "./dist/**/*vendor*.js",
-      "maxSize": "37kb"
+      "maxSize": "60kb"
     }
   ]
 }
