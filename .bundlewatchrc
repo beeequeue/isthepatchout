@@ -5,7 +5,7 @@
   "files": [
     {
       "path": "./dist/**/*.js",
-      "maxSize": "6kb"
+      "maxSize": "25kb"
     },
     {
       "path": "./dist/**/*vendor*.js",

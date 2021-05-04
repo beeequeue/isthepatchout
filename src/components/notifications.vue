@@ -33,6 +33,7 @@ const {
 const handleChange = () => {
   throw new Error("Test error #1")
 
+  // eslint-disable-next-line no-unreachable
   if (subscribed.value) {
     return unsubscribe()
   }
