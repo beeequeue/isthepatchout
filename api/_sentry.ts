@@ -11,6 +11,8 @@ import {
 } from "@sentry/node"
 import type { VercelRequest, VercelResponse } from "@vercel/node"
 
+import { Logger } from "./_logger"
+
 import "@sentry/tracing"
 
 type Handler = (request: VercelRequest, response: VercelResponse) => Promise<void> | void
@@ -35,6 +37,7 @@ export const sentryWrapper = (path: string, handler: CustomHandler): Handler => 
   req,
   res,
 ) => {
+  Logger.debug(`${req.method as string} ${path}`)
   let response: NonNullable<CustomHandlerResponse>
 
   const trx = startTransaction({
@@ -51,6 +54,7 @@ export const sentryWrapper = (path: string, handler: CustomHandler): Handler => 
       status: res.statusCode,
     })
 
+    Logger.error(error)
     captureException(error)
   }
 
@@ -60,19 +64,23 @@ export const sentryWrapper = (path: string, handler: CustomHandler): Handler => 
 
   if (!isBoom(response)) {
     response.statusCode ??= 200
-
-    res.status(response.statusCode).json({
+    const body = {
       ...response,
       ok: true,
-    })
+    }
+
+    Logger.debug(body)
+    res.status(response.statusCode).json(body)
   } else {
     const { payload, statusCode, headers } = response.output
+    const body = { ...payload, ok: false }
 
     for (const [key, value] of Object.entries(headers)) {
       res.setHeader(key, value!)
     }
 
-    res.status(statusCode).json({ ...payload, ok: false })
+    Logger.debug(body)
+    res.status(statusCode).json(body)
   }
 }
 

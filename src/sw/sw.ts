@@ -1,6 +1,6 @@
 import { precacheAndRoute } from "workbox-precaching"
 
-import { init, captureException } from "@sentry/vue"
+import { captureException, init, setTag } from "@sentry/vue"
 
 import type { PushEventPatch } from "../types"
 
@@ -10,6 +10,8 @@ init({
   release: import.meta.env.VERCEL_GIT_COMMIT_SHA as string | undefined,
   environment: import.meta.env.VERCEL_ENV as string,
 })
+
+setTag("app", "service-worker")
 
 enum NotificationAction {
   ViewReleaseNotes = "view-release-notes",
