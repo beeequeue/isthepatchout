@@ -5,7 +5,6 @@ import { init, captureException } from "@sentry/vue"
 import type { PushEventPatch } from "../types"
 
 init({
-  debug: true,
   enabled: import.meta.env.VERCEL_ENV !== "development" && !!import.meta.env.SENTRY_DSN,
   dsn: import.meta.env.SENTRY_DSN as string | undefined,
   release: import.meta.env.VERCEL_GIT_COMMIT_SHA as string | undefined,

@@ -21,7 +21,6 @@ export type CustomHandler = (
 ) => Promise<CustomHandlerResponse> | CustomHandlerResponse
 
 init({
-  debug: true,
   enabled: process.env.VERCEL_ENV !== "development" && !!process.env.SENTRY_DSN,
   release: process.env.VERCEL_GIT_COMMIT_SHA,
   dsn: process.env.SENTRY_DSN,
