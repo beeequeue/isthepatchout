@@ -37,7 +37,6 @@ export const sentryWrapper = (path: string, handler: CustomHandler): Handler => 
   req,
   res,
 ) => {
-  Logger.debug(`${req.method as string} ${path}`)
   let response: NonNullable<CustomHandlerResponse>
 
   const trx = startTransaction({
@@ -69,7 +68,13 @@ export const sentryWrapper = (path: string, handler: CustomHandler): Handler => 
       ok: true,
     }
 
-    Logger.debug(body)
+    Logger.debug(
+      `${req.method as string} ${path} ${res.statusCode}\n${JSON.stringify(
+        body,
+        null,
+        2,
+      )}`,
+    )
     res.status(response.statusCode).json(body)
   } else {
     const { payload, statusCode, headers } = response.output
@@ -79,7 +84,13 @@ export const sentryWrapper = (path: string, handler: CustomHandler): Handler => 
       res.setHeader(key, value!)
     }
 
-    Logger.debug(body)
+    Logger.debug(
+      `${req.method as string} ${path} ${res.statusCode}\n${JSON.stringify(
+        body,
+        null,
+        2,
+      )}`,
+    )
     res.status(statusCode).json(body)
   }
 }
