@@ -1,5 +1,6 @@
 import { ref, watch } from "vue"
 
+import { captureException } from "@sentry/vue"
 import { useLocalStorage } from "@vueuse/core"
 
 import { LocalStorageKey } from "../constants"
@@ -59,7 +60,7 @@ const unsubscribe = async () => {
   )
 
   if (!response.ok) {
-    console.error("Could not register unsubscription with db")
+    captureException("Could not register unsubscription with db")
   }
 }
 

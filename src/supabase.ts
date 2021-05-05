@@ -1,5 +1,6 @@
 import { computed, onUnmounted, ref } from "vue"
 
+import { captureException } from "@sentry/vue"
 import { SupabaseClient, SupabaseRealtimePayload } from "@supabase/supabase-js"
 
 import { Patch } from "./types"
@@ -29,7 +30,8 @@ export const useUnreleasedPatches = () => {
     .order("number", { ascending: false })
     .then((result) => {
       if (result.error != null) {
-        console.error(result.error)
+        captureException(result.error)
+
         error.value = result.error
         data.value = []
       } else {
@@ -84,7 +86,8 @@ export const useLastReleasedPatch = () => {
     .single()
     .then((result) => {
       if (result.error != null) {
-        console.error(result.error)
+        captureException(result.error)
+
         error.value = result.error
         data.value = null
       } else {

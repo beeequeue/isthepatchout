@@ -1,14 +1,22 @@
 import { precacheAndRoute } from "workbox-precaching"
 
+import { init, captureException } from "@sentry/vue"
+
 import type { PushEventPatch } from "../types"
+
+init({
+  debug: true,
+  enabled: import.meta.env.VERCEL_ENV !== "development" && !!import.meta.env.SENTRY_DSN,
+  dsn: import.meta.env.SENTRY_DSN as string | undefined,
+  release: import.meta.env.VERCEL_GIT_COMMIT_SHA as string | undefined,
+  environment: import.meta.env.VERCEL_ENV as string,
+})
 
 enum NotificationAction {
   ViewReleaseNotes = "view-release-notes",
 }
 
-self.addEventListener("error", function (e) {
-  console.error(e.filename, e.lineno, e.colno, e.message)
-})
+self.addEventListener("error", captureException)
 
 self.addEventListener("push" as any, (e: PushEvent) => {
   if (e.data == null) {
