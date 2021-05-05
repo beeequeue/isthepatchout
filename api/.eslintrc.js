@@ -1,3 +1,5 @@
+const { join } = require("path")
+
 module.exports = {
   env: {
     es2021: true,
@@ -10,7 +12,7 @@ module.exports = {
     "plugin:@beequeue/prettier",
   ],
   parserOptions: {
-    project: "api/tsconfig.json",
+    project: join(__dirname, "tsconfig.json"),
   },
   rules: {
     "@typescript-eslint/no-non-null-assertion": "off",
