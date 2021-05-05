@@ -111,7 +111,7 @@ export const upsertSubscription = async ({
       p256dh,
       environment: process.env.VERCEL_ENV,
     },
-    { onConflict: "entrypoint" },
+    { onConflict: "endpoint" },
   )
 
   if (error) {
