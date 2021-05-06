@@ -8,6 +8,10 @@
       "maxSize": "6kb"
     },
     {
+      "path": "./dist/sw.js",
+      "maxSize": "30kb"
+    },
+    {
       "path": "./dist/**/*vendor*.js",
       "maxSize": "60kb"
     }
