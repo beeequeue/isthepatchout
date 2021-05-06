@@ -29,7 +29,7 @@
     "@sentry/vue": "6.3.5",
     "@supabase/supabase-js": "1.11.10",
     "@vueuse/core": "4.9.1",
-    "date-fns": "2.21.1",
+    "date-fns": "2.21.2",
     "fathom-client": "3.0.0",
     "modern-normalize": "1.1.0",
     "vue": "3.0.11",
