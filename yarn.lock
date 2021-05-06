@@ -3607,10 +3607,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dotenv@npm:8.5.1":
-  version: 8.5.1
-  resolution: "dotenv@npm:8.5.1"
-  checksum: d9de0e6b0592b83d02fddb8152f84dc0ae5a46bd150f57e30510838f8a7511f887fe8705c0e291126b8c6ee049f66926a056acb1f9c9ef78bd6a5062cbd79c14
+"dotenv@npm:9.0.0":
+  version: 9.0.0
+  resolution: "dotenv@npm:9.0.0"
+  checksum: e7fd61a6393c2abd47d97a767556d949f78fd50a2811fb6f63c0427695f135881e3603956c0abe6330c1a1a6996ea4c992a5a86dd95d4edd70189c792e331c9f
   languageName: node
   linkType: hard
 
@@ -5412,7 +5412,7 @@ fsevents@~2.3.1:
     bottleneck: 2.19.5
     bundlewatch: 0.3.2
     date-fns: 2.21.1
-    dotenv: 8.5.1
+    dotenv: 9.0.0
     eslint: 7.25.0
     fathom-client: 3.0.0
     got: 11.8.2
