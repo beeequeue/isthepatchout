@@ -3365,10 +3365,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:2.21.2":
-  version: 2.21.2
-  resolution: "date-fns@npm:2.21.2"
-  checksum: 7e5a25c4a9f141fb393bcdb46cb75b6bc1eebbae0bb68ce93bcb052af26aa170e8b29d5699db27be89c885a4eafa395be7ad9756558f6a115544fbb59db84f32
+"date-fns@npm:2.21.3":
+  version: 2.21.3
+  resolution: "date-fns@npm:2.21.3"
+  checksum: 00dc783af23ab1ca686ea9a21acd9572733ca9544c40a26e3061fc190bb0663c638c88f35d7719553279ad08c787eae816eaa0043d141563efc8394235f6c857
   languageName: node
   linkType: hard
 
@@ -5418,7 +5418,7 @@ fsevents@~2.3.1:
     "@vueuse/core": 4.9.2
     bottleneck: 2.19.5
     bundlewatch: 0.3.2
-    date-fns: 2.21.2
+    date-fns: 2.21.3
     dotenv: 9.0.0
     eslint: 7.26.0
     fathom-client: 3.0.0
