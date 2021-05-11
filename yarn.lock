@@ -3813,12 +3813,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.9.3":
-  version: 0.9.7
-  resolution: "esbuild@npm:0.9.7"
+"esbuild@npm:^0.11.19":
+  version: 0.11.20
+  resolution: "esbuild@npm:0.11.20"
   bin:
     esbuild: bin/esbuild
-  checksum: fc2a33e46cf66747f9a4416a03ecd39adc353516b6972086d2633040221c9bb4d01cde409f6396d223517ac6fe73bbeea16b79109fcb283d0ed13e7ae7f04d42
+  checksum: 46939f425f6378b2a487ec497cd0656e0b05169dc52a24485dd7ad769a806a162c8efd048547727c9d6d21c4d7df95f4b128d2fae37fb322ead02913dc9a9e1c
   languageName: node
   linkType: hard
 
@@ -5433,7 +5433,7 @@ fsevents@~2.3.1:
     prettier: 2.2.1
     simple-git-hooks: 2.4.1
     typescript: 4.2.4
-    vite: 2.2.4
+    vite: 2.3.0
     vite-plugin-pwa: 0.7.3
     vue: 3.0.11
     vue-tsc: 0.1.2
@@ -9161,11 +9161,11 @@ typescript@4.2.4:
   languageName: node
   linkType: hard
 
-"vite@npm:2.2.4":
-  version: 2.2.4
-  resolution: "vite@npm:2.2.4"
+"vite@npm:2.3.0":
+  version: 2.3.0
+  resolution: "vite@npm:2.3.0"
   dependencies:
-    esbuild: ^0.9.3
+    esbuild: ^0.11.19
     fsevents: ~2.3.1
     postcss: ^8.2.1
     resolve: ^1.19.0
@@ -9175,7 +9175,7 @@ typescript@4.2.4:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 06b5bfadfcc1a9d87c1da427082143e05f5d05b06a5c9d9506a71740aca8faf148376884fe5d67af2dd8fd89c1ac825861bb58502f0d2b1512013c83c731ef26
+  checksum: b7787cca20ec7c186c03246aedbfad1392f4c422e024d8b1b16455851fb7c5113ca89d161a534bec5b7ed9df89454de6535b533ff9c8f483e8af5332e30fe68c
   languageName: node
   linkType: hard
 
