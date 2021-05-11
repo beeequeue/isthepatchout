@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@sentry/vue": "6.3.5",
-    "@supabase/supabase-js": "1.11.10",
+    "@supabase/supabase-js": "1.11.11",
     "@vueuse/core": "4.9.2",
     "date-fns": "2.21.3",
     "fathom-client": "3.0.0",
