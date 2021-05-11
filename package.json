@@ -55,7 +55,7 @@
     "lint-staged": "11.0.0",
     "openapi-typescript": "3.2.3",
     "pino": "6.11.3",
-    "pino-pretty": "4.7.1",
+    "pino-pretty": "4.8.0",
     "postcss-nesting": "8.0.1",
     "prettier": "2.2.1",
     "simple-git-hooks": "2.4.1",

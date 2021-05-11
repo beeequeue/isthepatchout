@@ -5428,7 +5428,7 @@ fsevents@~2.3.1:
     modern-normalize: 1.1.0
     openapi-typescript: 3.2.3
     pino: 6.11.3
-    pino-pretty: 4.7.1
+    pino-pretty: 4.8.0
     postcss-nesting: 8.0.1
     prettier: 2.2.1
     simple-git-hooks: 2.4.1
@@ -6888,9 +6888,9 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"pino-pretty@npm:4.7.1":
-  version: 4.7.1
-  resolution: "pino-pretty@npm:4.7.1"
+"pino-pretty@npm:4.8.0":
+  version: 4.8.0
+  resolution: "pino-pretty@npm:4.8.0"
   dependencies:
     "@hapi/bourne": ^2.0.0
     args: ^5.0.1
@@ -6901,11 +6901,12 @@ fsevents@~2.3.1:
     joycon: ^2.2.5
     pump: ^3.0.0
     readable-stream: ^3.6.0
+    rfdc: ^1.3.0
     split2: ^3.1.1
     strip-json-comments: ^3.1.1
   bin:
     pino-pretty: bin.js
-  checksum: d5d49cd94f20695b8accb48a6c4701a9071cd8cb45d9b97fd9ea46b3612f75ecc8ce792d97127f5c73148028720c231611887b9b2deaf5d8d9df74be7065ef91
+  checksum: 8e2e4cdb80c7f8b4df318f30415c98a09f952174a7dd9b0910041f995b8476fc177568e950ea3ce5967303c46356df37d13f822cff99c848e4177c957d3b1dad
   languageName: node
   linkType: hard
 
@@ -7727,6 +7728,13 @@ fsevents@~2.3.1:
   version: 1.0.4
   resolution: "reusify@npm:1.0.4"
   checksum: c3076ebcc22a6bc252cb0b9c77561795256c22b757f40c0d8110b1300723f15ec0fc8685e8d4ea6d7666f36c79ccc793b1939c748bf36f18f542744a4e379fcc
+  languageName: node
+  linkType: hard
+
+"rfdc@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "rfdc@npm:1.3.0"
+  checksum: fb2ba8512e43519983b4c61bd3fa77c0f410eff6bae68b08614437bc3f35f91362215f7b4a73cbda6f67330b5746ce07db5dd9850ad3edc91271ad6deea0df32
   languageName: node
   linkType: hard
 
