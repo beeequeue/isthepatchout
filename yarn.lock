@@ -1713,21 +1713,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/gotrue-js@npm:^1.15.0":
-  version: 1.15.0
-  resolution: "@supabase/gotrue-js@npm:1.15.0"
+"@supabase/gotrue-js@npm:^1.15.1":
+  version: 1.15.1
+  resolution: "@supabase/gotrue-js@npm:1.15.1"
   dependencies:
     cross-fetch: ^3.0.6
-  checksum: 612571b397475ea76641fe561f0d48320b3498934f9320e4ac4bb01eb9b3236e279e64addd8dd49134321079ad66d4455f25b47468d9384393e028e902be2add
+  checksum: 6d0a4426fc095e26c95e7eaa9520eb2340b24a12c7f3e1f87b20e2acb3690823d6955e4f73a21c6006555370201b5b695d1b4707f7df1dda54d75af6d0f53500
   languageName: node
   linkType: hard
 
-"@supabase/postgrest-js@npm:^0.28.2":
-  version: 0.28.2
-  resolution: "@supabase/postgrest-js@npm:0.28.2"
+"@supabase/postgrest-js@npm:^0.28.3":
+  version: 0.28.3
+  resolution: "@supabase/postgrest-js@npm:0.28.3"
   dependencies:
     cross-fetch: ^3.0.6
-  checksum: a9cb2e3168fc6f6ee9d938c14afd84230bf3d4a81148f7e8970811499ded28d470b7c2463b30f37e9005a9dc181c9ba764091d502f35067057dad26a7783d25d
+  checksum: a8a72a2cc0ceedb108349af2043aab87bc9ef605e836828e821a56832abb43ce678ac9a3124170c080b200b0c3dcac0f2082f1a415f2439cf246bdd3a0ea3323
   languageName: node
   linkType: hard
 
@@ -1750,15 +1750,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/supabase-js@npm:1.11.11":
-  version: 1.11.11
-  resolution: "@supabase/supabase-js@npm:1.11.11"
+"@supabase/supabase-js@npm:1.11.13":
+  version: 1.11.13
+  resolution: "@supabase/supabase-js@npm:1.11.13"
   dependencies:
-    "@supabase/gotrue-js": ^1.15.0
-    "@supabase/postgrest-js": ^0.28.2
+    "@supabase/gotrue-js": ^1.15.1
+    "@supabase/postgrest-js": ^0.28.3
     "@supabase/realtime-js": ^1.0.9
     "@supabase/storage-js": ^1.0.2
-  checksum: 1d96b3c132d66108310aa9d58b2c7f8b70a1ad4c3f66debc17c1d9e4efb12112c7f7baf111c5b86af9360aae0a4cb1b60d575515804c21f0d621f1838d1ae31c
+  checksum: 2aed56fd38759a7fb39ee1b16ab9e7921053a58cc04d39eb588322c00571a1e4af6d4a070806ff54d7c559cd2289b490fcb7dcaaf18e0672fc12caf826cd7977
   languageName: node
   linkType: hard
 
@@ -5408,7 +5408,7 @@ fsevents@~2.3.1:
     "@sentry/node": 6.3.6
     "@sentry/tracing": 6.3.6
     "@sentry/vue": 6.3.6
-    "@supabase/supabase-js": 1.11.11
+    "@supabase/supabase-js": 1.11.13
     "@types/node": 14.14.44
     "@types/pino": 6.3.8
     "@types/web-push": 3.3.0
