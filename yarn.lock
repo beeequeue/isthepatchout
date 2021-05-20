@@ -1853,10 +1853,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:14.14.44":
-  version: 14.14.44
-  resolution: "@types/node@npm:14.14.44"
-  checksum: a6e9d60b5a9069bdf6f43dcad92b635b02572daeb69d4649871c59a34b5267dcc6612f01f20934365efd8d86ebd1639f8ca9e0a3fb34ce1850ca7f3325d6ecec
+"@types/node@npm:*, @types/node@npm:14.17.0":
+  version: 14.17.0
+  resolution: "@types/node@npm:14.17.0"
+  checksum: 8e718402537fdfb11a3e59d43d8b0fe46112b1a4799f0d348c01030fc83c0d7c820fd8afa2db1dbe51674b9460a048d111b9caf71bb99342bd32db653effbe94
   languageName: node
   linkType: hard
 
@@ -5409,7 +5409,7 @@ fsevents@~2.3.1:
     "@sentry/tracing": 6.4.1
     "@sentry/vue": 6.4.1
     "@supabase/supabase-js": 1.11.13
-    "@types/node": 14.14.44
+    "@types/node": 14.17.0
     "@types/pino": 6.3.8
     "@types/web-push": 3.3.0
     "@vercel/node": 1.10.0
