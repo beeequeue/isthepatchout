@@ -3,7 +3,7 @@ import { createApp } from "vue"
 
 import { captureException, init, setTag } from "@sentry/vue"
 
-import App from "./App.vue"
+import App from "./app.vue"
 
 import "modern-normalize"
 

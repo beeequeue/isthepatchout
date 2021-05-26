@@ -9,7 +9,7 @@ import { DotaVersion } from "./_dota"
 import { Logger } from "./_logger"
 import { UpdateSubscriptionInput } from "./subscription"
 
-const { SUPABASE_SERVICE_KEY, VITE_SUPABASE_URL } = process.env
+const { SUPABASE_SERVICE_KEY, VERCEL_ENV, VITE_SUPABASE_URL } = process.env
 
 export const supabase = new SupabaseClient(
   VITE_SUPABASE_URL as string,
@@ -109,7 +109,7 @@ export const upsertSubscription = async ({
       endpoint,
       auth,
       p256dh,
-      environment: process.env.VERCEL_ENV,
+      environment: VERCEL_ENV,
     },
     { onConflict: "endpoint" },
   )
@@ -145,7 +145,7 @@ export const handleSendErrors = async (errors: WebPushError[]) => {
       expired.map((error) => error.endpoint),
     )
 
-  if (rest.length) {
+  if (rest.length > 0) {
     Logger.error(rest)
   }
 }

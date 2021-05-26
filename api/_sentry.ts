@@ -28,7 +28,7 @@ init({
   dsn: process.env.SENTRY_DSN,
   environment: process.env.VERCEL_ENV as string,
   integrations: [new Integrations.Http({ tracing: true })],
-  tracesSampleRate: 1.0,
+  tracesSampleRate: 1,
 })
 
 setTag("app", "api")

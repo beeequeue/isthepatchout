@@ -27,15 +27,15 @@ export type PatchNoteListData = {
 }
 /* eslint-enable @typescript-eslint/naming-convention */
 
+const request = () =>
+  http.get<PatchNoteListData>("patchnoteslist", {
+    headers: { Host: "www.dota2.com" },
+    responseType: "json",
+    retry: 3,
+  })
+
 export const getPatchList = async () => {
   Logger.info("Fetching patch list...")
-
-  const request = () =>
-    http.get<PatchNoteListData>("patchnoteslist", {
-      headers: { Host: "www.dota2.com" },
-      responseType: "json",
-      retry: 3,
-    })
 
   const response = await dotaApiScheduler.schedule(request)
 
@@ -100,7 +100,7 @@ export class DotaVersion {
   }
 
   toNumber() {
-    return this.major * 10000 + this.minor * 100 + this.patch
+    return this.major * 10_000 + this.minor * 100 + this.patch
   }
 
   toString() {
