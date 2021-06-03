@@ -22,8 +22,7 @@
     "postinstall": "simple-git-hooks",
     "serve": "vite preview",
     "start": "vite",
-    "typecheck": "tsc --project api/tsconfig.json && vue-tsc --project tsconfig.json",
-    "typegen": "openapi-typescript --output src/generated.ts \"https://kyxgnkqidepgglspsihc.supabase.co/rest/v1/?apikey=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYxNzk4NzU1MiwiZXhwIjoxOTMzNTYzNTUyfQ.WKriKsWCVyoZyH7tRjJuFiPartTnRvaiS-1f_moc8CY\" && prettier --write src/generated.ts"
+    "typecheck": "tsc --project api/tsconfig.json && vue-tsc --project tsconfig.json"
   },
   "dependencies": {
     "@sentry/vue": "6.4.1",
@@ -53,7 +52,6 @@
     "got": "11.8.2",
     "joi": "17.4.0",
     "lint-staged": "11.0.0",
-    "openapi-typescript": "3.2.3",
     "pino": "6.11.3",
     "pino-pretty": "4.8.0",
     "postcss-nesting": "8.0.1",
