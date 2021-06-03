@@ -1,0 +1,24 @@
+html,
+body,
+#app {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+@layer base {
+  @font-face {
+    font-family: "Radiance";
+    src: url("fonts/Radiance-SemiBold.woff2") format("woff2"), url("fonts/Radiance-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif;
+  }
+}

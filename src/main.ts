@@ -5,7 +5,9 @@ import { captureException, init, setTag } from "@sentry/vue"
 
 import App from "./app.vue"
 
-import "modern-normalize"
+import "virtual:windi.css"
+import "virtual:windi-devtools"
+import "./base.pcss"
 
 const app = createApp(App)
 
