@@ -7,7 +7,7 @@ import App from "./app.vue"
 
 import "virtual:windi.css"
 import "virtual:windi-devtools"
-import "./base.pcss"
+import "./base.css"
 
 const app = createApp(App)
 
