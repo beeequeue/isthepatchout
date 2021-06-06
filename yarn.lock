@@ -5,6 +5,13 @@ __metadata:
   version: 4
   cacheKey: 8
 
+"@antfu/utils@npm:^0.1.6":
+  version: 0.1.6
+  resolution: "@antfu/utils@npm:0.1.6"
+  checksum: 596083fc101e5027384de6a0d5ac514d92315498b0a7bccccc9d4d6bf36838d5dbbf41734ae25026c2248cdde816bbd39d04d3f2bc336106176f38a4d717bd88
+  languageName: node
+  linkType: hard
+
 "@babel/code-frame@npm:7.12.11":
   version: 7.12.11
   resolution: "@babel/code-frame@npm:7.12.11"
@@ -2264,18 +2271,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@windicss/plugin-utils@npm:0.15.10":
-  version: 0.15.10
-  resolution: "@windicss/plugin-utils@npm:0.15.10"
+"@windicss/plugin-utils@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@windicss/plugin-utils@npm:1.0.1"
   dependencies:
+    "@antfu/utils": ^0.1.6
     debug: ^4.3.2
     fast-glob: ^3.2.5
+    jiti: ^1.10.1
     magic-string: ^0.25.7
     micromatch: ^4.0.4
-    pirates: ^4.0.1
-    sucrase: ^3.18.1
-    windicss: ^2.5.14
-  checksum: 9d15ee89c2465dfc2049f68fca35e75ceb0eb78aaa46a11d86b3dbdab3b42e36f0d0dd23b9131cf2b1d8d65b7ae925e1968498251f9a1504755cfc6db8f49fee
+    windicss: ^3.1.0
+  checksum: a954110beaeb8d51884ac160e3a775874fee734d81315f85376d68a47d080f56a0dd66690a30509f419e51a49abfbc66bbd95c87cfb8d81a33943f64e392c683
   languageName: node
   linkType: hard
 
@@ -2444,13 +2451,6 @@ __metadata:
   dependencies:
     color-convert: ^2.0.1
   checksum: 513b44c3b2105dd14cc42a19271e80f386466c4be574bccf60b627432f9198571ebf4ab1e4c3ba17347658f4ee1711c163d574248c0c1cdc2d5917a0ad582ec4
-  languageName: node
-  linkType: hard
-
-"any-promise@npm:^1.0.0":
-  version: 1.3.0
-  resolution: "any-promise@npm:1.3.0"
-  checksum: 0ee8a9bdbe882c90464d75d1f55cf027f5458650c4bd1f0467e65aec38ccccda07ca5844969ee77ed46d04e7dded3eaceb027e8d32f385688523fe305fa7e1de
   languageName: node
   linkType: hard
 
@@ -3229,13 +3229,6 @@ __metadata:
   version: 2.20.3
   resolution: "commander@npm:2.20.3"
   checksum: ab8c07884e42c3a8dbc5dd9592c606176c7eb5c1ca5ff274bcf907039b2c41de3626f684ea75ccf4d361ba004bbaff1f577d5384c155f3871e456bdf27becf9e
-  languageName: node
-  linkType: hard
-
-"commander@npm:^4.0.0":
-  version: 4.1.1
-  resolution: "commander@npm:4.1.1"
-  checksum: d7b9913ff92cae20cb577a4ac6fcc121bd6223319e54a40f51a14740a681ad5c574fd29a57da478a5f234a6fa6c52cbf0b7c641353e03c648b1ae85ba670b977
   languageName: node
   linkType: hard
 
@@ -4760,20 +4753,6 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"glob@npm:7.1.6":
-  version: 7.1.6
-  resolution: "glob@npm:7.1.6"
-  dependencies:
-    fs.realpath: ^1.0.0
-    inflight: ^1.0.4
-    inherits: 2
-    minimatch: ^3.0.4
-    once: ^1.3.0
-    path-is-absolute: ^1.0.0
-  checksum: 351d549dd90553b87c2d3f90ce11aed9e1093c74130440e7ae0592e11bbcd2ce7f0ebb8ba6bfe63aaf9b62166a7f4c80cb84490ae5d78408bb2572bf7d4ee0a6
-  languageName: node
-  linkType: hard
-
 "glob@npm:^7.0.0, glob@npm:^7.0.3, glob@npm:^7.1.2, glob@npm:^7.1.3, glob@npm:^7.1.4, glob@npm:^7.1.6":
   version: 7.1.7
   resolution: "glob@npm:7.1.7"
@@ -5664,11 +5643,11 @@ fsevents@~2.3.1:
     typescript: 4.2.4
     vite: 2.3.3
     vite-plugin-pwa: 0.7.3
-    vite-plugin-windicss: 0.15.10
+    vite-plugin-windicss: 1.0.1
     vue: 3.0.11
     vue-tsc: 0.1.2
     web-push: 3.4.4
-    windicss: 3.0.9
+    windicss: 3.1.1
     workbox-precaching: 6.1.5
   languageName: unknown
   linkType: soft
@@ -5681,6 +5660,15 @@ fsevents@~2.3.1:
     merge-stream: ^2.0.0
     supports-color: ^7.0.0
   checksum: f9afa3b88e3f12027901e4964ba3ff048285b5783b5225cab28fac25b4058cea8ad54001e9a1577ee2bed125fac3ccf5c80dc507b120300cc1bbcb368796533e
+  languageName: node
+  linkType: hard
+
+"jiti@npm:^1.10.1":
+  version: 1.10.1
+  resolution: "jiti@npm:1.10.1"
+  bin:
+    jiti: bin/jiti.js
+  checksum: 8e96ecb87e2642639c06d753aa5c5fcb214cfb50ac3159eab200677c6f1a6401ef3a63f6898bdbc7c51dacc02d77d3b7eb32c93ea5c0aa3b4083e6035da6cc17
   languageName: node
   linkType: hard
 
@@ -6525,17 +6513,6 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"mz@npm:^2.7.0":
-  version: 2.7.0
-  resolution: "mz@npm:2.7.0"
-  dependencies:
-    any-promise: ^1.0.0
-    object-assign: ^4.0.1
-    thenify-all: ^1.0.0
-  checksum: 8427de0ece99a07e9faed3c0c6778820d7543e3776f9a84d22cf0ec0a8eb65f6e9aee9c9d353ff9a105ff62d33a9463c6ca638974cc652ee8140cd1e35951c87
-  languageName: node
-  linkType: hard
-
 "nanoid@npm:^3.1.23":
   version: 3.1.23
   resolution: "nanoid@npm:3.1.23"
@@ -6603,13 +6580,6 @@ fsevents@~2.3.1:
   bin:
     node-gyp: bin/node-gyp.js
   checksum: 4fbd99af8a0ac1e0c834a693392d23696e945e604ede111c528eb8d4761dfb22492dbd33c4e3730b8aab99a9f156e9e6418ce489f88cbbfc51e0e00eadd51bc8
-  languageName: node
-  linkType: hard
-
-"node-modules-regexp@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "node-modules-regexp@npm:1.0.0"
-  checksum: 99541903536c5ce552786f0fca7f06b88df595e62e423c21fa86a1674ee2363dad1f7482d1bec20b4bd9fa5f262f88e6e5cb788fc56411113f2fe2e97783a3a7
   languageName: node
   linkType: hard
 
@@ -6705,7 +6675,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"object-assign@npm:^4.0.1, object-assign@npm:^4.1.0, object-assign@npm:^4.1.1":
+"object-assign@npm:^4.1.0, object-assign@npm:^4.1.1":
   version: 4.1.1
   resolution: "object-assign@npm:4.1.1"
   checksum: fcc6e4ea8c7fe48abfbb552578b1c53e0d194086e2e6bbbf59e0a536381a292f39943c6e9628af05b5528aa5e3318bb30d6b2e53cadaf5b8fe9e12c4b69af23f
@@ -7108,15 +7078,6 @@ fsevents@~2.3.1:
   bin:
     pino: bin.js
   checksum: 6fb82f11d4ebd7e4314cacb3b2acb8047e00dc0e4e31f08f5ad54f63d2e6f17464ae57bac4624a095f5cd87b8658ef1d810ca7c7026647048b422f63566218b2
-  languageName: node
-  linkType: hard
-
-"pirates@npm:^4.0.1":
-  version: 4.0.1
-  resolution: "pirates@npm:4.0.1"
-  dependencies:
-    node-modules-regexp: ^1.0.0
-  checksum: 091e232aac19f0049a681838fa9fcb4af824b5b1eb0e9325aa07b9d13245bfe3e4fa57a7766b9fdcd19cb89f2c15c688b46023be3047cb288023a0c079d3b2a3
   languageName: node
   linkType: hard
 
@@ -8656,23 +8617,6 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"sucrase@npm:^3.18.1":
-  version: 3.18.1
-  resolution: "sucrase@npm:3.18.1"
-  dependencies:
-    commander: ^4.0.0
-    glob: 7.1.6
-    lines-and-columns: ^1.1.6
-    mz: ^2.7.0
-    pirates: ^4.0.1
-    ts-interface-checker: ^0.1.9
-  bin:
-    sucrase: bin/sucrase
-    sucrase-node: bin/sucrase-node
-  checksum: 27750d397fcd449e8a20622befb53c86e56ed3a75b1b5ac8066b83b207119d865fe863c191e5542a405967bef6115b6f79bde3c5b7dc0d18b3681e7a951be310
-  languageName: node
-  linkType: hard
-
 "supports-color@npm:^5.0.0, supports-color@npm:^5.3.0, supports-color@npm:^5.4.0":
   version: 5.5.0
   resolution: "supports-color@npm:5.5.0"
@@ -8817,24 +8761,6 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"thenify-all@npm:^1.0.0":
-  version: 1.6.0
-  resolution: "thenify-all@npm:1.6.0"
-  dependencies:
-    thenify: ">= 3.1.0 < 4"
-  checksum: dba7cc8a23a154cdcb6acb7f51d61511c37a6b077ec5ab5da6e8b874272015937788402fd271fdfc5f187f8cb0948e38d0a42dcc89d554d731652ab458f5343e
-  languageName: node
-  linkType: hard
-
-"thenify@npm:>= 3.1.0 < 4":
-  version: 3.3.1
-  resolution: "thenify@npm:3.3.1"
-  dependencies:
-    any-promise: ^1.0.0
-  checksum: 84e1b804bfec49f3531215f17b4a6e50fd4397b5f7c1bccc427b9c656e1ecfb13ea79d899930184f78bc2f57285c54d9a50a590c8868f4f0cef5c1d9f898b05e
-  languageName: node
-  linkType: hard
-
 "through@npm:^2.3.8":
   version: 2.3.8
   resolution: "through@npm:2.3.8"
@@ -8912,13 +8838,6 @@ resolve@^2.0.0-next.3:
   version: 1.0.5
   resolution: "trough@npm:1.0.5"
   checksum: d6c8564903ed00e5258bab92134b020724dbbe83148dc72e4bf6306c03ed8843efa1bcc773fa62410dd89161ecb067432dd5916501793508a9506cacbc408e25
-  languageName: node
-  linkType: hard
-
-"ts-interface-checker@npm:^0.1.9":
-  version: 0.1.13
-  resolution: "ts-interface-checker@npm:0.1.13"
-  checksum: 20c29189c2dd6067a8775e07823ddf8d59a33e2ffc47a1bd59a5cb28bb0121a2969a816d5e77eda2ed85b18171aa5d1c4005a6b88ae8499ec7cc49f78571cb5e
   languageName: node
   linkType: hard
 
@@ -9515,17 +9434,17 @@ typescript@4.2.4:
   languageName: node
   linkType: hard
 
-"vite-plugin-windicss@npm:0.15.10":
-  version: 0.15.10
-  resolution: "vite-plugin-windicss@npm:0.15.10"
+"vite-plugin-windicss@npm:1.0.1":
+  version: 1.0.1
+  resolution: "vite-plugin-windicss@npm:1.0.1"
   dependencies:
-    "@windicss/plugin-utils": 0.15.10
-    chalk: ^4.1.0
+    "@windicss/plugin-utils": 1.0.1
+    chalk: ^4.1.1
     debug: ^4.3.2
-    windicss: ^2.5.14
+    windicss: ^3.1.0
   peerDependencies:
     vite: ^2.0.1
-  checksum: 989b867ffad19d32c3ece9a3934df5d1e74f379c587ad802f386e28bc45dcb815225b478a0463896221af77407d83b28be1aacc129383cff56ef4eee3f6ab811
+  checksum: d71cc89a64b348a234c642e9f59193a4b81db160670c2c4fbed5961150718c9b4b2df111dbc926575cf2d6af0edef2101ce90cd7e2cc21de984820cae3ada361
   languageName: node
   linkType: hard
 
@@ -9873,21 +9792,12 @@ typescript@4.2.4:
   languageName: node
   linkType: hard
 
-"windicss@npm:3.0.9":
-  version: 3.0.9
-  resolution: "windicss@npm:3.0.9"
+"windicss@npm:3.1.1, windicss@npm:^3.1.0":
+  version: 3.1.1
+  resolution: "windicss@npm:3.1.1"
   bin:
     windicss: cli/index.js
-  checksum: 5bb5dcda18cc05726d7ad34934115428744a4a2a65fc08ff24dc9785a4b15fc8bcd486a6eded5ac5bc70aaf59bc81e6928918c5a60b3e9f621bfcc7a2702cd19
-  languageName: node
-  linkType: hard
-
-"windicss@npm:^2.5.14":
-  version: 2.5.14
-  resolution: "windicss@npm:2.5.14"
-  bin:
-    windicss: cli/index.js
-  checksum: daed5fb0f6473918380a95e96a35d2a06bc058768e728fe572353749a6395c5c3d25e19850e32813c8321a29eea061ced4d4219284e838cdac8de8f65d6a59b0
+  checksum: 7f40c10f881e27acd4073ba563a1f2d6c0dfddfd379b76cd2ea7c9697094ff80950ce421972adf76d03c299f7580a9bfd8570f6375444f2976e0bdf92a34945e
   languageName: node
   linkType: hard
 
