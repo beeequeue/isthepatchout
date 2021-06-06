@@ -30,7 +30,6 @@
     "@vueuse/core": "4.9.2",
     "date-fns": "2.21.3",
     "fathom-client": "3.0.0",
-    "modern-normalize": "1.1.0",
     "vue": "3.0.11",
     "workbox-precaching": "6.1.5"
   },
@@ -54,7 +53,6 @@
     "lint-staged": "11.0.0",
     "pino": "6.11.3",
     "pino-pretty": "4.8.0",
-    "postcss-nesting": "8.0.1",
     "prettier": "2.2.1",
     "simple-git-hooks": "2.4.1",
     "tailwindcss": "2.1.2",

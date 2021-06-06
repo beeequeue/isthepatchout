@@ -5656,10 +5656,8 @@ fsevents@~2.3.1:
     got: 11.8.2
     joi: 17.4.0
     lint-staged: 11.0.0
-    modern-normalize: 1.1.0
     pino: 6.11.3
     pino-pretty: 4.8.0
-    postcss-nesting: 8.0.1
     prettier: 2.2.1
     simple-git-hooks: 2.4.1
     tailwindcss: 2.1.2
@@ -6485,7 +6483,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"modern-normalize@npm:1.1.0, modern-normalize@npm:^1.0.0":
+"modern-normalize@npm:^1.0.0":
   version: 1.1.0
   resolution: "modern-normalize@npm:1.1.0"
   checksum: edfd40650bd7250eb4761651886a02ca3c524effca41b9832932eab9ccf9f2cfa7e5da8491c7c8bc2d58e1696e5e765adebeaf90cd9d3376444bd6bc0b0f2c99
@@ -7239,15 +7237,6 @@ fsevents@~2.3.1:
   peerDependencies:
     postcss: ^8.1.13
   checksum: 88d97fe3b4f2384ece10ad3c92b626b095830c2dc0c762b69f25261dba122e283d4f86571de50f0d56c8cff77ae94639e64f00d250518ecf2ee9abc290642648
-  languageName: node
-  linkType: hard
-
-"postcss-nesting@npm:8.0.1":
-  version: 8.0.1
-  resolution: "postcss-nesting@npm:8.0.1"
-  peerDependencies:
-    postcss: ^8
-  checksum: a96a4ef4c0a485477dbd8e262121d6423b95f2f68a6265a2d722a12700e889276a798e4db7e47bf5e6afb86aec3cc335518564edca8d655b54831cc9eaa0459e
   languageName: node
   linkType: hard
 
