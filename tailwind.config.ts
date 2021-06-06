@@ -1,6 +1,7 @@
 /* eslint-disable no-undef,import/no-extraneous-dependencies */
-const { defineConfig } = require("vite-plugin-windicss")
-const colors = require("windicss/colors")
+import { defineConfig } from "vite-plugin-windicss"
+
+import colors from "windicss/colors"
 
 export default defineConfig({
   mode: "jit",
@@ -19,12 +20,14 @@ export default defineConfig({
       md: "1024px",
       lg: "1280px",
     },
-    colors: {
-      trans: "transparent",
-      current: "currentColor",
-      gray: colors.warmGray,
-      danger: colors.rose,
-      primary: colors.amber,
+    extend: {
+      colors: {
+        trans: "transparent",
+        current: "currentColor",
+        gray: colors.warmGray,
+        danger: colors.rose,
+        primary: colors.amber,
+      },
     },
   },
 })
