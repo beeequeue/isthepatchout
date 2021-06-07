@@ -5,9 +5,7 @@
   <div v-else-if="error">
     {{ error }}
   </div>
-  <div v-else class="answer">
-    {{ recentlyReleased ? "Yes!" : "No." }}
-  </div>
+  <answer v-else :released="recentlyReleased" />
 
   <ul v-if="recentlyReleased" class="links">
     <li v-for="link in links" :key="link">
@@ -22,6 +20,7 @@ import { computed, watch } from "vue"
 
 import { useLastReleasedPatch, useUnreleasedPatches } from "../supabase"
 
+import Answer from "./answer.vue"
 import Question from "./question.vue"
 
 const { last, loading: lastPatchLoading } = useLastReleasedPatch()
