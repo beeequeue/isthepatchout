@@ -21,14 +21,8 @@ import { usePushNotifications } from "../hooks/use-push-notifications"
 
 import ToggleButton from "./toggle-button.vue"
 
-const {
-  supported,
-  loading,
-  subscribing,
-  subscribed,
-  askForPermissions,
-  unsubscribe,
-} = usePushNotifications()
+const { supported, loading, subscribing, subscribed, askForPermissions, unsubscribe } =
+  usePushNotifications()
 
 const handleChange = () => {
   // eslint-disable-next-line no-unreachable

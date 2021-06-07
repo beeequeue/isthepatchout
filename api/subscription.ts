@@ -42,25 +42,27 @@ const getCorsOrigin = (request: VercelRequest) => {
   return request.headers.host as string
 }
 
-const cors = (fn: Handler): Handler => (request, response) => {
-  response.setHeader(
-    "Access-Control-Allow-Origin",
-    VERCEL_ENV === "production" ? "https://isthepatchout.com" : getCorsOrigin(request),
-  )
+const cors =
+  (fn: Handler): Handler =>
+  (request, response) => {
+    response.setHeader(
+      "Access-Control-Allow-Origin",
+      VERCEL_ENV === "production" ? "https://isthepatchout.com" : getCorsOrigin(request),
+    )
 
-  response.setHeader("Access-Control-Allow-Methods", "GET, POST, DELETE")
-  response.setHeader(
-    "Access-Control-Allow-Headers",
-    "Accept, Accept-Version, Content-Length, Content-Type, Date",
-  )
+    response.setHeader("Access-Control-Allow-Methods", "GET, POST, DELETE")
+    response.setHeader(
+      "Access-Control-Allow-Headers",
+      "Accept, Accept-Version, Content-Length, Content-Type, Date",
+    )
 
-  if (request.method === "OPTIONS") {
-    response.status(200).end()
-    return
+    if (request.method === "OPTIONS") {
+      response.status(200).end()
+      return
+    }
+
+    return fn(request, response)
   }
-
-  return fn(request, response)
-}
 
 const getHandler: CustomHandler = async (request) => {
   if (request.query.endpoint == null || typeof request.query.endpoint !== "string") {

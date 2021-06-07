@@ -33,67 +33,66 @@ init({
 
 setTag("app", "api")
 
-export const sentryWrapper = (path: string, handler: CustomHandler): Handler => async (
-  req,
-  res,
-) => {
-  let response: NonNullable<CustomHandlerResponse>
+export const sentryWrapper =
+  (path: string, handler: CustomHandler): Handler =>
+  async (req, res) => {
+    let response: NonNullable<CustomHandlerResponse>
 
-  const trx = startTransaction({
-    name: path,
-    op: "transaction",
-  })
-
-  try {
-    response = (await handler(req)) ?? {}
-  } catch (error) {
-    response = internal(error.message)
-
-    setContext("response", {
-      status: res.statusCode,
+    const trx = startTransaction({
+      name: path,
+      op: "transaction",
     })
 
-    Logger.error(error)
-    captureException(error)
-  }
+    try {
+      response = (await handler(req)) ?? {}
+    } catch (error) {
+      response = internal(error.message)
 
-  trx.finish()
+      setContext("response", {
+        status: res.statusCode,
+      })
 
-  await flush(1000)
-
-  if (!isBoom(response)) {
-    response.statusCode ??= 200
-    const body = {
-      ...response,
-      ok: true,
+      Logger.error(error)
+      captureException(error)
     }
 
-    Logger.debug(
-      `${req.method as string} ${path} ${res.statusCode}\n${JSON.stringify(
-        body,
-        null,
-        2,
-      )}`,
-    )
-    res.status(response.statusCode).json(body)
-  } else {
-    const { payload, statusCode, headers } = response.output
-    const body = { ...payload, ok: false }
+    trx.finish()
 
-    for (const [key, value] of Object.entries(headers)) {
-      res.setHeader(key, value!)
+    await flush(1000)
+
+    if (!isBoom(response)) {
+      response.statusCode ??= 200
+      const body = {
+        ...response,
+        ok: true,
+      }
+
+      Logger.debug(
+        `${req.method as string} ${path} ${res.statusCode}\n${JSON.stringify(
+          body,
+          null,
+          2,
+        )}`,
+      )
+      res.status(response.statusCode).json(body)
+    } else {
+      const { payload, statusCode, headers } = response.output
+      const body = { ...payload, ok: false }
+
+      for (const [key, value] of Object.entries(headers)) {
+        res.setHeader(key, value!)
+      }
+
+      Logger.debug(
+        `${req.method as string} ${path} ${res.statusCode}\n${JSON.stringify(
+          body,
+          null,
+          2,
+        )}`,
+      )
+      res.status(statusCode).json(body)
     }
-
-    Logger.debug(
-      `${req.method as string} ${path} ${res.statusCode}\n${JSON.stringify(
-        body,
-        null,
-        2,
-      )}`,
-    )
-    res.status(statusCode).json(body)
   }
-}
 
 export const startTask = (name: string) => {
   const transaction = getCurrentHub().getScope()?.getTransaction()

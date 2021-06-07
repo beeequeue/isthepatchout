@@ -1,6 +1,17 @@
 <template>
   <main
-    class="container mx-auto h-screen px-4 py-10 md:px-10 flex flex-col items-center md:justify-center text-center text-gray-300"
+    class="
+      container
+      mx-auto
+      h-screen
+      px-4
+      py-10
+      md:px-10
+      flex flex-col
+      items-center
+      md:justify-center
+      text-center text-gray-300
+    "
   >
     <Main />
 
