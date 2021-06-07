@@ -2252,22 +2252,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/core@npm:4.9.2":
-  version: 4.9.2
-  resolution: "@vueuse/core@npm:4.9.2"
+"@vueuse/core@npm:4.11.2":
+  version: 4.11.2
+  resolution: "@vueuse/core@npm:4.11.2"
   dependencies:
-    "@vueuse/shared": 4.9.2
+    "@vueuse/shared": 4.11.2
     vue-demi: "*"
-  checksum: 4cd809318c43b3af838d0f09d1761c225c5e0dde57b671aa8d00215ef24691ad021f167f2be3cbe5428afefc37c60729544f801dfb64291feebea401cba7519d
+  checksum: 3a84b411ae45159891ad3b9122fca8e97f02458e393dfea8c691657e6f25db3027ca57e75029f5d904b3708071cba2e40d11187b2049aae72ee8c4c95021074c
   languageName: node
   linkType: hard
 
-"@vueuse/shared@npm:4.9.2":
-  version: 4.9.2
-  resolution: "@vueuse/shared@npm:4.9.2"
+"@vueuse/shared@npm:4.11.2":
+  version: 4.11.2
+  resolution: "@vueuse/shared@npm:4.11.2"
   dependencies:
     vue-demi: "*"
-  checksum: 7daba4e30cf6a47af58fd193491cbee57f663368228c19226dc448be96e5517474d08ab262253f55356f9eeee295aacc09761c243cbc7eb61b3c7d800c0e2800
+  checksum: 49d0aca68e962ccfbd86152325cba7b177eec9d518aa1861cad81183048e3bf1520848e5b606edcc5a2e89490f6485208163474820f6594355daff3f043d9a77
   languageName: node
   linkType: hard
 
@@ -5679,7 +5679,7 @@ fsevents@~2.3.1:
     "@vercel/node": 1.10.0
     "@vitejs/plugin-vue": 1.2.2
     "@vue/compiler-sfc": 3.0.11
-    "@vueuse/core": 4.9.2
+    "@vueuse/core": 4.11.2
     bottleneck: 2.19.5
     bundlewatch: 0.3.2
     date-fns: 2.21.3
