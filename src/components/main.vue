@@ -1,11 +1,20 @@
 <template>
   <question :relevant-patches="relevantPatches" />
 
-  <div v-if="loading">Loading...</div>
-  <div v-else-if="error">
-    {{ error }}
-  </div>
-  <answer v-else :released="recentlyReleased" />
+  <transition
+    mode="out-in"
+    class="duration-500 transition-fastest"
+    enter-active-class="ease-out"
+    leave-active-class="ease-in"
+    enter-from-class="opacity-0"
+    leave-to-class="opacity-0"
+  >
+    <loading v-if="loading" />
+    <div v-else-if="error">
+      {{ error }}
+    </div>
+    <answer v-else :released="recentlyReleased" />
+  </transition>
 
   <ul v-if="recentlyReleased" class="links">
     <li v-for="link in links" :key="link">
@@ -20,6 +29,7 @@ import { computed, watch } from "vue"
 import { useLastReleasedPatch, useUnreleasedPatches } from "../supabase"
 
 import Answer from "./answer.vue"
+import Loading from "./loading.vue"
 import Question from "./question.vue"
 
 const { last, recentlyReleased, loading: lastPatchLoading } = useLastReleasedPatch()
