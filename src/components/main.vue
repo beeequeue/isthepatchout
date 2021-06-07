@@ -15,7 +15,6 @@
 </template>
 
 <script lang="ts" setup>
-import { differenceInDays } from "date-fns"
 import { computed, watch } from "vue"
 
 import { useLastReleasedPatch, useUnreleasedPatches } from "../supabase"
@@ -23,24 +22,16 @@ import { useLastReleasedPatch, useUnreleasedPatches } from "../supabase"
 import Answer from "./answer.vue"
 import Question from "./question.vue"
 
-const { last, loading: lastPatchLoading } = useLastReleasedPatch()
+const { last, recentlyReleased, loading: lastPatchLoading } = useLastReleasedPatch()
 const { upNext, error, loading: upcomingLoading } = useUnreleasedPatches()
 
 const loading = computed(() => lastPatchLoading.value || upcomingLoading.value)
-
-const recentlyReleased = computed(
-  () =>
-    last.value != null &&
-    differenceInDays(Date.now(), new Date(last.value.releasedAt!)) < 7,
-)
 
 const relevantPatches = computed(
   () => (recentlyReleased.value ? [last.value!] : upNext.value) ?? [],
 )
 
-const links = computed(() =>
-  last.value?.links != null ? ((last.value.links as unknown) as string[]) : null,
-)
+const links = computed(() => (last.value?.links != null ? last.value.links : null))
 
 watch(recentlyReleased, (isRecentlyReleased) => {
   if (isRecentlyReleased) {

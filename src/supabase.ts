@@ -1,3 +1,4 @@
+import { differenceInDays } from "date-fns"
 import { computed, onUnmounted, ref } from "vue"
 
 import { captureException } from "@sentry/vue"
@@ -107,6 +108,12 @@ export const useLastReleasedPatch = () => {
     }
   }
 
+  const recentlyReleased = computed(
+    () =>
+      data.value != null &&
+      differenceInDays(Date.now(), new Date(data.value.releasedAt!)) < 7,
+  )
+
   const subscription = supabase
     .from<Patch>("patches")
     .on("UPDATE", handler)
@@ -119,6 +126,7 @@ export const useLastReleasedPatch = () => {
 
   return {
     last: data,
+    recentlyReleased,
     error,
     loading,
   }
