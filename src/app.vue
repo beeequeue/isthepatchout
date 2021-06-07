@@ -1,13 +1,15 @@
 <template>
-  <main>
+  <main
+    class="container mx-auto px-4 py-10 md:px-10 flex flex-col items-center md:justify-center text-center text-gray-300"
+  >
     <Main />
+
+    <section class="disclaimer">
+      <i>The page will automatically update when the patch is released!</i>
+    </section>
+
+    <Notifications />
   </main>
-
-  <section class="disclaimer">
-    <i>The page will automatically update when the patch is released!</i>
-  </section>
-
-  <Notifications />
 </template>
 
 <script lang="ts" setup>
