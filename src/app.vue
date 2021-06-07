@@ -11,6 +11,7 @@
       items-center
       md:justify-center
       text-center text-gray-300
+      select-none
     "
   >
     <Main />

@@ -1,5 +1,5 @@
 <template>
-  <div class="font-serif text-12xl select-none">
+  <div class="font-serif text-12xl">
     <transition
       mode="out-in"
       class="duration-500 transition-fastest"
