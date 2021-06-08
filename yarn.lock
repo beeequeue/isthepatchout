@@ -5693,7 +5693,7 @@ fsevents@~2.3.1:
     pino-pretty: 4.8.0
     prettier: 2.3.1
     simple-git-hooks: 2.4.1
-    tailwindcss: 2.1.2
+    tailwindcss: 2.1.4
     typescript: 4.2.4
     vite: 2.3.3
     vite-plugin-pwa: 0.7.3
@@ -8723,9 +8723,9 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:2.1.2":
-  version: 2.1.2
-  resolution: "tailwindcss@npm:2.1.2"
+"tailwindcss@npm:2.1.4":
+  version: 2.1.4
+  resolution: "tailwindcss@npm:2.1.4"
   dependencies:
     "@fullhuman/postcss-purgecss": ^3.1.3
     bytes: ^3.0.0
@@ -8760,7 +8760,7 @@ resolve@^2.0.0-next.3:
   bin:
     tailwind: lib/cli.js
     tailwindcss: lib/cli.js
-  checksum: 5018c2cfed5809c0159b28f5639b3199f98c4b3ecdf806f6fa31c1f223552933466cd0b6788f274ab0f530f35577de5f3c3069de8c07d24c5ff758583c545232
+  checksum: 5723cf3327be7d2e8d45c89d2228af0fcb93d34f4b4bab7fa60614e320f4cf8902e8bd32e8829943818b81147ce3795f012a6c0fe92585f68820e4a5dc59e671
   languageName: node
   linkType: hard
 
