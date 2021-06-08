@@ -58,6 +58,7 @@
     "tailwindcss": "2.1.2",
     "typescript": "4.2.4",
     "vite": "2.3.7",
+    "vite-plugin-html": "2.0.7",
     "vite-plugin-pwa": "0.7.3",
     "vite-plugin-windicss": "1.0.1",
     "vue-tsc": "0.1.7",

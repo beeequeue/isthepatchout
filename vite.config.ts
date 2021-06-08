@@ -1,6 +1,7 @@
 import { config } from "dotenv"
 import { defineConfig } from "vite"
-import vue from "@vitejs/plugin-vue"
+import Vue from "@vitejs/plugin-vue"
+import { injectHtml as InjectHtml } from "vite-plugin-html"
 import WindiCSS from "vite-plugin-windicss"
 import { VitePWA } from "vite-plugin-pwa"
 
@@ -19,8 +20,13 @@ export default defineConfig({
     "import.meta.env.VERCEL_GIT_COMMIT_SHA": s(process.env.VERCEL_GIT_COMMIT_SHA),
   },
   plugins: [
-    vue(),
+    Vue(),
     WindiCSS(),
+    InjectHtml({
+      injectData: {
+        VITE_SUPABASE_URL: process.env.VITE_SUPABASE_URL,
+      },
+    }),
     VitePWA({
       strategies: "injectManifest",
       srcDir: "src/sw",
