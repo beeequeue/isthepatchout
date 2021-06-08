@@ -2097,12 +2097,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitejs/plugin-vue@npm:1.2.2":
-  version: 1.2.2
-  resolution: "@vitejs/plugin-vue@npm:1.2.2"
+"@vitejs/plugin-vue@npm:1.2.3":
+  version: 1.2.3
+  resolution: "@vitejs/plugin-vue@npm:1.2.3"
   peerDependencies:
-    "@vue/compiler-sfc": ^3.0.6
-  checksum: 9abe20f3df2ae05ad9d6154a3a83094f895db8d3f1204ab584429fbcd2356645b472c7fbacbed4ea325ef01664329d6c0b880e7eb9621acc072430fcb15e8a7f
+    "@vue/compiler-sfc": ^3.0.8
+  checksum: 561a3ae61cb752927d188f5bdb50e9941396637f0299a39f33f290c58a13b642d38fd2ed932386b87d859ae6552ccab1dc0ad6769a8846440fc70e67a1ace407
   languageName: node
   linkType: hard
 
@@ -3989,12 +3989,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.11.23":
-  version: 0.11.23
-  resolution: "esbuild@npm:0.11.23"
+"esbuild@npm:^0.12.5":
+  version: 0.12.6
+  resolution: "esbuild@npm:0.12.6"
   bin:
     esbuild: bin/esbuild
-  checksum: d55bea84f94e7854fa6fb013ffc63747f2286001b3d73c2a7beb605e6e4847c24ff2cde0660f03045d06d083695c8082423b007a9ee8687e70b52719458bfdd6
+  checksum: a9dea2245d527c8538eda62ff5a24a0cae259d9d15c9b63dda3b03d5f70ff499c05f1c5954cd3eaa87e1d148ce8869c53ce5cbab2cca05fbdb4b212e0bb5e99b
   languageName: node
   linkType: hard
 
@@ -5677,7 +5677,7 @@ fsevents@~2.3.1:
     "@types/pino": 6.3.8
     "@types/web-push": 3.3.0
     "@vercel/node": 1.10.0
-    "@vitejs/plugin-vue": 1.2.2
+    "@vitejs/plugin-vue": 1.2.3
     "@vue/compiler-sfc": 3.0.11
     "@vueuse/core": 4.9.2
     bottleneck: 2.19.5
@@ -5695,7 +5695,7 @@ fsevents@~2.3.1:
     simple-git-hooks: 2.4.1
     tailwindcss: 2.1.2
     typescript: 4.2.4
-    vite: 2.3.3
+    vite: 2.3.7
     vite-plugin-pwa: 0.7.3
     vite-plugin-windicss: 1.0.1
     vue: 3.0.11
@@ -7292,7 +7292,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.1.10, postcss@npm:^8.1.6, postcss@npm:^8.2.1, postcss@npm:^8.2.10":
+"postcss@npm:^8.1.10, postcss@npm:^8.1.6, postcss@npm:^8.2.1, postcss@npm:^8.3.0":
   version: 8.3.0
   resolution: "postcss@npm:8.3.0"
   dependencies:
@@ -9513,13 +9513,13 @@ typescript@4.2.4:
   languageName: node
   linkType: hard
 
-"vite@npm:2.3.3":
-  version: 2.3.3
-  resolution: "vite@npm:2.3.3"
+"vite@npm:2.3.7":
+  version: 2.3.7
+  resolution: "vite@npm:2.3.7"
   dependencies:
-    esbuild: ^0.11.23
+    esbuild: ^0.12.5
     fsevents: ~2.3.1
-    postcss: ^8.2.10
+    postcss: ^8.3.0
     resolve: ^1.19.0
     rollup: ^2.38.5
   dependenciesMeta:
@@ -9527,7 +9527,7 @@ typescript@4.2.4:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 66cbd53b41cf4bc733038116c661e640c7ee99501f7d10f71e1b31e791eaab5aa799fb0e5e1fd99412dfbb14e4a981fc32875532eae2db6ba2d58d2f5bb39a2d
+  checksum: f67574e957b452259edbf72d5cbd37de4d5656bf516a7b7358d93484cb25480c2c1c7eb30c3071d0951ab1a2b1e163753869eddf059bec553642fd5d84a2c8fc
   languageName: node
   linkType: hard
 
