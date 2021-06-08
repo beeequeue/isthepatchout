@@ -34,7 +34,7 @@
     "workbox-precaching": "6.1.5"
   },
   "devDependencies": {
-    "@beequeue/eslint-plugin": "0.2.0",
+    "@beequeue/eslint-plugin": "0.2.1",
     "@hapi/boom": "9.1.2",
     "@sentry/node": "6.4.1",
     "@sentry/tracing": "6.4.1",
@@ -47,7 +47,7 @@
     "bottleneck": "2.19.5",
     "bundlewatch": "0.3.2",
     "dotenv": "10.0.0",
-    "eslint": "7.27.0",
+    "eslint": "7.28.0",
     "got": "11.8.2",
     "joi": "17.4.0",
     "lint-staged": "11.0.0",
