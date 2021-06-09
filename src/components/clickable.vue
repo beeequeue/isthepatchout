@@ -1,6 +1,6 @@
 <template>
   <component
-    :is="props.is"
+    :is="is"
     class="clickable"
     :class="{ clicked }"
     @mousedown="clicked = false"

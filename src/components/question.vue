@@ -10,12 +10,12 @@
       transition-opacity transition-faster
       delay-500
     "
-    :class="{ 'opacity-0': props.relevantPatches.length < 1 }"
+    :class="{ 'opacity-0': relevantPatches.length < 1 }"
   >
     Is
 
     <div
-      v-for="(patch, i) in props.relevantPatches"
+      v-for="(patch, i) in relevantPatches"
       :key="patch?.id"
       class="md:flex md:items-center md:gap-2"
     >
