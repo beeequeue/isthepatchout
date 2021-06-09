@@ -1,5 +1,7 @@
 <template>
-  <div class="text-2xl select-none animate-intensifies filter blur-1">༼ つ ◕_◕ ༽つ</div>
+  <div class="flex items-center text-4xl select-none animate-intensifies filter blur-1">
+    ༼ つ ◕_◕ ༽つ
+  </div>
 </template>
 
 <style>
