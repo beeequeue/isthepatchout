@@ -33,5 +33,5 @@ import { defineProps } from "vue"
 
 import type { Patch } from "../types"
 
-const props = defineProps<{ relevantPatches: Patch[] }>()
+defineProps<{ relevantPatches: Patch[] }>()
 </script>

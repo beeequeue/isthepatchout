@@ -13,7 +13,7 @@
 <script lang="ts" setup>
 import { ref, defineProps } from "vue"
 
-const props = defineProps({
+defineProps({
   is: {
     type: String,
     default: "div",

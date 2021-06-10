@@ -24,7 +24,7 @@ import Loading from "./loading.vue"
 import Question from "./question.vue"
 
 const { last, recentlyReleased, loading: lastPatchLoading } = useLastReleasedPatch()
-const { upNext, error, loading: upcomingLoading } = useUnreleasedPatches()
+const { upNext, loading: upcomingLoading } = useUnreleasedPatches()
 
 const loading = computed(() => lastPatchLoading.value || upcomingLoading.value)
 
