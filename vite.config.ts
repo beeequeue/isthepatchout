@@ -1,4 +1,6 @@
 import { config } from "dotenv"
+import browserslist from "browserslist"
+import { esbuildPluginBrowserslist } from "esbuild-plugin-browserslist"
 import { defineConfig } from "vite"
 import Vue from "@vitejs/plugin-vue"
 import WindiCSS from "vite-plugin-windicss"
@@ -25,6 +27,7 @@ export default defineConfig({
     },
   },
   plugins: [
+    esbuildPluginBrowserslist(browserslist()),
     Vue(),
     WindiCSS(),
     VitePWA({
