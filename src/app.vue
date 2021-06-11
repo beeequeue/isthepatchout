@@ -21,7 +21,7 @@
       <Main
         v-else
         key="main"
-        :last="last ?? null"
+        :last="last ?? undefined"
         :relevant-patches="relevantPatches"
         :recently-released="recentlyReleased"
       />
