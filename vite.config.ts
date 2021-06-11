@@ -19,6 +19,12 @@ export default defineConfig({
     "import.meta.env.VERCEL_ENV": s(process.env.VERCEL_ENV),
     "import.meta.env.VERCEL_GIT_COMMIT_SHA": s(process.env.VERCEL_GIT_COMMIT_SHA),
   },
+  resolve: {
+    alias: {
+      "@ivanv/vue-collapse-transition":
+        "@ivanv/vue-collapse-transition/src/CollapseTransition.vue",
+    },
+  },
   plugins: [
     Vue(),
     WindiCSS(),

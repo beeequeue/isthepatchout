@@ -1349,6 +1349,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@ivanv/vue-collapse-transition@npm:1.0.2":
+  version: 1.0.2
+  resolution: "@ivanv/vue-collapse-transition@npm:1.0.2"
+  checksum: 2c4009804d58073d6df3842ffebda10f8fdb197a108a2529318cf943e3cdefb7ee6a1017bd991a0f1a03d005eed26418594f924f159572dc707c22cd9a0917ce
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.4":
   version: 2.1.4
   resolution: "@nodelib/fs.scandir@npm:2.1.4"
@@ -5753,6 +5760,7 @@ fsevents@~2.3.1:
   dependencies:
     "@beequeue/eslint-plugin": 0.2.1
     "@hapi/boom": 9.1.2
+    "@ivanv/vue-collapse-transition": 1.0.2
     "@sentry/node": 6.4.1
     "@sentry/tracing": 6.4.1
     "@sentry/vue": 6.4.1

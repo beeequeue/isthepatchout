@@ -1,54 +1,41 @@
 <template>
-  <question :relevant-patches="relevantPatches" />
+  <section class="flex flex-col items-center">
+    <Question :relevant-patches="relevantPatches" />
 
-  <fade class="h-50">
-    <loading v-if="loading" />
-    <answer v-else :released="recentlyReleased" />
-  </fade>
+    <Answer :released="recentlyReleased" />
 
-  <ul v-if="recentlyReleased" class="links">
-    <li v-for="link in links" :key="link">
-      <a :href="link" target="_blank" rel="noopener">{{ link }}</a>
-    </li>
-  </ul>
+    <CollapseTransition :duration="500">
+      <div v-if="!recentlyReleased" class="visible">Checking for updates...</div>
+    </CollapseTransition>
+
+    <ul v-if="recentlyReleased" class="links">
+      <li v-for="link in links" :key="link">
+        <a :href="link" target="_blank" rel="noopener">{{ link }}</a>
+      </li>
+    </ul>
+  </section>
 </template>
 
 <script lang="ts" setup>
-import { computed, watch } from "vue"
+import { computed, defineProps } from "vue"
 
-import { useLastReleasedPatch, useUnreleasedPatches } from "../supabase"
+import CollapseTransition from "@ivanv/vue-collapse-transition"
+
+import type { Patch } from "../types"
 
 import Answer from "./answer.vue"
-import Fade from "./fade.vue"
-import Loading from "./loading.vue"
 import Question from "./question.vue"
 
-const { last, recentlyReleased, loading: lastPatchLoading } = useLastReleasedPatch()
-const { upNext, loading: upcomingLoading } = useUnreleasedPatches()
+const props = defineProps<{
+  last?: Patch
+  relevantPatches: Patch[]
+  recentlyReleased: boolean
+}>()
 
-const loading = computed(() => lastPatchLoading.value || upcomingLoading.value)
-
-const relevantPatches = computed(
-  () => (recentlyReleased.value ? [last.value!] : upNext.value) ?? [],
-)
-
-const links = computed(() => (last.value?.links != null ? last.value.links : null))
-
-watch(recentlyReleased, (isRecentlyReleased) => {
-  if (isRecentlyReleased) {
-    document.title = `${last.value!.id} is out!`
-    // new Notification(`PATCH ${last.value!.id} IS OUT!`)
-  }
-})
+const links = computed(() => props.last?.links ?? null)
 </script>
 
 <style scoped>
-.answer {
-  font-size: 10em;
-  font-weight: 800;
-  line-height: 100%;
-}
-
 .links {
   font-size: 1.25em;
 }

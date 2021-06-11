@@ -6,11 +6,7 @@
       text-2xl
       md:text-4xl
       font-serif
-      h-18
-      transition-opacity transition-faster
-      delay-500
     "
-    :class="{ 'opacity-0': relevantPatches.length < 1 }"
   >
     Is
 

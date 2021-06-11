@@ -1,6 +1,8 @@
 <template>
-  <div class="flex items-center text-4xl select-none animate-intensifies filter blur-1">
-    ༼ つ ◕_◕ ༽つ
+  <div class="flex flex-col items-center relative">
+    <div class="text-4xl font-bold whitespace-nowrap opacity-20">Is the Patch Out?</div>
+
+    <div class="text-4xl animate-intensifies filter blur-1">༼ つ ◕_◕ ༽つ</div>
   </div>
 </template>
 
