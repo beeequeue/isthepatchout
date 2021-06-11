@@ -27,7 +27,7 @@ import Answer from "./answer.vue"
 import Question from "./question.vue"
 
 const props = defineProps<{
-  last?: Patch
+  last?: Patch | null
   relevantPatches: Patch[]
   recentlyReleased: boolean
 }>()
