@@ -1749,12 +1749,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/postgrest-js@npm:^0.29.0":
-  version: 0.29.0
-  resolution: "@supabase/postgrest-js@npm:0.29.0"
+"@supabase/postgrest-js@npm:^0.30.0":
+  version: 0.30.0
+  resolution: "@supabase/postgrest-js@npm:0.30.0"
   dependencies:
     cross-fetch: ^3.0.6
-  checksum: b296d36f829b5d11489f980f8a7478a9b7f54f785839e1309a099cc4fd4ada204d87ab189f47c131b464d48c48ebe0712c4cc143029af38f85f451f19de98518
+  checksum: 0d7022725ea3879afb3292c4b242295366caf57399175f4b249bb4fb9df19e2d9d73760326e90ce0d89dfa879d8526f7a526488d6c60dfa36d5ef9ce2b8288f9
   languageName: node
   linkType: hard
 
@@ -1777,15 +1777,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/supabase-js@npm:1.13.2":
-  version: 1.13.2
-  resolution: "@supabase/supabase-js@npm:1.13.2"
+"@supabase/supabase-js@npm:1.14.0":
+  version: 1.14.0
+  resolution: "@supabase/supabase-js@npm:1.14.0"
   dependencies:
     "@supabase/gotrue-js": ^1.16.2
-    "@supabase/postgrest-js": ^0.29.0
+    "@supabase/postgrest-js": ^0.30.0
     "@supabase/realtime-js": ^1.0.9
     "@supabase/storage-js": ^1.2.1
-  checksum: e59912a9295f10a1f93350c46c00a7a7df743634d6f5418444e01162d9ea77559e50b5d693a894f08ed551dd52e15774e1a85b5456bc0caa44bf710d57908f4a
+  checksum: a0ad02f7167d1d6ea40344f7194754976f53ec2b5b2ea2b900ed96bd421c8274ac9038ee033465ba134b7878f68668ab789baba15571b6988a37ac9ce963dc58
   languageName: node
   linkType: hard
 
@@ -5675,7 +5675,7 @@ fsevents@~2.3.1:
     "@sentry/node": 6.4.1
     "@sentry/tracing": 6.4.1
     "@sentry/vue": 6.4.1
-    "@supabase/supabase-js": 1.13.2
+    "@supabase/supabase-js": 1.14.0
     "@types/node": 14.17.3
     "@types/pino": 6.3.8
     "@types/web-push": 3.3.0
