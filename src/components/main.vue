@@ -5,7 +5,9 @@
     <Answer :released="recentlyReleased" />
 
     <CollapseTransition :duration="500">
-      <div v-if="!recentlyReleased" class="visible">Checking for updates...</div>
+      <div v-if="!recentlyReleased" class="visible">
+        Listening in real-time for updates...
+      </div>
     </CollapseTransition>
 
     <ul v-if="recentlyReleased" class="links">
@@ -27,7 +29,7 @@ import Answer from "./answer.vue"
 import Question from "./question.vue"
 
 const props = defineProps<{
-  last?: Patch | null
+  last?: Patch
   relevantPatches: Patch[]
   recentlyReleased: boolean
 }>()
