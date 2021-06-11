@@ -1,7 +1,6 @@
 import { config } from "dotenv"
 import { defineConfig } from "vite"
 import Vue from "@vitejs/plugin-vue"
-import { injectHtml as InjectHtml } from "vite-plugin-html"
 import WindiCSS from "vite-plugin-windicss"
 import { VitePWA } from "vite-plugin-pwa"
 
@@ -28,11 +27,6 @@ export default defineConfig({
   plugins: [
     Vue(),
     WindiCSS(),
-    InjectHtml({
-      injectData: {
-        VITE_SUPABASE_URL: process.env.VITE_SUPABASE_URL,
-      },
-    }),
     VitePWA({
       strategies: "injectManifest",
       srcDir: "src/sw",
