@@ -2097,14 +2097,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/node@npm:1.10.0":
-  version: 1.10.0
-  resolution: "@vercel/node@npm:1.10.0"
+"@vercel/node@npm:1.11.0":
+  version: 1.11.0
+  resolution: "@vercel/node@npm:1.11.0"
   dependencies:
     "@types/node": "*"
     ts-node: 8.9.1
     typescript: 3.9.3
-  checksum: c3e1f4e6f467ab328f11562371186c5fad32fb9b942e5b79ac3d32c783248421d478add0d392c5411da2875e4b64505b67bfd62c5cb74c32a7aa51ae87b18867
+  checksum: 7fbb99767a6ca19fa8458dd9670967a1f4161c4035c452cdb7fb1b1eb663bf1660ea5dc713382c1329b4e977bac511cce11c0806233c8bc50e02c23db9562b6c
   languageName: node
   linkType: hard
 
@@ -5679,7 +5679,7 @@ fsevents@~2.3.1:
     "@types/node": 14.17.3
     "@types/pino": 6.3.8
     "@types/web-push": 3.3.0
-    "@vercel/node": 1.10.0
+    "@vercel/node": 1.11.0
     "@vitejs/plugin-vue": 1.2.3
     "@vue/compiler-sfc": 3.0.11
     "@vueuse/core": 4.11.2
