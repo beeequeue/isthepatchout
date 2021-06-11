@@ -27,7 +27,7 @@
   "dependencies": {
     "@ivanv/vue-collapse-transition": "1.0.2",
     "@sentry/vue": "6.4.1",
-    "@supabase/supabase-js": "1.13.2",
+    "@supabase/supabase-js": "1.14.0",
     "@vueuse/core": "4.11.2",
     "date-fns": "2.21.3",
     "fathom-client": "3.0.0",
