@@ -2818,7 +2818,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"browserslist@npm:4.16.6":
+"browserslist@npm:4.16.6, browserslist@npm:^4.14.5, browserslist@npm:^4.16.3":
   version: 4.16.6
   resolution: "browserslist@npm:4.16.6"
   dependencies:
@@ -2830,21 +2830,6 @@ __metadata:
   bin:
     browserslist: cli.js
   checksum: 3dffc86892d2dcfcfc66b52519b7e5698ae070b4fc92ab047e760efc4cae0474e9e70bbe10d769c8d3491b655ef3a2a885b88e7196c83cc5dc0a46dfdba8b70c
-  languageName: node
-  linkType: hard
-
-"browserslist@npm:^4.14.5, browserslist@npm:^4.16.3":
-  version: 4.16.4
-  resolution: "browserslist@npm:4.16.4"
-  dependencies:
-    caniuse-lite: ^1.0.30001208
-    colorette: ^1.2.2
-    electron-to-chromium: ^1.3.712
-    escalade: ^3.1.1
-    node-releases: ^1.1.71
-  bin:
-    browserslist: cli.js
-  checksum: e35cab68c52c5e3a00610146e26fdd9e86449721e291e26d210d689ac751624dd8494d684164c1018084f35d104aaf733a463a74262857c2257d16962a6f62a6
   languageName: node
   linkType: hard
 
@@ -3021,13 +3006,6 @@ __metadata:
   version: 5.3.1
   resolution: "camelcase@npm:5.3.1"
   checksum: e6effce26b9404e3c0f301498184f243811c30dfe6d0b9051863bd8e4034d09c8c2923794f280d6827e5aa055f6c434115ff97864a16a963366fb35fd673024b
-  languageName: node
-  linkType: hard
-
-"caniuse-lite@npm:^1.0.30001208":
-  version: 1.0.30001208
-  resolution: "caniuse-lite@npm:1.0.30001208"
-  checksum: 720c5d7582f08f21a983ccc12a8a32f1d5d08251258862c152ff2c3fa50ef9be5bc5cd34e1bfe35dae1dcaf72248fef75d868b8c3c22ee72a118eef17fae167f
   languageName: node
   linkType: hard
 
@@ -3834,13 +3812,6 @@ __metadata:
   version: 2.7.4
   resolution: "ejs@npm:2.7.4"
   checksum: a1d2bfc7d1f0b39e99ae19b20c9469a25aeddba1ffc225db098110b18d566f73772fcdcc740b108cfda7452276f67d7b64eb359f90285414c942f4ae70713371
-  languageName: node
-  linkType: hard
-
-"electron-to-chromium@npm:^1.3.712":
-  version: 1.3.713
-  resolution: "electron-to-chromium@npm:1.3.713"
-  checksum: 144f564c747bb8826c714d5d8fa8a2dff7fe0c59b72b18975bad191fca25dd454c6ffb23ed3c4a0d22acbbf2f7f3ee5932a35e23b1813e6587b56ece0c05edc3
   languageName: node
   linkType: hard
 
@@ -5743,7 +5714,7 @@ fsevents@~2.3.1:
     tailwindcss: 2.1.4
     typescript: 4.3.2
     vite: 2.3.7
-    vite-plugin-pwa: 0.7.3
+    vite-plugin-pwa: 0.8.0
     vite-plugin-windicss: 1.0.3
     vue: 3.0.11
     vue-tsc: 0.1.7
@@ -8108,9 +8079,9 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"rollup@npm:^2.38.5, rollup@npm:^2.43.1, rollup@npm:^2.45.2":
-  version: 2.45.2
-  resolution: "rollup@npm:2.45.2"
+"rollup@npm:^2.38.5, rollup@npm:^2.43.1, rollup@npm:^2.51.2":
+  version: 2.51.2
+  resolution: "rollup@npm:2.51.2"
   dependencies:
     fsevents: ~2.3.1
   dependenciesMeta:
@@ -8118,7 +8089,7 @@ resolve@^2.0.0-next.3:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: c049bedc191199842fab13248fdd74dbb33262b5a42ce35abe268037aa8be0f9a32739f2e28c74e7aaacae514fbb637ef79a20ef784f7a33b33587da479065bb
+  checksum: 74fe48402478189a523275e57d23627743f9021b5e7b16f65a468eff006b97d2f6a1798ff8936e9b89c053010744fde1e6518336f02693870a317bbabb8bba52
   languageName: node
   linkType: hard
 
@@ -9530,19 +9501,19 @@ typescript@4.3.2:
   languageName: node
   linkType: hard
 
-"vite-plugin-pwa@npm:0.7.3":
-  version: 0.7.3
-  resolution: "vite-plugin-pwa@npm:0.7.3"
+"vite-plugin-pwa@npm:0.8.0":
+  version: 0.8.0
+  resolution: "vite-plugin-pwa@npm:0.8.0"
   dependencies:
     debug: ^4.3.2
     fast-glob: ^3.2.5
     pretty-bytes: ^5.6.0
-    rollup: ^2.45.2
+    rollup: ^2.51.2
     workbox-build: ^6.1.5
     workbox-window: ^6.1.5
   peerDependencies:
     vite: ^2.0.0
-  checksum: 1baadb922bd45b0c81047c9eb18c73ac2ed0506c2b234cc474a6e29265ea8dcde3194253c1431e515df26b50a25ef07a768d482eff6139ac4806e8bb5ac89085
+  checksum: 4b7f11de0cb5a2a6366e429126ba72d346f0e8d4018586ca03324503352647e8788a26ca14dc5d41efeeae294d41b6b94dff924d1fb4ecd1bc814358ad118e2d
   languageName: node
   linkType: hard
 
