@@ -1873,7 +1873,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:14.17.3":
+"@types/node@npm:*, @types/node@npm:^15.3.0":
+  version: 15.12.2
+  resolution: "@types/node@npm:15.12.2"
+  checksum: 0dff080f306e4d5cd968bd43315238a227b1f54f4bb59fa9cee976535678f00755834c0288315029ae12f78b3db43efb5bfb700cf8aae882f184eb700229f974
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:14.17.3":
   version: 14.17.3
   resolution: "@types/node@npm:14.17.3"
   checksum: c24c1f222b83a4cba584ae1bce2ab262d48d9d502346d82dd261236d29ce11ad63c5a5b1bfc74e50eaae032384893d443297d4da758e1eb540d9bf2495d7814e
@@ -2818,7 +2825,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"browserslist@npm:4.16.6":
+"browserslist@npm:4.16.6, browserslist@npm:^4.14.5, browserslist@npm:^4.16.3":
   version: 4.16.6
   resolution: "browserslist@npm:4.16.6"
   dependencies:
@@ -2830,21 +2837,6 @@ __metadata:
   bin:
     browserslist: cli.js
   checksum: 3dffc86892d2dcfcfc66b52519b7e5698ae070b4fc92ab047e760efc4cae0474e9e70bbe10d769c8d3491b655ef3a2a885b88e7196c83cc5dc0a46dfdba8b70c
-  languageName: node
-  linkType: hard
-
-"browserslist@npm:^4.14.5, browserslist@npm:^4.16.3":
-  version: 4.16.4
-  resolution: "browserslist@npm:4.16.4"
-  dependencies:
-    caniuse-lite: ^1.0.30001208
-    colorette: ^1.2.2
-    electron-to-chromium: ^1.3.712
-    escalade: ^3.1.1
-    node-releases: ^1.1.71
-  bin:
-    browserslist: cli.js
-  checksum: e35cab68c52c5e3a00610146e26fdd9e86449721e291e26d210d689ac751624dd8494d684164c1018084f35d104aaf733a463a74262857c2257d16962a6f62a6
   languageName: node
   linkType: hard
 
@@ -3021,13 +3013,6 @@ __metadata:
   version: 5.3.1
   resolution: "camelcase@npm:5.3.1"
   checksum: e6effce26b9404e3c0f301498184f243811c30dfe6d0b9051863bd8e4034d09c8c2923794f280d6827e5aa055f6c434115ff97864a16a963366fb35fd673024b
-  languageName: node
-  linkType: hard
-
-"caniuse-lite@npm:^1.0.30001208":
-  version: 1.0.30001208
-  resolution: "caniuse-lite@npm:1.0.30001208"
-  checksum: 720c5d7582f08f21a983ccc12a8a32f1d5d08251258862c152ff2c3fa50ef9be5bc5cd34e1bfe35dae1dcaf72248fef75d868b8c3c22ee72a118eef17fae167f
   languageName: node
   linkType: hard
 
@@ -3834,13 +3819,6 @@ __metadata:
   version: 2.7.4
   resolution: "ejs@npm:2.7.4"
   checksum: a1d2bfc7d1f0b39e99ae19b20c9469a25aeddba1ffc225db098110b18d566f73772fcdcc740b108cfda7452276f67d7b64eb359f90285414c942f4ae70713371
-  languageName: node
-  linkType: hard
-
-"electron-to-chromium@npm:^1.3.712":
-  version: 1.3.713
-  resolution: "electron-to-chromium@npm:1.3.713"
-  checksum: 144f564c747bb8826c714d5d8fa8a2dff7fe0c59b72b18975bad191fca25dd454c6ffb23ed3c4a0d22acbbf2f7f3ee5932a35e23b1813e6587b56ece0c05edc3
   languageName: node
   linkType: hard
 
@@ -5737,7 +5715,7 @@ fsevents@~2.3.1:
     joi: 17.4.0
     lint-staged: 11.0.0
     pino: 6.11.3
-    pino-pretty: 4.8.0
+    pino-pretty: 5.0.2
     prettier: 2.3.1
     simple-git-hooks: 2.4.1
     tailwindcss: 2.1.4
@@ -7137,11 +7115,12 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"pino-pretty@npm:4.8.0":
-  version: 4.8.0
-  resolution: "pino-pretty@npm:4.8.0"
+"pino-pretty@npm:5.0.2":
+  version: 5.0.2
+  resolution: "pino-pretty@npm:5.0.2"
   dependencies:
     "@hapi/bourne": ^2.0.0
+    "@types/node": ^15.3.0
     args: ^5.0.1
     chalk: ^4.0.0
     dateformat: ^4.5.1
@@ -7155,7 +7134,7 @@ fsevents@~2.3.1:
     strip-json-comments: ^3.1.1
   bin:
     pino-pretty: bin.js
-  checksum: 8e2e4cdb80c7f8b4df318f30415c98a09f952174a7dd9b0910041f995b8476fc177568e950ea3ce5967303c46356df37d13f822cff99c848e4177c957d3b1dad
+  checksum: 4d19f2ab13120a348b4cec7e786212a1ea22d6be2f7b4fa55efa35de97922cedd723dbc3340b1cc93927d503210259cf2079e0b202c58fddf76134425e1d13a4
   languageName: node
   linkType: hard
 
