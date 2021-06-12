@@ -6,6 +6,7 @@
       text-2xl
       md:text-4xl
       font-serif
+      text-center
     "
   >
     Is
