@@ -1451,114 +1451,114 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sentry/browser@npm:6.4.1":
-  version: 6.4.1
-  resolution: "@sentry/browser@npm:6.4.1"
+"@sentry/browser@npm:6.6.0":
+  version: 6.6.0
+  resolution: "@sentry/browser@npm:6.6.0"
   dependencies:
-    "@sentry/core": 6.4.1
-    "@sentry/types": 6.4.1
-    "@sentry/utils": 6.4.1
+    "@sentry/core": 6.6.0
+    "@sentry/types": 6.6.0
+    "@sentry/utils": 6.6.0
     tslib: ^1.9.3
-  checksum: ac07b4e9bd876ea0a87ae5318a231b62a98d2e30f98faf30334c561c0610d0be0e1e1fc396ece36872c20e7de92e096c5a24c78d1bac05c386c71eb189e620db
+  checksum: 0c2a56abe06c4cd7a168a28ca340b24d5383420b65aeeb059ed7834052c0b0563624f3fb4cd5ff43e7fd04ad11c377e1d9906e8c0d251fdd7cfaa7353975b0e3
   languageName: node
   linkType: hard
 
-"@sentry/core@npm:6.4.1":
-  version: 6.4.1
-  resolution: "@sentry/core@npm:6.4.1"
+"@sentry/core@npm:6.6.0":
+  version: 6.6.0
+  resolution: "@sentry/core@npm:6.6.0"
   dependencies:
-    "@sentry/hub": 6.4.1
-    "@sentry/minimal": 6.4.1
-    "@sentry/types": 6.4.1
-    "@sentry/utils": 6.4.1
+    "@sentry/hub": 6.6.0
+    "@sentry/minimal": 6.6.0
+    "@sentry/types": 6.6.0
+    "@sentry/utils": 6.6.0
     tslib: ^1.9.3
-  checksum: 176908cfb47297b862fd583e6b1d05b4682378ea27ce2d51eda032cb3ee6722d43ecf90f97ee96d65054868b8e882ac0e7308574fcc663c51b3f4b6f21b5d803
+  checksum: 6045c38f644fc4b0a8c41d27ec9fcb812ded5c083febd56201990702afa43d30a8ab9c5ab0643f7f5f6b20ecef5438ef5747ba228dc18d2a115dec685d66e349
   languageName: node
   linkType: hard
 
-"@sentry/hub@npm:6.4.1":
-  version: 6.4.1
-  resolution: "@sentry/hub@npm:6.4.1"
+"@sentry/hub@npm:6.6.0":
+  version: 6.6.0
+  resolution: "@sentry/hub@npm:6.6.0"
   dependencies:
-    "@sentry/types": 6.4.1
-    "@sentry/utils": 6.4.1
+    "@sentry/types": 6.6.0
+    "@sentry/utils": 6.6.0
     tslib: ^1.9.3
-  checksum: 402456fe33984ed23ac9e9d0954a86e87926c8572c3a213de819a27bb0bfd3af5d6f157e409795c944bb626527e4f4f5f7e7a134ff764e73bc255d4a05401e93
+  checksum: e95ce8071f3f9d25a1c054a1566c432324878d950a32c3260a35f371d698d9551be3882e16b84c3e93db1c2b42c2ac30e2b37370ce711e7ff00b8ac532ba62d7
   languageName: node
   linkType: hard
 
-"@sentry/minimal@npm:6.4.1":
-  version: 6.4.1
-  resolution: "@sentry/minimal@npm:6.4.1"
+"@sentry/minimal@npm:6.6.0":
+  version: 6.6.0
+  resolution: "@sentry/minimal@npm:6.6.0"
   dependencies:
-    "@sentry/hub": 6.4.1
-    "@sentry/types": 6.4.1
+    "@sentry/hub": 6.6.0
+    "@sentry/types": 6.6.0
     tslib: ^1.9.3
-  checksum: 8c7d69b383785eca81cf2a45997dfd355173ee22c657fe259f93c5bb6dc4ad75573ad9c0c3e817e88a6576e3191f8e7195992fc57824ecb971428ce43858ddb7
+  checksum: de16e6e0efa9f4f1a02086599a405d81dc7c868400cabcb987ad6488fb93ac82bca79e1cdfaf979853e14b9e2abf5073c38d901ee18a5ecacceeac4fda34ce74
   languageName: node
   linkType: hard
 
-"@sentry/node@npm:6.4.1":
-  version: 6.4.1
-  resolution: "@sentry/node@npm:6.4.1"
+"@sentry/node@npm:6.6.0":
+  version: 6.6.0
+  resolution: "@sentry/node@npm:6.6.0"
   dependencies:
-    "@sentry/core": 6.4.1
-    "@sentry/hub": 6.4.1
-    "@sentry/tracing": 6.4.1
-    "@sentry/types": 6.4.1
-    "@sentry/utils": 6.4.1
+    "@sentry/core": 6.6.0
+    "@sentry/hub": 6.6.0
+    "@sentry/tracing": 6.6.0
+    "@sentry/types": 6.6.0
+    "@sentry/utils": 6.6.0
     cookie: ^0.4.1
     https-proxy-agent: ^5.0.0
     lru_map: ^0.3.3
     tslib: ^1.9.3
-  checksum: c8a34916fe7735fed26aa952729d4cd42e9b4c01a5a4a3bc996118d3f65b986a8210838b69eecbe7a3699f0ea8555fb7c6e0187740cdf9f919a6494b9501b63f
+  checksum: 66b9b2ea52b32460178e9066a92dd40a974eab78f577361606bd64fefa9a57f2259788e1868b553547285f89e2768a8ba1fb334f72d8eeec620d8e8f603c3ce5
   languageName: node
   linkType: hard
 
-"@sentry/tracing@npm:6.4.1":
-  version: 6.4.1
-  resolution: "@sentry/tracing@npm:6.4.1"
+"@sentry/tracing@npm:6.6.0":
+  version: 6.6.0
+  resolution: "@sentry/tracing@npm:6.6.0"
   dependencies:
-    "@sentry/hub": 6.4.1
-    "@sentry/minimal": 6.4.1
-    "@sentry/types": 6.4.1
-    "@sentry/utils": 6.4.1
+    "@sentry/hub": 6.6.0
+    "@sentry/minimal": 6.6.0
+    "@sentry/types": 6.6.0
+    "@sentry/utils": 6.6.0
     tslib: ^1.9.3
-  checksum: bddcc4a3b8fbaa2e9f30c88292dcfe332cf5e08346ff934254a4bf0434651bb9aeeec3a822492387822f59a4f0a0dfc06e1cdf0f0b317a3cf6b7a207a19f532d
+  checksum: 84e3fae0dc11df40f4fadcb64c6e9c94e998fe70deac8e64ac7fcc11da77e38f0165ec5e7f2019305673cef71f1f70af4d8b28e3ab2db0814ba66b1db1098d99
   languageName: node
   linkType: hard
 
-"@sentry/types@npm:6.4.1":
-  version: 6.4.1
-  resolution: "@sentry/types@npm:6.4.1"
-  checksum: 50ffc4a6382372e9a04d536821579fe84cf6ef6cba4d0a538cc0f3f3612f7762354457147719a8796f9bbb8e3a7e7b801487cd2b549f202b65de50fd176eb53f
+"@sentry/types@npm:6.6.0":
+  version: 6.6.0
+  resolution: "@sentry/types@npm:6.6.0"
+  checksum: 32afd0c7186f7a3abffbe4c74c6aef847787a845c4863c5f75e579b86963472eb13a009ecfc2271a46890364fe14ff11e3d075ae7091276e44681049c26dfbd7
   languageName: node
   linkType: hard
 
-"@sentry/utils@npm:6.4.1":
-  version: 6.4.1
-  resolution: "@sentry/utils@npm:6.4.1"
+"@sentry/utils@npm:6.6.0":
+  version: 6.6.0
+  resolution: "@sentry/utils@npm:6.6.0"
   dependencies:
-    "@sentry/types": 6.4.1
+    "@sentry/types": 6.6.0
     tslib: ^1.9.3
-  checksum: fc0568ea9c5c53df360a323fb599595516b55c6e2004e70d1917a326e2edbfaf44654314b7dcc26f0c71a5215e9b274ecc160136d13dcbb294f77b1540c15fb2
+  checksum: c435bd0f5d94ea8f1efe14a1180abce676f3713c005c815d496c0b3d269514158212e7a4115476c221ceb2685879fe5ddc0e4f7a93ced53f7a09ae5d7e9ffc97
   languageName: node
   linkType: hard
 
-"@sentry/vue@npm:6.4.1":
-  version: 6.4.1
-  resolution: "@sentry/vue@npm:6.4.1"
+"@sentry/vue@npm:6.6.0":
+  version: 6.6.0
+  resolution: "@sentry/vue@npm:6.6.0"
   dependencies:
-    "@sentry/browser": 6.4.1
-    "@sentry/core": 6.4.1
-    "@sentry/minimal": 6.4.1
-    "@sentry/types": 6.4.1
-    "@sentry/utils": 6.4.1
+    "@sentry/browser": 6.6.0
+    "@sentry/core": 6.6.0
+    "@sentry/minimal": 6.6.0
+    "@sentry/types": 6.6.0
+    "@sentry/utils": 6.6.0
     tslib: ^1.9.3
   peerDependencies:
     vue: 2.x
     vue-router: 3.x
-  checksum: 41e0a3c0372c0465c4b1fc03823413d453c5a53c8530991b815e41d7b5c01a8a4f7476880774ca96fc13ff07ea6fbb3540df671ac38709ae1e85a788c0953edd
+  checksum: 4cbe07e05f098c77f5061bb7180eeaa2574862454c5bc1a3070462fefe81f4bdb0dbc354a9f35a0073f6e85d63dfe4a0c4dedb3138f5b0e47248e95c9651ec22
   languageName: node
   linkType: hard
 
@@ -2270,22 +2270,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/core@npm:4.11.2":
-  version: 4.11.2
-  resolution: "@vueuse/core@npm:4.11.2"
+"@vueuse/core@npm:5.0.2":
+  version: 5.0.2
+  resolution: "@vueuse/core@npm:5.0.2"
   dependencies:
-    "@vueuse/shared": 4.11.2
+    "@vueuse/shared": 5.0.2
     vue-demi: "*"
-  checksum: 3a84b411ae45159891ad3b9122fca8e97f02458e393dfea8c691657e6f25db3027ca57e75029f5d904b3708071cba2e40d11187b2049aae72ee8c4c95021074c
+  checksum: 51b0ef45bb91979950ed613cb3d03bf635d29ab5f1d299c5d84818c56790b5489e80fb6a28bdfd01157a0833a2e2ef71de8cf3a19a8403110ebf185c11af5891
   languageName: node
   linkType: hard
 
-"@vueuse/shared@npm:4.11.2":
-  version: 4.11.2
-  resolution: "@vueuse/shared@npm:4.11.2"
+"@vueuse/shared@npm:5.0.2":
+  version: 5.0.2
+  resolution: "@vueuse/shared@npm:5.0.2"
   dependencies:
     vue-demi: "*"
-  checksum: 49d0aca68e962ccfbd86152325cba7b177eec9d518aa1861cad81183048e3bf1520848e5b606edcc5a2e89490f6485208163474820f6594355daff3f043d9a77
+  checksum: ee870e275e0bfddbfc6b8a3b7e401a99d0643871d347214056d5e277f3eba11120ba7976ee2e818eefd98cf58e3f19f337337dce15e2c70a50333ed45c4e9666
   languageName: node
   linkType: hard
 
@@ -5692,9 +5692,9 @@ fsevents@~2.3.1:
     "@beequeue/eslint-plugin": 0.2.1
     "@hapi/boom": 9.1.2
     "@ivanv/vue-collapse-transition": 1.0.2
-    "@sentry/node": 6.4.1
-    "@sentry/tracing": 6.4.1
-    "@sentry/vue": 6.4.1
+    "@sentry/node": 6.6.0
+    "@sentry/tracing": 6.6.0
+    "@sentry/vue": 6.6.0
     "@supabase/supabase-js": 1.14.0
     "@types/node": 14.17.3
     "@types/pino": 6.3.8
@@ -5702,7 +5702,7 @@ fsevents@~2.3.1:
     "@vercel/node": 1.11.0
     "@vitejs/plugin-vue": 1.2.3
     "@vue/compiler-sfc": 3.1.1
-    "@vueuse/core": 4.11.2
+    "@vueuse/core": 5.0.2
     bottleneck: 2.19.5
     browserslist: 4.16.6
     bundlewatch: 0.3.2

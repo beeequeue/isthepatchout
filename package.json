@@ -26,9 +26,9 @@
   },
   "dependencies": {
     "@ivanv/vue-collapse-transition": "1.0.2",
-    "@sentry/vue": "6.4.1",
+    "@sentry/vue": "6.6.0",
     "@supabase/supabase-js": "1.14.0",
-    "@vueuse/core": "4.11.2",
+    "@vueuse/core": "5.0.2",
     "date-fns": "2.22.1",
     "fathom-client": "3.0.0",
     "vue": "3.1.1",
@@ -37,8 +37,8 @@
   "devDependencies": {
     "@beequeue/eslint-plugin": "0.2.1",
     "@hapi/boom": "9.1.2",
-    "@sentry/node": "6.4.1",
-    "@sentry/tracing": "6.4.1",
+    "@sentry/node": "6.6.0",
+    "@sentry/tracing": "6.6.0",
     "@types/node": "14.17.3",
     "@types/pino": "6.3.8",
     "@types/web-push": "3.3.0",
