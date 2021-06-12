@@ -1873,7 +1873,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:14.17.3":
+"@types/node@npm:*, @types/node@npm:^15.3.0":
+  version: 15.12.2
+  resolution: "@types/node@npm:15.12.2"
+  checksum: 0dff080f306e4d5cd968bd43315238a227b1f54f4bb59fa9cee976535678f00755834c0288315029ae12f78b3db43efb5bfb700cf8aae882f184eb700229f974
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:14.17.3":
   version: 14.17.3
   resolution: "@types/node@npm:14.17.3"
   checksum: c24c1f222b83a4cba584ae1bce2ab262d48d9d502346d82dd261236d29ce11ad63c5a5b1bfc74e50eaae032384893d443297d4da758e1eb540d9bf2495d7814e
@@ -5708,7 +5715,7 @@ fsevents@~2.3.1:
     joi: 17.4.0
     lint-staged: 11.0.0
     pino: 6.11.3
-    pino-pretty: 4.8.0
+    pino-pretty: 5.0.2
     prettier: 2.3.1
     simple-git-hooks: 2.4.1
     tailwindcss: 2.1.4
@@ -7108,11 +7115,12 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"pino-pretty@npm:4.8.0":
-  version: 4.8.0
-  resolution: "pino-pretty@npm:4.8.0"
+"pino-pretty@npm:5.0.2":
+  version: 5.0.2
+  resolution: "pino-pretty@npm:5.0.2"
   dependencies:
     "@hapi/bourne": ^2.0.0
+    "@types/node": ^15.3.0
     args: ^5.0.1
     chalk: ^4.0.0
     dateformat: ^4.5.1
@@ -7126,7 +7134,7 @@ fsevents@~2.3.1:
     strip-json-comments: ^3.1.1
   bin:
     pino-pretty: bin.js
-  checksum: 8e2e4cdb80c7f8b4df318f30415c98a09f952174a7dd9b0910041f995b8476fc177568e950ea3ce5967303c46356df37d13f822cff99c848e4177c957d3b1dad
+  checksum: 4d19f2ab13120a348b4cec7e786212a1ea22d6be2f7b4fa55efa35de97922cedd723dbc3340b1cc93927d503210259cf2079e0b202c58fddf76134425e1d13a4
   languageName: node
   linkType: hard
 
