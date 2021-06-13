@@ -1,8 +1,8 @@
 <template>
-  <div class="flex relative align-center font-serif text-12xl">
+  <div class="flex relative align-center font-serif text-10xl md:text-12xl">
     <transition
       mode="out-in"
-      class="duration-500 transition-fastest"
+      class="duration-250"
       enter-active-class="ease-out"
       leave-active-class="ease-in"
       enter-from-class="transform -translate-x-full opacity-0"

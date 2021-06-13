@@ -1,12 +1,14 @@
 <template>
-  <section class="flex flex-col items-center">
+  <section class="flex flex-shrink flex-col items-center my-auto md:mb-0">
     <Question :relevant-patches="relevantPatches" />
 
     <Answer :released="recentlyReleased" />
 
     <CollapseTransition :duration="500">
-      <div v-if="!recentlyReleased" class="visible">
-        Listening in real-time for updates...
+      <div v-if="!recentlyReleased" class="text-center">
+        No need to refresh the page.
+        <br />
+        It will update as soon as we see a new update!
       </div>
     </CollapseTransition>
 

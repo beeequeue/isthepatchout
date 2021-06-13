@@ -3,14 +3,13 @@
     class="
       container
       mx-auto
-      h-screen
-      px-4
-      py-10
-      md:px-10
       flex flex-col
       justify-center
       items-center
-      md:justify-center
+      h-screen
+      px-4
+      pt-15
+      md:py-20 md:px-10 md:justify-center
       text-gray-300
       select-none
     "
@@ -26,12 +25,15 @@
         :recently-released="recentlyReleased"
       />
     </Fade>
+
+    <BottomBar />
   </main>
 </template>
 
 <script lang="ts" setup>
 import { computed, watch } from "vue"
 
+import BottomBar from "./components/bottom-bar.vue"
 import Fade from "./components/fade.vue"
 import Loading from "./components/loading.vue"
 import Main from "./components/main.vue"
