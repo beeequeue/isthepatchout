@@ -1,5 +1,20 @@
 <template>
-  <nav class="flex relative justify-center align-center w-1/1 mt-auto py-2 px-4">
+  <nav
+    class="
+      flex
+      relative
+      justify-center
+      align-center
+      <md:w-1/1
+      mt-auto
+      md:mb-5
+      py-2
+      px-4
+      md:rounded-lg
+      bg-gradient-to-br
+      from-gray-900
+    "
+  >
     <Notifications />
   </nav>
 </template>

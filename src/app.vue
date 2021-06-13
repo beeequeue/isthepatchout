@@ -1,19 +1,5 @@
 <template>
-  <main
-    class="
-      container
-      mx-auto
-      flex flex-col
-      justify-center
-      items-center
-      h-screen
-      px-4
-      pt-15
-      md:py-20 md:px-10 md:justify-center
-      text-gray-300
-      select-none
-    "
-  >
+  <main class="grid justify-items-center items-center h-screen">
     <Fade>
       <Loading v-if="loading" key="loading" />
 
@@ -54,3 +40,9 @@ watch(recentlyReleased, (isRecentlyReleased) => {
   }
 })
 </script>
+
+<style scoped>
+main {
+  grid-template-rows: 1fr auto;
+}
+</style>

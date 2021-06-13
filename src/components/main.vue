@@ -1,5 +1,5 @@
 <template>
-  <section class="flex flex-shrink flex-col items-center my-auto md:mb-0">
+  <section class="flex flex-shrink flex-col items-center">
     <Question :relevant-patches="relevantPatches" />
 
     <Answer :released="recentlyReleased" />
