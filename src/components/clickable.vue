@@ -1,7 +1,21 @@
 <template>
   <component
     :is="is"
-    class="clickable"
+    class="
+      clickable
+      flex
+      items-center
+      py-1
+      px-2
+      bg-trans
+      border-2 border-trans
+      rounded-lg
+      overflow-hidden
+      cursor-pointer
+      transition-bg
+      duration-500
+      active:bg-gray-800
+    "
     :class="{ clicked }"
     @mousedown="clicked = false"
     @click="clicked = true"
@@ -16,7 +30,7 @@ import { ref, defineProps } from "vue"
 defineProps({
   is: {
     type: String,
-    default: "div",
+    default: "button",
   },
 })
 
@@ -37,24 +51,9 @@ const clicked = ref(false)
 }
 
 .clickable {
-  display: flex;
-  align-items: center;
-  padding: 2px 6px;
-  border: 2px solid transparent;
-  border-radius: 10px;
-  overflow: hidden;
-
-  background: transparent;
-  box-shadow: var(--shadows);
-
-  user-select: none;
-  cursor: pointer;
-
   transition: background 500ms, box-shadow 500ms;
 
   &:active {
-    background: var(--bg-300);
-
     transition: background 50ms;
   }
 

@@ -1,5 +1,5 @@
 <template>
-  <Clickable is="button" class="switch" :class="{ checked }" @click="emit('change')">
+  <Clickable class="switch" :class="{ checked }" @click="emit('change')">
     <input
       hidden
       type="checkbox"
@@ -12,16 +12,13 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps, defineEmit, computed } from "vue"
+import { defineProps, defineEmit } from "vue"
 
 // @ts-ignore: Used component
 import Clickable from "./clickable.vue"
 
-const props = defineProps<{ checked: boolean; circle?: boolean }>()
+defineProps<{ checked: boolean; circle?: boolean }>()
 const emit = defineEmit(["change"])
-
-// @ts-ignore: Used in styles
-const radius = computed(() => (props.circle ? "100%" : "10px"))
 </script>
 
 <style scoped>
