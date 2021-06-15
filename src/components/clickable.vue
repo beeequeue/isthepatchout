@@ -5,8 +5,7 @@
       clickable
       flex
       items-center
-      py-1
-      px-2
+      p-2
       bg-trans
       border-2 border-trans
       rounded-lg
@@ -14,7 +13,7 @@
       cursor-pointer
       transition-bg
       duration-500
-      active:bg-gray-800
+      active:bg-gray-800 active:duration-50
     "
     :class="{ clicked }"
     @mousedown="clicked = false"
@@ -50,15 +49,7 @@ const clicked = ref(false)
   }
 }
 
-.clickable {
-  transition: background 500ms, box-shadow 500ms;
-
-  &:active {
-    transition: background 50ms;
-  }
-
-  &.clicked {
-    animation: clicked 350ms forwards;
-  }
+.clicked {
+  animation: clicked 350ms forwards;
 }
 </style>

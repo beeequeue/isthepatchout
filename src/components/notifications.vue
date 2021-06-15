@@ -1,22 +1,20 @@
 <template>
-  <transition>
-    <section v-if="!loading && supported" class="notifications">
-      <ToggleButton circle :checked="subscribed" @change="handleChange">
-        <img
-          class="icon"
-          :class="{ subscribing }"
-          :src="subscribed ? alertSvg : noAlertSvg"
-        />
-      </ToggleButton>
-
-      Notifications
-    </section>
-  </transition>
+  <section class="!loading && supported">
+    <ToggleButton circle :checked="subscribed" @change="handleChange">
+      <span
+        class="h-6 w-6 animate-infinite animate-slow transition-all"
+        :class="iconClasses"
+        v-html="subscribed ? alertSvg : noAlertSvg"
+      />
+    </ToggleButton>
+  </section>
 </template>
 
 <script lang="ts" setup>
-import alertSvg from "../assets/alert.svg"
-import noAlertSvg from "../assets/no-alert.svg"
+import { computed } from "vue"
+
+import alertSvg from "../assets/alert.svg?raw"
+import noAlertSvg from "../assets/no-alert.svg?raw"
 import { usePushNotifications } from "../hooks/use-push-notifications"
 
 import ToggleButton from "./toggle-button.vue"
@@ -24,8 +22,13 @@ import ToggleButton from "./toggle-button.vue"
 const { supported, loading, subscribing, subscribed, askForPermissions, unsubscribe } =
   usePushNotifications()
 
+const iconClasses = computed(() => ({
+  "animate-heartBeat": subscribing.value,
+  "grayed-out": !supported || loading.value,
+  shine: subscribed.value,
+}))
+
 const handleChange = () => {
-  // eslint-disable-next-line no-unreachable
   if (subscribed.value) {
     return unsubscribe()
   }
@@ -35,32 +38,7 @@ const handleChange = () => {
 </script>
 
 <style scoped>
-.notifications {
-  display: flex;
-  align-items: center;
-  font-size: 1.25em;
-
-  & > button {
-    margin-right: 12px;
-  }
-
-  transition: opacity 1s;
-
-  &.v-enter-from {
-    opacity: 0;
-  }
-}
-
-@keyframes spin {
-  from {
-    transform: rotateZ(0deg);
-  }
-  to {
-    transform: rotateZ(360deg);
-  }
-}
-
-.subscribing {
-  animation: spin 0.5s linear infinite;
+.shine {
+  filter: drop-shadow(0 0 4px #ccc);
 }
 </style>

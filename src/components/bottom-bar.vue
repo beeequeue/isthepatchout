@@ -1,18 +1,18 @@
 <template>
   <nav
     class="
-      flex
       relative
-      justify-center
-      align-center
-      <md:w-1/1
+      grid
+      auto-cols-min
+      w-1/1
+      md:w-auto
       mt-auto
       md:mb-5
-      py-2
-      px-4
+      p-1
+      shadow-lg
       md:rounded-lg
       bg-gradient-to-br
-      from-gray-900
+      from-gray-900/75
     "
   >
     <Notifications />

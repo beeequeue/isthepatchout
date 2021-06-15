@@ -2343,6 +2343,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@windicss/animations@npm:1.0.8":
+  version: 1.0.8
+  resolution: "@windicss/animations@npm:1.0.8"
+  checksum: d8c5f4a3a2aa7990fd32f0b38305988bc8e01d1f00089fc771db5895249b09635ede23b27caaa1d973376a0c08beeca9103a527e40091e534ead912b27920cdd
+  languageName: node
+  linkType: hard
+
 "@windicss/plugin-utils@npm:1.0.4":
   version: 1.0.4
   resolution: "@windicss/plugin-utils@npm:1.0.4"
@@ -5741,6 +5748,7 @@ fsevents@~2.3.1:
     "@vitejs/plugin-vue": 1.2.3
     "@vue/compiler-sfc": 3.1.1
     "@vueuse/core": 5.0.3
+    "@windicss/animations": 1.0.8
     bottleneck: 2.19.5
     browserslist: 4.16.6
     bundlewatch: 0.3.2
