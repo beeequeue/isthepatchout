@@ -1,0 +1,41 @@
+{
+  "$schema": "https://raw.githubusercontent.com/dtinth/vercel-schemas/master/json/deployment/config-static.json",
+  "headers": [
+    {
+      "source": "/assets/**/*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800"
+        }
+      ]
+    },
+    {
+      "source": "/sw.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/fonts/*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=2419200"
+        }
+      ]
+    },
+    {
+      "source": "/*.svg",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=2419200"
+        }
+      ]
+    }
+  ]
+}
