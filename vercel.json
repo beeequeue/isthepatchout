@@ -1,5 +1,4 @@
 {
-  "$schema": "https://raw.githubusercontent.com/dtinth/vercel-schemas/master/json/deployment/config-static.json",
   "headers": [
     {
       "source": "/assets/**/*",
