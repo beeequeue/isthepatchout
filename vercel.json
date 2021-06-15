@@ -1,7 +1,7 @@
 {
   "headers": [
     {
-      "source": "/assets/**/*",
+      "source": "/assets/.*",
       "headers": [
         {
           "key": "Cache-Control",
@@ -19,7 +19,7 @@
       ]
     },
     {
-      "source": "/fonts/*",
+      "source": "/fonts/.*",
       "headers": [
         {
           "key": "Cache-Control",
@@ -28,7 +28,7 @@
       ]
     },
     {
-      "source": "/*.svg",
+      "source": "/.*.svg",
       "headers": [
         {
           "key": "Cache-Control",
