@@ -1,0 +1,30 @@
+{
+  extends: ["config:js-app", "helpers:disableTypesNodeMajor"],
+  prHourlyLimit: 5,
+  prConcurrentLimit: 5,
+  branchConcurrentLimit: 5,
+  schedule: ["before 11am"],
+  labels: ["dependencies"],
+  postUpdateOptions: ["yarnDedupeHighest"],
+  postUpgradeTasks: {
+    commands: ["yarn eslint --fix"],
+    fileFilters: ["yarn.lock", "**/*.{js,ts,vue}"],
+    executionMode: "update",
+  },
+  baseBranches: ["main"],
+  packageRules: [
+    {
+      matchUpdateTypes: ["patch", "minor"],
+      matchManagers: ["npm"],
+      automerge: true,
+    },
+    {
+      sourceUrlPrefixes: ["https://github.com/vitejs/vite"],
+      groupName: "Vite",
+    },
+    {
+      packagePatterns: ["lint"],
+      groupName: "Linting",
+    },
+  ],
+}
