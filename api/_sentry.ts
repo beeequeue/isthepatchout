@@ -2,13 +2,13 @@ import { Boom, internal, isBoom } from "@hapi/boom"
 import {
   captureException,
   flush,
-  getCurrentHub,
   init,
   Integrations,
   setContext,
   setTag,
   startTransaction,
 } from "@sentry/node"
+import type { Transaction } from "@sentry/types"
 import type { VercelRequest, VercelResponse } from "@vercel/node"
 
 import { Logger } from "./_logger"
@@ -28,17 +28,19 @@ init({
   dsn: process.env.SENTRY_DSN,
   environment: process.env.VERCEL_ENV as string,
   integrations: [new Integrations.Http({ tracing: true })],
-  tracesSampleRate: 1,
+  tracesSampleRate: Number(process.env.SENTRY_TRACES_SAMPLE_RATE ?? 1),
 })
 
 setTag("app", "api")
+
+let transaction: Transaction
 
 export const sentryWrapper =
   (path: string, handler: CustomHandler): Handler =>
   async (req, res) => {
     let response: NonNullable<CustomHandlerResponse>
 
-    const trx = startTransaction({
+    transaction = startTransaction({
       name: path,
       op: "transaction",
     })
@@ -56,7 +58,7 @@ export const sentryWrapper =
       captureException(error)
     }
 
-    trx.finish()
+    transaction.finish()
 
     await flush(1000)
 
@@ -95,8 +97,6 @@ export const sentryWrapper =
   }
 
 export const startTask = (name: string) => {
-  const transaction = getCurrentHub().getScope()?.getTransaction()
-
   if (transaction == null) throw new Error("thefuck")
 
   return transaction.startChild({
