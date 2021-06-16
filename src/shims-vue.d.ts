@@ -19,3 +19,11 @@ declare module "@ivanv/vue-collapse-transition" {
 
   export default CollapseTransition
 }
+
+declare module "simple-icons/icons/*" {
+  import { SimpleIcon } from "simple-icons"
+
+  const icon: SimpleIcon
+
+  export = icon
+}

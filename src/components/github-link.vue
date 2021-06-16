@@ -9,10 +9,8 @@
 
 <script lang="ts" setup>
 import githubIcon from "simple-icons/icons/github"
-import { defineProps } from "vue"
 
 import pkgJson from "../../package.json"
 
-import Clickable from "./clickable.vue"
 import Icon from "./icon.vue"
 </script>

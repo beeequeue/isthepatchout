@@ -2003,7 +2003,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/simple-icons@npm:^5":
+"@types/simple-icons@npm:5.0.0":
   version: 5.0.0
   resolution: "@types/simple-icons@npm:5.0.0"
   checksum: f7ba7d058e0160990009f4b6580e6f2de0fe5cb628034ee80490b981b7a6036fd61f5406f21d3d0f8b574f1972a635ce1d5a0042efb5324df4e56c53f0a5570c
@@ -5750,7 +5750,7 @@ fsevents@~2.3.1:
     "@supabase/supabase-js": 1.15.1
     "@types/node": 14.17.3
     "@types/pino": 6.3.8
-    "@types/simple-icons": ^5
+    "@types/simple-icons": 5.0.0
     "@types/web-push": 3.3.0
     "@vercel/node": 1.11.1
     "@vitejs/plugin-vue": 1.2.3
