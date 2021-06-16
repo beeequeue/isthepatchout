@@ -1,5 +1,5 @@
 <template>
-  <main class="grid justify-items-center items-center h-screen">
+  <main class="grid justify-items-center items-center h-1/1">
     <Fade>
       <Loading v-if="loading" key="loading" />
 
