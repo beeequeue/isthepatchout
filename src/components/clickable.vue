@@ -15,7 +15,7 @@
       duration-500
       active:bg-gray-800 active:duration-50
     "
-    :class="{ clicked }"
+    :class="{ clicked, 'rounded-full': round }"
     @mousedown="clicked = false"
     @click="clicked = true"
   >
@@ -30,6 +30,10 @@ defineProps({
   is: {
     type: String,
     default: "button",
+  },
+  round: {
+    type: Boolean,
+    default: false,
   },
 })
 

@@ -1,13 +1,11 @@
 <template>
-  <section class="!loading && supported">
-    <ToggleButton circle :checked="subscribed" @change="handleChange">
-      <span
-        class="h-6 w-6 animate-infinite animate-slow transition-all"
-        :class="iconClasses"
-        v-html="subscribed ? alertSvg : noAlertSvg"
-      />
-    </ToggleButton>
-  </section>
+  <ToggleButton circle :checked="subscribed" @change="handleChange">
+    <Icon
+      class="h-6 w-6 hover:fill-gray-100 animate-infinite animate-slow transition-all"
+      :class="iconClasses"
+      :icon="subscribed ? alertSvg : noAlertSvg"
+    />
+  </ToggleButton>
 </template>
 
 <script lang="ts" setup>
@@ -17,6 +15,7 @@ import alertSvg from "../assets/alert.svg?raw"
 import noAlertSvg from "../assets/no-alert.svg?raw"
 import { usePushNotifications } from "../hooks/use-push-notifications"
 
+import Icon from "./icon.vue"
 import ToggleButton from "./toggle-button.vue"
 
 const { supported, loading, subscribing, subscribed, askForPermissions, unsubscribe } =
@@ -25,6 +24,7 @@ const { supported, loading, subscribing, subscribed, askForPermissions, unsubscr
 const iconClasses = computed(() => ({
   "animate-heartBeat": subscribing.value,
   "grayed-out": !supported || loading.value,
+  "fill-gray-400": !subscribed.value,
   shine: subscribed.value,
 }))
 
