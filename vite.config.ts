@@ -32,6 +32,7 @@ export default defineConfig({
     WindiCSS(),
     VitePWA({
       strategies: "injectManifest",
+      registerType: "prompt",
       srcDir: "src/sw",
       filename: "sw.ts",
       base: "/",
