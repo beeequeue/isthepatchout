@@ -17,6 +17,7 @@ export type PushSubscription = {
   auth: string
   p256dh: string
   environment: string
+  lastNotified: Patch["id"]
 }
 
 export type PushEventPatch = Patch & {

@@ -100,6 +100,20 @@ export const doesSubscriptionExist = async (endpoint: string): Promise<boolean> 
   return (count ?? 0) > 0
 }
 
+const getLastReleasedPatch = async () => {
+  const { error, data } = await supabase
+    .from<Patch>("patches")
+    .select("id")
+    .not("releasedAt", "is", null)
+    .order("releasedAt", { ascending: false })
+
+  if (error) {
+    throw new Error(error.message)
+  }
+
+  return data![0]
+}
+
 export const upsertSubscription = async ({
   endpoint,
   keys: { auth, p256dh },
@@ -110,6 +124,7 @@ export const upsertSubscription = async ({
       auth,
       p256dh,
       environment: VERCEL_ENV,
+      lastNotified: (await getLastReleasedPatch()).id,
     },
     { onConflict: "endpoint" },
   )
