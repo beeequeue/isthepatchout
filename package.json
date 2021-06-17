@@ -45,7 +45,6 @@
     "@types/node": "14.17.3",
     "@types/pino": "6.3.8",
     "@types/simple-icons": "5.0.0",
-    "@types/web-push": "3.3.0",
     "@vercel/node": "1.11.1",
     "@vitejs/plugin-vue": "1.2.3",
     "@vue/compiler-sfc": "3.1.1",
@@ -69,7 +68,6 @@
     "vite-plugin-pwa": "0.8.1",
     "vite-plugin-windicss": "1.0.4",
     "vue-tsc": "0.1.7",
-    "web-push": "3.4.4",
     "windicss": "3.1.3"
   }
 }
