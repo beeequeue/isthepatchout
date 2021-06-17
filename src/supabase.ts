@@ -84,7 +84,7 @@ export const useLastReleasedPatch = () => {
     .not("releasedAt", "is", null)
     .order("number", { ascending: false })
     .limit(1)
-    .single()
+    .maybeSingle()
     .then((result) => {
       if (result.error != null) {
         captureException(result.error)

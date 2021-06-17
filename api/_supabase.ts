@@ -86,16 +86,18 @@ export const upsertPatches = async (patches: Patch[]) => {
 }
 
 export const doesSubscriptionExist = async (endpoint: string): Promise<boolean> => {
-  const { count, error } = await supabase
+  const { data, error } = await supabase
     .from<PushSubscription>("subscriptions")
-    .select("endpoint", { count: "exact" })
+    .select("endpoint")
     .eq("endpoint", endpoint)
+    .limit(1)
+    .maybeSingle()
 
   if (error) {
     throw new Error(error.message)
   }
 
-  return (count ?? 0) > 0
+  return data != null
 }
 
 const getLastReleasedPatch = async () => {
