@@ -4,14 +4,6 @@
 
     <Answer :released="recentlyReleased" />
 
-    <CollapseTransition :duration="500">
-      <div v-if="!recentlyReleased" class="text-center">
-        No need to refresh the page.
-        <br />
-        It will update as soon as we see a new update!
-      </div>
-    </CollapseTransition>
-
     <ul v-if="recentlyReleased" class="links">
       <li v-for="link in links" :key="link">
         <a :href="link" target="_blank" rel="noopener">{{ link }}</a>
