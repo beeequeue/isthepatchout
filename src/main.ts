@@ -34,9 +34,13 @@ Fathom.load(import.meta.env.VITE_FATHOM_SITE_ID as string, {
 })
 
 if (import.meta.env.PROD && "serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    void navigator.serviceWorker.register("/sw.js", { scope: "/" })
-  })
+  void (async () => {
+    const { registerSW } = await import("virtual:pwa-register")
+    const updateSW = registerSW({
+      onNeedRefresh: () => updateSW(),
+      immediate: true,
+    })
+  })()
 }
 
 app.mount("#app")
