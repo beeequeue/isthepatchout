@@ -46,6 +46,8 @@ self.addEventListener("notificationclick" as any, (e: NotificationEvent) => {
   if (data.links.length > 0) {
     void target.clients.openWindow(data.links[0])
   }
+
+  e.notification.close()
 })
 
 // @ts-ignore: Missing type
