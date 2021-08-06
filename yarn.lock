@@ -9072,7 +9072,7 @@ typescript@4.3.3:
 
 "typescript@patch:typescript@3.9.3#~builtin<compat/typescript>":
   version: 3.9.3
-  resolution: "typescript@patch:typescript@npm%3A3.9.3#~builtin<compat/typescript>::version=3.9.3&hash=34ad7d"
+  resolution: "typescript@patch:typescript@npm%3A3.9.3#~builtin<compat/typescript>::version=3.9.3&hash=d8b4e7"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
@@ -9082,11 +9082,11 @@ typescript@4.3.3:
 
 "typescript@patch:typescript@4.3.3#~builtin<compat/typescript>":
   version: 4.3.3
-  resolution: "typescript@patch:typescript@npm%3A4.3.3#~builtin<compat/typescript>::version=4.3.3&hash=34ad7d"
+  resolution: "typescript@patch:typescript@npm%3A4.3.3#~builtin<compat/typescript>::version=4.3.3&hash=d8b4e7"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 7b7c4bfd48dfe1a016fdeb75fe812e643034744a6a9fc1aa81039136ceb4ab832cac19ec4b0ab926e5c59d7e91e63cfd88bec2f9731a8eccec106d7e9eb2d307
+  checksum: 4d6ca2ba48932bbac77253ccfc3fd431151703f30a2e4bbd2cf292c92b96957b6d2a5e4794cf1f9410a74700e4ac485b3a247d18730eba364cc2c98ddc1a4a1e
   languageName: node
   linkType: hard
 
