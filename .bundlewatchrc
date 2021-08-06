@@ -13,7 +13,8 @@
     },
     {
       "path": "./dist/**/*vendor*.js",
-      "maxSize": "60kb"
+      "maxSize": "65kb"
     }
-  ]
+  ],
+  "normalizeFilenames": "^.+?(\\.\\w+?)?\\.\\w+$"
 }
