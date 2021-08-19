@@ -19,6 +19,7 @@
     ]
   },
   "scripts": {
+    "dev": "vite --port $PORT --clearScreen false",
     "build": "vite build",
     "bundlewatch": "bundlewatch --config .bundlewatchrc",
     "lint": "eslint {api,src}",
