@@ -28,7 +28,7 @@
     "typecheck": "tsc --project api/tsconfig.json && vue-tsc --project tsconfig.json"
   },
   "resolutions": {
-    "@types/node": "14.17.9"
+    "@types/node": "14.17.10"
   },
   "dependencies": {
     "@ivanv/vue-collapse-transition": "1.0.2",
