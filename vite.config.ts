@@ -15,6 +15,9 @@ export default defineConfig({
   build: {
     sourcemap: true,
   },
+  server: {
+    open: true,
+  },
   define: {
     "import.meta.env.SENTRY_DSN": s(process.env.SENTRY_DSN),
     "import.meta.env.VERCEL_ENV": s(process.env.VERCEL_ENV),

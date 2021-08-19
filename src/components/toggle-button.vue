@@ -12,10 +12,10 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps, defineEmit } from "vue"
+import { defineProps, defineEmits } from "vue"
 
 import Clickable from "./clickable.vue"
 
 defineProps<{ checked: boolean; circle?: boolean }>()
-const emit = defineEmit<(type: "change") => void>()
+const emit = defineEmits<(type: "change") => void>()
 </script>
