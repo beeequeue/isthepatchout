@@ -1,5 +1,15 @@
 <template>
-  <div class="flex relative align-center font-serif text-10xl md:text-12xl">
+  <div
+    class="
+      flex
+      relative
+      align-center
+      font-serif
+      text-10xl
+      md:text-12xl
+      pointer-events-none
+    "
+  >
     <transition
       mode="out-in"
       class="duration-250"
