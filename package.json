@@ -39,7 +39,7 @@
     "date-fns": "2.23.0",
     "fathom-client": "3.1.0",
     "simple-icons": "5.10.0",
-    "vue": "3.2.4",
+    "vue": "3.2.20",
     "workbox-precaching": "6.2.4"
   },
   "devDependencies": {
@@ -52,7 +52,7 @@
     "@types/simple-icons": "5.8.0",
     "@vercel/node": "1.12.1",
     "@vitejs/plugin-vue": "1.4.0",
-    "@vue/compiler-sfc": "3.2.4",
+    "@vue/compiler-sfc": "3.2.20",
     "@windicss/animations": "1.0.8",
     "bottleneck": "2.19.5",
     "browserslist": "4.16.8",
