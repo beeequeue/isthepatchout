@@ -4061,6 +4061,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"fastify-warning@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "fastify-warning@npm:0.2.0"
+  checksum: c19ebccf54a3122877d2248400772ca98bacbabdf97826211ede29246c640d47431a2eebed1f52f9421139ed5e52e42d3bd4aefc46e27b6f34add3507529fd97
+  languageName: node
+  linkType: hard
+
 "fastq@npm:^1.6.0":
   version: 1.12.0
   resolution: "fastq@npm:1.12.0"
@@ -4936,7 +4943,7 @@ fsevents@~2.3.2:
     got: 11.8.2
     joi: 17.4.2
     lint-staged: 11.1.2
-    pino: 6.13.0
+    pino: 6.13.3
     pino-pretty: 5.1.3
     prettier: 2.3.2
     simple-git-hooks: 2.6.1
@@ -6111,19 +6118,20 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"pino@npm:6.13.0":
-  version: 6.13.0
-  resolution: "pino@npm:6.13.0"
+"pino@npm:6.13.3":
+  version: 6.13.3
+  resolution: "pino@npm:6.13.3"
   dependencies:
     fast-redact: ^3.0.0
     fast-safe-stringify: ^2.0.8
+    fastify-warning: ^0.2.0
     flatstr: ^1.0.12
     pino-std-serializers: ^3.1.0
     quick-format-unescaped: ^4.0.3
     sonic-boom: ^1.0.2
   bin:
     pino: bin.js
-  checksum: 7145de4287f03bc3f7ff4de0cdacfcfea9d843e5759c90f95f6a245b6898964387f6bd24813749333c23684186bc79d91a2d03f28512f2c4a3f8bc6773316a1c
+  checksum: a580decd47a1c8b32a846ba1cb478087b523636d697bd4c57833d10b3f2b35c7d06739715ad9a291b41caf002b8d1bbf98674bfb3e99989fd41b7d934cca861c
   languageName: node
   linkType: hard
 
