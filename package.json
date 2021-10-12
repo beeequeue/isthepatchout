@@ -29,7 +29,7 @@
     "typecheck": "tsc --project api/tsconfig.json && vue-tsc --project tsconfig.json"
   },
   "resolutions": {
-    "@types/node": "14.17.10"
+    "@types/node": "14.17.21"
   },
   "dependencies": {
     "@ivanv/vue-collapse-transition": "1.0.2",
@@ -47,7 +47,7 @@
     "@hapi/boom": "9.1.4",
     "@sentry/node": "6.11.0",
     "@sentry/tracing": "6.11.0",
-    "@types/node": "14.17.10",
+    "@types/node": "14.17.21",
     "@types/pino": "6.3.11",
     "@types/simple-icons": "5.8.0",
     "@vercel/node": "1.12.1",
