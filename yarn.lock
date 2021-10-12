@@ -4945,7 +4945,7 @@ fsevents@~2.3.2:
     vite-plugin-windicss: 1.2.7
     vue: 3.2.20
     vue-tsc: 0.2.3
-    windicss: 3.1.7
+    windicss: 3.1.9
     workbox-precaching: 6.2.4
   languageName: unknown
   linkType: soft
@@ -8149,12 +8149,12 @@ typescript@4.3.5:
   languageName: node
   linkType: hard
 
-"windicss@npm:3.1.7, windicss@npm:^3.1.6":
-  version: 3.1.7
-  resolution: "windicss@npm:3.1.7"
+"windicss@npm:3.1.9, windicss@npm:^3.1.6":
+  version: 3.1.9
+  resolution: "windicss@npm:3.1.9"
   bin:
     windicss: cli/index.js
-  checksum: 346cd0308635c22612a0c68baa0658f704e5eb427ccfab94203cc16b334596562540247ddd9cb42a4dde92105b88945d59cdfdf0e37dceeb73fc408d87e8cb6a
+  checksum: 7c9c1ac23b5125315b215ed92c67fb4cb2db0a4322d86ac15c11e9cea2313ff75698833a9d7bff2ee17a95f3bee5ca7cd1b19f6660dbbff8cc64815545f6b30a
   languageName: node
   linkType: hard
 
