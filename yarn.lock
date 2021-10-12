@@ -2133,11 +2133,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/core@npm:6.0.0":
-  version: 6.0.0
-  resolution: "@vueuse/core@npm:6.0.0"
+"@vueuse/core@npm:6.5.3":
+  version: 6.5.3
+  resolution: "@vueuse/core@npm:6.5.3"
   dependencies:
-    "@vueuse/shared": 6.0.0
+    "@vueuse/shared": 6.5.3
     vue-demi: "*"
   peerDependencies:
     "@vue/composition-api": ^1.1.0
@@ -2147,13 +2147,13 @@ __metadata:
       optional: true
     vue:
       optional: true
-  checksum: 1c3d55c0540507baa5e087049d427517247288eac5b56f807dec42dcdb83b7ddb9800bf97e7b12b3823e9720565a2437a48ef9e7820840f9a08f334e1f1a96c9
+  checksum: 70745c29fa863ed0fc1611e96b58a67057ad456bfd97d6e3174a90ca97f02af1fd62cb58183a354d831a1baf4b7f018d6e8cf0fb1ce4430c284f0457ca122275
   languageName: node
   linkType: hard
 
-"@vueuse/shared@npm:6.0.0":
-  version: 6.0.0
-  resolution: "@vueuse/shared@npm:6.0.0"
+"@vueuse/shared@npm:6.5.3":
+  version: 6.5.3
+  resolution: "@vueuse/shared@npm:6.5.3"
   dependencies:
     vue-demi: "*"
   peerDependencies:
@@ -2164,7 +2164,7 @@ __metadata:
       optional: true
     vue:
       optional: true
-  checksum: 19ccd32a124b73cd636666d3239db2243bf982373d86cc04eb09af6b9caaeb440cb02eb44e59b982ee9b0ece2e37afd6d58cc6b7e78c673a61c54449e6faf89c
+  checksum: 31dc2f7372577306236a50d4a83359f667e7f9c8116eb5bb84aa064905d451264927675e75d37b07592a07fffe7e56ee0ba581d66f3b6c030a9423f90e8d7a62
   languageName: node
   linkType: hard
 
@@ -5082,7 +5082,7 @@ fsevents@~2.3.2:
     "@vercel/node": 1.12.1
     "@vitejs/plugin-vue": 1.9.3
     "@vue/compiler-sfc": 3.2.20
-    "@vueuse/core": 6.0.0
+    "@vueuse/core": 6.5.3
     "@windicss/animations": 1.0.8
     bottleneck: 2.19.5
     browserslist: 4.16.8
