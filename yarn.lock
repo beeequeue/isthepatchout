@@ -5099,7 +5099,7 @@ fsevents@~2.3.2:
     pino-pretty: 5.1.3
     prettier: 2.4.1
     simple-git-hooks: 2.6.1
-    simple-icons: 5.10.0
+    simple-icons: 5.18.0
     tailwindcss: 2.2.16
     typescript: 4.3.5
     vite: 2.6.7
@@ -7135,10 +7135,10 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"simple-icons@npm:5.10.0":
-  version: 5.10.0
-  resolution: "simple-icons@npm:5.10.0"
-  checksum: 89373fdb316d212ecc81f329645470c016257880035d240fed3c68487f686163eaa763677ff60b18a81725e779f14ad1855b56a7202352c984aab323a669b04b
+"simple-icons@npm:5.18.0":
+  version: 5.18.0
+  resolution: "simple-icons@npm:5.18.0"
+  checksum: 49d070d07f10cb5bfe660996708a7b351f042a8edcf44ba0cb54db0b4081ed3370881ab80fa43ac8a28408de994f8460428c2e6428739b6cc7195a4bc3943b8c
   languageName: node
   linkType: hard
 

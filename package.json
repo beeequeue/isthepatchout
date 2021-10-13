@@ -38,7 +38,7 @@
     "@vueuse/core": "6.5.3",
     "date-fns": "2.25.0",
     "fathom-client": "3.2.0",
-    "simple-icons": "5.10.0",
+    "simple-icons": "5.18.0",
     "vue": "3.2.20",
     "workbox-precaching": "6.2.4"
   },
