@@ -3151,10 +3151,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:2.23.0":
-  version: 2.23.0
-  resolution: "date-fns@npm:2.23.0"
-  checksum: 485216d550255a548552db16379e7a5cd440e262b90fbdc0362f63ee71d0e74bd00ce29ca8d76b343f6df36c1ecb6f22edba0b72848a4c32674e755619695c1f
+"date-fns@npm:2.25.0":
+  version: 2.25.0
+  resolution: "date-fns@npm:2.25.0"
+  checksum: 8896dc1dde0ee5ef77616942423bfa11fa2017a5ac19457293b7aaedc8822ff94f0a14eaf93da573b09b601dc0149eb430988a046cc9f79a2eb15f8c66c9c50c
   languageName: node
   linkType: hard
 
@@ -5087,7 +5087,7 @@ fsevents@~2.3.2:
     bottleneck: 2.19.5
     browserslist: 4.17.3
     bundlewatch: 0.3.2
-    date-fns: 2.23.0
+    date-fns: 2.25.0
     dotenv: 10.0.0
     esbuild-plugin-browserslist: 0.2.1
     eslint: 7.32.0
