@@ -55,7 +55,7 @@
     "@vue/compiler-sfc": "3.2.20",
     "@windicss/animations": "1.0.8",
     "bottleneck": "2.19.5",
-    "browserslist": "4.17.3",
+    "browserslist": "4.17.4",
     "bundlewatch": "0.3.2",
     "dotenv": "10.0.0",
     "esbuild-plugin-browserslist": "0.2.1",
