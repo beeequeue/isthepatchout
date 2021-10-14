@@ -5116,7 +5116,7 @@ fsevents@~2.3.2:
     vue: 3.2.20
     vue-tsc: 0.28.3
     windicss: 3.1.9
-    workbox-precaching: 6.2.4
+    workbox-precaching: 6.3.0
   languageName: unknown
   linkType: soft
 
@@ -8446,13 +8446,6 @@ typescript@4.3.5:
   languageName: node
   linkType: hard
 
-"workbox-core@npm:6.2.4":
-  version: 6.2.4
-  resolution: "workbox-core@npm:6.2.4"
-  checksum: 22c8894f54e29e40e42e5d6e99c067fab09f88d2351e0402d26e210179db8b6d08130b29584b75cfd4472e6d6681a3951b5e4af85b7ac56a1fb4c0ec4d30088a
-  languageName: node
-  linkType: hard
-
 "workbox-core@npm:6.3.0":
   version: 6.3.0
   resolution: "workbox-core@npm:6.3.0"
@@ -8491,17 +8484,6 @@ typescript@4.3.5:
   languageName: node
   linkType: hard
 
-"workbox-precaching@npm:6.2.4":
-  version: 6.2.4
-  resolution: "workbox-precaching@npm:6.2.4"
-  dependencies:
-    workbox-core: 6.2.4
-    workbox-routing: 6.2.4
-    workbox-strategies: 6.2.4
-  checksum: 726cbbca153364a89fb618d9f69f1c1f28995886c2f8c49ca5a3edc16aaf4dc4ddd9fe04451f5454d728b8ab13b3be5f50c6974fae58adc89d09c23c69503349
-  languageName: node
-  linkType: hard
-
 "workbox-precaching@npm:6.3.0":
   version: 6.3.0
   resolution: "workbox-precaching@npm:6.3.0"
@@ -8536,30 +8518,12 @@ typescript@4.3.5:
   languageName: node
   linkType: hard
 
-"workbox-routing@npm:6.2.4":
-  version: 6.2.4
-  resolution: "workbox-routing@npm:6.2.4"
-  dependencies:
-    workbox-core: 6.2.4
-  checksum: ae96637d4af14a8d2bffb595390459eb890f0f604f5572a175d6f8a91e91a0123511666d7691337628572d7aa7ec37add7951b657543910556d2ba2afda83f5a
-  languageName: node
-  linkType: hard
-
 "workbox-routing@npm:6.3.0":
   version: 6.3.0
   resolution: "workbox-routing@npm:6.3.0"
   dependencies:
     workbox-core: 6.3.0
   checksum: 53dbedd5dd94ec3821de0226ab8e43dcf0b779ee47973a849c52c46b4b8f0584250da332e2716359eccb0071011531cd49b227164de42127cfac13cdf3adb3c2
-  languageName: node
-  linkType: hard
-
-"workbox-strategies@npm:6.2.4":
-  version: 6.2.4
-  resolution: "workbox-strategies@npm:6.2.4"
-  dependencies:
-    workbox-core: 6.2.4
-  checksum: 8ae961a4d6ac42ce273ca755a10fe9cb7379d1760baaeb7d81698a20a6b55fb700940754381d81c6bbf58e1365ff9dc47c9652c48b4aa7067630715f2518b3bf
   languageName: node
   linkType: hard
 
