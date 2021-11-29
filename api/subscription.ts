@@ -3,6 +3,7 @@ import Joi from "joi"
 import { badRequest, notFound } from "@hapi/boom"
 import type { VercelRequest, VercelResponse } from "@vercel/node"
 
+import { Logger } from "./_logger"
 import { CustomHandler, sentryWrapper } from "./_sentry"
 import {
   deleteSubscription,
@@ -65,6 +66,8 @@ const cors =
   }
 
 const getHandler: CustomHandler = async (request) => {
+  Logger.info("test")
+
   if (request.query.endpoint == null || typeof request.query.endpoint !== "string") {
     return badRequest("Invalid query parameters")
   }

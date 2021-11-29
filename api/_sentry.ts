@@ -45,7 +45,7 @@ export const sentryWrapper =
 
     try {
       response = (await handler(req)) ?? {}
-    } catch (error) {
+    } catch (error: any) {
       response = internal(error.message as string)
 
       setContext("response", {
