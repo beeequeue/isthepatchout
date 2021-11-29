@@ -5,15 +5,15 @@
   "files": [
     {
       "path": "./dist/**/*.js",
-      "maxSize": "6kb"
+      "maxSize": "7kb"
     },
     {
       "path": "./dist/sw.js",
-      "maxSize": "30kb"
+      "maxSize": "32kb"
     },
     {
       "path": "./dist/**/*vendor*.js",
-      "maxSize": "65kb"
+      "maxSize": "70kb"
     }
   ],
   "normalizeFilenames": "^.+?(\\.\\w+?)?\\.\\w+$"
