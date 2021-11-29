@@ -41,7 +41,7 @@ const handler: CustomHandler = async (request) => {
   try {
     await checkAndUpdatePatches()
   } catch (error) {
-    return internal(error.message, error)
+    return internal(error.message as string, error)
   }
 }
 

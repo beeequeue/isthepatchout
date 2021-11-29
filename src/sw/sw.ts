@@ -51,4 +51,5 @@ self.addEventListener("notificationclick" as any, (e: NotificationEvent) => {
 })
 
 // @ts-ignore: Missing type
+// eslint-disable-next-line @typescript-eslint/no-unsafe-argument
 precacheAndRoute(self.__WB_MANIFEST)

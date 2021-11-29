@@ -1,13 +1,6 @@
 <template>
   <div
-    class="
-      flex flex-col
-      md:flex-row md:items-center md:gap-2
-      text-2xl
-      md:text-4xl
-      font-serif
-      text-center
-    "
+    class="flex flex-col md:flex-row md:items-center md:gap-2 text-2xl md:text-4xl font-serif text-center"
   >
     Is
 

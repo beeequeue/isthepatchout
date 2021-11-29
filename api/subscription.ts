@@ -89,7 +89,7 @@ const postHandler: CustomHandler = async (request) => {
     return badRequest(error.message)
   }
 
-  await upsertSubscription(value)
+  await upsertSubscription(value as UpdateSubscriptionInput)
 }
 
 const deleteHandler: CustomHandler = async (request) => {
