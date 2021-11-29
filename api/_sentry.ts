@@ -13,8 +13,6 @@ import type { VercelRequest, VercelResponse } from "@vercel/node"
 
 import { Logger } from "./_logger"
 
-import "@sentry/tracing"
-
 type Handler = (request: VercelRequest, response: VercelResponse) => Promise<void> | void
 type CustomResponse = Record<string, unknown> & { message?: string; statusCode?: number }
 type CustomHandlerResponse = undefined | CustomResponse | Boom<null>
