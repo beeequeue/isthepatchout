@@ -36,7 +36,7 @@
     "@sentry/vue": "6.15.0",
     "@supabase/supabase-js": "1.28.2",
     "@vueuse/core": "7.1.2",
-    "date-fns": "2.26.0",
+    "date-fns": "2.27.0",
     "fathom-client": "3.2.0",
     "simple-icons": "5.24.0",
     "vue": "3.2.23",
