@@ -5641,7 +5641,7 @@ fsevents@~2.3.2:
     got: 11.8.3
     joi: 17.4.2
     lint-staged: 12.1.2
-    pino: 7.5.0
+    pino: 7.5.1
     pino-pretty: 7.2.0
     prettier: 2.5.0
     simple-git-hooks: 2.7.0
@@ -6860,9 +6860,9 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"pino@npm:*, pino@npm:7.5.0":
-  version: 7.5.0
-  resolution: "pino@npm:7.5.0"
+"pino@npm:*, pino@npm:7.5.1":
+  version: 7.5.1
+  resolution: "pino@npm:7.5.1"
   dependencies:
     fast-redact: ^3.0.0
     fastify-warning: ^0.2.0
@@ -6877,7 +6877,7 @@ fsevents@~2.3.2:
     thread-stream: ^0.13.0
   bin:
     pino: bin.js
-  checksum: ed33d7e6ef7a1cea4b0a8da061959a07f32638ba157e74ac80968cfaf1dc2149d654c8955f4bb20d08637ead8a7baec9dafaecfee62093e14c17bb496aabaef4
+  checksum: 2f71ebadb08dd8a9d6cd82e9dd67c3be1f16756ec977aa8b5e65d28e8b70d7512543c071fe011cf187dcdb9d8b8aea434881a452a34d79040e44de54078a58b7
   languageName: node
   linkType: hard
 
