@@ -1870,13 +1870,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/realtime-js@npm:^1.3.2":
-  version: 1.3.2
-  resolution: "@supabase/realtime-js@npm:1.3.2"
+"@supabase/realtime-js@npm:^1.3.3":
+  version: 1.3.3
+  resolution: "@supabase/realtime-js@npm:1.3.3"
   dependencies:
     "@types/websocket": ^1.0.3
     websocket: ^1.0.34
-  checksum: 8ca923bfed6521f9510def97b944e248a3fa7a56a251de79897904d0d8314f7f3c5147821dd0c3a2e3fd70b47629c0ddb13615698633218a64098dc79914184d
+  checksum: d2517e04dd7c23e2a97151e5fc2ca80594e1a9546049cf9824ccd2cb2254a00251dec122cbd8baa4204a134b427dc66f9e145e39e8fb30ece41138f259584496
   languageName: node
   linkType: hard
 
@@ -1889,15 +1889,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/supabase-js@npm:1.28.4":
-  version: 1.28.4
-  resolution: "@supabase/supabase-js@npm:1.28.4"
+"@supabase/supabase-js@npm:1.28.5":
+  version: 1.28.5
+  resolution: "@supabase/supabase-js@npm:1.28.5"
   dependencies:
     "@supabase/gotrue-js": ^1.21.7
     "@supabase/postgrest-js": ^0.35.0
-    "@supabase/realtime-js": ^1.3.2
+    "@supabase/realtime-js": ^1.3.3
     "@supabase/storage-js": ^1.5.0
-  checksum: 4c29b622a38c4490a865e2a2d13393d84734d8f9bebfe97595cbdef54f2bde81a0fadb8290c7934e69f932d626b1fed9ee7828cadf0a876374d8d1dd4b3e5004
+  checksum: 1413609d594a846b0f12c40c1d07933d0d6d2adb04f137181ec8e43d923fd54afa79bf6194232e103fb946e0586a7eddd6edd1a64e456a8416708c36191848a4
   languageName: node
   linkType: hard
 
@@ -5621,7 +5621,7 @@ fsevents@~2.3.2:
     "@ivanv/vue-collapse-transition": 1.0.2
     "@sentry/node": 6.15.0
     "@sentry/vue": 6.15.0
-    "@supabase/supabase-js": 1.28.4
+    "@supabase/supabase-js": 1.28.5
     "@types/node": 14.17.34
     "@types/pino": 7.0.5
     "@types/simple-icons": 5.21.1
