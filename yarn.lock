@@ -5649,7 +5649,7 @@ fsevents@~2.3.2:
     tailwindcss: 2.2.19
     typescript: 4.5.2
     vite: 2.6.14
-    vite-plugin-pwa: 0.11.9
+    vite-plugin-pwa: 0.11.10
     vite-plugin-windicss: 1.5.4
     vue: 3.2.23
     vue-tsc: 0.29.8
@@ -8741,9 +8741,9 @@ typescript@4.3.4:
   languageName: node
   linkType: hard
 
-"vite-plugin-pwa@npm:0.11.9":
-  version: 0.11.9
-  resolution: "vite-plugin-pwa@npm:0.11.9"
+"vite-plugin-pwa@npm:0.11.10":
+  version: 0.11.10
+  resolution: "vite-plugin-pwa@npm:0.11.10"
   dependencies:
     chalk: ^4.1.2
     debug: ^4.3.2
@@ -8756,7 +8756,7 @@ typescript@4.3.4:
     vite: ^2.0.0
     workbox-build: ^6.4.0
     workbox-window: ^6.4.0
-  checksum: 36b6c24263971086a9b633b6422821fd773ec4b8657b66f01b89183014c50606cdb14885ecf7f21e8855d432d85a1bbe438418f19e85834cc0d0912b35df247a
+  checksum: 67d9bc9ff495022f71dcc6288dbbddbe03e06a6deadfcbe9d3cbd110ce3a372d41c424047470f33789c2042868678773d67fb5dbc89480a7c3dbbd87b0bfd870
   languageName: node
   linkType: hard
 
