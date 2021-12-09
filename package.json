@@ -35,7 +35,7 @@
     "@ivanv/vue-collapse-transition": "1.0.2",
     "@sentry/vue": "6.16.0",
     "@supabase/supabase-js": "1.28.5",
-    "@vueuse/core": "7.1.2",
+    "@vueuse/core": "7.2.2",
     "date-fns": "2.27.0",
     "fathom-client": "3.2.0",
     "simple-icons": "5.24.0",
