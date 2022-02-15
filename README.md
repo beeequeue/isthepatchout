@@ -10,7 +10,7 @@ worker(Cloudflare Worker) -- Triggers checks on a cron schedule --> vercel(Verce
 supa(Supabase) -- patch data, real-time updates --> client((Browser))
 vercel -- hosts SPA, lambda functions --> client
 vercel -- updates patch, push notif data --> supa
-supa-- real-time updates -->notif(notifications service)-- push notifications -->client
+supa-- real-time updates -->notif(fa:fa-arrow-up-right-from-square notifications service)-- push notifications -->client
 
 click notif href "https://github.com/isthepatchout/notifications" "Repo"
 
