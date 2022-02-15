@@ -12,6 +12,8 @@ vercel -- hosts SPA, lambda functions --> client
 vercel -- updates patch, push notif data --> supa
 supa-- real-time updates -->notif(notifications service)-- push notifications -->client
 
+click notif href "https://github.com/isthepatchout/notifications" "Repo"
+
 style supa stroke:#1d9065
 style worker stroke:orange
 ```
