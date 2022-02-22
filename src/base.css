@@ -7,6 +7,14 @@ body,
   padding: 0;
 }
 
+#app {
+  @apply text-gray-300 text-shadow-lg select-none;
+}
+
+#app button {
+  @apply text-gray-300 font-sans;
+}
+
 @layer base {
   @font-face {
     font-family: "Radiance";

@@ -1,22 +1,24 @@
 <template>
-  <ToggleButton circle :checked="subscribed" @change="handleChange">
+  <ToggleButton circle :checked="subscribed" class="text-base" @change="handleChange">
     <Icon
-      class="h-6 w-6 hover:fill-gray-100 animate-infinite animate-slow transition-all"
+      class="h-5 w-5 mr-2 hover:fill-gray-100 animate-infinite animate-slow transition-all"
       :class="iconClasses"
       :icon="subscribed ? alertSvg : noAlertSvg"
     />
+
+    {{ subscribed ? "Disable" : "Enable" }} notifications
   </ToggleButton>
 </template>
 
 <script lang="ts" setup>
 import { computed } from "vue"
 
-import alertSvg from "../assets/alert.svg?raw"
-import noAlertSvg from "../assets/no-alert.svg?raw"
-import { usePushNotifications } from "../hooks/use-push-notifications"
+import alertSvg from "../../assets/alert.svg?raw"
+import noAlertSvg from "../../assets/no-alert.svg?raw"
+import { usePushNotifications } from "../../hooks/use-push-notifications"
+import ToggleButton from "../toggle-button.vue"
 
 import Icon from "./icon.vue"
-import ToggleButton from "./toggle-button.vue"
 
 const { supported, loading, subscribing, subscribed, askForPermissions, unsubscribe } =
   usePushNotifications()

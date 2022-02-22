@@ -1,5 +1,5 @@
 <template>
-  <main class="grid justify-items-center items-center h-1/1">
+  <main class="grid justify-items-center items-center h-1/1 overflow-hidden">
     <Fade>
       <Loading v-if="loading" key="loading" />
 
@@ -19,7 +19,7 @@
 <script lang="ts" setup>
 import { computed, watch } from "vue"
 
-import BottomBar from "./components/bottom-bar.vue"
+import BottomBar from "./components/bottom-bar/bottom-bar.vue"
 import Fade from "./components/fade.vue"
 import Loading from "./components/loading.vue"
 import Main from "./components/main.vue"
