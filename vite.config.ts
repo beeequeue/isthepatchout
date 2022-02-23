@@ -48,8 +48,18 @@ export default defineConfig(({ mode }) => ({
         theme_color: "#111",
         icons: [
           {
-            src: "/android-chrome-144x144.png?v=2",
+            src: "/android-chrome-144x144.png?v=3",
             sizes: "144x144",
+            type: "image/png",
+          },
+          {
+            src: "/android-chrome-192x192.png?v=3",
+            sizes: "192x192",
+            type: "image/png",
+          },
+          {
+            src: "/android-chrome-512x512.png?v=3",
+            sizes: "512x512",
             type: "image/png",
           },
         ],
