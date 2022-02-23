@@ -6,7 +6,7 @@
       :icon="subscribed ? alertSvg : noAlertSvg"
     />
 
-    {{ subscribed ? "Disable" : "Enable" }} notifications
+    {{ subscribed ? "Disable" : "Enable" }} push notifications
   </ToggleButton>
 </template>
 
