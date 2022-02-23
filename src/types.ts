@@ -13,9 +13,10 @@ export type Patch = {
 
 export type PushSubscription = {
   endpoint: string
+  type: "push" | "discord"
   createdAt: string
   auth: string
-  p256dh: string
+  extra: string | null
   environment: string
   lastNotified: Patch["id"]
 }

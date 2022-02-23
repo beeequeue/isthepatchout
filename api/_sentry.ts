@@ -14,7 +14,11 @@ import type { VercelRequest, VercelResponse } from "@vercel/node"
 import { Logger } from "./_logger"
 
 type Handler = (request: VercelRequest, response: VercelResponse) => Promise<void> | void
-type CustomResponse = Record<string, unknown> & { message?: string; statusCode?: number }
+type CustomResponse = Record<string, unknown> & {
+  message?: string
+  statusCode?: number
+  headers?: Record<string, string>
+}
 type CustomHandlerResponse = undefined | CustomResponse | Boom<null>
 export type CustomHandler = (
   request: VercelRequest,
@@ -62,9 +66,17 @@ export const sentryWrapper =
 
     if (!isBoom(response)) {
       response.statusCode ??= 200
+
       const body = {
         ...response,
         ok: true,
+      }
+      delete body.headers
+
+      if (response.headers != null) {
+        for (const [key, value] of Object.entries(response.headers)) {
+          res.setHeader(key, value)
+        }
       }
 
       Logger.debug(
