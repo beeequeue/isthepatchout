@@ -37,7 +37,7 @@ const fireConfetti = () => {
   })
 }
 
-watch([() => props.releasedWhileOpen, audioReady], async ([released, ready]) => {
+watch([() => props.releasedWhileOpen, audioReady], ([released, ready]) => {
   if (!released || !ready) return
 
   audio.currentTime = 0
