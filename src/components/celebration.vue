@@ -6,15 +6,20 @@ import confetti from "canvas-confetti"
 import { ref, watch } from "vue"
 
 import matchfoundSoundUrl from "../assets/matchfound.mp3"
+import { volume } from "../hooks/volume"
 
 const props = defineProps<{ releasedWhileOpen: boolean }>()
 
 const audioReady = ref(false)
 const audio = new Audio(matchfoundSoundUrl)
 audio.autoplay = false
-audio.volume = 0.5
+audio.volume = volume.value
 audio.addEventListener("canplaythrough", () => {
   audioReady.value = true
+})
+
+watch(volume, (newValue) => {
+  audio.volume = newValue
 })
 
 const fireConfetti = () => {

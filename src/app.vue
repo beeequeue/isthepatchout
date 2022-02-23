@@ -35,7 +35,7 @@ const relevantPatches = computed(
   () => (recentlyReleased.value ? [last.value!] : upNext.value) ?? [],
 )
 
-const releasedWhileOpen = ref(true)
+const releasedWhileOpen = ref(false)
 
 watch(recentlyReleased, (newValue, oldValue) => {
   if (!oldValue && newValue) {
