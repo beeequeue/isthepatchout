@@ -1923,6 +1923,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/canvas-confetti@npm:1.4.2":
+  version: 1.4.2
+  resolution: "@types/canvas-confetti@npm:1.4.2"
+  checksum: 68327c85bec9f507a8002bf7bc57d8e1850816e91460c8d0c340ae7a06a782839c016b82e5b4adf5ff52fe96af94853c9a25e17bd317524d377ccdc0e00e8d9c
+  languageName: node
+  linkType: hard
+
 "@types/estree@npm:0.0.39":
   version: 0.0.39
   resolution: "@types/estree@npm:0.0.39"
@@ -3068,6 +3075,13 @@ __metadata:
   version: 1.0.30001312
   resolution: "caniuse-lite@npm:1.0.30001312"
   checksum: 753fb9ea1e02e999430b323a71b5acab5120f3b5fc0161b01669f54a3ef5c5296240b6ae9b79b12a3742e3aed216aa9ee3d5398a23c16d08625ccd376b79545d
+  languageName: node
+  linkType: hard
+
+"canvas-confetti@npm:1.5.1":
+  version: 1.5.1
+  resolution: "canvas-confetti@npm:1.5.1"
+  checksum: e5932e34261615d629aac24aebad0472dd01c6cc3a3d6460ef37ab81eb533a2fdcec1cd842fcad6275f907fe378fc71cc90c91e1f997df63b0865ec2d5783ad8
   languageName: node
   linkType: hard
 
@@ -5544,6 +5558,7 @@ fsevents@~2.3.2:
     "@ivanv/vue-collapse-transition": 1.0.2
     "@sentry/node": 6.17.9
     "@supabase/supabase-js": 1.30.6
+    "@types/canvas-confetti": 1.4.2
     "@types/node": 14.18.12
     "@types/pino": 7.0.5
     "@types/simple-icons": 5.21.1
@@ -5555,6 +5570,7 @@ fsevents@~2.3.2:
     bottleneck: 2.19.5
     browserslist: 4.19.3
     bundlewatch: 0.3.3
+    canvas-confetti: 1.5.1
     date-fns: 2.28.0
     dotenv: 16.0.0
     esbuild-plugin-browserslist: 0.4.3

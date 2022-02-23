@@ -35,6 +35,15 @@
           "value": "public, max-age=604800, stale-while-revalidate=2419200"
         }
       ]
+    },
+    {
+      "source": "/(.*).mp3",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=2419200"
+        }
+      ]
     }
   ]
 }

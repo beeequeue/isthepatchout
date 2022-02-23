@@ -9,6 +9,7 @@
         :last="last ?? undefined"
         :relevant-patches="relevantPatches"
         :recently-released="recentlyReleased"
+        :released-while-open="releasedWhileOpen"
       />
     </Fade>
 
@@ -17,7 +18,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, watch } from "vue"
+import { computed, ref, watch } from "vue"
 
 import BottomBar from "./components/bottom-bar/bottom-bar.vue"
 import Fade from "./components/fade.vue"
@@ -34,8 +35,14 @@ const relevantPatches = computed(
   () => (recentlyReleased.value ? [last.value!] : upNext.value) ?? [],
 )
 
-watch(recentlyReleased, (isRecentlyReleased) => {
-  if (isRecentlyReleased) {
+const releasedWhileOpen = ref(true)
+
+watch(recentlyReleased, (newValue, oldValue) => {
+  if (!oldValue && newValue) {
+    releasedWhileOpen.value = true
+  }
+
+  if (newValue) {
     document.title = `${last.value!.id} is out!`
   }
 })
