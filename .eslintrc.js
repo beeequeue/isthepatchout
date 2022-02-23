@@ -12,7 +12,7 @@ module.exports = {
   ],
   globals: {
     defineProps: "readonly",
-    defineEmit: "readonly",
+    defineEmits: "readonly",
   },
   rules: {
     "@typescript-eslint/no-non-null-assertion": "off",
