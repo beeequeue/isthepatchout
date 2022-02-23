@@ -6,11 +6,6 @@
   schedule: ["before 11am"],
   labels: ["dependencies"],
   postUpdateOptions: ["yarnDedupeHighest"],
-  postUpgradeTasks: {
-    commands: ["yarn eslint --fix"],
-    fileFilters: ["yarn.lock", "**/*.{js,ts,vue}"],
-    executionMode: "update",
-  },
   baseBranches: ["main"],
   packageRules: [
     {
