@@ -14,6 +14,10 @@ export const supabase = new SupabaseClient(
   SUPABASE_SERVICE_KEY as string,
 )
 
+// -------------------------------------
+// -------------- PATCHES --------------
+// -------------------------------------
+
 export const formatPatchData = (data: PatchNoteListItem): Patch => {
   let links = [`https://dota2.com/patches/${data.patch_number}`]
 
@@ -85,6 +89,10 @@ export const upsertPatches = async (patches: Patch[]) => {
   }
 }
 
+// -------------------------------------------
+// -------------- SUBSCRIPTIONS --------------
+// -------------------------------------------
+
 export const doesSubscriptionExist = async (endpoint: string): Promise<boolean> => {
   const { data, error } = await supabase
     .from<PushSubscription>("subscriptions")
@@ -120,9 +128,10 @@ export const upsertSubscription = async ({
 }: UpdateSubscriptionInput) => {
   const { error } = await supabase.from<PushSubscription>("subscriptions").upsert(
     {
+      type: "push",
       endpoint,
       auth,
-      p256dh,
+      extra: p256dh,
       environment: VERCEL_ENV,
       lastNotified: (await getLastReleasedPatch()).id,
     },
@@ -139,6 +148,32 @@ export const deleteSubscription = async (endpoint: string) => {
     .from<PushSubscription>("subscriptions")
     .delete()
     .eq("endpoint", endpoint)
+
+  if (error) {
+    throw new Error(error.message)
+  }
+}
+
+// ----------------------------------------------
+// -------------- DISCORD WEBHOOKS --------------
+// ----------------------------------------------
+
+export const registerDiscordWebhook = async (
+  endpoint: string,
+  guildId: string,
+  id: string,
+) => {
+  const { error } = await supabase.from<PushSubscription>("subscriptions").upsert(
+    {
+      type: "discord",
+      endpoint,
+      auth: guildId,
+      extra: id,
+      environment: VERCEL_ENV,
+      lastNotified: (await getLastReleasedPatch()).id,
+    },
+    { onConflict: "endpoint" },
+  )
 
   if (error) {
     throw new Error(error.message)

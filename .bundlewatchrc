@@ -9,11 +9,11 @@
     },
     {
       "path": "./dist/sw.js",
-      "maxSize": "32kb"
+      "maxSize": "7.5kb"
     },
     {
       "path": "./dist/**/*vendor*.js",
-      "maxSize": "70kb"
+      "maxSize": "47kb"
     }
   ],
   "normalizeFilenames": "^.+?(\\.\\w+?)?\\.\\w+$"

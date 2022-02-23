@@ -1,7 +1,7 @@
 <template>
   <component
     :is="is"
-    class="clickable flex items-center p-2 bg-trans border-2 border-trans rounded-lg overflow-hidden cursor-pointer transition-bg duration-500 active:bg-gray-800 active:duration-50"
+    class="clickable flex items-center p-2 bg-trans border-2 border-trans rounded-lg overflow-hidden cursor-pointer transition-bg duration-500 active:bg-gray-800 active:duration-50 focus-visible:bg-gray-800"
     :class="{ clicked, 'rounded-full': round }"
     @mousedown="clicked = false"
     @click="clicked = true"
@@ -38,6 +38,10 @@ const clicked = ref(false)
   100% {
     border-color: transparent;
   }
+}
+
+.clickable {
+  outline: 0;
 }
 
 .clicked {

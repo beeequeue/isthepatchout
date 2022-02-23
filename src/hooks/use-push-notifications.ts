@@ -1,6 +1,5 @@
 import { ref, watch } from "vue"
 
-import { captureException } from "@sentry/vue"
 import { useLocalStorage } from "@vueuse/core"
 
 import { LocalStorageKey } from "../constants"
@@ -52,16 +51,12 @@ const unsubscribe = async () => {
   subscription.value = null
 
   const params = new URLSearchParams({ endpoint })
-  const response = await fetch(
+  await fetch(
     `${import.meta.env.VITE_API_URL as string}/api/subscription?${params.toString()}`,
     {
       method: "DELETE",
     },
   )
-
-  if (!response.ok) {
-    captureException("Could not register unsubscription with db")
-  }
 }
 
 const getIsSubscriptionValid = async (endpoint: string): Promise<boolean> => {

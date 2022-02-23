@@ -19,7 +19,7 @@
 <script lang="ts" setup>
 import { computed, watch } from "vue"
 
-import BottomBar from "./components/bottom-bar.vue"
+import BottomBar from "./components/bottom-bar/bottom-bar.vue"
 import Fade from "./components/fade.vue"
 import Loading from "./components/loading.vue"
 import Main from "./components/main.vue"

@@ -3,7 +3,7 @@
     <li v-for="({ url, name }, i) in prettyLinks" :id="name.toLowerCase()" :key="url">
       <a :href="url" target="_blank" rel="noopener">
         <div
-          class="relative py-1 px-2 mb-1 text-3xl text-center color-primary-400 overflow-hidden"
+          class="relative py-1 px-2 mb-1 text-3xl color-primary-400 text-center overflow-hidden"
         >
           <span>
             {{ name }}

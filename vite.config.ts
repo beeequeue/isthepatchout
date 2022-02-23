@@ -1,17 +1,19 @@
 import { config } from "dotenv"
 import browserslist from "browserslist"
 import { esbuildPluginBrowserslist } from "esbuild-plugin-browserslist"
-import { defineConfig } from "vite"
-import Vue from "@vitejs/plugin-vue"
+import { visualizer } from "rollup-plugin-visualizer"
+import { defineConfig, Plugin } from "vite"
+import Checker from "vite-plugin-checker"
 import WindiCSS from "vite-plugin-windicss"
 import { VitePWA } from "vite-plugin-pwa"
+import Vue from "@vitejs/plugin-vue"
 
 config()
 
 const s = JSON.stringify
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   build: {
     sourcemap: true,
   },
@@ -55,5 +57,11 @@ export default defineConfig({
         orientation: "portrait",
       },
     }),
+    Checker({ vueTsc: true, enableBuild: mode === "development" }),
+    process.argv.includes("--analyze") != null &&
+      (visualizer({
+        open: true,
+        brotliSize: true,
+      }) as unknown as Plugin),
   ],
-})
+}))
