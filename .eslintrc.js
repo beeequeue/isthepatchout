@@ -10,6 +10,10 @@ module.exports = {
     "plugin:@beequeue/typescript",
     "plugin:@beequeue/prettier",
   ],
+  globals: {
+    defineProps: "readonly",
+    defineEmit: "readonly",
+  },
   rules: {
     "@typescript-eslint/no-non-null-assertion": "off",
   },
