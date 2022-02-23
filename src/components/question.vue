@@ -19,8 +19,6 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps } from "vue"
-
 import type { Patch } from "../types"
 
 defineProps<{ relevantPatches: Patch[] }>()

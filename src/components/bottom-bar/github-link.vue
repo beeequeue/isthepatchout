@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts" setup>
-import githubIcon from "simple-icons/icons/github"
+import { siGithub as githubIcon } from "simple-icons/icons"
 
 import pkgJson from "../../../package.json"
 import Clickable from "../clickable.vue"

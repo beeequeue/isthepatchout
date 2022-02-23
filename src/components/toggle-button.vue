@@ -12,8 +12,6 @@
 </template>
 
 <script lang="ts" setup>
-import { defineProps, defineEmits } from "vue"
-
 import Clickable from "./clickable.vue"
 
 defineProps<{ checked: boolean; circle?: boolean }>()

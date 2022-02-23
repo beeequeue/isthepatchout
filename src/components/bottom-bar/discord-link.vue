@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts" setup>
-import discordIcon from "simple-icons/icons/discord"
+import { siDiscord as discordIcon } from "simple-icons/icons"
 
 import Clickable from "../clickable.vue"
 
