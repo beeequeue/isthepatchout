@@ -6,8 +6,6 @@ import Animations from "@windicss/animations"
 import colors from "windicss/colors"
 
 export default defineConfig({
-  mode: "jit",
-  darkMode: false,
   corePlugins: {
     accessibility: false,
   },
@@ -29,7 +27,7 @@ export default defineConfig({
       colors: {
         trans: "transparent",
         current: "currentColor",
-        gray: colors.warmGray,
+        gray: colors.stone,
         danger: colors.rose,
         primary: colors.amber,
       },
