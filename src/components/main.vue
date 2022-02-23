@@ -14,7 +14,10 @@
       </div>
     </CollapseTransition>
 
-    <Celebration :released-while-open="releasedWhileOpen" />
+    <Celebration
+      :recently-released="recentlyReleased"
+      :initial-released-value="initialReleasedValue"
+    />
 
     <Links v-if="recentlyReleased && links" :links="links" />
   </section>
@@ -38,7 +41,7 @@ const props = defineProps<{
   last?: Patch
   relevantPatches: Patch[]
   recentlyReleased: boolean
-  releasedWhileOpen: boolean
+  initialReleasedValue: boolean
 }>()
 
 const links = computed(() => props.last?.links ?? null)

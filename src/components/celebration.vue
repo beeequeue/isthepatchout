@@ -8,7 +8,10 @@ import { ref, watch } from "vue"
 import matchfoundSoundUrl from "../assets/matchfound.mp3"
 import { volume } from "../hooks/volume"
 
-const props = defineProps<{ releasedWhileOpen: boolean }>()
+const props = defineProps<{
+  recentlyReleased: boolean
+  initialReleasedValue: boolean
+}>()
 
 const audioReady = ref(false)
 const audio = new Audio(matchfoundSoundUrl)
@@ -37,8 +40,8 @@ const fireConfetti = () => {
   })
 }
 
-watch([() => props.releasedWhileOpen, audioReady], ([released, ready]) => {
-  if (!released || !ready) return
+watch([() => props.recentlyReleased, audioReady], ([released, ready]) => {
+  if (props.initialReleasedValue || !released || !ready) return
 
   audio.currentTime = 0
   void audio.play()

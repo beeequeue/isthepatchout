@@ -9,7 +9,7 @@
         :last="last ?? undefined"
         :relevant-patches="relevantPatches"
         :recently-released="recentlyReleased"
-        :released-while-open="releasedWhileOpen"
+        :initial-released-value="initialReleasedValue"
       />
     </Fade>
 
@@ -35,13 +35,15 @@ const relevantPatches = computed(
   () => (recentlyReleased.value ? [last.value!] : upNext.value) ?? [],
 )
 
-const releasedWhileOpen = ref(false)
+const initialReleasedValue = ref<boolean | null>(null)
 
-watch(recentlyReleased, (newValue, oldValue) => {
-  if (!oldValue && newValue) {
-    releasedWhileOpen.value = true
+watch(loadingLastPatch, (newLoading, oldLoading) => {
+  if (oldLoading && !newLoading) {
+    initialReleasedValue.value = recentlyReleased.value
   }
+})
 
+watch(recentlyReleased, (newValue) => {
   if (newValue) {
     document.title = `${last.value!.id} is out!`
   }
