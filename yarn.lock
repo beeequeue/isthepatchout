@@ -2160,12 +2160,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitejs/plugin-vue@npm:1.10.2":
-  version: 1.10.2
-  resolution: "@vitejs/plugin-vue@npm:1.10.2"
+"@vitejs/plugin-vue@npm:2.2.2":
+  version: 2.2.2
+  resolution: "@vitejs/plugin-vue@npm:2.2.2"
   peerDependencies:
     vite: ^2.5.10
-  checksum: 7cffcf10f865ba30e380a64eff5aeb69e828905833ae85a1621523d76b7de38a66549deeefecd05788919e0e31aba155d734f67fd97542a6d77046f89ae86c8c
+    vue: ^3.2.25
+  checksum: f05920e282569c3721dbbd730c83e40978134c0f53cd10f9429cc37b22152c494782f7b9541db937a2fd7ed324b819ec8aa0b54f136c3c6adbed7298c9c9e9da
   languageName: node
   linkType: hard
 
@@ -5710,7 +5711,7 @@ fsevents@~2.3.2:
     "@types/pino": 7.0.5
     "@types/simple-icons": 5.21.1
     "@vercel/node": 1.12.1
-    "@vitejs/plugin-vue": 1.10.2
+    "@vitejs/plugin-vue": 2.2.2
     "@vue/compiler-sfc": 3.2.26
     "@vueuse/core": 7.3.0
     "@windicss/animations": 1.0.8
