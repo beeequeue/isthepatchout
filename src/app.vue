@@ -26,10 +26,10 @@ import Loading from "./components/loading.vue"
 import Main from "./components/main.vue"
 import { useLastReleasedPatch, useUnreleasedPatches } from "./supabase"
 
-const { last, recentlyReleased, loading: lastPatchLoading } = useLastReleasedPatch()
-const { upNext, loading: upcomingLoading } = useUnreleasedPatches()
+const { last, recentlyReleased, loading: loadingLastPatch } = useLastReleasedPatch()
+const { upNext, loading: loadingUpcoming } = useUnreleasedPatches()
 
-const loading = computed(() => lastPatchLoading.value || upcomingLoading.value)
+const loading = computed(() => loadingLastPatch.value || loadingUpcoming.value)
 
 const relevantPatches = computed(
   () => (recentlyReleased.value ? [last.value!] : upNext.value) ?? [],
