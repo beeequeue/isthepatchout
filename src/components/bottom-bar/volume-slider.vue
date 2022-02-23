@@ -26,7 +26,7 @@ import { volume } from "../../hooks/volume"
 
 import Icon from "./icon.vue"
 
-const lastVolume = ref(volume.value)
+const lastVolume = ref(volume.value || 0.5)
 
 const muteOrUnmute = () => {
   if (volume.value === 0) {
