@@ -10,7 +10,7 @@ import { volume } from "../hooks/volume"
 
 const props = defineProps<{
   recentlyReleased: boolean
-  initialReleasedValue: boolean
+  initialReleasedValue: boolean | null
 }>()
 
 const audioReady = ref(false)

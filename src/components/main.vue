@@ -38,10 +38,10 @@ import Links from "./links.vue"
 import Question from "./question.vue"
 
 const props = defineProps<{
-  last?: Patch
+  last: Patch | null
   relevantPatches: Patch[]
   recentlyReleased: boolean
-  initialReleasedValue: boolean
+  initialReleasedValue: boolean | null
 }>()
 
 const links = computed(() => props.last?.links ?? null)

@@ -108,20 +108,6 @@ export const doesSubscriptionExist = async (endpoint: string): Promise<boolean> 
   return data != null
 }
 
-const getLastReleasedPatch = async () => {
-  const { error, data } = await supabase
-    .from<Patch>("patches")
-    .select("id")
-    .not("releasedAt", "is", null)
-    .order("releasedAt", { ascending: false })
-
-  if (error) {
-    throw new Error(error.message)
-  }
-
-  return data![0]
-}
-
 export const upsertSubscription = async ({
   endpoint,
   keys: { auth, p256dh },
@@ -133,7 +119,7 @@ export const upsertSubscription = async ({
       auth,
       extra: p256dh,
       environment: VERCEL_ENV,
-      lastNotified: (await getLastReleasedPatch()).id,
+      lastNotified: 0,
     },
     { onConflict: "endpoint" },
   )
@@ -170,7 +156,7 @@ export const registerDiscordWebhook = async (
       auth: guildId,
       extra: id,
       environment: VERCEL_ENV,
-      lastNotified: (await getLastReleasedPatch()).id,
+      lastNotified: 0,
     },
     { onConflict: "endpoint" },
   )

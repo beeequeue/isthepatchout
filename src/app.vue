@@ -6,7 +6,7 @@
       <Main
         v-else
         key="main"
-        :last="last ?? undefined"
+        :last="last"
         :relevant-patches="relevantPatches"
         :recently-released="recentlyReleased"
         :initial-released-value="initialReleasedValue"
