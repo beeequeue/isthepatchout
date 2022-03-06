@@ -3,7 +3,7 @@
     v-if="!hidden"
     class="absolute top-2 left-35 p-2 flex items-center rounded-lg shadow-lg bg-gray-900"
   >
-    <Icon :icon="arrowSvg" class="h-10 w-10 flex-shrink-0" />
+    <Icon :icon="arrowSvg" class="!h-8 !w-8 flex-shrink-0" />
 
     <div class="max-w-90 p-y2 text-center">
       If you want a sound to play when a patch is released you'll have to allow

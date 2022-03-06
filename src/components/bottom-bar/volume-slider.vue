@@ -36,15 +36,4 @@ const muteOrUnmute = () => {
     volume.value = 0
   }
 }
-
-/* eslint-disable @typescript-eslint/naming-convention */
-const searchParams = new URLSearchParams({
-  scope: "webhook.incoming",
-  response_type: "code",
-  client_id: "945801741864165427",
-  redirect_uri: encodeURI(
-    `${import.meta.env.VITE_API_URL as string}/api/callback/discord`,
-  ),
-})
-const url = new URL(`https://discord.com/api/oauth2/authorize?${searchParams.toString()}`)
 </script>
