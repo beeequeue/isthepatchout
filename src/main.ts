@@ -18,7 +18,9 @@ if (import.meta.env.PROD && "serviceWorker" in navigator) {
   void (async () => {
     const { registerSW } = await import("virtual:pwa-register")
     const updateSW = registerSW({
-      onNeedRefresh: () => updateSW(),
+      onNeedRefresh: () => {
+        void updateSW()
+      },
       immediate: true,
     })
   })()

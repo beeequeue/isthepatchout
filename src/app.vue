@@ -1,9 +1,9 @@
 <template>
   <main class="grid justify-items-center items-center h-1/1">
-    <Fade>
-      <Loading v-if="loading" key="loading" />
+    <FadeTransition>
+      <LoadingState v-if="loading" key="loading" />
 
-      <Main
+      <Content
         v-else
         key="main"
         :last="last"
@@ -11,7 +11,7 @@
         :recently-released="recentlyReleased"
         :initial-released-value="initialReleasedValue"
       />
-    </Fade>
+    </FadeTransition>
 
     <BottomBar />
   </main>
@@ -21,9 +21,9 @@
 import { computed, ref, watch } from "vue"
 
 import BottomBar from "./components/bottom-bar/bottom-bar.vue"
-import Fade from "./components/fade.vue"
-import Loading from "./components/loading.vue"
-import Main from "./components/main.vue"
+import Content from "./components/content.vue"
+import FadeTransition from "./components/fade-transition.vue"
+import LoadingState from "./components/loading-state.vue"
 import { useLastReleasedPatch, useUnreleasedPatches } from "./supabase"
 
 const { last, recentlyReleased, loading: loadingLastPatch } = useLastReleasedPatch()

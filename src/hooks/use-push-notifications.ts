@@ -35,7 +35,8 @@ const registerNewSubscription = async () => {
 
   await fetch(`${import.meta.env.VITE_API_URL as string}/api/subscription`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    // eslint-disable-next-line @typescript-eslint/naming-convention
+    headers: { "content-type": "application/json" },
     body: JSON.stringify(subscriptionData),
   })
 }

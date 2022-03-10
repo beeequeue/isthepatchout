@@ -69,7 +69,7 @@ export class DotaVersion {
 
     this.major = Number(matches[1])
     this.minor = Number(matches[2])
-    this.patch = matches[3] != null ? matches[3].charCodeAt(0) - 97 + 1 : 0
+    this.patch = matches[3] != null ? matches[3].codePointAt(0)! - 97 + 1 : 0
 
     this.type = this.patch === 0 ? (this.minor === 0 ? "major" : "minor") : "patch"
   }
@@ -109,7 +109,7 @@ export class DotaVersion {
       minorPart = minorPart.padStart(2, "0")
     }
 
-    const patchPart = this.patch !== 0 ? String.fromCharCode(this.patch + 97 - 1) : ""
+    const patchPart = this.patch !== 0 ? String.fromCodePoint(this.patch + 97 - 1) : ""
 
     return `${this.major}.${minorPart}${patchPart}`
   }

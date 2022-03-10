@@ -43,7 +43,7 @@
     "workbox-precaching": "6.4.2"
   },
   "devDependencies": {
-    "@beequeue/eslint-plugin": "0.4.0",
+    "@beequeue/eslint-plugin": "0.5.0",
     "@hapi/boom": "9.1.4",
     "@sentry/node": "6.17.9",
     "@types/canvas-confetti": "1.4.2",
@@ -59,7 +59,7 @@
     "bundlewatch": "0.3.3",
     "dotenv": "16.0.0",
     "esbuild-plugin-browserslist": "0.4.3",
-    "eslint": "8.9.0",
+    "eslint": "8.10.0",
     "got": "11.8.3",
     "joi": "17.6.0",
     "lint-staged": "12.3.4",
