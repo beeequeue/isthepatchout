@@ -5115,7 +5115,7 @@ fsevents@~2.3.2:
     vue: 3.2.31
     vue-tsc: 0.31.4
     windicss: 3.4.4
-    workbox-precaching: 6.4.2
+    workbox-precaching: 6.5.3
   languageName: unknown
   linkType: soft
 
@@ -8445,6 +8445,13 @@ typescript@4.3.4:
   languageName: node
   linkType: hard
 
+"workbox-core@npm:6.5.3":
+  version: 6.5.3
+  resolution: "workbox-core@npm:6.5.3"
+  checksum: b898da6d990642eaac7ad38db0d8379ef42d8de5fd6636ac859d79ec6f15d41e1b1bc6dce6dfc8b0e0b38094c0af8e29b2e8c2461666ea67cacd59dc5f53b45e
+  languageName: node
+  linkType: hard
+
 "workbox-expiration@npm:6.4.2":
   version: 6.4.2
   resolution: "workbox-expiration@npm:6.4.2"
@@ -8487,6 +8494,17 @@ typescript@4.3.4:
   languageName: node
   linkType: hard
 
+"workbox-precaching@npm:6.5.3":
+  version: 6.5.3
+  resolution: "workbox-precaching@npm:6.5.3"
+  dependencies:
+    workbox-core: 6.5.3
+    workbox-routing: 6.5.3
+    workbox-strategies: 6.5.3
+  checksum: 231aab3fc552e80f78bf7f0dbfbae628144053898e24e04ee750b95e1bfb0648e1c68d29d238c2eaacac3689e34678b890b901d6c41a1987f305a48d067b7851
+  languageName: node
+  linkType: hard
+
 "workbox-range-requests@npm:6.4.2":
   version: 6.4.2
   resolution: "workbox-range-requests@npm:6.4.2"
@@ -8519,12 +8537,30 @@ typescript@4.3.4:
   languageName: node
   linkType: hard
 
+"workbox-routing@npm:6.5.3":
+  version: 6.5.3
+  resolution: "workbox-routing@npm:6.5.3"
+  dependencies:
+    workbox-core: 6.5.3
+  checksum: 9274c40f5b4ca618fb90b5992e6f7f336b7b2303262529510dd229c080a1c6113672a7ef00cb6e24d99ac4f44f606506ca499a46316de87b836d31f5fec71045
+  languageName: node
+  linkType: hard
+
 "workbox-strategies@npm:6.4.2":
   version: 6.4.2
   resolution: "workbox-strategies@npm:6.4.2"
   dependencies:
     workbox-core: 6.4.2
   checksum: f981ab0bb103695f765cb4305d0bf35ebe347bcb19c441a58b2b48e99dc238495b6cbb1d1d3f55c89f2dee3202d9d2f8cb31f10b98120a33ed52f7e838366a98
+  languageName: node
+  linkType: hard
+
+"workbox-strategies@npm:6.5.3":
+  version: 6.5.3
+  resolution: "workbox-strategies@npm:6.5.3"
+  dependencies:
+    workbox-core: 6.5.3
+  checksum: 74e1ac4d239c9439aab693dbaa02d03db00ebef9195d9537c0947f853a107d2c9960e42b0e2284911be69052c99f63dd12dadf069839734bb921041fa108e846
   languageName: node
   linkType: hard
 
