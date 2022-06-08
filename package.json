@@ -29,7 +29,7 @@
     "typecheck": "tsc --project api/tsconfig.json && vue-tsc --project tsconfig.json"
   },
   "resolutions": {
-    "@types/node": "14.18.12"
+    "@types/node": "16.11.39"
   },
   "dependencies": {
     "@ivanv/vue-collapse-transition": "1.0.2",
@@ -44,11 +44,11 @@
   },
   "devDependencies": {
     "@beequeue/eslint-plugin": "0.6.0",
-    "@hapi/boom": "9.1.4",
+    "@hapi/boom": "10.0.0",
     "@sentry/node": "7.1.1",
     "@types/canvas-confetti": "1.4.2",
-    "@types/node": "14.18.12",
-    "@vercel/node": "1.13.0",
+    "@types/node": "16.11.39",
+    "@vercel/node": "2.0.1",
     "@vitejs/plugin-vue": "2.3.3",
     "@vue/compiler-sfc": "3.2.37",
     "@windicss/animations": "1.0.8",
@@ -61,13 +61,13 @@
     "got": "11.8.3",
     "joi": "17.6.0",
     "lint-staged": "13.0.0",
-    "pino": "7.8.0",
-    "pino-pretty": "7.5.1",
-    "prettier": "2.5.1",
+    "pino": "8.0.0",
+    "pino-pretty": "8.0.0",
+    "prettier": "2.6.2",
     "rollup-plugin-visualizer": "5.5.4",
     "simple-git-hooks": "2.8.0",
     "tailwindcss": "3.0.24",
-    "typescript": "4.5.5",
+    "typescript": "4.7.3",
     "vite": "2.9.10",
     "vite-plugin-checker": "0.4.6",
     "vite-plugin-pwa": "0.12.0",
