@@ -5,7 +5,6 @@
   branchConcurrentLimit: 5,
   schedule: ["before 11am"],
   labels: ["dependencies"],
-  postUpdateOptions: ["yarnDedupeHighest"],
   baseBranches: ["main"],
   packageRules: [
     {

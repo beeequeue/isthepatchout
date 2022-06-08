@@ -6,12 +6,12 @@
   "repository": "https://github.com/BeeeQueue/isthepatchout",
   "license": "MIT",
   "private": true,
-  "packageManager": "yarn@3.2.2",
+  "packageManager": "pnpm@7.9.3",
   "engines": {
     "node": "^16.15"
   },
   "simple-git-hooks": {
-    "pre-commit": "yarn lint-staged"
+    "pre-commit": "pnpm lint-staged"
   },
   "lint-staged": {
     "*.{js,ts,vue,html,json}": [

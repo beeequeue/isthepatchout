@@ -22,25 +22,57 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v3
+      - uses: BeeeQueue/setup-node@corepack
         with:
           node-version: 16
+          corepack: true
 
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
+      - run: corepack enable
+
+      - name: find pnpm cache path
+        id: cache
+        run: echo "::set-output name=path::$(pnpm store path)"
 
       - uses: actions/cache@v3
         with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: yarn-v1-${{ hashFiles('**/yarn.lock') }}
+          path: ${{ steps.cache.outputs.path }}
+          key: v1-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            yarn-v1-
+            v1-pnpm-
 
       - name: Install dependencies
-        run: yarn install --immutable
+        run: pnpm install --frozen-lockfile
 
-      - run: yarn lint
+      - run: pnpm lint --format compact
+
+  typecheck:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: BeeeQueue/setup-node@corepack
+        with:
+          node-version: 16
+          corepack: true
+
+      - name: find pnpm cache path
+        id: cache
+        run: echo "::set-output name=path::$(pnpm store path)"
+
+      - uses: actions/cache@v3
+        with:
+          path: ${{ steps.cache.outputs.path }}
+          key: v1-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            v1-pnpm-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - run: pnpm typecheck
+
+      - run: pnpm test
 
   build:
     runs-on: ubuntu-latest
@@ -48,29 +80,28 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v3
+      - uses: BeeeQueue/setup-node@corepack
         with:
           node-version: 16
+          corepack: true
 
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
+      - name: find pnpm cache path
+        id: cache
+        run: echo "::set-output name=path::$(pnpm store path)"
 
       - uses: actions/cache@v3
         with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: yarn-v1-${{ hashFiles('**/yarn.lock') }}
+          path: ${{ steps.cache.outputs.path }}
+          key: v1-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
-            yarn-v1-
+            v1-pnpm-
 
       - name: Install dependencies
-        run: yarn install --immutable
+        run: pnpm install --frozen-lockfile
 
-      - run: yarn typecheck
+      - run: pnpm build
 
-      - run: yarn build
-
-      - run: yarn bundlewatch
+      - run: pnpm bundlewatch
         env:
           BUNDLEWATCH_GITHUB_TOKEN: ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}
           CI_COMMIT_SHA: ${{ github.event.pull_request.head.sha }}
