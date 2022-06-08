@@ -5,10 +5,7 @@
 import confetti from "canvas-confetti"
 import { watch } from "vue"
 
-const props = defineProps<{
-  recentlyReleased: boolean
-  initialReleasedValue: boolean | null
-}>()
+import { state } from "../state"
 
 const fireConfetti = () => {
   void confetti({
@@ -25,10 +22,15 @@ const fireConfetti = () => {
   })
 }
 
-watch([() => props.recentlyReleased], ([released]) => {
-  if (props.initialReleasedValue || !released) return
+watch(
+  () => state.recentlyReleased,
+  (released) => {
+    if (state.releasedBeforeOpen || !released) return
 
-  const interval = setInterval(fireConfetti, 100)
-  setTimeout(() => clearInterval(interval), 30_000)
-})
+    document.title = `${state.latestPatch!.id} is out!`
+
+    const interval = setInterval(fireConfetti, 100)
+    setTimeout(() => clearInterval(interval), 30_000)
+  },
+)
 </script>
