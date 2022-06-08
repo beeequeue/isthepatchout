@@ -61,7 +61,8 @@ export const insertUpcomingPatches = async () => {
     throw new Error(error.message)
   }
 
-  const lastVersion = DotaVersion.parse(lastReleasedPatch[0].id)
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
+  const lastVersion = DotaVersion.parse(lastReleasedPatch![0].id)
 
   const upcomingVersions = [
     lastVersion.next(DotaPatchType.Minor),

@@ -92,7 +92,8 @@ const postHandler: CustomHandler = async (request) => {
     return badRequest(error.message)
   }
 
-  await upsertSubscription(value)
+  // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
+  await upsertSubscription(value!)
 }
 
 const deleteHandler: CustomHandler = async (request) => {
