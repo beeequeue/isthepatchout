@@ -1,8 +1,6 @@
-import { differenceInDays } from "date-fns"
-import { computed, onUnmounted, ref } from "vue"
-
 import { SupabaseClient, SupabaseRealtimePayload } from "@supabase/supabase-js"
 
+import { mutations } from "./state"
 import { Patch } from "./types"
 
 export const supabase = new SupabaseClient(
@@ -10,104 +8,29 @@ export const supabase = new SupabaseClient(
   import.meta.env.VITE_SUPABASE_PUBLIC_KEY as string,
 )
 
-type PostgrestError = {
-  message: string
-  details: string
-  hint: string
-  code: string
-}
-
-export const useUnreleasedPatches = () => {
-  const data = ref<Patch[]>([])
-  const error = ref<PostgrestError | null>(null)
-  const loading = ref(true)
-
-  void supabase
-    .from<Patch>("patches")
-    .select()
-    .is("releasedAt", null)
-    .limit(2)
-    .order("number", { ascending: false })
-    .then((result) => {
-      if (result.error != null) {
-        error.value = result.error
-        data.value = []
-      } else {
-        error.value = null
-        // Reverse the order for easier usage in stuff like reduce
-        data.value = result.data.reverse()
-      }
-
-      loading.value = false
-    })
-
-  const handler = (payload: SupabaseRealtimePayload<Patch>) => {
-    const relevantPatchIndex = data.value.findIndex(
-      (patch) => patch.id === payload.new.id,
-    )
-
-    if (relevantPatchIndex === -1) return
-
-    data.value[relevantPatchIndex] = payload.new
-  }
-
-  const subscription = supabase
-    .from<Patch>("patches")
-    .on("UPDATE", handler)
-    .on("INSERT", handler)
-    .subscribe()
-
-  onUnmounted(() => {
-    subscription.unsubscribe()
-  })
-
-  const upNext = computed(() => data.value.filter((patch) => patch.releasedAt == null))
-
-  return {
-    upNext,
-    error,
-    loading,
-  }
-}
-
-export const useLastReleasedPatch = () => {
-  const data = ref<Patch | null>(null)
-  const error = ref<PostgrestError | null>(null)
-  const loading = ref(true)
-
-  void supabase
+export const fetchLatestPatch = async () => {
+  const result = await supabase
     .from<Patch>("patches")
     .select()
     .not("releasedAt", "is", null)
     .order("number", { ascending: false })
     .limit(1)
     .maybeSingle()
-    .then((result) => {
-      if (result.error != null) {
-        error.value = result.error
-        data.value = null
-      } else {
-        error.value = null
-        data.value = result.data
-      }
 
-      loading.value = false
-    })
+  if (result.data != null) {
+    mutations.updateInitialData(result.data)
+  }
+}
 
+export const initChangeDetection = (latestPatch: Patch) => {
   const handler = (payload: SupabaseRealtimePayload<Patch>) => {
     if (
       payload.new.releasedAt != null &&
-      payload.new.number >= (data.value?.number ?? 0)
+      payload.new.number >= (latestPatch.number ?? 0)
     ) {
-      data.value = payload.new
+      mutations.releaseNewPatch(payload.new)
     }
   }
-
-  const recentlyReleased = computed(
-    () =>
-      data.value != null &&
-      differenceInDays(Date.now(), new Date(data.value.releasedAt!)) < 7,
-  )
 
   const subscription = supabase
     .from<Patch>("patches")
@@ -115,14 +38,7 @@ export const useLastReleasedPatch = () => {
     .on("INSERT", handler)
     .subscribe()
 
-  onUnmounted(() => {
+  return () => {
     subscription.unsubscribe()
-  })
-
-  return {
-    last: data,
-    recentlyReleased,
-    error,
-    loading,
   }
 }

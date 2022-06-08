@@ -68,7 +68,7 @@ export default defineConfig(({ mode }) => ({
       },
     }),
     Checker({ vueTsc: true, enableBuild: mode === "development" }),
-    process.argv.includes("--analyze") != null &&
+    process.argv.includes("--analyze") &&
       (visualizer({
         open: true,
         brotliSize: true,

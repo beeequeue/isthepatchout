@@ -1,19 +1,21 @@
 {
   "ci": {
-    "trackBranches": ["main"]
+    "trackBranches": [
+      "main"
+    ]
   },
   "files": [
-    {
-      "path": "./dist/**/*.js",
-      "maxSize": "7kb"
-    },
     {
       "path": "./dist/sw.js",
       "maxSize": "7.5kb"
     },
     {
-      "path": "./dist/**/*vendor*.js",
-      "maxSize": "47kb"
+      "path": "./dist/assets/*.js",
+      "maxSize": "10kb"
+    },
+    {
+      "path": "./dist/assets/index.*.js",
+      "maxSize": "58kb"
     }
   ],
   "normalizeFilenames": "^.+?(\\.\\w+?)?\\.\\w+$"

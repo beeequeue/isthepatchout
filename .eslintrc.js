@@ -8,13 +8,12 @@ module.exports = {
     "plugin:@beequeue/base",
     "plugin:@beequeue/vue",
     "plugin:@beequeue/typescript",
-    "plugin:@beequeue/prettier",
   ],
   globals: {
     defineProps: "readonly",
     defineEmits: "readonly",
   },
   rules: {
-    "@typescript-eslint/no-non-null-assertion": "off",
+    "vue/multi-word-component-names": "off",
   },
 }

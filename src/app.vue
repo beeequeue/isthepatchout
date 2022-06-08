@@ -1,16 +1,9 @@
 <template>
   <main class="grid justify-items-center items-center h-1/1">
     <FadeTransition>
-      <LoadingState v-if="loading" key="loading" />
+      <LoadingState v-if="state.loading" key="loading" />
 
-      <Content
-        v-else
-        key="main"
-        :last="last"
-        :relevant-patches="relevantPatches"
-        :recently-released="recentlyReleased"
-        :initial-released-value="initialReleasedValue"
-      />
+      <Content v-else key="main" />
     </FadeTransition>
 
     <BottomBar />
@@ -18,36 +11,28 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref, watch } from "vue"
+import { watch } from "vue"
 
 import BottomBar from "./components/bottom-bar/bottom-bar.vue"
 import Content from "./components/content.vue"
 import FadeTransition from "./components/fade-transition.vue"
 import LoadingState from "./components/loading-state.vue"
-import { useLastReleasedPatch, useUnreleasedPatches } from "./supabase"
+import { state } from "./state"
+import { fetchLatestPatch, initChangeDetection } from "./supabase"
 
-const { last, recentlyReleased, loading: loadingLastPatch } = useLastReleasedPatch()
-const { upNext, loading: loadingUpcoming } = useUnreleasedPatches()
+void fetchLatestPatch()
 
-const loading = computed(() => loadingLastPatch.value || loadingUpcoming.value)
+watch(
+  () => state.latestPatch,
+  (newPatch, _, onCleanup) => {
+    if (newPatch != null) {
+      const unsubscribe = initChangeDetection(newPatch)
 
-const relevantPatches = computed(
-  () => (recentlyReleased.value ? [last.value!] : upNext.value) ?? [],
+      onCleanup(unsubscribe)
+    }
+  },
+  { deep: true },
 )
-
-const initialReleasedValue = ref<boolean | null>(null)
-
-watch(loadingLastPatch, (newLoading, oldLoading) => {
-  if (oldLoading && !newLoading) {
-    initialReleasedValue.value = recentlyReleased.value
-  }
-})
-
-watch(recentlyReleased, (newValue) => {
-  if (newValue) {
-    document.title = `${last.value!.id} is out!`
-  }
-})
 </script>
 
 <style scoped>
