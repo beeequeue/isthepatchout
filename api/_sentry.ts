@@ -6,9 +6,7 @@ import {
   Integrations,
   setContext,
   setTag,
-  startTransaction,
 } from "@sentry/node"
-import type { Transaction } from "@sentry/types"
 import type { VercelRequest, VercelResponse } from "@vercel/node"
 
 import { Logger } from "./_logger"
@@ -35,17 +33,10 @@ init({
 
 setTag("app", "api")
 
-let transaction: Transaction
-
 export const sentryWrapper =
   (path: string, handler: CustomHandler): Handler =>
   async (req, res) => {
     let response: NonNullable<CustomHandlerResponse>
-
-    transaction = startTransaction({
-      name: path,
-      op: "transaction",
-    })
 
     try {
       response = (await handler(req)) ?? {}
@@ -59,8 +50,6 @@ export const sentryWrapper =
       Logger.error(error)
       captureException(error)
     }
-
-    transaction.finish()
 
     await flush(1000)
 
@@ -105,12 +94,3 @@ export const sentryWrapper =
       res.status(statusCode).json(body)
     }
   }
-
-export const startTask = (name: string) => {
-  if (transaction == null) throw new Error("thefuck")
-
-  return transaction.startChild({
-    op: "task",
-    description: name,
-  })
-}
