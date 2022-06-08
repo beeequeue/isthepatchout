@@ -46,7 +46,7 @@ const handler: CustomHandler = async (request) => {
         grant_type: "authorization_code",
         client_id: DISCORD_CLIENT_ID,
         client_secret: DISCORD_CLIENT_SECRET,
-        code: value!.code,
+        code: value.code,
         redirect_uri: `${VITE_API_URL}/api/callback/discord`,
       },
     },
@@ -55,7 +55,7 @@ const handler: CustomHandler = async (request) => {
   try {
     await registerDiscordWebhook(
       response.body.webhook.url,
-      value!.guild_id,
+      value.guild_id,
       response.body.webhook.id,
     )
 
