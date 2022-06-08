@@ -3,27 +3,12 @@
 
 <script lang="ts" setup>
 import confetti from "canvas-confetti"
-import { ref, watch } from "vue"
-
-import matchfoundSoundUrl from "../assets/matchfound.mp3"
-import { volume } from "../hooks/volume"
+import { watch } from "vue"
 
 const props = defineProps<{
   recentlyReleased: boolean
   initialReleasedValue: boolean | null
 }>()
-
-const audioReady = ref(false)
-const audio = new Audio(matchfoundSoundUrl)
-audio.autoplay = false
-audio.volume = volume.value
-audio.addEventListener("canplaythrough", () => {
-  audioReady.value = true
-})
-
-watch(volume, (newValue) => {
-  audio.volume = newValue
-})
 
 const fireConfetti = () => {
   void confetti({
@@ -40,11 +25,8 @@ const fireConfetti = () => {
   })
 }
 
-watch([() => props.recentlyReleased, audioReady], ([released, ready]) => {
-  if (props.initialReleasedValue || !released || !ready) return
-
-  audio.currentTime = 0
-  void audio.play()
+watch([() => props.recentlyReleased], ([released]) => {
+  if (props.initialReleasedValue || !released) return
 
   const interval = setInterval(fireConfetti, 100)
   setTimeout(() => clearInterval(interval), 30_000)

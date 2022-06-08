@@ -1,7 +1,5 @@
 <template>
   <section class="flex flex-shrink flex-col items-center">
-    <AutoplayAlert v-if="!canPlayAudio" />
-
     <Question :relevant-patches="relevantPatches" />
 
     <Answer :released="recentlyReleased" />
@@ -28,11 +26,9 @@ import { computed } from "vue"
 
 import CollapseTransition from "@ivanv/vue-collapse-transition"
 
-import { canPlayAudio } from "../hooks/volume"
 import type { Patch } from "../types"
 
 import Answer from "./answer.vue"
-import AutoplayAlert from "./autoplay-alert.vue"
 import Celebration from "./celebration.vue"
 import Links from "./links.vue"
 import Question from "./question.vue"
