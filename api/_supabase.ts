@@ -1,9 +1,10 @@
+import { DotaPatchType, DotaVersion } from "dotaver"
+
 import { SupabaseClient } from "@supabase/supabase-js"
 
 import type { Patch, PushSubscription } from "../src/types"
 
 import type { PatchNoteListItem } from "./_dota"
-import { DotaVersion } from "./_dota"
 import { Logger } from "./_logger"
 import { UpdateSubscriptionInput } from "./subscription"
 
@@ -27,7 +28,7 @@ export const formatPatchData = (data: PatchNoteListItem): Patch => {
 
   return {
     id: data.patch_number,
-    number: new DotaVersion(data.patch_number).toNumber(),
+    number: DotaVersion.parse(data.patch_number).toNumber(),
     releasedAt: new Date(data.patch_timestamp * 1000).toISOString(),
     links,
   }
@@ -60,11 +61,11 @@ export const insertUpcomingPatches = async () => {
     throw new Error(error.message)
   }
 
-  const lastVersion = new DotaVersion(lastReleasedPatch![0].id)
+  const lastVersion = DotaVersion.parse(lastReleasedPatch[0].id)
 
   const upcomingVersions = [
-    lastVersion.increment("minor"),
-    lastVersion.increment("patch"),
+    lastVersion.next(DotaPatchType.Minor),
+    lastVersion.next(DotaPatchType.Patch),
   ]
 
   Logger.debug(upcomingVersions)

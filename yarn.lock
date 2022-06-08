@@ -3183,6 +3183,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dotaver@npm:1.0.1":
+  version: 1.0.1
+  resolution: "dotaver@npm:1.0.1"
+  checksum: 37ee64720f831d23479838dfaa299521266bc43b60cf3424ae8c6a6d2597934fc52bcb05193e168a37aac8632cd7dddc39b30ae039912a92c7c027ec046a80f8
+  languageName: node
+  linkType: hard
+
 "dotenv@npm:16.0.1":
   version: 16.0.1
   resolution: "dotenv@npm:16.0.1"
@@ -4913,6 +4920,7 @@ fsevents@~2.3.2:
     bundlewatch: 0.3.3
     canvas-confetti: 1.5.1
     date-fns: 2.28.0
+    dotaver: 1.0.1
     dotenv: 16.0.1
     esbuild-plugin-browserslist: 0.4.10
     eslint: 8.17.0
