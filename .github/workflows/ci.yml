@@ -1,4 +1,4 @@
-name: CI/CD
+name: ci
 on:
   push:
     branches:
@@ -7,13 +7,13 @@ on:
       - "**.md"
       - ".gitignore"
       - ".github/**"
-      - "!.github/workflows/CICD.yml"
+      - "!.github/workflows/ci.yml"
   pull_request:
     paths-ignore:
       - "**.md"
       - ".gitignore"
       - ".github/**"
-      - "!.github/workflows/CICD.yml"
+      - "!.github/workflows/ci.yml"
 
 jobs:
   lint:
@@ -25,7 +25,17 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: yarn
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
+
+      - uses: actions/cache@v3
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: yarn-v1-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            yarn-v1-
 
       - name: Install dependencies
         run: yarn install --immutable
@@ -41,7 +51,17 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: yarn
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
+
+      - uses: actions/cache@v3
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: yarn-v1-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            yarn-v1-
 
       - name: Install dependencies
         run: yarn install --immutable
