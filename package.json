@@ -59,7 +59,7 @@
     "dotenv": "16.0.1",
     "esbuild-plugin-browserslist": "0.4.10",
     "eslint": "8.17.0",
-    "got": "11.8.3",
+    "got": "11.8.5",
     "joi": "17.6.0",
     "lint-staged": "13.0.0",
     "pino": "8.0.0",
