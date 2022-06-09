@@ -61,7 +61,7 @@
     "eslint": "8.17.0",
     "got": "11.8.5",
     "joi": "17.6.0",
-    "lint-staged": "13.0.0",
+    "lint-staged": "13.0.1",
     "pino": "8.0.0",
     "pino-pretty": "8.0.0",
     "prettier": "2.6.2",
