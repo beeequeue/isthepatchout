@@ -5,7 +5,7 @@
     Is
 
     <div
-      v-for="(patch, i) in nextPatches"
+      v-for="(patch, i) in relevantPatches"
       :key="patch?.toString()"
       class="md:flex md:items-center md:gap-2"
     >
@@ -26,11 +26,18 @@ import { computed } from "vue"
 
 import type { Patch } from "../types"
 
-const props = defineProps<{ latestPatch: Patch }>()
+const props = defineProps<{
+  recentlyReleased: boolean
+  latestPatch: Patch
+}>()
 
 const currentPatch = computed(() => DotaVersion.parse(props.latestPatch.id))
 const nextPatches = computed(() => [
   currentPatch.value.next(DotaPatchType.Minor),
   currentPatch.value.next(DotaPatchType.Patch),
 ])
+
+const relevantPatches = computed(() =>
+  props.recentlyReleased ? [DotaVersion.parse(props.latestPatch.id)] : nextPatches.value,
+)
 </script>

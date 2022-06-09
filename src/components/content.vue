@@ -1,6 +1,10 @@
 <template>
   <section class="flex flex-shrink flex-col items-center">
-    <Question v-if="state.latestPatch != null" :latest-patch="state.latestPatch" />
+    <Question
+      v-if="state.latestPatch != null"
+      :recently-released="state.recentlyReleased"
+      :latest-patch="state.latestPatch"
+    />
 
     <Answer :released="state.recentlyReleased" />
 
