@@ -1860,55 +1860,45 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@volar/code-gen@npm:0.37.3":
-  version: 0.37.3
-  resolution: "@volar/code-gen@npm:0.37.3"
+"@volar/code-gen@npm:0.37.5":
+  version: 0.37.5
+  resolution: "@volar/code-gen@npm:0.37.5"
   dependencies:
-    "@volar/source-map": 0.37.3
-  checksum: 21e477af39f02e8d450e5d5910b357e977e78981068c62d892e15c5f509287dd4ee7222e8c3f8569e373f948b486cc030ec92132fb55ec44880d7a4fd89a6410
+    "@volar/source-map": 0.37.5
+  checksum: 4978825d1885942d50da2b5d2cbf7e0b0377bff133c991aecd2271eb2fb3270ded72b2e296e789cc9bacb72841bf1c86bff9450bc795e0f2675b57c5e438bfe0
   languageName: node
   linkType: hard
 
-"@volar/source-map@npm:0.37.3":
-  version: 0.37.3
-  resolution: "@volar/source-map@npm:0.37.3"
-  checksum: 749d0de1590afdd4ae0dfd0003fd7b32129d541c27dd49dd9ec329f736fba1293a9499a2e8bb74aae8686d08a81b156168db28eb0f48c0b2f16c6cbe64ff82be
+"@volar/source-map@npm:0.37.5":
+  version: 0.37.5
+  resolution: "@volar/source-map@npm:0.37.5"
+  checksum: ebce4972e4e0544447c02622dfd6fb25649bde53c9a9ef138ff218d63aed9dff2b16e84fb72ae811018de2314b1f818bf1db0365ec38a58f2bd9e176da6d618d
   languageName: node
   linkType: hard
 
-"@volar/typescript-faster@npm:0.37.3":
-  version: 0.37.3
-  resolution: "@volar/typescript-faster@npm:0.37.3"
+"@volar/vue-code-gen@npm:0.37.5":
+  version: 0.37.5
+  resolution: "@volar/vue-code-gen@npm:0.37.5"
   dependencies:
-    semver: ^7.3.7
-  checksum: eca86e65aee1032b19be8f2f9a1c85d41db3db9669ee2d9bf6ae7d3d60acd85d5641eb07e03e254d07ca3bf1a3c255e069d2364f8b0ed06864e43608a33dcf0f
-  languageName: node
-  linkType: hard
-
-"@volar/vue-code-gen@npm:0.37.3":
-  version: 0.37.3
-  resolution: "@volar/vue-code-gen@npm:0.37.3"
-  dependencies:
-    "@volar/code-gen": 0.37.3
-    "@volar/source-map": 0.37.3
+    "@volar/code-gen": 0.37.5
+    "@volar/source-map": 0.37.5
     "@vue/compiler-core": ^3.2.37
     "@vue/compiler-dom": ^3.2.37
     "@vue/shared": ^3.2.37
-  checksum: 98d7c66aa5669ed29baafb256917110316ca83af886728a8dedac9d4f367293eaac666f2b265c18e812b8d5a930d0989fcb8da64ad53cd13a32f93f1fabe3954
+  checksum: 5fb21b6bc97175408594da18ebe12c5d3c71769d21dceb262e8839c89c63519a85ead5cc8c7aac4b2c7efaefb58142989f15cb42c9b083d0080682b5a3d419ff
   languageName: node
   linkType: hard
 
-"@volar/vue-typescript@npm:0.37.3":
-  version: 0.37.3
-  resolution: "@volar/vue-typescript@npm:0.37.3"
+"@volar/vue-typescript@npm:0.37.5":
+  version: 0.37.5
+  resolution: "@volar/vue-typescript@npm:0.37.5"
   dependencies:
-    "@volar/code-gen": 0.37.3
-    "@volar/source-map": 0.37.3
-    "@volar/typescript-faster": 0.37.3
-    "@volar/vue-code-gen": 0.37.3
+    "@volar/code-gen": 0.37.5
+    "@volar/source-map": 0.37.5
+    "@volar/vue-code-gen": 0.37.5
     "@vue/compiler-sfc": ^3.2.37
     "@vue/reactivity": ^3.2.37
-  checksum: 9eec530fb770dc280a2b6cd762dedb85eed628663875363b88762ee34262e4544429725b31b16482a2f2d0e08da9bf4f0f010b4cdfe8bbeb77a5aee655f073d3
+  checksum: 702c42644b9655da20cff7d0df544d9c3453e6b06e2a5b535a70d1849b7f76c8ea69167af67aa0f169c6f6ef8a841db8532519139087faac7ee88aa173b7b711
   languageName: node
   linkType: hard
 
@@ -4941,7 +4931,7 @@ fsevents@~2.3.2:
     vite-plugin-pwa: 0.12.0
     vite-plugin-windicss: 1.8.4
     vue: 3.2.37
-    vue-tsc: 0.37.3
+    vue-tsc: 0.37.5
     windicss: 3.5.4
     workbox-precaching: 6.5.3
   languageName: unknown
@@ -7865,16 +7855,16 @@ typescript@4.3.4:
   languageName: node
   linkType: hard
 
-"vue-tsc@npm:0.37.3":
-  version: 0.37.3
-  resolution: "vue-tsc@npm:0.37.3"
+"vue-tsc@npm:0.37.5":
+  version: 0.37.5
+  resolution: "vue-tsc@npm:0.37.5"
   dependencies:
-    "@volar/vue-typescript": 0.37.3
+    "@volar/vue-typescript": 0.37.5
   peerDependencies:
     typescript: "*"
   bin:
     vue-tsc: bin/vue-tsc.js
-  checksum: 91c43c1db11aaea863bb4ce0b41f5555fef94668e6d44d9806dedc95e80af31c251c5f9c212c301d1eb6e34572e39ad56f9b2f7fc76012d22be788aea05285e1
+  checksum: f45fb59cf99efc605c967484cc95ccd2fcb07661177ac11309281389f7afb53867c3c5df7a750319ca981e6be621c86f58a432e0d45b4c1e797bcc6c4f7d6e89
   languageName: node
   linkType: hard
 
