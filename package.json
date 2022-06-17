@@ -38,7 +38,7 @@
     "canvas-confetti": "1.5.1",
     "date-fns": "2.28.0",
     "dotaver": "1.0.1",
-    "fathom-client": "3.4.1",
+    "fathom-client": "3.5.0",
     "simple-icons": "7.1.0",
     "vue": "3.2.37",
     "workbox-precaching": "6.5.3"

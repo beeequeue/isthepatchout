@@ -4191,10 +4191,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fathom-client@npm:3.4.1":
-  version: 3.4.1
-  resolution: "fathom-client@npm:3.4.1"
-  checksum: 0f2262e72866e9f000eea6c5162d8dffd51762308d4131eb2035872f624520451b1d61d9ca5c5721c816e9f5f2d7feef559dd9575ffb0deb11a56874409424b5
+"fathom-client@npm:3.5.0":
+  version: 3.5.0
+  resolution: "fathom-client@npm:3.5.0"
+  checksum: 16299bd50dc6bcc716a0d6c81fdad65272ff4f08d68695b64b00e19a04de14771c96ddc1205ce7c4220eddd0d3cf70c65ee9c8fb32b8b776ef155faf61e44479
   languageName: node
   linkType: hard
 
@@ -5031,7 +5031,7 @@ fsevents@~2.3.2:
     dotenv: 16.0.1
     esbuild-plugin-browserslist: 0.4.11
     eslint: 8.17.0
-    fathom-client: 3.4.1
+    fathom-client: 3.5.0
     got: 11.8.5
     joi: 17.6.0
     lint-staged: 13.0.2
