@@ -5040,7 +5040,7 @@ fsevents@~2.3.2:
     prettier: 2.7.1
     rollup-plugin-visualizer: 5.6.0
     simple-git-hooks: 2.8.0
-    simple-icons: 7.1.0
+    simple-icons: 7.2.0
     tailwindcss: 3.1.3
     typescript: 4.7.4
     vite: 2.9.12
@@ -6972,10 +6972,10 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"simple-icons@npm:7.1.0":
-  version: 7.1.0
-  resolution: "simple-icons@npm:7.1.0"
-  checksum: b89895dec0f988abb812a78cac0eb35c09d5f0cf86d2c90efd359f93b6fc1142989359ef291592194c2252a26ccfcb621e24d88bae51dae64bcfa43c78b8ecc9
+"simple-icons@npm:7.2.0":
+  version: 7.2.0
+  resolution: "simple-icons@npm:7.2.0"
+  checksum: b68db51d2f89e04ddc88a2101205570c64a83365c6ab7bd99717bfea5787462addf8c9f0fc83d3d0ce1d2a612718cd9778c12f1b3c9a3c4c841ee5de21614330
   languageName: node
   linkType: hard
 
