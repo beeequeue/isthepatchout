@@ -2175,6 +2175,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"abort-controller@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "abort-controller@npm:3.0.0"
+  dependencies:
+    event-target-shim: ^5.0.0
+  checksum: 170bdba9b47b7e65906a28c8ce4f38a7a369d78e2271706f020849c1bfe0ee2067d4261df8bbb66eb84f79208fd5b710df759d64191db58cfba7ce8ef9c54b75
+  languageName: node
+  linkType: hard
+
 "acorn-jsx@npm:^5.3.2":
   version: 5.3.2
   resolution: "acorn-jsx@npm:5.3.2"
@@ -4094,6 +4103,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"event-target-shim@npm:^5.0.0":
+  version: 5.0.1
+  resolution: "event-target-shim@npm:5.0.1"
+  checksum: 1ffe3bb22a6d51bdeb6bf6f7cf97d2ff4a74b017ad12284cc9e6a279e727dc30a5de6bb613e5596ff4dc3e517841339ad09a7eec44266eccb1aa201a30448166
+  languageName: node
+  linkType: hard
+
 "execa@npm:^6.1.0":
   version: 6.1.0
   resolution: "execa@npm:6.1.0"
@@ -4175,10 +4191,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-redact@npm:^3.0.0":
-  version: 3.0.1
-  resolution: "fast-redact@npm:3.0.1"
-  checksum: 89de97ea5cdb32c8ba127c48cf789dd9011dcca72513aa5bb268262fdc6402834b8060782821559c5891bd049c53572f3c6fdb1f4cd26d788614f1dcb01ba39a
+"fast-redact@npm:^3.1.1":
+  version: 3.1.1
+  resolution: "fast-redact@npm:3.1.1"
+  checksum: e486cc9990b5c9724f39bf4e392c1b250c8fd5e8c0145be80c73de3461fc390babe7b48f35746b50bf3cbcd917e093b5685ae66295162c7d9b686a761d48e989
   languageName: node
   linkType: hard
 
@@ -5042,7 +5058,7 @@ fsevents@~2.3.2:
     got: 11.8.5
     joi: 17.6.0
     lint-staged: 13.0.2
-    pino: 8.0.0
+    pino: 8.1.0
     pino-pretty: 8.0.0
     prettier: 2.7.1
     rollup-plugin-visualizer: 5.6.0
@@ -5954,10 +5970,10 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"on-exit-leak-free@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "on-exit-leak-free@npm:1.0.0"
-  checksum: 813adf176cf95500c0e5cfef2c82f8c92969692c3837b7b939519c31aab3866e856a30254184a347c5da0c885b2a840e37ee44cc72f6432a2284525db6a8ce7f
+"on-exit-leak-free@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "on-exit-leak-free@npm:2.1.0"
+  checksum: 7334d98b87b0c89c9b69c747760b21196ff35afdedc4eaf1a0a3a02964463d7f6802481b120e4c8298967c74773ca7b914ab2eb3d9b279010eb7f67ac4960eed
   languageName: node
   linkType: hard
 
@@ -6193,13 +6209,23 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"pino-abstract-transport@npm:^0.5.0, pino-abstract-transport@npm:v0.5.0":
+"pino-abstract-transport@npm:^0.5.0":
   version: 0.5.0
   resolution: "pino-abstract-transport@npm:0.5.0"
   dependencies:
     duplexify: ^4.1.2
     split2: ^4.0.0
   checksum: c503f867de3189f8217ab9cf794e8a631dddd0029a829f0f985f5511308152ebd53e363764fbc5570b3d1c715b341e3923456ce16ad84cd41be2b9a074ada234
+  languageName: node
+  linkType: hard
+
+"pino-abstract-transport@npm:v1.0.0":
+  version: 1.0.0
+  resolution: "pino-abstract-transport@npm:1.0.0"
+  dependencies:
+    readable-stream: ^4.0.0
+    split2: ^4.0.0
+  checksum: 05dd0eda52dd99fd204b39fe7b62656744b63e863bc052cdd5105d25f226a236966d0a46e39a1ace4838f6e988c608837ff946d2d0bc92835ca7baa0a3bff8d8
   languageName: node
   linkType: hard
 
@@ -6233,24 +6259,24 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"pino@npm:8.0.0":
-  version: 8.0.0
-  resolution: "pino@npm:8.0.0"
+"pino@npm:8.1.0":
+  version: 8.1.0
+  resolution: "pino@npm:8.1.0"
   dependencies:
     atomic-sleep: ^1.0.0
-    fast-redact: ^3.0.0
-    on-exit-leak-free: ^1.0.0
-    pino-abstract-transport: v0.5.0
+    fast-redact: ^3.1.1
+    on-exit-leak-free: ^2.1.0
+    pino-abstract-transport: v1.0.0
     pino-std-serializers: ^5.0.0
     process-warning: ^2.0.0
     quick-format-unescaped: ^4.0.3
     real-require: ^0.1.0
-    safe-stable-stringify: ^2.1.0
+    safe-stable-stringify: ^2.3.1
     sonic-boom: ^3.0.0
     thread-stream: ^1.0.0
   bin:
     pino: bin.js
-  checksum: 68b0e62e3b4f54a848f3aaf3915913f0551ea76214080bbfd12d688608beb408e3c6c12c1389a6dfcba1fdae517b6f0d61a29f2ce3f2dcb2e9b98e2383a7d2d2
+  checksum: 4912f40bdd78d53c92703606e84fede324900a9a6a6e18ee0834eff61f41fce5709902362fcfd180faaf956f567a0791161fe408de17cc68aa2f83e9b9361866
   languageName: node
   linkType: hard
 
@@ -6541,6 +6567,15 @@ fsevents@~2.3.2:
     string_decoder: ^1.1.1
     util-deprecate: ^1.0.1
   checksum: d4ea81502d3799439bb955a3a5d1d808592cf3133350ed352aeaa499647858b27b1c4013984900238b0873ec8d0d8defce72469fb7a83e61d53f5ad61cb80dc8
+  languageName: node
+  linkType: hard
+
+"readable-stream@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "readable-stream@npm:4.0.0"
+  dependencies:
+    abort-controller: ^3.0.0
+  checksum: 761528b35e5c63accff558bc050bbb030520995ab2649cca3bd6be64cf4ddff5f85b104f5a8b61294bc21393bf2d25f3b850f170d225670084e8046298a685ec
   languageName: node
   linkType: hard
 
@@ -6861,7 +6896,7 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"safe-stable-stringify@npm:^2.1.0":
+"safe-stable-stringify@npm:^2.3.1":
   version: 2.3.1
   resolution: "safe-stable-stringify@npm:2.3.1"
   checksum: a0a0bad0294c3e2a9d1bf3cf2b1096dfb83c162d09a5e4891e488cce082120bd69161d2a92aae7fc48255290f17700decae9c89a07fe139794e61b5c8b411377
