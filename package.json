@@ -75,6 +75,6 @@
     "vite-plugin-pwa": "0.12.0",
     "vite-plugin-windicss": "1.8.4",
     "vue-tsc": "0.38.1",
-    "windicss": "3.5.4"
+    "windicss": "3.5.5"
   }
 }
