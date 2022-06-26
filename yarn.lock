@@ -5,7 +5,7 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@antfu/utils@npm:^0.5.1":
+"@antfu/utils@npm:^0.5.2":
   version: 0.5.2
   resolution: "@antfu/utils@npm:0.5.2"
   checksum: 9b91446b2dbb823abeeba1cc33d6ebf701a462923408ad4751fbe162da46ae0669c774c2b5435fc77691dc207ce5de5945e693d5163e07d6ef42e376b04c7af4
@@ -2142,29 +2142,29 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@windicss/config@npm:1.8.4":
-  version: 1.8.4
-  resolution: "@windicss/config@npm:1.8.4"
+"@windicss/config@npm:1.8.5":
+  version: 1.8.5
+  resolution: "@windicss/config@npm:1.8.5"
   dependencies:
     debug: ^4.3.4
-    jiti: ^1.13.0
-    windicss: ^3.5.1
-  checksum: 2913d34ce205c6d337b0bc3d2f138260811b16df5dbb0a54a067a29b87d1067a8be0d2575a18a077445629d0589a8c9a22b3df7dac81f880154dd859436f9a72
+    jiti: ^1.14.0
+    windicss: ^3.5.5
+  checksum: a98b981e484e054123b33d651bcb2fa7dbf068a6ecd243df7495bc6eb5c2bf385fab5275a6d69af1b6eca1ade2daf3fc68f5cad6db205ce805baf9c77517f283
   languageName: node
   linkType: hard
 
-"@windicss/plugin-utils@npm:1.8.4":
-  version: 1.8.4
-  resolution: "@windicss/plugin-utils@npm:1.8.4"
+"@windicss/plugin-utils@npm:1.8.5":
+  version: 1.8.5
+  resolution: "@windicss/plugin-utils@npm:1.8.5"
   dependencies:
-    "@antfu/utils": ^0.5.1
-    "@windicss/config": 1.8.4
+    "@antfu/utils": ^0.5.2
+    "@windicss/config": 1.8.5
     debug: ^4.3.4
     fast-glob: ^3.2.11
-    magic-string: ^0.26.1
+    magic-string: ^0.26.2
     micromatch: ^4.0.5
-    windicss: ^3.5.1
-  checksum: 1fdd8b50b73d4e0dd5efd733acc53d94158c5ecce671386e0703bc9415a495e6a7e16682c18dd05f99c4677af97e041c79b3268ccc912ccbb6ecec895c2dcfd3
+    windicss: ^3.5.5
+  checksum: 35203999312d00774cf0d15454bb62f70ae85d798d8f20b0a354f376c020f7e178e309f31d4fa9db883815a8ab2adedf8f0aad829213b64a993568e8d09967a3
   languageName: node
   linkType: hard
 
@@ -5070,7 +5070,7 @@ fsevents@~2.3.2:
     vite: 2.9.12
     vite-plugin-checker: 0.4.6
     vite-plugin-pwa: 0.12.0
-    vite-plugin-windicss: 1.8.4
+    vite-plugin-windicss: 1.8.5
     vue: 3.2.37
     vue-tsc: 0.38.1
     windicss: 3.5.5
@@ -5103,12 +5103,12 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"jiti@npm:^1.13.0":
-  version: 1.13.0
-  resolution: "jiti@npm:1.13.0"
+"jiti@npm:^1.14.0":
+  version: 1.14.0
+  resolution: "jiti@npm:1.14.0"
   bin:
     jiti: bin/jiti.js
-  checksum: 1e74d99b9a551df952057b8bce56f744caccca0044aa05021643e6ce0837ed47bc2d5b290fecb462e32988c6bf318afe77e341310c5ecf6bb63c19c80c929cb6
+  checksum: 61e7123caa397b8a53068120b7496b95048b96feba3cc1a263265e9b0bcfb375e90a182e07643a29e5380d92c485918d5e7db3805cc9511404e7e9c93234725b
   languageName: node
   linkType: hard
 
@@ -5495,7 +5495,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"magic-string@npm:^0.26.1":
+"magic-string@npm:^0.26.2":
   version: 0.26.2
   resolution: "magic-string@npm:0.26.2"
   dependencies:
@@ -7915,17 +7915,17 @@ typescript@4.3.4:
   languageName: node
   linkType: hard
 
-"vite-plugin-windicss@npm:1.8.4":
-  version: 1.8.4
-  resolution: "vite-plugin-windicss@npm:1.8.4"
+"vite-plugin-windicss@npm:1.8.5":
+  version: 1.8.5
+  resolution: "vite-plugin-windicss@npm:1.8.5"
   dependencies:
-    "@windicss/plugin-utils": 1.8.4
+    "@windicss/plugin-utils": 1.8.5
     debug: ^4.3.4
     kolorist: ^1.5.1
-    windicss: ^3.5.1
+    windicss: ^3.5.5
   peerDependencies:
     vite: ^2.0.1
-  checksum: 657b63b123c5e2696e409e140b1b56a7f02131908ec247dd7e1cf7439aabe707f2f2d1dff857001f8b9206c9771939fb79e5886175d243097d031887f3bd9fa8
+  checksum: 39b79105095f2920cc5e00bf5caf047baad045e20c3cbbeb040bccbc623f10078feaa38c0b6e627d1fcac5f4947d8a123e04cfc9650109576839fa624b7965b5
   languageName: node
   linkType: hard
 
@@ -8142,7 +8142,7 @@ typescript@4.3.4:
   languageName: node
   linkType: hard
 
-"windicss@npm:3.5.5, windicss@npm:^3.5.1":
+"windicss@npm:3.5.5, windicss@npm:^3.5.5":
   version: 3.5.5
   resolution: "windicss@npm:3.5.5"
   bin:
