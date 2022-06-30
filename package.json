@@ -58,7 +58,7 @@
     "browserslist": "4.21.1",
     "bundlewatch": "0.3.3",
     "dotenv": "16.0.1",
-    "esbuild-plugin-browserslist": "0.4.11",
+    "esbuild-plugin-browserslist": "0.4.12",
     "eslint": "8.18.0",
     "got": "11.8.5",
     "joi": "17.6.0",
