@@ -73,7 +73,7 @@
     "vite": "2.9.13",
     "vite-plugin-checker": "0.4.6",
     "vite-plugin-pwa": "0.12.2",
-    "vite-plugin-windicss": "1.8.5",
+    "vite-plugin-windicss": "1.8.6",
     "vue-tsc": "0.38.2",
     "windicss": "3.5.6"
   }
