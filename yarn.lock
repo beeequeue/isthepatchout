@@ -1659,10 +1659,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/canvas-confetti@npm:1.4.2":
-  version: 1.4.2
-  resolution: "@types/canvas-confetti@npm:1.4.2"
-  checksum: 68327c85bec9f507a8002bf7bc57d8e1850816e91460c8d0c340ae7a06a782839c016b82e5b4adf5ff52fe96af94853c9a25e17bd317524d377ccdc0e00e8d9c
+"@types/canvas-confetti@npm:1.4.3":
+  version: 1.4.3
+  resolution: "@types/canvas-confetti@npm:1.4.3"
+  checksum: 2f74b7fd7355c6cb296b03e6f9f3ac4b3a25e883b85b50ecb61bb7cd11faafd3bdb0cd869c2b50b9f3421c11db251d240f54b1b4ffd59777992e067690c29551
   languageName: node
   linkType: hard
 
@@ -5028,7 +5028,7 @@ fsevents@~2.3.2:
     "@ivanv/vue-collapse-transition": 1.0.2
     "@sentry/node": 7.6.0
     "@supabase/supabase-js": 1.35.4
-    "@types/canvas-confetti": 1.4.2
+    "@types/canvas-confetti": 1.4.3
     "@types/node": 16.11.43
     "@vercel/node": 2.4.3
     "@vitejs/plugin-vue": 2.3.3

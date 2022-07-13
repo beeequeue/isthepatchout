@@ -48,7 +48,7 @@
     "@beequeue/eslint-plugin": "0.6.0",
     "@hapi/boom": "10.0.0",
     "@sentry/node": "7.6.0",
-    "@types/canvas-confetti": "1.4.2",
+    "@types/canvas-confetti": "1.4.3",
     "@types/node": "16.11.43",
     "@vercel/node": "2.4.3",
     "@vitejs/plugin-vue": "2.3.3",
