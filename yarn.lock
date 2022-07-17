@@ -2080,13 +2080,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/core@npm:8.9.3":
-  version: 8.9.3
-  resolution: "@vueuse/core@npm:8.9.3"
+"@vueuse/core@npm:8.9.4":
+  version: 8.9.4
+  resolution: "@vueuse/core@npm:8.9.4"
   dependencies:
     "@types/web-bluetooth": ^0.0.14
-    "@vueuse/metadata": 8.9.3
-    "@vueuse/shared": 8.9.3
+    "@vueuse/metadata": 8.9.4
+    "@vueuse/shared": 8.9.4
     vue-demi: "*"
   peerDependencies:
     "@vue/composition-api": ^1.1.0
@@ -2096,20 +2096,20 @@ __metadata:
       optional: true
     vue:
       optional: true
-  checksum: 00ca931e5265b3d5a08dddb77cb7b0bf31ecb8e4546bb901ce99eaaa839285018a2a12c3356291ddee22531c2d3e9dafc0701a92d8470de002db306eb0641b8c
+  checksum: 4f19874884d246e724562051143f27e18d7e7aefb941d4417e785027b87a895aea7ed51f3c9d6c1af219ea33d41cc1e0fcba113b72922ce6057a518cb0b83572
   languageName: node
   linkType: hard
 
-"@vueuse/metadata@npm:8.9.3":
-  version: 8.9.3
-  resolution: "@vueuse/metadata@npm:8.9.3"
-  checksum: 6c2732e408231fcf9061612b0bd83cdafb7ebf585ca369ff97db3ace3fbae62518df42abe699212818ddd8bb6bb182a847c8b7c4c9803b8b6a8ff1721e090e52
+"@vueuse/metadata@npm:8.9.4":
+  version: 8.9.4
+  resolution: "@vueuse/metadata@npm:8.9.4"
+  checksum: f289adc73d7d396e0245b0f219126811556497dcc093008b2b9e8c9023196c52eb5918dce4f5f6cc3a01db9c6a699b6adfc678800a1b543f6cc1c857d5643526
   languageName: node
   linkType: hard
 
-"@vueuse/shared@npm:8.9.3":
-  version: 8.9.3
-  resolution: "@vueuse/shared@npm:8.9.3"
+"@vueuse/shared@npm:8.9.4":
+  version: 8.9.4
+  resolution: "@vueuse/shared@npm:8.9.4"
   dependencies:
     vue-demi: "*"
   peerDependencies:
@@ -2120,7 +2120,7 @@ __metadata:
       optional: true
     vue:
       optional: true
-  checksum: 1986f0e2840b316e1eec48715411ff65496a17cf03ea28ded6ae94872f48f2b5b1aa842f5fdd5a9eec10cf6c566d08c9d029a84f7b1368e92038ea5d6092783b
+  checksum: 83a29ec879073100e268863f607b3a8175ac1d70318b85f74907ed69bcf0d538f89b2ccd3c14ac37eab326ec3564e0c1623f1f9af0980516a5617e7f81fdd9bb
   languageName: node
   linkType: hard
 
@@ -5033,7 +5033,7 @@ fsevents@~2.3.2:
     "@vercel/node": 2.4.4
     "@vitejs/plugin-vue": 2.3.3
     "@vue/compiler-sfc": 3.2.37
-    "@vueuse/core": 8.9.3
+    "@vueuse/core": 8.9.4
     "@windicss/animations": 1.0.8
     bottleneck: 2.19.5
     browserslist: 4.21.2
