@@ -5048,7 +5048,7 @@ fsevents@~2.3.2:
     got: 11.8.5
     joi: 17.6.0
     lint-staged: 13.0.3
-    pino: 8.1.0
+    pino: 8.2.0
     pino-pretty: 8.1.0
     prettier: 2.7.1
     rollup-plugin-visualizer: 5.7.1
@@ -6228,31 +6228,31 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"pino-std-serializers@npm:^5.0.0":
-  version: 5.3.0
-  resolution: "pino-std-serializers@npm:5.3.0"
-  checksum: 1c04d953a81b3ce7aa90ec49a43be90d7c4f8b71b7fe8889ed405b4cdcb49844a3c0207bd6355f71941445840978fada9a998fa51307f474a9473e2450b30ae2
+"pino-std-serializers@npm:^6.0.0":
+  version: 6.0.0
+  resolution: "pino-std-serializers@npm:6.0.0"
+  checksum: d9dc1779b3870cdbe00dc2dff15e3931eb126bb144bc9f746d83a2c1174a28e366ed0abe63379dee2fee474e6018a088bfbb2c4b57c1e206601918f5a61e276f
   languageName: node
   linkType: hard
 
-"pino@npm:8.1.0":
-  version: 8.1.0
-  resolution: "pino@npm:8.1.0"
+"pino@npm:8.2.0":
+  version: 8.2.0
+  resolution: "pino@npm:8.2.0"
   dependencies:
     atomic-sleep: ^1.0.0
     fast-redact: ^3.1.1
     on-exit-leak-free: ^2.1.0
     pino-abstract-transport: v1.0.0
-    pino-std-serializers: ^5.0.0
+    pino-std-serializers: ^6.0.0
     process-warning: ^2.0.0
     quick-format-unescaped: ^4.0.3
     real-require: ^0.1.0
     safe-stable-stringify: ^2.3.1
     sonic-boom: ^3.0.0
-    thread-stream: ^1.0.0
+    thread-stream: ^2.0.0
   bin:
     pino: bin.js
-  checksum: 4912f40bdd78d53c92703606e84fede324900a9a6a6e18ee0834eff61f41fce5709902362fcfd180faaf956f567a0791161fe408de17cc68aa2f83e9b9361866
+  checksum: 9f2b82c829e334243500a6b6749e9f509d3e8cff2c42800ebdb08f5488f32d2327e693ccf65723ce27242848341cbc81ad6204cc93bd7070ee0fd6d27be2c41b
   languageName: node
   linkType: hard
 
@@ -7480,12 +7480,12 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"thread-stream@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "thread-stream@npm:1.0.0"
+"thread-stream@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "thread-stream@npm:2.0.0"
   dependencies:
     real-require: ^0.1.0
-  checksum: 34dd0a4a1afcf5cea8e9789c40302f225bf4c60d16a2ed35413fac3df2944f95d26e4f02c4362c43b38cf5997130bbaced23bd5585857bb549fe9130197ff246
+  checksum: 5156f2bda7dace42acf7ac93de801ac13c15247a28e62c28d92c3e91f78fdbcc423047d14cbcfaa1e35ad2c119a256cf6c2da5ed5eec69c6481dee3a798c7d56
   languageName: node
   linkType: hard
 
