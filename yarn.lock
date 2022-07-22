@@ -5048,7 +5048,7 @@ fsevents@~2.3.2:
     got: 11.8.5
     joi: 17.6.0
     lint-staged: 13.0.3
-    pino: 8.2.0
+    pino: 8.3.0
     pino-pretty: 8.1.0
     prettier: 2.7.1
     rollup-plugin-visualizer: 5.7.1
@@ -6235,9 +6235,9 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"pino@npm:8.2.0":
-  version: 8.2.0
-  resolution: "pino@npm:8.2.0"
+"pino@npm:8.3.0":
+  version: 8.3.0
+  resolution: "pino@npm:8.3.0"
   dependencies:
     atomic-sleep: ^1.0.0
     fast-redact: ^3.1.1
@@ -6248,11 +6248,11 @@ fsevents@~2.3.2:
     quick-format-unescaped: ^4.0.3
     real-require: ^0.1.0
     safe-stable-stringify: ^2.3.1
-    sonic-boom: ^3.0.0
+    sonic-boom: ^3.1.0
     thread-stream: ^2.0.0
   bin:
     pino: bin.js
-  checksum: 9f2b82c829e334243500a6b6749e9f509d3e8cff2c42800ebdb08f5488f32d2327e693ccf65723ce27242848341cbc81ad6204cc93bd7070ee0fd6d27be2c41b
+  checksum: c6e3dd7d95f14dfc5a4a1672b5ab4ffcae7b49724ad0f3af6a07d687e6ef0b0c7601d14b8355074d284b24326c722eaee45682042931c061696620444248ec10
   languageName: node
   linkType: hard
 
@@ -7064,12 +7064,12 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"sonic-boom@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "sonic-boom@npm:3.0.0"
+"sonic-boom@npm:^3.0.0, sonic-boom@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "sonic-boom@npm:3.1.0"
   dependencies:
     atomic-sleep: ^1.0.0
-  checksum: fdab09872bd2d0bdaaa974841a719820cbc50d9db4a620ce46da159efe19d0b6cf1e450b51a28e65d9cbf910d15d1f259d5c247a7c51912cf287048bd35525b4
+  checksum: 164fa2fa6726a5be083a4a9c30ab556f64817d97622c606e4486fcb1b5ceb43e065d0ded07e593225f6bf018640eed5482cf5a2cdef0eae828ab66782950fe7d
   languageName: node
   linkType: hard
 
