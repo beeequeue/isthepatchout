@@ -37,7 +37,7 @@
     "@supabase/supabase-js": "1.35.4",
     "@vueuse/core": "8.9.4",
     "canvas-confetti": "1.5.1",
-    "date-fns": "2.28.0",
+    "date-fns": "2.29.1",
     "dotaver": "1.0.1",
     "fathom-client": "3.5.0",
     "simple-icons": "7.4.0",
