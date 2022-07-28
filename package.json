@@ -42,7 +42,7 @@
     "fathom-client": "3.5.0",
     "simple-icons": "7.5.0",
     "vue": "3.2.37",
-    "workbox-precaching": "6.5.3"
+    "workbox-precaching": "6.5.4"
   },
   "devDependencies": {
     "@beequeue/eslint-plugin": "0.6.0",
