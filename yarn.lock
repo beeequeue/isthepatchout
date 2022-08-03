@@ -1270,26 +1270,35 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@edge-runtime/format@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@edge-runtime/format@npm:1.0.0"
-  checksum: 303f576d92189a5616488eb29ed76b4d8d2a9b586d68c5c3b45528202214d39aad10303252e5c119adc4473707be8c63592d5d5b81ae072647de166b82f3ddab
+"@edge-runtime/format@npm:^1.1.0-beta.23":
+  version: 1.1.0-beta.25
+  resolution: "@edge-runtime/format@npm:1.1.0-beta.25"
+  checksum: 93aa91c371e0cac4e989656731ce0aef368eacad28fb7f43cdb49e9285c5bc14af1ed6df3a70e23cf91d1c0a0e9a43eecf06320c81d5f4eb7a3404189f170ff0
   languageName: node
   linkType: hard
 
-"@edge-runtime/primitives@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "@edge-runtime/primitives@npm:1.0.1"
-  checksum: 2496a7f7be686a591f35f9fc515449f1718f6edffe17c56512ccf0fc7c73da878439a523a4e186ac2cf6aae065bb9e0d4bf581d112e2cf7acd873c54c3974026
+"@edge-runtime/primitives@npm:^1.1.0-beta.23, @edge-runtime/primitives@npm:^1.1.0-beta.25":
+  version: 1.1.0-beta.25
+  resolution: "@edge-runtime/primitives@npm:1.1.0-beta.25"
+  checksum: 3ae2153668f703eab549c59d91449119bf74e7b60e7d4e23a6f2ad10723781553c818c08fc3130f1573976377d43f1c024d5b0a0b664e954b863e32b50438430
   languageName: node
   linkType: hard
 
-"@edge-runtime/vm@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "@edge-runtime/vm@npm:1.0.1"
+"@edge-runtime/vm@npm:1.1.0-beta.23":
+  version: 1.1.0-beta.23
+  resolution: "@edge-runtime/vm@npm:1.1.0-beta.23"
   dependencies:
-    "@edge-runtime/primitives": ^1.0.1
-  checksum: 6aad6e243070cfebebb6aa5e3a2db19aaf46b7dccd8fd964e69e7c2b96751c3df45482e75ad608af6de93488efe69b8314c9706ba7c036bfe23a4f70264af78d
+    "@edge-runtime/primitives": ^1.1.0-beta.23
+  checksum: 71c54ea4913b27fd765592a20c534ae547bdae162ea7af699c82c552ba5c84bdae41415bf00697cf8027953349fd6baf45c3fa7429ef0f956ff517cc026dc363
+  languageName: node
+  linkType: hard
+
+"@edge-runtime/vm@npm:^1.1.0-beta.23":
+  version: 1.1.0-beta.25
+  resolution: "@edge-runtime/vm@npm:1.1.0-beta.25"
+  dependencies:
+    "@edge-runtime/primitives": ^1.1.0-beta.25
+  checksum: 52aca9be03c6ee2994d205c685204262a0a93da9603e8c39ddc47d40f4f0a8f3c073cbe8d1a4fb3b7fb579bc732862be1481981097f2ce068a1f00edb93e1d74
   languageName: node
   linkType: hard
 
@@ -1894,10 +1903,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/build-utils@npm:5.0.7":
-  version: 5.0.7
-  resolution: "@vercel/build-utils@npm:5.0.7"
-  checksum: c90eab48facf5e79e30bf28ded244f662f4910961d1497e9d7b63e3096a8a407c371479d170d7c29661db24661d99b26e4255ba1122df60a9cbf6e6842dc87ce
+"@vercel/build-utils@npm:5.0.8":
+  version: 5.0.8
+  resolution: "@vercel/build-utils@npm:5.0.8"
+  checksum: 9497551abdd6686e7b3347b3f18adc41298d8afbc027149159ed678c1bdfe2d4cdad62c77ac34211d84e93700ab414ee1015526c8e3409a97c429199cc1e224d
   languageName: node
   linkType: hard
 
@@ -1908,21 +1917,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/node@npm:2.5.2":
-  version: 2.5.2
-  resolution: "@vercel/node@npm:2.5.2"
+"@vercel/node@npm:2.5.3":
+  version: 2.5.3
+  resolution: "@vercel/node@npm:2.5.3"
   dependencies:
+    "@edge-runtime/vm": 1.1.0-beta.23
     "@types/node": "*"
-    "@vercel/build-utils": 5.0.7
+    "@vercel/build-utils": 5.0.8
     "@vercel/node-bridge": 3.0.0
     "@vercel/static-config": 2.0.1
-    edge-runtime: 1.0.1
+    edge-runtime: 1.1.0-beta.23
     esbuild: 0.14.47
     exit-hook: 2.2.1
     node-fetch: 2.6.7
     ts-node: 8.9.1
     typescript: 4.3.4
-  checksum: 6638137ee6f2b37cdbbdbd00280d7b7397c5f50817439046db5621efee2d361d8c8baa1e9e132d81027799f7d323dedaea79a94c191ec6e451a84379643c41d0
+  checksum: ba8d7bf8d946b39896eb06dca6fcec64023ff94a9da358a2e67499aabfbec134f7549092504351734d10e843c2c598c42354bbb2631b8c4c89aa348acb7842da
   languageName: node
   linkType: hard
 
@@ -3314,14 +3324,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"edge-runtime@npm:1.0.1":
-  version: 1.0.1
-  resolution: "edge-runtime@npm:1.0.1"
+"edge-runtime@npm:1.1.0-beta.23":
+  version: 1.1.0-beta.23
+  resolution: "edge-runtime@npm:1.1.0-beta.23"
   dependencies:
-    "@edge-runtime/format": ^1.0.0
-    "@edge-runtime/vm": ^1.0.1
+    "@edge-runtime/format": ^1.1.0-beta.23
+    "@edge-runtime/vm": ^1.1.0-beta.23
     exit-hook: 2.2.1
-    http-status: ~1.5.0
+    http-status: 1.5.2
     mri: 1.2.0
     picocolors: 1.0.0
     pretty-bytes: 5.6.0
@@ -3329,7 +3339,7 @@ __metadata:
     time-span: 4.0.0
   bin:
     edge-runtime: dist/cli/index.js
-  checksum: 8f2da042aca303141b0377ae78fdfee9c8d711ef7d056b173fb5630e5a38596ca379b7d0f4040bb33f1109d14792223fd3c1622020765b97d0e3c154a1563b04
+  checksum: ca3ee74af8610920a712a2bc83d79ea8d9edd12cb4483621c846f07be164e4d1b08bf748d74ffedacd26e5cfc04effac553413db02df81cd821ca7799e09c1f5
   languageName: node
   linkType: hard
 
@@ -4726,7 +4736,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"http-status@npm:~1.5.0":
+"http-status@npm:1.5.2":
   version: 1.5.2
   resolution: "http-status@npm:1.5.2"
   checksum: f975c98184d232afb438af86c77e4011a5d161fd490f048992ad19dfa0133ddce169f54d18e226d55b80f39def7008822d993cfbb7f318bab5a49836ec5097e1
@@ -5134,7 +5144,7 @@ fsevents@~2.3.2:
     "@supabase/supabase-js": 1.35.4
     "@types/canvas-confetti": 1.4.3
     "@types/node": 16.11.47
-    "@vercel/node": 2.5.2
+    "@vercel/node": 2.5.3
     "@vitejs/plugin-vue": 2.3.3
     "@vue/compiler-sfc": 3.2.37
     "@vueuse/core": 9.0.2
