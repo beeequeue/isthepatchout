@@ -35,7 +35,7 @@
   "dependencies": {
     "@ivanv/vue-collapse-transition": "1.0.2",
     "@supabase/supabase-js": "1.35.5",
-    "@vueuse/core": "9.0.2",
+    "@vueuse/core": "9.1.0",
     "canvas-confetti": "1.5.1",
     "date-fns": "2.29.1",
     "dotaver": "1.0.1",
