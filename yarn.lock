@@ -2131,31 +2131,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/core@npm:9.0.2":
-  version: 9.0.2
-  resolution: "@vueuse/core@npm:9.0.2"
+"@vueuse/core@npm:9.1.0":
+  version: 9.1.0
+  resolution: "@vueuse/core@npm:9.1.0"
   dependencies:
     "@types/web-bluetooth": ^0.0.15
-    "@vueuse/metadata": 9.0.2
-    "@vueuse/shared": 9.0.2
+    "@vueuse/metadata": 9.1.0
+    "@vueuse/shared": 9.1.0
     vue-demi: "*"
-  checksum: 472cd6c98d020d60582ccb0cb4ffc7d3a98529475af876242c27f673d185132c86f935e920cd30553107b4325ffc8469b9f5b04a0fb9f97fa04bd9bebf9fc08c
+  checksum: 41a7d3a247ef007908028804923767c20bef7417491a762420a2f4a3da8f7a14da80f5126afaf545fddfa5c77e75cd96c966c884fd4627d8c8a082caecc21386
   languageName: node
   linkType: hard
 
-"@vueuse/metadata@npm:9.0.2":
-  version: 9.0.2
-  resolution: "@vueuse/metadata@npm:9.0.2"
-  checksum: beebca77b5a2f497d7ba719ab5332455eb07ad3b9b2bd61ec53db0f4976271a95a824e68d13f1f87b780a549a3d2980496c1647ebac6aeae31f0a0b245cecc64
+"@vueuse/metadata@npm:9.1.0":
+  version: 9.1.0
+  resolution: "@vueuse/metadata@npm:9.1.0"
+  checksum: 128657916aaed7b2a011ed60a1213254ef49ed9b486e61925afdc16da887091e3c55803ee1a2a3beff0180a4acca8fba80bb862fc17b14b3ae5f9c61fed246d3
   languageName: node
   linkType: hard
 
-"@vueuse/shared@npm:9.0.2":
-  version: 9.0.2
-  resolution: "@vueuse/shared@npm:9.0.2"
+"@vueuse/shared@npm:9.1.0":
+  version: 9.1.0
+  resolution: "@vueuse/shared@npm:9.1.0"
   dependencies:
     vue-demi: "*"
-  checksum: dc6098c849d7060702746ba4611805e2704b6d9a46a4dac7b75176427aa83d510ddf93230859f606d5a97a3eb210e3b9db57e222eb3e57d0b8a1d6fcbcff60f6
+  checksum: 18aae2c37b1cfabc97f53c16300d5daf072a7a9d8a0ae98a77d14022ead47e33053307838d3d43100ec234b4cf8d5430a7e8be011869fd5eecac2a6dca7a1453
   languageName: node
   linkType: hard
 
@@ -5147,7 +5147,7 @@ fsevents@~2.3.2:
     "@vercel/node": 2.5.3
     "@vitejs/plugin-vue": 2.3.3
     "@vue/compiler-sfc": 3.2.37
-    "@vueuse/core": 9.0.2
+    "@vueuse/core": 9.1.0
     "@windicss/animations": 1.0.8
     bottleneck: 2.19.5
     browserslist: 4.21.3
