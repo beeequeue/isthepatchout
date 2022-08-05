@@ -5162,7 +5162,7 @@ fsevents@~2.3.2:
     got: 11.8.5
     joi: 17.6.0
     lint-staged: 13.0.3
-    pino: 8.3.1
+    pino: 8.4.0
     pino-pretty: 8.1.0
     prettier: 2.7.1
     rollup-plugin-visualizer: 5.7.1
@@ -6383,9 +6383,9 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"pino@npm:8.3.1":
-  version: 8.3.1
-  resolution: "pino@npm:8.3.1"
+"pino@npm:8.4.0":
+  version: 8.4.0
+  resolution: "pino@npm:8.4.0"
   dependencies:
     atomic-sleep: ^1.0.0
     fast-redact: ^3.1.1
@@ -6400,7 +6400,7 @@ fsevents@~2.3.2:
     thread-stream: ^2.0.0
   bin:
     pino: bin.js
-  checksum: 4871cf02fdc62ce27042a98797d343e381375486bd9e88a2a4ee72259e12227f040c76a6050707dfe76f3cacfcec0c049c28b53eb9a82074ddf2913cce9473ee
+  checksum: ccb5d3d83ae9b9fc17b6a8f44a0204cbb57036322cc7ed6cfaba2d1cebacbeaadebf7c9c047bc0b8136654698ca7f2b6671243f5151998a8f5e0bb431e7a2476
   languageName: node
   linkType: hard
 
