@@ -63,7 +63,7 @@
     "got": "11.8.5",
     "joi": "17.6.0",
     "lint-staged": "13.0.3",
-    "pino": "8.3.1",
+    "pino": "8.4.0",
     "pino-pretty": "8.1.0",
     "prettier": "2.7.1",
     "rollup-plugin-visualizer": "5.7.1",
