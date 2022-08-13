@@ -50,7 +50,7 @@
     "@sentry/node": "7.10.0",
     "@types/canvas-confetti": "1.4.3",
     "@types/node": "16.11.48",
-    "@vercel/node": "2.5.7",
+    "@vercel/node": "2.5.8",
     "@vitejs/plugin-vue": "2.3.4",
     "@vue/compiler-sfc": "3.2.37",
     "@windicss/animations": "1.0.8",
