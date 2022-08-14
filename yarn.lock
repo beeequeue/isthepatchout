@@ -5373,7 +5373,7 @@ fsevents@~2.3.2:
     joi: 17.6.0
     lint-staged: 13.0.3
     pino: 8.4.1
-    pino-pretty: 8.1.0
+    pino-pretty: 9.0.0
     prettier: 2.7.1
     rollup-plugin-visualizer: 5.7.1
     simple-git-hooks: 2.8.0
@@ -6288,13 +6288,6 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"on-exit-leak-free@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "on-exit-leak-free@npm:1.0.0"
-  checksum: 813adf176cf95500c0e5cfef2c82f8c92969692c3837b7b939519c31aab3866e856a30254184a347c5da0c885b2a840e37ee44cc72f6432a2284525db6a8ce7f
-  languageName: node
-  linkType: hard
-
 "on-exit-leak-free@npm:^2.1.0":
   version: 2.1.0
   resolution: "on-exit-leak-free@npm:2.1.0"
@@ -6562,9 +6555,9 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"pino-pretty@npm:8.1.0":
-  version: 8.1.0
-  resolution: "pino-pretty@npm:8.1.0"
+"pino-pretty@npm:9.0.0":
+  version: 9.0.0
+  resolution: "pino-pretty@npm:9.0.0"
   dependencies:
     colorette: ^2.0.7
     dateformat: ^4.6.3
@@ -6573,7 +6566,7 @@ fsevents@~2.3.2:
     help-me: ^4.0.1
     joycon: ^3.1.1
     minimist: ^1.2.6
-    on-exit-leak-free: ^1.0.0
+    on-exit-leak-free: ^2.1.0
     pino-abstract-transport: ^1.0.0
     pump: ^3.0.0
     readable-stream: ^4.0.0
@@ -6582,7 +6575,7 @@ fsevents@~2.3.2:
     strip-json-comments: ^3.1.1
   bin:
     pino-pretty: bin.js
-  checksum: 6e8656cdecfd5cf23a328bbb50c5b9d3f27dee838ed797a41037845612dbe610e1083fa896128f7323cf45c862e3954441527ab315be3bab63d14095c7b4cd73
+  checksum: d1b730337036fad02ba3f6712b13d36731189d3a1b95624c2577f403329fe172353810b38ae4bba2e3709edd6ef65fc5beb113969737a8e6f6ac877e7025b3c3
   languageName: node
   linkType: hard
 
