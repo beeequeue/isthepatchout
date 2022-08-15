@@ -1,0 +1,179 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type:": "object",
+  "additionalProperties": false,
+  "required": ["project_id", "api", "auth", "db", "studio", "inbucket"],
+  "properties": {
+    "project_id": {
+      "type": "string"
+    },
+    "api": {
+      "description": "https://postgrest.org/en/stable/configuration.html",
+      "type": "object",
+      "required": ["port", "extra_search_path", "max_rows"],
+      "properties": {
+        "port": {
+          "description": "Port to use for the API URL.",
+          "type": "number",
+          "default": 54321
+        },
+        "extra_search_path": {
+          "description": "Extra schemas to add to the search_path of every request.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": ["extensions"]
+        },
+        "max_rows": {
+          "description": "The maximum number of rows returned from a view, table, or stored procedure. Limits payload size for accidental or malicious requests.",
+          "type": "number",
+          "default": 1000
+        }
+      }
+    },
+    "auth": {
+      "description": "https://supabase.com/docs/reference/auth",
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "site_url",
+        "additional_redirect_urls",
+        "jwt_expiry",
+        "enable_signup",
+        "email"
+      ],
+      "properties": {
+        "site_url": {
+          "description": "The base URL of your website. Used as an allow-list for redirects and for constructing URLs used in emails.",
+          "type": "string",
+          "default": "http://localhost:3000"
+        },
+        "additional_redirect_urls": {
+          "description": "A list of exact URLs that auth providers are permitted to redirect to post authentication.",
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "default": ["http://localhost:3000"]
+        },
+        "jwt_expiry": {
+          "description": "How long tokens are valid for, in seconds. Defaults to 3600 (1 hour), maximum 604,800 seconds (one week).",
+          "type": "number",
+          "default": 3600
+        },
+        "enable_signup": {
+          "description": "Allow/disallow new user signups to your project.",
+          "type": "boolean",
+          "default": true
+        },
+        "email": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["enable_signup", "double_confirm_changes", "enable_confirmations"],
+          "properties": {
+            "enable_signup": {
+              "description": "Allow/disallow new user signups via email to your project.",
+              "type": "boolean",
+              "default": true
+            },
+            "double_confirm_changes": {
+              "description": "If enabled, a user will be required to confirm any email change on both the old, and new email addresses. If disabled, only the new email is required to confirm.",
+              "type": "boolean",
+              "default": true
+            },
+            "enable_confirmations": {
+              "description": "If enabled, users need to confirm their email address before signing in.",
+              "type": "boolean",
+              "default": true
+            }
+          }
+        },
+        "external": {
+          "type": "object",
+          "additionalProperties": false,
+          "propertyNames": {
+            "enum": [
+              "apple",
+              "azure",
+              "bitbucket",
+              "discord",
+              "facebook",
+              "github",
+              "gitlab",
+              "google",
+              "twitch",
+              "twitter",
+              "slack",
+              "spotify"
+            ]
+          },
+          "patternProperties": {
+            "": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["enabled", "client_id", "secret"],
+              "properties": {
+                "enabled": {
+                  "description": "Use an external OAuth provider.",
+                  "type": "boolean",
+                  "default": true
+                },
+                "client_id": {
+                  "description": "Client ID for the external OAuth provider.",
+                  "type": "string",
+                  "default": ""
+                },
+                "secret": {
+                  "description": "Client secret for the external OAuth provider.",
+                  "type": "string",
+                  "default": ""
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "db": {
+      "description": "https://postgrest.org/en/stable/configuration.html",
+      "type": "object",
+      "required": ["port", "major_version"],
+      "properties": {
+        "port": {
+          "description": "Port to use for the local database URL.",
+          "type": "number",
+          "default": 54322
+        },
+        "major_version": {
+          "description": "The database major version to use. This has to be the same as your remote database's. Run SHOW server_version; on the remote database to check.",
+          "type": "number",
+          "default": 14
+        }
+      }
+    },
+    "studio": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "port": {
+          "description": "Port to use for Supabase Studio.",
+          "type": "number",
+          "default": 54323
+        }
+      }
+    },
+    "inbucket": {
+      "description": "https://www.inbucket.org",
+      "type": "object",
+      "required": [],
+      "properties": {
+        "port": {
+          "description": "Port to use for the email testing server web interface.\n\nEmails sent with the local dev setup are not actually sent - rather, they are monitored, and you can view the emails that would have been sent from the web interface.",
+          "type": "number",
+          "default": 54324
+        }
+      }
+    }
+  }
+}
