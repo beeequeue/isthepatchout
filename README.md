@@ -6,11 +6,20 @@ A website that automatically notifies when a new patch is released.
 
 ```mermaid
 graph TD
-worker(Cloudflare Worker) -- Triggers checks on a cron schedule --> vercel(Vercel)
-supa(Supabase) -- patch data, real-time updates --> client((Browser))
-vercel -- hosts SPA, lambda functions --> client
+worker(Cloudflare Worker)
+vercel(Vercel)
+supa(Supabase)
+browser([Browser])
+notif(fa:fa-arrow-up-right-from-square notifications service)
+discord([Discord Channels])
+
+worker -- Triggers checks on a cron schedule --> vercel
+supa -- patch data, real-time updates --> browser
+vercel -- hosts SPA, lambda functions --> browser
 vercel -- updates patch, push notif data --> supa
-supa-- real-time updates -->notif(fa:fa-arrow-up-right-from-square notifications service)-- push notifications -->client
+supa -- real-time updates --> notif
+notif -- push notifications --> browser
+notif -- webhooks --> discord
 
 click notif href "https://github.com/isthepatchout/notifications" "Repo"
 
