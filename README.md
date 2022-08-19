@@ -2,6 +2,10 @@
 
 A website that automatically notifies when a new patch is released.
 
+It also supports notifications via the [Web Push API](https://developer.mozilla.org/en-US/docs/Web/API/Push_API) and [Discord Webhooks](https://support.discord.com/hc/en-us/articles/228383668-Intro-to-Webhooks). Notifications are sent via the [`notifications`](https://github.com/isthepatchout/notifications) service.
+
+This is accomplished by using [Supabase](https://supabase.com) and their real-time services to watch the `patches` table for new patches, and then doing what needs to be done based on it!
+
 ## Architecture
 
 ```mermaid
