@@ -1,13 +1,14 @@
-import Bottleneck from "bottleneck"
 import { $fetch } from "ohmyfetch"
 import type { FetchError } from "ohmyfetch"
+import PQueue from "p-queue"
 import { isError } from "remeda"
 
 import { Logger } from "./_logger"
 
-const dotaApiScheduler = new Bottleneck({
-  minTime: 1000,
-  maxConcurrent: 3,
+const dotaApiScheduler = new PQueue({
+  concurrency: 3,
+  interval: 1000,
+  intervalCap: 1,
 })
 
 /* eslint-disable @typescript-eslint/naming-convention */
@@ -35,7 +36,7 @@ const request = () =>
 export const getPatchList = async () => {
   Logger.info("Fetching patch list...")
 
-  const response = await dotaApiScheduler.schedule(request)
+  const response = await dotaApiScheduler.add(request)
 
   if (isError(response)) {
     Logger.error("Request failed", response.response)
