@@ -66,6 +66,8 @@ style worker stroke:orange
 
 ## Development
 
+Requires Node ^16, Supabase CLI, Vercel CLI
+
 ### Setup
 
 1. Install dependencies: `$ yarn`
