@@ -10,8 +10,6 @@ import Vue from "@vitejs/plugin-vue"
 
 config()
 
-const s = JSON.stringify
-
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   build: {
@@ -20,11 +18,7 @@ export default defineConfig(({ mode }) => ({
   server: {
     open: true,
   },
-  define: {
-    "import.meta.env.SENTRY_DSN": s(process.env.SENTRY_DSN),
-    "import.meta.env.VERCEL_ENV": s(process.env.VERCEL_ENV),
-    "import.meta.env.VERCEL_GIT_COMMIT_SHA": s(process.env.VERCEL_GIT_COMMIT_SHA),
-  },
+  envPrefix: ["VITE_", "VERCEL_"],
   resolve: {
     alias: {
       "cross-fetch": "./src/fetch.js",
