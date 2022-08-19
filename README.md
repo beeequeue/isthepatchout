@@ -8,15 +8,27 @@ This is accomplished by using [Supabase](https://supabase.com) and their real-ti
 
 ## Removing notifications
 
-### Discord
+<details>
+<summary>Discord</summary>
 
-1. Go to the channel's settings
-1. Go to the integrations
-1. Delete the `isthepatchout` integration
+1. Go to the channel's settings <br/> ![image](https://user-images.githubusercontent.com/472500/185675016-6410de81-32fe-4bb4-95e9-269a39c91620.png)
+1. Go to the integrations <br/> ![image](https://user-images.githubusercontent.com/472500/185675105-8226e486-8fdb-48a9-b3bf-3abb2ca1d20b.png)
+1. Delete the `isthepatchout` integration <br/> ![image](https://user-images.githubusercontent.com/472500/185675191-92833356-adcd-4287-a17e-c3f040c738e0.png)
 
-### Web Push
+</details>
 
-1. Click the button to do it
+<details>
+<summary>Web Push</summary>
+
+Click the button that does it
+
+![image](https://user-images.githubusercontent.com/472500/185674949-e6dc073f-1c75-46de-ab6d-67f136c6f763.png)
+
+or...
+
+Deny the website access to notifications - google it!
+
+</details>
 
 ## Privacy & GDPR
 
