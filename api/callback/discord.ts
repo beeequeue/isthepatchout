@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-import HttpClient from "got"
 import Joi from "joi"
+import { $fetch } from "ohmyfetch"
 
 import { badRequest } from "@hapi/boom"
 
@@ -38,25 +38,27 @@ const handler: CustomHandler = async (request) => {
     return badRequest(validationError.message)
   }
 
-  const response = await HttpClient.post<{ webhook: { id: string; url: string } }>(
+  const response = await $fetch<{ webhook: { id: string; url: string } }>(
     "https://discord.com/api/v9/oauth2/token",
     {
       responseType: "json",
-      form: {
+      method: "POST",
+      headers: { "content-type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams({
         grant_type: "authorization_code",
         client_id: DISCORD_CLIENT_ID,
         client_secret: DISCORD_CLIENT_SECRET,
         code: value.code,
         redirect_uri: `${VITE_API_URL}/api/callback/discord`,
-      },
+      }),
     },
   )
 
   try {
     await registerDiscordWebhook(
-      response.body.webhook.url,
+      response.webhook.url,
       value.guild_id,
-      response.body.webhook.id,
+      response.webhook.id,
     )
 
     return {
