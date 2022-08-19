@@ -6,6 +6,27 @@ It also supports notifications via the [Web Push API](https://developer.mozilla.
 
 This is accomplished by using [Supabase](https://supabase.com) and their real-time services to watch the `patches` table for new patches, and then doing what needs to be done based on it!
 
+## Removing notifications
+
+### Discord
+
+1. Go to the channel's settings
+1. Go to the integrations
+1. Delete the `isthepatchout` integration
+
+### Web Push
+
+1. Click the button to do it
+
+## Privacy & GDPR
+
+No PII data is stored. It only stores the data needed to send notifications, which is either:
+
+- A Discord Webhook URL (e.g. `https://discord.com/api/webhooks/{random number}/{random string}`)
+- Web Push API URL (e.g. `https://fcm.googleapis.com/fcm/send/{random string}`)
+
+as well as which patch number was last sent to the recipient.
+
 ## Architecture
 
 ```mermaid
