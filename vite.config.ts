@@ -27,6 +27,7 @@ export default defineConfig(({ mode }) => ({
   },
   resolve: {
     alias: {
+      "cross-fetch": "./src/fetch.js",
       "@ivanv/vue-collapse-transition":
         "@ivanv/vue-collapse-transition/src/CollapseTransition.vue",
     },
