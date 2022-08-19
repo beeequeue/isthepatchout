@@ -1,16 +1,13 @@
 import Bottleneck from "bottleneck"
-import HttpClient from "got"
+import { $fetch } from "ohmyfetch"
+import type { FetchError } from "ohmyfetch"
+import { isError } from "remeda"
 
 import { Logger } from "./_logger"
 
 const dotaApiScheduler = new Bottleneck({
   minTime: 1000,
   maxConcurrent: 3,
-})
-
-const http = HttpClient.extend({
-  prefixUrl: "https://www.dota2.com/datafeed",
-  retry: 3,
 })
 
 /* eslint-disable @typescript-eslint/naming-convention */
@@ -24,30 +21,28 @@ export type PatchNoteListItem = {
 
 export type PatchNoteListData = {
   patches: PatchNoteListItem[]
+  success: boolean
 }
 /* eslint-enable @typescript-eslint/naming-convention */
 
 const request = () =>
-  http.get<PatchNoteListData>("patchnoteslist", {
-    headers: { Host: "www.dota2.com" },
+  $fetch<PatchNoteListData>("https://www.dota2.com/datafeed/patchnoteslist", {
     responseType: "json",
+    headers: { Host: "www.dota2.com" },
     retry: 3,
-  })
+  }).catch((error: FetchError) => error)
 
 export const getPatchList = async () => {
   Logger.info("Fetching patch list...")
 
   const response = await dotaApiScheduler.schedule(request)
 
-  if (response.statusCode >= 400) {
-    Logger.error("Request failed", {
-      status: response.statusCode,
-      body: response.body,
-    })
+  if (isError(response)) {
+    Logger.error("Request failed", response.response)
     return null
   }
 
-  Logger.debug(response.body?.patches?.slice(-5))
+  Logger.debug(response?.patches?.slice(-5))
 
-  return response.body.patches
+  return response.patches
 }
