@@ -7,15 +7,17 @@ import { watch } from "vue"
 
 import { state } from "../state"
 
+const particleCount = window.innerWidth > 600 ? 10 : 4
+
 const fireConfetti = () => {
   void confetti({
-    particleCount: 10,
+    particleCount,
     spread: 75,
     angle: 45,
     origin: { x: 0, y: 0.5 },
   })
   void confetti({
-    particleCount: 10,
+    particleCount,
     spread: 75,
     angle: 145,
     origin: { x: 1, y: 0.5 },

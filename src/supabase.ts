@@ -1,7 +1,8 @@
+import type { RealtimeChannel } from "@supabase/realtime-js"
 import { SupabaseClient } from "@supabase/supabase-js"
 
 import { mutations } from "./state"
-import type { Database, Patch } from "./types"
+import type { Database, Patch, RealtimeChange } from "./types"
 
 export const supabase = new SupabaseClient<Database>(
   import.meta.env.VITE_SUPABASE_URL as string,
@@ -22,25 +23,30 @@ export const fetchLatestPatch = async () => {
   }
 }
 
-const filter = (event: "UPDATE" | "INSERT") => ({
+const filter = (event: "INSERT" | "UPDATE") => ({
   event,
   schema: "public",
   table: "patches",
 })
 
-export const initChangeDetection = (latestPatch: Patch) => {
-  const handler = (payload: unknown) => {
+export const initChangeDetection = (latestPatch: Patch): RealtimeChannel => {
+  const handler = (payload: RealtimeChange<"patches">) => {
     if (
-      payload.new.releasedAt != null &&
-      payload.new.number >= (latestPatch.number ?? 0)
+      payload.record?.releasedAt != null &&
+      payload.record.number >= (latestPatch.number ?? 0)
     ) {
-      mutations.releaseNewPatch(payload.new)
+      mutations.releaseNewPatch(payload.record)
     }
   }
 
-  supabase
-    .channel("db-changes")
+  const channel = supabase.channel("public:patches")
+
+  channel
     .on("postgres_changes", filter("UPDATE"), handler)
     .on("postgres_changes", filter("INSERT"), handler)
     .subscribe()
+
+  return channel
 }
+
+export const removeChannel = (channel: RealtimeChannel) => supabase.removeChannel(channel)
