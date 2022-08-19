@@ -24,11 +24,9 @@ void fetchLatestPatch()
 
 watch(
   () => state.latestPatch,
-  (newPatch, _, onCleanup) => {
+  (newPatch, _) => {
     if (newPatch != null) {
-      const unsubscribe = initChangeDetection(newPatch)
-
-      onCleanup(unsubscribe)
+      initChangeDetection(newPatch)
     }
   },
   { deep: true },
