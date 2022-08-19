@@ -1,16 +1,17 @@
-import { SupabaseClient, SupabaseRealtimePayload } from "@supabase/supabase-js"
+import type { RealtimeChannel } from "@supabase/realtime-js"
+import { SupabaseClient } from "@supabase/supabase-js"
 
 import { mutations } from "./state"
-import { Patch } from "./types"
+import type { Database, Patch, RealtimeChange } from "./types"
 
-export const supabase = new SupabaseClient(
+export const supabase = new SupabaseClient<Database>(
   import.meta.env.VITE_SUPABASE_URL as string,
   import.meta.env.VITE_SUPABASE_PUBLIC_KEY as string,
 )
 
 export const fetchLatestPatch = async () => {
   const result = await supabase
-    .from<Patch>("patches")
+    .from("patches")
     .select()
     .not("releasedAt", "is", null)
     .order("number", { ascending: false })
@@ -22,23 +23,30 @@ export const fetchLatestPatch = async () => {
   }
 }
 
-export const initChangeDetection = (latestPatch: Patch) => {
-  const handler = (payload: SupabaseRealtimePayload<Patch>) => {
+const filter = (event: "INSERT" | "UPDATE") => ({
+  event,
+  schema: "public",
+  table: "patches",
+})
+
+export const initChangeDetection = (latestPatch: Patch): RealtimeChannel => {
+  const handler = (payload: RealtimeChange<"patches">) => {
     if (
-      payload.new.releasedAt != null &&
-      payload.new.number >= (latestPatch.number ?? 0)
+      payload.record?.releasedAt != null &&
+      payload.record.number >= (latestPatch.number ?? 0)
     ) {
-      mutations.releaseNewPatch(payload.new)
+      mutations.releaseNewPatch(payload.record)
     }
   }
 
-  const subscription = supabase
-    .from<Patch>("patches")
-    .on("UPDATE", handler)
-    .on("INSERT", handler)
+  const channel = supabase.channel("public:patches")
+
+  channel
+    .on("postgres_changes", filter("UPDATE"), handler)
+    .on("postgres_changes", filter("INSERT"), handler)
     .subscribe()
 
-  return () => {
-    subscription.unsubscribe()
-  }
+  return channel
 }
+
+export const removeChannel = (channel: RealtimeChannel) => supabase.removeChannel(channel)

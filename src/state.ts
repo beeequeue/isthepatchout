@@ -1,7 +1,7 @@
 import { differenceInDays } from "date-fns"
 import { reactive } from "vue"
 
-import { Patch } from "./types"
+import type { Patch } from "./types"
 
 export const state = reactive({
   loading: true,

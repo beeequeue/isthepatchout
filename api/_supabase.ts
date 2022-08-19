@@ -2,17 +2,20 @@ import { DotaPatchType, DotaVersion } from "dotaver"
 
 import { SupabaseClient } from "@supabase/supabase-js"
 
-import type { Patch, PushSubscription } from "../src/types"
+import type { Patch, Database } from "../src/types"
 
 import type { PatchNoteListItem } from "./_dota"
 import { Logger } from "./_logger"
 import { UpdateSubscriptionInput } from "./subscription"
 
-const { SUPABASE_SERVICE_KEY, VERCEL_ENV, VITE_SUPABASE_URL } = process.env
+const { SUPABASE_SERVICE_KEY, VERCEL_ENV, VITE_SUPABASE_URL } = process.env as Record<
+  string,
+  string
+>
 
-export const supabase = new SupabaseClient(
-  VITE_SUPABASE_URL as string,
-  SUPABASE_SERVICE_KEY as string,
+export const supabase = new SupabaseClient<Database>(
+  VITE_SUPABASE_URL,
+  SUPABASE_SERVICE_KEY,
 )
 
 // -------------------------------------
@@ -37,7 +40,7 @@ export const formatPatchData = (data: PatchNoteListItem): Patch => {
 export const removeUnreleasedPatches = async () => {
   Logger.info("Deleting unreleased patches...")
 
-  const { error } = await supabase.from<Patch>("patches").delete().is("releasedAt", null)
+  const { error } = await supabase.from("patches").delete().is("releasedAt", null)
 
   if (error) {
     Logger.error(error)
@@ -49,7 +52,7 @@ export const insertUpcomingPatches = async () => {
   Logger.info("Deleting unreleased patches...")
 
   const { data: lastReleasedPatch, error } = await supabase
-    .from<Patch>("patches")
+    .from("patches")
     .select("id")
     .not("releasedAt", "is", null)
     .order("number", { ascending: false })
@@ -71,7 +74,7 @@ export const insertUpcomingPatches = async () => {
 
   Logger.debug(upcomingVersions)
 
-  await supabase.from<Patch>("patches").insert(
+  await supabase.from("patches").insert(
     upcomingVersions.map((version) => ({
       id: version.toString(),
       number: version.toNumber(),
@@ -83,7 +86,7 @@ export const insertUpcomingPatches = async () => {
 export const upsertPatches = async (patches: Patch[]) => {
   Logger.info(`Inserting or updating ${patches.length} patches...`)
 
-  const { error } = await supabase.from<Patch>("patches").upsert(patches)
+  const { error } = await supabase.from("patches").upsert(patches)
 
   if (error) {
     Logger.error(error)
@@ -97,7 +100,7 @@ export const upsertPatches = async (patches: Patch[]) => {
 
 export const doesSubscriptionExist = async (endpoint: string): Promise<boolean> => {
   const { data, error } = await supabase
-    .from<PushSubscription>("subscriptions")
+    .from("subscriptions")
     .select("endpoint")
     .eq("endpoint", endpoint)
     .limit(1)
@@ -114,7 +117,7 @@ export const upsertSubscription = async ({
   endpoint,
   keys: { auth, p256dh },
 }: UpdateSubscriptionInput) => {
-  const { error } = await supabase.from<PushSubscription>("subscriptions").upsert(
+  const { error } = await supabase.from("subscriptions").upsert(
     {
       type: "push",
       endpoint,
@@ -132,10 +135,7 @@ export const upsertSubscription = async ({
 }
 
 export const deleteSubscription = async (endpoint: string) => {
-  const { error } = await supabase
-    .from<PushSubscription>("subscriptions")
-    .delete()
-    .eq("endpoint", endpoint)
+  const { error } = await supabase.from("subscriptions").delete().eq("endpoint", endpoint)
 
   if (error) {
     throw new Error(error.message)
@@ -151,7 +151,7 @@ export const registerDiscordWebhook = async (
   guildId: string,
   id: string,
 ) => {
-  const { error } = await supabase.from<PushSubscription>("subscriptions").upsert(
+  const { error } = await supabase.from("subscriptions").upsert(
     {
       type: "discord",
       endpoint,
