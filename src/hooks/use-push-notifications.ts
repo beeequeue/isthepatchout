@@ -13,7 +13,7 @@ const supported =
   "showNotification" in ServiceWorkerRegistration.prototype &&
   "PushManager" in window
 
-const permissionsGranted = ref(Notification.permission === "granted")
+const permissionsGranted = ref(Notification?.permission === "granted")
 
 const askForPermissions = async () => {
   const result = await Notification.requestPermission()
