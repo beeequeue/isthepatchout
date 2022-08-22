@@ -40,7 +40,7 @@
     "date-fns": "2.29.2",
     "dotaver": "1.0.1",
     "fathom-client": "3.5.0",
-    "simple-icons": "7.7.0",
+    "simple-icons": "7.8.0",
     "vue": "3.2.37",
     "workbox-precaching": "6.5.4"
   },
