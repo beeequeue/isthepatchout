@@ -1697,10 +1697,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:16.11.52":
-  version: 16.11.52
-  resolution: "@types/node@npm:16.11.52"
-  checksum: eb688bff28015f1399264b7aa347d5f40e165d438306bd5884d78993671c5e43b7849b8ddc74b91bf7c7b73e15ba54fc56ea1db2118b0e3f59f9fabd2adc7fe7
+"@types/node@npm:16.11.54":
+  version: 16.11.54
+  resolution: "@types/node@npm:16.11.54"
+  checksum: fa4d6a94498cc6ef96932a25557082587a178b5fa1da5e208bdb171b85265110a7ca6a4f296e740dca1b29d2a44b3c1e76e21d255e5eeed8be5f67ea538dcb9c
   languageName: node
   linkType: hard
 
@@ -5223,7 +5223,7 @@ fsevents@~2.3.2:
     "@sentry/node": 7.11.1
     "@supabase/supabase-js": 2.0.0-rc.6
     "@types/canvas-confetti": 1.4.3
-    "@types/node": 16.11.52
+    "@types/node": 16.11.54
     "@vercel/node": 2.5.8
     "@vitejs/plugin-vue": 3.0.3
     "@vue/compiler-sfc": 3.2.37
