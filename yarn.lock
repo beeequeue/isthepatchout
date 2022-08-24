@@ -3630,16 +3630,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild-plugin-browserslist@npm:0.4.13":
-  version: 0.4.13
-  resolution: "esbuild-plugin-browserslist@npm:0.4.13"
+"esbuild-plugin-browserslist@npm:0.5.0":
+  version: 0.5.0
+  resolution: "esbuild-plugin-browserslist@npm:0.5.0"
   dependencies:
     debug: ^4.3.4
-    zod: ^3.17.10
+    zod: ^3.18.0
   peerDependencies:
     browserslist: ^4.21.3
-    esbuild: ~0.14.53
-  checksum: 74ee16b9446dd2ed154a9dece9f310c01ffee495616bfd75c4e5bc85a84c57b590a1dc0d6748e2ac27871b6c60e2856fe0087916c69cb0ebda4452b6896d6ebf
+    esbuild: ~0.15.5
+  checksum: d372b64bcf87ca7a4c25eb5239e52afc7734e72c3131899bc1d723b905a22f0d1eb97c6a2abf12b6b41dba0fdb990948b9cce8cb4b9c66494f6ab9b14435eea9
   languageName: node
   linkType: hard
 
@@ -5235,7 +5235,7 @@ fsevents@~2.3.2:
     date-fns: 2.29.2
     dotaver: 1.0.1
     dotenv: 16.0.1
-    esbuild-plugin-browserslist: 0.4.13
+    esbuild-plugin-browserslist: 0.5.0
     eslint: 8.22.0
     fathom-client: 3.5.0
     joi: 17.6.0
@@ -8746,9 +8746,9 @@ typescript@4.3.4:
   languageName: node
   linkType: hard
 
-"zod@npm:^3.17.10":
-  version: 3.17.10
-  resolution: "zod@npm:3.17.10"
-  checksum: 5de630b8eceda3de211cce0a734b629f8c4ca4bc887127b0ebd57e9c9be23204725e60adf2faf1c5ccb9b660c7588a8b04f60dfda1ed8e67a789e93c15f838f1
+"zod@npm:^3.18.0":
+  version: 3.18.0
+  resolution: "zod@npm:3.18.0"
+  checksum: 86a9a9928f4b40a07020d4b9832842fa4a70050c2d7bd1b2866bc1acfd734aa53a40f87a99a4312a637341a608b0105770c7a1f83b56df78e97691b4f5badcd8
   languageName: node
   linkType: hard
