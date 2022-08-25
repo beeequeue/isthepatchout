@@ -5243,7 +5243,7 @@ fsevents@~2.3.2:
     ohmyfetch: 0.4.18
     p-queue: 6.6.2
     pino: 8.4.2
-    pino-pretty: 9.0.1
+    pino-pretty: 9.1.0
     prettier: 2.7.1
     remeda: 1.0.1
     rollup-plugin-visualizer: 5.8.0
@@ -6413,9 +6413,9 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"pino-pretty@npm:9.0.1":
-  version: 9.0.1
-  resolution: "pino-pretty@npm:9.0.1"
+"pino-pretty@npm:9.1.0":
+  version: 9.1.0
+  resolution: "pino-pretty@npm:9.1.0"
   dependencies:
     colorette: ^2.0.7
     dateformat: ^4.6.3
@@ -6433,7 +6433,7 @@ fsevents@~2.3.2:
     strip-json-comments: ^3.1.1
   bin:
     pino-pretty: bin.js
-  checksum: 60344b50b1a51f96b7b4be068fba3a31112324d26c0d9ed47ccf0e79f2b1fc5cca315bd67080dac4c2e5143f2b775d13c5b00fae7f401e6b5cfb0258d1f7e58c
+  checksum: 44416ebfcc8c4b996a1508b7866301087565f47d2b9155cbe41ca56cc3e638f54c989728492bc71a07e8ea73a64d1ea44b2728a2440c1d67f9ea43c25c8cceaa
   languageName: node
   linkType: hard
 
