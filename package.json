@@ -58,7 +58,7 @@
     "bundlewatch": "0.3.3",
     "dotenv": "16.0.1",
     "esbuild-plugin-browserslist": "0.5.0",
-    "eslint": "8.22.0",
+    "eslint": "8.23.0",
     "joi": "17.6.0",
     "lint-staged": "13.0.3",
     "ohmyfetch": "0.4.18",
