@@ -5,8 +5,8 @@ import { mutations } from "./state"
 import type { Database, Patch, RealtimeChange } from "./types"
 
 export const supabase = new SupabaseClient<Database>(
-  import.meta.env.VITE_SUPABASE_URL as string,
-  import.meta.env.VITE_SUPABASE_PUBLIC_KEY as string,
+  import.meta.env.VITE_SUPABASE_URL,
+  import.meta.env.VITE_SUPABASE_PUBLIC_KEY,
 )
 
 export const fetchLatestPatch = async () => {

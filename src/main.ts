@@ -9,7 +9,7 @@ import "./base.css"
 
 const app = createApp(App)
 
-Fathom.load(import.meta.env.VITE_FATHOM_SITE_ID as string, {
+Fathom.load(import.meta.env.VITE_FATHOM_SITE_ID, {
   url: "https://twentythree-restored.haglund.dev/script.js",
   spa: "auto",
 })

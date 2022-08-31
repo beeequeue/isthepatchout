@@ -14,6 +14,7 @@ module.exports = {
     defineEmits: "readonly",
   },
   rules: {
+    "@typescript-eslint/naming-convention": "off",
     "vue/multi-word-component-names": "off",
   },
 }

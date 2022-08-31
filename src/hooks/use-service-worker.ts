@@ -14,9 +14,7 @@ const urlBase64ToUint8Array = (base64String: string) => {
   return outputArray
 }
 
-const applicationServerKey = urlBase64ToUint8Array(
-  import.meta.env.VITE_VAPID_PUBLIC_KEY as string,
-)
+const applicationServerKey = urlBase64ToUint8Array(import.meta.env.VITE_VAPID_PUBLIC_KEY)
 
 const registration = ref<ServiceWorkerRegistration>()
 

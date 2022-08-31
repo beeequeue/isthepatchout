@@ -33,7 +33,7 @@ const manuallyDisabled = useLocalStorage(LocalStorageKey.ManuallyDisabled, false
 const registerNewSubscription = async () => {
   const subscriptionData = JSON.parse(JSON.stringify(subscription.value))
 
-  await fetch(`${import.meta.env.VITE_API_URL as string}/api/subscription`, {
+  await fetch(`${import.meta.env.VITE_API_URL}/api/subscription`, {
     method: "POST",
     // eslint-disable-next-line @typescript-eslint/naming-convention
     headers: { "content-type": "application/json" },
@@ -52,19 +52,16 @@ const unsubscribe = async () => {
   subscription.value = null
 
   const params = new URLSearchParams({ endpoint })
-  await fetch(
-    `${import.meta.env.VITE_API_URL as string}/api/subscription?${params.toString()}`,
-    {
-      method: "DELETE",
-    },
-  )
+  await fetch(`${import.meta.env.VITE_API_URL}/api/subscription?${params.toString()}`, {
+    method: "DELETE",
+  })
 }
 
 const getIsSubscriptionValid = async (endpoint: string): Promise<boolean> => {
   const params = new URLSearchParams({ endpoint })
 
   const response = await fetch(
-    `${import.meta.env.VITE_API_URL as string}/api/subscription?${params.toString()}`,
+    `${import.meta.env.VITE_API_URL}/api/subscription?${params.toString()}`,
   )
 
   if (
