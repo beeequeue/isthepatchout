@@ -1,4 +1,4 @@
-import Joi from "joi"
+import z, { Infer } from "myzod"
 
 import { badRequest, notFound } from "@hapi/boom"
 import type { VercelRequest, VercelResponse } from "@vercel/node"
@@ -15,21 +15,18 @@ type Handler = (request: VercelRequest, response: VercelResponse) => Promise<voi
 
 const { VERCEL_ENV } = process.env
 
-export type UpdateSubscriptionInput = {
-  endpoint: string
-  keys: {
-    auth: string
-    p256dh: string
-  }
-}
+const Input = z.object(
+  {
+    endpoint: z.string().pattern(/^https:\/\//),
+    keys: z.object({
+      auth: z.string().min(10),
+      p256dh: z.string().min(10),
+    }),
+  },
+  { allowUnknown: false },
+)
 
-const schema = Joi.object<UpdateSubscriptionInput>({
-  endpoint: Joi.string().uri({ scheme: ["https"] }),
-  keys: Joi.object({
-    auth: Joi.string().min(10).trim(),
-    p256dh: Joi.string().min(10),
-  }),
-})
+export type UpdateSubscriptionInput = Infer<typeof Input>
 
 const getCorsOrigin = (request: VercelRequest) => {
   if (request.headers.origin) return request.headers.origin
@@ -82,18 +79,13 @@ const postHandler: CustomHandler = async (request) => {
     return badRequest("Body isn't JSON")
   }
 
-  const { error, value } = schema.validate(request.body, {
-    abortEarly: false,
-    stripUnknown: true,
-    presence: "required",
-  })
-
-  if (error != null) {
-    return badRequest(error.message)
+  const result = Input.try(request.body)
+  if (result instanceof z.ValidationError) {
+    return badRequest(result.message)
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
-  await upsertSubscription(value!)
+  await upsertSubscription(result)
 }
 
 const deleteHandler: CustomHandler = async (request) => {

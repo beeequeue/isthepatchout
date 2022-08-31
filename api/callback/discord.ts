@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-import Joi from "joi"
+import z from "myzod"
 import { $fetch } from "ohmyfetch"
 
 import { badRequest } from "@hapi/boom"
@@ -13,29 +13,22 @@ const { DISCORD_CLIENT_ID, DISCORD_CLIENT_SECRET, VITE_API_URL } = process.env a
   string
 >
 
-export type DiscordCallbackInput = {
-  code: string
-  guild_id: string
-}
-
-const schema = Joi.object<DiscordCallbackInput>({
-  code: Joi.string(),
-  guild_id: Joi.string(),
-})
+const Input = z.object(
+  {
+    code: z.string(),
+    guild_id: z.string(),
+  },
+  { allowUnknown: false },
+)
 
 /**
  * GET /api/callback/discord
  * Registers a new Discord webhook for the notifications service to call when a new patch is released
  */
 const handler: CustomHandler = async (request) => {
-  const { error: validationError, value } = schema.validate(request.query, {
-    abortEarly: false,
-    stripUnknown: true,
-    presence: "required",
-  })
-
-  if (validationError != null) {
-    return badRequest(validationError.message)
+  const result = Input.try(request.query)
+  if (result instanceof z.ValidationError) {
+    return badRequest(result.message)
   }
 
   const response = await $fetch<{ webhook: { id: string; url: string } }>(
@@ -48,7 +41,7 @@ const handler: CustomHandler = async (request) => {
         grant_type: "authorization_code",
         client_id: DISCORD_CLIENT_ID,
         client_secret: DISCORD_CLIENT_SECRET,
-        code: value.code,
+        code: result.code,
         redirect_uri: `${VITE_API_URL}/api/callback/discord`,
       }),
     },
@@ -57,7 +50,7 @@ const handler: CustomHandler = async (request) => {
   try {
     await registerDiscordWebhook(
       response.webhook.url,
-      value.guild_id,
+      result.guild_id,
       response.webhook.id,
     )
 
