@@ -32,8 +32,9 @@ const handler: CustomHandler = async (request) => {
 
   try {
     await checkAndUpdatePatches()
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
-    return internal(error.message as string, error)
+    return internal((error as Error).message, error)
   }
 }
 
