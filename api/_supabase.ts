@@ -1,8 +1,8 @@
-import { DotaPatchType, DotaVersion } from "dotaver"
+import { DotaVersion } from "dotaver"
 
 import { SupabaseClient } from "@supabase/supabase-js"
 
-import type { Patch, Database } from "../src/types"
+import type { Database, Patch } from "../src/types"
 
 import type { PatchNoteListItem } from "./_dota"
 import { Logger } from "./_logger"
@@ -37,56 +37,25 @@ export const formatPatchData = (data: PatchNoteListItem): Patch => {
   }
 }
 
-export const removeUnreleasedPatches = async () => {
-  Logger.info("Deleting unreleased patches...")
+export const upsertPatches = async (patches: Patch[]) => {
+  Logger.info(`Received ${patches.length} patches to maybe insert...`)
 
-  const { error } = await supabase.from("patches").delete().is("releasedAt", null)
-
-  if (error) {
-    Logger.error(error)
-    throw new Error(error.message)
-  }
-}
-
-export const insertUpcomingPatches = async () => {
-  Logger.info("Deleting unreleased patches...")
-
-  const { data: lastReleasedPatch, error } = await supabase
+  const { data: knownPatches, error: knownPatchesError } = await supabase
     .from("patches")
     .select("id")
-    .not("releasedAt", "is", null)
-    .order("number", { ascending: false })
-
-  Logger.debug(lastReleasedPatch![0])
-
-  if (error) {
-    Logger.error(error)
-    throw new Error(error.message)
+  if (knownPatchesError != null) {
+    Logger.error(knownPatchesError)
+    throw new Error(knownPatchesError.message)
   }
 
   // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
-  const lastVersion = DotaVersion.parse(lastReleasedPatch![0].id)
+  const knownPatchIds = new Set(knownPatches!.map((patch) => patch.id))
+  const newPatches = patches.filter((patch) => !knownPatchIds.has(patch.id))
 
-  const upcomingVersions = [
-    lastVersion.next(DotaPatchType.Minor),
-    lastVersion.next(DotaPatchType.Patch),
-  ]
+  Logger.info(`Of which ${newPatches.length} are new...`)
+  if (newPatches.length === 0) return
 
-  Logger.debug(upcomingVersions)
-
-  await supabase.from("patches").insert(
-    upcomingVersions.map((version) => ({
-      id: version.toString(),
-      number: version.toNumber(),
-      links: [],
-    })),
-  )
-}
-
-export const upsertPatches = async (patches: Patch[]) => {
-  Logger.info(`Inserting or updating ${patches.length} patches...`)
-
-  const { error } = await supabase.from("patches").upsert(patches)
+  const { error } = await supabase.from("patches").insert(newPatches)
 
   if (error) {
     Logger.error(error)

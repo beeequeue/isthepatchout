@@ -2,12 +2,7 @@ import { forbidden, internal } from "@hapi/boom"
 
 import { getPatchList } from "./_dota"
 import { CustomHandler, sentryWrapper } from "./_sentry"
-import {
-  formatPatchData,
-  insertUpcomingPatches,
-  removeUnreleasedPatches,
-  upsertPatches,
-} from "./_supabase"
+import { formatPatchData, upsertPatches } from "./_supabase"
 
 const { CHECK_TOKEN } = process.env
 
@@ -20,9 +15,6 @@ const checkAndUpdatePatches = async () => {
 
   const formattedPatches = releasedPatches.map(formatPatchData)
   await upsertPatches(formattedPatches)
-
-  await removeUnreleasedPatches()
-  await insertUpcomingPatches()
 }
 
 /**
@@ -40,8 +32,9 @@ const handler: CustomHandler = async (request) => {
 
   try {
     await checkAndUpdatePatches()
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {
-    return internal(error.message as string, error)
+    return internal((error as Error).message, error)
   }
 }
 

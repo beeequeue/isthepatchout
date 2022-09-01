@@ -16,7 +16,7 @@ export default defineConfig(({ mode }) => ({
     sourcemap: true,
   },
   server: {
-    open: true,
+    open: "http://localhost:3000",
   },
   envPrefix: ["VITE_", "VERCEL_"],
   resolve: {

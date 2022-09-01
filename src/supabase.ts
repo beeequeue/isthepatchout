@@ -5,8 +5,8 @@ import { mutations } from "./state"
 import type { Database, Patch, RealtimeChange } from "./types"
 
 export const supabase = new SupabaseClient<Database>(
-  import.meta.env.VITE_SUPABASE_URL as string,
-  import.meta.env.VITE_SUPABASE_PUBLIC_KEY as string,
+  import.meta.env.VITE_SUPABASE_URL,
+  import.meta.env.VITE_SUPABASE_PUBLIC_KEY,
 )
 
 export const fetchLatestPatch = async () => {
@@ -23,12 +23,6 @@ export const fetchLatestPatch = async () => {
   }
 }
 
-const filter = (event: "INSERT" | "UPDATE") => ({
-  event,
-  schema: "public",
-  table: "patches",
-})
-
 export const initChangeDetection = (latestPatch: Patch): RealtimeChannel => {
   const handler = (payload: RealtimeChange<"patches">) => {
     if (
@@ -42,8 +36,15 @@ export const initChangeDetection = (latestPatch: Patch): RealtimeChannel => {
   const channel = supabase.channel("public:patches")
 
   channel
-    .on("postgres_changes", filter("UPDATE"), handler)
-    .on("postgres_changes", filter("INSERT"), handler)
+    .on(
+      "postgres_changes",
+      {
+        event: "INSERT",
+        schema: "public",
+        table: "patches",
+      },
+      handler,
+    )
     .subscribe()
 
   return channel
