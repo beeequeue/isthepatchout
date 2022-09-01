@@ -47,7 +47,7 @@
   "devDependencies": {
     "@beequeue/eslint-plugin": "0.7.0",
     "@hapi/boom": "10.0.0",
-    "@sentry/node": "7.11.1",
+    "@sentry/node": "7.12.0",
     "@types/canvas-confetti": "1.4.3",
     "@types/node": "16.11.56",
     "@vercel/node": "2.5.11",
