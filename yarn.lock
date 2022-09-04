@@ -5233,7 +5233,7 @@ fsevents@~2.3.2:
     pino-pretty: 9.1.0
     prettier: 2.7.1
     remeda: 1.1.0
-    rollup-plugin-visualizer: 5.8.0
+    rollup-plugin-visualizer: 5.8.1
     simple-git-hooks: 2.8.0
     simple-icons: 7.9.0
     tailwindcss: 3.1.8
@@ -6989,9 +6989,9 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"rollup-plugin-visualizer@npm:5.8.0":
-  version: 5.8.0
-  resolution: "rollup-plugin-visualizer@npm:5.8.0"
+"rollup-plugin-visualizer@npm:5.8.1":
+  version: 5.8.1
+  resolution: "rollup-plugin-visualizer@npm:5.8.1"
   dependencies:
     nanoid: ^3.3.4
     open: ^8.4.0
@@ -6999,9 +6999,12 @@ resolve@^2.0.0-next.3:
     yargs: ^17.5.1
   peerDependencies:
     rollup: ^2.0.0
+  peerDependenciesMeta:
+    rollup:
+      optional: true
   bin:
     rollup-plugin-visualizer: dist/bin/cli.js
-  checksum: 907e435e2fa4243786c2e99f7062ce94bc7876ba20af42afbeeceed7d3403d5e6784e021328bca103dc7550d570978f46890e9d04ebe1b7ceb5dc934f592a676
+  checksum: 8fe26ab4ebfa034147721606f4020534821a428f296c7dc8ab2c1d863f30d9330600593f09e79a4d92de57c4e7d67905a36df631b272d9d49aaf09633b59b40c
   languageName: node
   linkType: hard
 
