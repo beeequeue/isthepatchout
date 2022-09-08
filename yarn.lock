@@ -1555,21 +1555,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/gotrue-js@npm:^2.0.0-rc.3":
-  version: 2.0.0-rc.3
-  resolution: "@supabase/gotrue-js@npm:2.0.0-rc.3"
+"@supabase/gotrue-js@npm:^2.0.0-rc.4":
+  version: 2.0.0-rc.4
+  resolution: "@supabase/gotrue-js@npm:2.0.0-rc.4"
   dependencies:
     cross-fetch: ^3.1.5
-  checksum: 2683756294c964ec13f1a72a11253f261025e6631a41084a7ea66a6265fcc96edb2d7202cf3c69b1f0da8a772519cfa100540d8f71f2b82e0c2dddeed8e755f6
+  checksum: cd521e6720951160ec4c383d9d1f786547cf29464c3a743bb49927617451a107d508f7bd076936761051c1ca6dff58c1c4cd5a9d2df74e8ccc0ad2b118003cce
   languageName: node
   linkType: hard
 
-"@supabase/postgrest-js@npm:^1.0.0-rc.4":
-  version: 1.0.0-rc.4
-  resolution: "@supabase/postgrest-js@npm:1.0.0-rc.4"
+"@supabase/postgrest-js@npm:^1.0.0-rc.5":
+  version: 1.0.0-rc.5
+  resolution: "@supabase/postgrest-js@npm:1.0.0-rc.5"
   dependencies:
     cross-fetch: ^3.1.5
-  checksum: 39859ee167c04cf100845945ec0deb30725b690695b9c030cf4a5f4416c3e57ab739e2148f0129d6f22379cefcf09de17c1125f6cd399add43841c008abd5982
+  checksum: 8c421bd6f10a563143efe12fe7ed10c0a694117dc29d539f18cffb017dc5325cfa03a3208a0c0e37cac116579764a8e5ac348bb67ad3eab494f2060672722201
   languageName: node
   linkType: hard
 
@@ -1592,17 +1592,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/supabase-js@npm:2.0.0-rc.8":
-  version: 2.0.0-rc.8
-  resolution: "@supabase/supabase-js@npm:2.0.0-rc.8"
+"@supabase/supabase-js@npm:2.0.0-rc.9":
+  version: 2.0.0-rc.9
+  resolution: "@supabase/supabase-js@npm:2.0.0-rc.9"
   dependencies:
     "@supabase/functions-js": ^2.0.0-rc.1
-    "@supabase/gotrue-js": ^2.0.0-rc.3
-    "@supabase/postgrest-js": ^1.0.0-rc.4
+    "@supabase/gotrue-js": ^2.0.0-rc.4
+    "@supabase/postgrest-js": ^1.0.0-rc.5
     "@supabase/realtime-js": ^2.0.0-rc.5
     "@supabase/storage-js": ^2.0.0-rc.1
     cross-fetch: ^3.1.5
-  checksum: eb4c628f9163afdc42f00752f399f2a018c02eb6cf11af9e3c2658e4c9a76dbcb74054743ddd94b4100300863c80853fe7056feb4153d74d2f9a89d0690d7d8f
+  checksum: 979b4216f8c0c2f789bfe150a252b45e82d4a2945d6de1fc6a85e014c3d69c2a2599150418acd5ab0629ef98b2bc8c56fd644ee2bbb2617448f9e9b91ca4b7d4
   languageName: node
   linkType: hard
 
@@ -5192,7 +5192,7 @@ fsevents@~2.3.2:
     "@hapi/boom": 10.0.0
     "@ivanv/vue-collapse-transition": 1.0.2
     "@sentry/node": 7.12.1
-    "@supabase/supabase-js": 2.0.0-rc.8
+    "@supabase/supabase-js": 2.0.0-rc.9
     "@types/canvas-confetti": 1.4.3
     "@types/node": 16.11.58
     "@vercel/node": 2.5.13
