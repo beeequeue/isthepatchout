@@ -41,7 +41,7 @@
     "dotaver": "1.0.1",
     "fathom-client": "3.5.0",
     "simple-icons": "7.10.0",
-    "vue": "3.2.38",
+    "vue": "3.2.39",
     "workbox-precaching": "6.5.4"
   },
   "devDependencies": {
@@ -52,7 +52,7 @@
     "@types/node": "16.11.58",
     "@vercel/node": "2.5.14",
     "@vitejs/plugin-vue": "3.1.0",
-    "@vue/compiler-sfc": "3.2.38",
+    "@vue/compiler-sfc": "3.2.39",
     "@windicss/animations": "1.0.8",
     "browserslist": "4.21.3",
     "bundlewatch": "0.3.3",
