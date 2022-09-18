@@ -5231,7 +5231,7 @@ fsevents@~2.3.2:
     typescript: 4.8.3
     vite: 3.1.2
     vite-plugin-checker: 0.4.9
-    vite-plugin-pwa: 0.12.7
+    vite-plugin-pwa: 0.12.8
     vite-plugin-windicss: 1.8.8
     vue: 3.2.39
     vue-tsc: 0.40.13
@@ -8116,9 +8116,9 @@ typescript@4.3.4:
   languageName: node
   linkType: hard
 
-"vite-plugin-pwa@npm:0.12.7":
-  version: 0.12.7
-  resolution: "vite-plugin-pwa@npm:0.12.7"
+"vite-plugin-pwa@npm:0.12.8":
+  version: 0.12.8
+  resolution: "vite-plugin-pwa@npm:0.12.8"
   dependencies:
     debug: ^4.3.4
     fast-glob: ^3.2.11
@@ -8130,7 +8130,7 @@ typescript@4.3.4:
     vite: ^2.0.0 || ^3.0.0-0
     workbox-build: ^6.4.0
     workbox-window: ^6.4.0
-  checksum: 0533bde5e64a7eb5bfe5a737466ce2723a0719ffa9d50e59bab65d2f518ae0f75c4145e90e4c7dbd2704c0e9397d61c0b4d6f56bac91e373929b37de8ec910ed
+  checksum: a7ea6c4ec29eace2931f8b37e51506c33ad73eb3dd9153958c9fec8137a21059eeed2e9455ba851de4829540dbd920590c4395d99c23b1cdb8c69c468a293535
   languageName: node
   linkType: hard
 
