@@ -30,7 +30,7 @@
   },
   "resolutions": {
     "@types/node": "16.11.59",
-    "node-fetch": "npm:node-fetch-native@0.1.5"
+    "node-fetch": "npm:node-fetch-native@0.1.7"
   },
   "dependencies": {
     "@ivanv/vue-collapse-transition": "1.0.2",
