@@ -5890,10 +5890,17 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"node-fetch-native@npm:^0.1.5, node-fetch@npm:node-fetch-native@0.1.5":
+"node-fetch-native@npm:^0.1.5":
   version: 0.1.5
   resolution: "node-fetch-native@npm:0.1.5"
   checksum: 524a5169a751e5fe85c3432331a4726b48f0a237e942a92c3821b9e34c862c051de659af5054f3c55877d600051f0e354c3114a13755f53270b67c60443e9c7a
+  languageName: node
+  linkType: hard
+
+"node-fetch@npm:node-fetch-native@0.1.7":
+  version: 0.1.7
+  resolution: "node-fetch-native@npm:0.1.7"
+  checksum: 0e342f2e26b1c4970fc0c88469661813ad3f755df8ecd42cfacfc781e5a1a5de363fe50b9e9227d98a43368660e791af7a5f7a6566329caaeb7ea21017410539
   languageName: node
   linkType: hard
 
