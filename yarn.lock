@@ -5220,7 +5220,7 @@ fsevents@~2.3.2:
     myzod: 1.8.8
     ohmyfetch: 0.4.19
     p-queue: 6.6.2
-    pino: 8.6.0
+    pino: 8.6.1
     pino-pretty: 9.1.0
     prettier: 2.7.1
     remeda: 1.1.0
@@ -6430,9 +6430,9 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"pino@npm:8.6.0":
-  version: 8.6.0
-  resolution: "pino@npm:8.6.0"
+"pino@npm:8.6.1":
+  version: 8.6.1
+  resolution: "pino@npm:8.6.1"
   dependencies:
     atomic-sleep: ^1.0.0
     fast-redact: ^3.1.1
@@ -6447,7 +6447,7 @@ fsevents@~2.3.2:
     thread-stream: ^2.0.0
   bin:
     pino: bin.js
-  checksum: 1142454645053191239e126d1f248e55d116dd3c7f0b00a2201ad4ea907b655d8b5dc6eb44ec1ea823974a13f5034df08cd5607e097c11409eda2a9c6672cc95
+  checksum: 1201cf2b47c8860b8e5811c20ddf6db000158d98dd04da2f09d59e797c3d7c391819d6279a526699b3fd8c13c357e86e0bb32ded15d2815ca8d97a407de47c9f
   languageName: node
   linkType: hard
 
