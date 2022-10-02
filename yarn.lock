@@ -5226,7 +5226,7 @@ fsevents@~2.3.2:
     remeda: 1.1.0
     rollup-plugin-visualizer: 5.8.2
     simple-git-hooks: 2.8.0
-    simple-icons: 7.13.0
+    simple-icons: 7.14.0
     tailwindcss: 3.1.8
     typescript: 4.8.4
     vite: 3.1.4
@@ -7199,10 +7199,10 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"simple-icons@npm:7.13.0":
-  version: 7.13.0
-  resolution: "simple-icons@npm:7.13.0"
-  checksum: fe96fa014db60caabe514ecc2b13813c1dee1951c59ff19385e30453e41008c1302f2decd6b780990a9d288103992d851ce7312786d59529646198fa3aa1258b
+"simple-icons@npm:7.14.0":
+  version: 7.14.0
+  resolution: "simple-icons@npm:7.14.0"
+  checksum: cd14412df1b45cbda748e8da67124ecf313dbbd6cda9d42d46a41eee19f02cd9970cc9f9bbd6512b6f4b27ad690cc7698c0dffe551b3e0d81080f60b057ad916
   languageName: node
   linkType: hard
 
