@@ -1819,22 +1819,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/node@npm:2.5.23":
-  version: 2.5.23
-  resolution: "@vercel/node@npm:2.5.23"
+"@vercel/node@npm:2.5.24":
+  version: 2.5.24
+  resolution: "@vercel/node@npm:2.5.24"
   dependencies:
     "@edge-runtime/vm": 1.1.0-beta.36
     "@types/node": "*"
     "@vercel/build-utils": 5.5.4
     "@vercel/node-bridge": 3.0.0
     "@vercel/static-config": 2.0.3
-    edge-runtime: 1.1.0-beta.37
+    edge-runtime: 1.1.0-beta.38
     esbuild: 0.14.47
     exit-hook: 2.2.1
     node-fetch: 2.6.7
     ts-node: 8.9.1
     typescript: 4.3.4
-  checksum: 2471c1d1bd651427dabe3d3f598a6c3cbb1415fab637bf14536a54ada9077b8ac4287315da17d745c78d7a8f268c6753d66385ecae6472cf2205c51a5b41c91d
+  checksum: fdf19b88df1136c64dcfb13c8680b10346110ea3543a0ecde2b54b199a910cfa7a5255820c0f38e640a644acae18f527ad77d9be2df3bab79df2ee61bdf2f8b2
   languageName: node
   linkType: hard
 
@@ -3186,9 +3186,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"edge-runtime@npm:1.1.0-beta.37":
-  version: 1.1.0-beta.37
-  resolution: "edge-runtime@npm:1.1.0-beta.37"
+"edge-runtime@npm:1.1.0-beta.38":
+  version: 1.1.0-beta.38
+  resolution: "edge-runtime@npm:1.1.0-beta.38"
   dependencies:
     "@edge-runtime/format": 1.1.0-beta.33
     "@edge-runtime/vm": 1.1.0-beta.36
@@ -3201,7 +3201,7 @@ __metadata:
     time-span: 4.0.0
   bin:
     edge-runtime: dist/cli/index.js
-  checksum: 4d65c4aa47ff05b80d0b2e33f7a8b3dbe9e5d7bbf5ef95744234cb6128a04bda9ac15043dbf387f45aa436c6ebda4f754f28f30056a7677557bbe3ec86b70a6e
+  checksum: 01e48aa09d3faf6719c28f6561370760314c1ccc4f9e12dbe90c5ec8e3a60d656689122bfbc22a1e32c06a81a7280113523b6e7f94b12bb76227ebacb204052d
   languageName: node
   linkType: hard
 
@@ -5191,7 +5191,7 @@ fsevents@~2.3.2:
     "@supabase/supabase-js": 2.0.0-rc.9
     "@types/canvas-confetti": 1.4.3
     "@types/node": 16.11.65
-    "@vercel/node": 2.5.23
+    "@vercel/node": 2.5.24
     "@vitejs/plugin-vue": 3.1.2
     "@vue/compiler-sfc": 3.2.40
     "@vueuse/core": 9.3.0
