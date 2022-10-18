@@ -2598,6 +2598,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"busboy@npm:^1.6.0":
+  version: 1.6.0
+  resolution: "busboy@npm:1.6.0"
+  dependencies:
+    streamsearch: ^1.1.0
+  checksum: 32801e2c0164e12106bf236291a00795c3c4e4b709ae02132883fe8478ba2ae23743b11c5735a0aae8afe65ac4b6ca4568b91f0d9fed1fdbc32ede824a73746e
+  languageName: node
+  linkType: hard
+
 "bytes@npm:^3.1.1":
   version: 3.1.2
   resolution: "bytes@npm:3.1.2"
@@ -5207,7 +5216,7 @@ fsevents@~2.3.2:
     fathom-client: 3.5.0
     lint-staged: 13.0.3
     myzod: 1.8.8
-    ohmyfetch: 0.4.19
+    ohmyfetch: 0.4.20
     p-queue: 6.6.2
     pino: 8.6.1
     pino-pretty: 9.1.1
@@ -5879,14 +5888,7 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"node-fetch-native@npm:^0.1.5":
-  version: 0.1.5
-  resolution: "node-fetch-native@npm:0.1.5"
-  checksum: 524a5169a751e5fe85c3432331a4726b48f0a237e942a92c3821b9e34c862c051de659af5054f3c55877d600051f0e354c3114a13755f53270b67c60443e9c7a
-  languageName: node
-  linkType: hard
-
-"node-fetch@npm:node-fetch-native@0.1.8":
+"node-fetch-native@npm:^0.1.8, node-fetch@npm:node-fetch-native@0.1.8":
   version: 0.1.8
   resolution: "node-fetch-native@npm:0.1.8"
   checksum: 1cea29dc30e9b570b5510656f41050e7d2df70acc41937911d4374c404ac35b4592d6b6959a81f336f00f2d74b321d039b80d8a1b62eaaa395747733bc31c799
@@ -6090,15 +6092,15 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"ohmyfetch@npm:0.4.19":
-  version: 0.4.19
-  resolution: "ohmyfetch@npm:0.4.19"
+"ohmyfetch@npm:0.4.20":
+  version: 0.4.20
+  resolution: "ohmyfetch@npm:0.4.20"
   dependencies:
     destr: ^1.1.1
-    node-fetch-native: ^0.1.5
-    ufo: ^0.8.5
-    undici: ^5.10.0
-  checksum: dbd3670f79c830c854fefedc113d5e750574fa09dbf6ffaa70733217486f534c3703be09fb8e566d0e335c74e1f705bb81671fb1b47f5db5ab348749d761c7e5
+    node-fetch-native: ^0.1.8
+    ufo: ^0.8.6
+    undici: ^5.11.0
+  checksum: dfaffa9f38bdcd6926281aaab9689a9dcdf9181c8d56a45278d7f6ed81d3c0ba3eed60e24078798c9e144b4ad348c92481dfcfb5106115d6864b4408dc7050f6
   languageName: node
   linkType: hard
 
@@ -7382,6 +7384,13 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
+"streamsearch@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "streamsearch@npm:1.1.0"
+  checksum: 1cce16cea8405d7a233d32ca5e00a00169cc0e19fbc02aa839959985f267335d435c07f96e5e0edd0eadc6d39c98d5435fb5bbbdefc62c41834eadc5622ad942
+  languageName: node
+  linkType: hard
+
 "string-argv@npm:^0.3.1":
   version: 0.3.1
   resolution: "string-argv@npm:0.3.1"
@@ -7950,10 +7959,10 @@ typescript@4.3.4:
   languageName: node
   linkType: hard
 
-"ufo@npm:^0.8.5":
-  version: 0.8.5
-  resolution: "ufo@npm:0.8.5"
-  checksum: 4dcf657a906550112ab1eb045110ebb768a914fb653373a2c363776a1f6ba25ea9d20bd5ed7f4bb44fb72bd4421b37d62991cd5ce4e3a2aef7e3eae450bb9508
+"ufo@npm:^0.8.6":
+  version: 0.8.6
+  resolution: "ufo@npm:0.8.6"
+  checksum: 5d483576230c7bfa2c9c9e5d864995e18d6c08ee3955c2237cc1a0d4b35a52991a0f5d26fe8cbf11952109a925a88dc14d973e0d14159b5b96b0fe7393a52899
   languageName: node
   linkType: hard
 
@@ -7969,10 +7978,12 @@ typescript@4.3.4:
   languageName: node
   linkType: hard
 
-"undici@npm:^5.10.0":
-  version: 5.10.0
-  resolution: "undici@npm:5.10.0"
-  checksum: 7ba2b71dccc74cd2bdf645b83e9aaef374ae04855943d0a2f42a3d0b9e5556f37cc9b5156fb5288277a2fa95fd46a56f3ae0d5cf73db3f008d75ec41104b136c
+"undici@npm:^5.11.0":
+  version: 5.11.0
+  resolution: "undici@npm:5.11.0"
+  dependencies:
+    busboy: ^1.6.0
+  checksum: 20669ef4023d24a75e81ed8142829f525f16af14d61f833b5f19cfc6bed7c706adde343a190d764dcceb227eba3211222d2b194010462a2ca221a7da0487f563
   languageName: node
   linkType: hard
 
