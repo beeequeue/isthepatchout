@@ -1270,26 +1270,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@edge-runtime/format@npm:1.1.0-beta.33":
-  version: 1.1.0-beta.33
-  resolution: "@edge-runtime/format@npm:1.1.0-beta.33"
-  checksum: 507f772a80b3c89ecc6f4ef569c63d180d82a1060798b513b741dd925a2e57054c9a5940eeaf6a4a5647c590ae6d9449d1f5460eebc23ff807624dc4ce4e09f3
+"@edge-runtime/format@npm:1.1.0-beta.34":
+  version: 1.1.0-beta.34
+  resolution: "@edge-runtime/format@npm:1.1.0-beta.34"
+  checksum: 009bbd53d2772505c680db734e6f1cfbbd3caaa1394f064c1c942c7348dbb56e7682472931f6f07912edc943e60e834ad56811fcf83f1e2c8751d5ebf9202c4a
   languageName: node
   linkType: hard
 
-"@edge-runtime/primitives@npm:1.1.0-beta.36":
-  version: 1.1.0-beta.36
-  resolution: "@edge-runtime/primitives@npm:1.1.0-beta.36"
-  checksum: c168824e5ce7c6fa89c86acbdfda4eb2e63d11622027b66bf078cf86519a58d49aca0ec6cab48639b28032ffef2b8b2bfb9d346edf735d20c9d839eae7e9a591
+"@edge-runtime/primitives@npm:1.1.0-beta.37":
+  version: 1.1.0-beta.37
+  resolution: "@edge-runtime/primitives@npm:1.1.0-beta.37"
+  checksum: 2d9766eb88de103f6ab7f75db318892cd20304f00b5f7c93ee12c016e2655b8aa6fb9e2eb4982b1dc7579096765d7d65ae09d7a10680e918c3a8f442ff8c28a9
   languageName: node
   linkType: hard
 
-"@edge-runtime/vm@npm:1.1.0-beta.36":
-  version: 1.1.0-beta.36
-  resolution: "@edge-runtime/vm@npm:1.1.0-beta.36"
+"@edge-runtime/vm@npm:1.1.0-beta.37":
+  version: 1.1.0-beta.37
+  resolution: "@edge-runtime/vm@npm:1.1.0-beta.37"
   dependencies:
-    "@edge-runtime/primitives": 1.1.0-beta.36
-  checksum: bdfdd69dee0063cf50dd2a0b547bb6050d4159fa87023112afcb1b1cd106d7dc1000db0aed0927050f580ff9335fffcb53d7141fb13ab20859ec721a5726db1a
+    "@edge-runtime/primitives": 1.1.0-beta.37
+  checksum: 05419ebd835c37ee7bf0d892106fc10e258c411ad9a62d2a6fe43da5bbf3b4957df2f1ce14cd6493249c89c186707aa7ed30329a34c1d28228a74cfc59efabaa
   languageName: node
   linkType: hard
 
@@ -1819,22 +1819,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/node@npm:2.5.25":
-  version: 2.5.25
-  resolution: "@vercel/node@npm:2.5.25"
+"@vercel/node@npm:2.5.26":
+  version: 2.5.26
+  resolution: "@vercel/node@npm:2.5.26"
   dependencies:
-    "@edge-runtime/vm": 1.1.0-beta.36
+    "@edge-runtime/vm": 1.1.0-beta.37
     "@types/node": "*"
     "@vercel/build-utils": 5.5.5
     "@vercel/node-bridge": 3.0.0
     "@vercel/static-config": 2.0.3
-    edge-runtime: 1.1.0-beta.38
+    edge-runtime: 1.1.0-beta.40
     esbuild: 0.14.47
     exit-hook: 2.2.1
     node-fetch: 2.6.7
     ts-node: 8.9.1
     typescript: 4.3.4
-  checksum: 6013411277476c596091aa734cfcba7b3996a5c4fcbf8d28151ed3bd8ee977d4e67a79c877eb1e9330a9c181cce6f32e8193aa411c5aae26f9c7698ec2294839
+  checksum: 00fcf151db51936d32fa5a35ea59f56e9e3f4310c61f31db409b16210e9493bc32e52f85ff9326bab5035c7375a0974110e557bc283b04f672de772fedd3da78
   languageName: node
   linkType: hard
 
@@ -3195,12 +3195,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"edge-runtime@npm:1.1.0-beta.38":
-  version: 1.1.0-beta.38
-  resolution: "edge-runtime@npm:1.1.0-beta.38"
+"edge-runtime@npm:1.1.0-beta.40":
+  version: 1.1.0-beta.40
+  resolution: "edge-runtime@npm:1.1.0-beta.40"
   dependencies:
-    "@edge-runtime/format": 1.1.0-beta.33
-    "@edge-runtime/vm": 1.1.0-beta.36
+    "@edge-runtime/format": 1.1.0-beta.34
+    "@edge-runtime/vm": 1.1.0-beta.37
     exit-hook: 2.2.1
     http-status: 1.5.3
     mri: 1.2.0
@@ -3210,7 +3210,7 @@ __metadata:
     time-span: 4.0.0
   bin:
     edge-runtime: dist/cli/index.js
-  checksum: 01e48aa09d3faf6719c28f6561370760314c1ccc4f9e12dbe90c5ec8e3a60d656689122bfbc22a1e32c06a81a7280113523b6e7f94b12bb76227ebacb204052d
+  checksum: 7094c8df29480a3eac05d7b2828e5a3c3a6139acc6df9b98d3087e43278af98d6ca4d168d8f8705d85f3aeb62dc7f196f4bda4c8f5f463fb3482dc0183f77ed1
   languageName: node
   linkType: hard
 
@@ -5200,7 +5200,7 @@ fsevents@~2.3.2:
     "@supabase/supabase-js": 2.0.0-rc.9
     "@types/canvas-confetti": 1.4.3
     "@types/node": 16.11.68
-    "@vercel/node": 2.5.25
+    "@vercel/node": 2.5.26
     "@vitejs/plugin-vue": 3.1.2
     "@vue/compiler-sfc": 3.2.41
     "@vueuse/core": 9.3.1
