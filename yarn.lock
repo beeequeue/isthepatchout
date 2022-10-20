@@ -5228,7 +5228,7 @@ fsevents@~2.3.2:
     tailwindcss: 3.2.0
     typescript: 4.8.4
     vite: 3.1.8
-    vite-plugin-checker: 0.4.9
+    vite-plugin-checker: 0.5.1
     vite-plugin-pwa: 0.13.1
     vite-plugin-windicss: 1.8.8
     vue: 3.2.41
@@ -8109,9 +8109,9 @@ typescript@4.3.4:
   languageName: node
   linkType: hard
 
-"vite-plugin-checker@npm:0.4.9":
-  version: 0.4.9
-  resolution: "vite-plugin-checker@npm:0.4.9"
+"vite-plugin-checker@npm:0.5.1":
+  version: 0.5.1
+  resolution: "vite-plugin-checker@npm:0.5.1"
   dependencies:
     "@babel/code-frame": ^7.12.13
     ansi-escapes: ^4.3.0
@@ -8129,10 +8129,21 @@ typescript@4.3.4:
     vscode-languageserver-textdocument: ^1.0.1
     vscode-uri: ^3.0.2
   peerDependencies:
+    eslint: ">=7"
+    typescript: "*"
     vite: ^2.0.0 || ^3.0.0-0
-  bin:
-    vite-plugin-checker-vls: bin/vls
-  checksum: b3bff686c3a48335869376d01ceb98ec4a5fa961dcdb4968ab2e629ab989a7760f2ea29c3660cf3fa54f3354968c93415fc918f2bebea2ec8a6bb93692eec41a
+    vls: "*"
+    vti: "*"
+  peerDependenciesMeta:
+    eslint:
+      optional: true
+    typescript:
+      optional: true
+    vls:
+      optional: true
+    vti:
+      optional: true
+  checksum: eed0b1a07563ca5b0567bbb39348a46208282f2c10c47d86d5c4d334c04bde30a1ce80566359588bdbae61339a8ee4ca609b9d4d779d50c6233d3efa8eb36220
   languageName: node
   linkType: hard
 
