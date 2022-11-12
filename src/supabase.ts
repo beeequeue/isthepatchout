@@ -1,8 +1,11 @@
-import type { RealtimeChannel } from "@supabase/realtime-js"
+import type {
+  RealtimeChannel,
+  RealtimePostgresInsertPayload,
+} from "@supabase/realtime-js"
 import { SupabaseClient } from "@supabase/supabase-js"
 
 import { mutations } from "./state"
-import type { Database, Patch, RealtimeChange } from "./types"
+import type { Database, Patch } from "./types"
 
 export const supabase = new SupabaseClient<Database>(
   import.meta.env.VITE_SUPABASE_URL,
@@ -24,12 +27,9 @@ export const fetchLatestPatch = async () => {
 }
 
 export const initChangeDetection = (latestPatch: Patch): RealtimeChannel => {
-  const handler = (payload: RealtimeChange<"patches">) => {
-    if (
-      payload.record?.releasedAt != null &&
-      payload.record.number >= (latestPatch.number ?? 0)
-    ) {
-      mutations.releaseNewPatch(payload.record)
+  const handler = (payload: RealtimePostgresInsertPayload<Patch>) => {
+    if (payload.new.releasedAt != null && payload.new.number >= latestPatch.number) {
+      mutations.releaseNewPatch(payload.new)
     }
   }
 
