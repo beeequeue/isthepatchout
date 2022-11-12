@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { precacheAndRoute } from "workbox-precaching"
 
 import type { PushEventPatch } from "../types"
