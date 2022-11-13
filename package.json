@@ -8,7 +8,7 @@
   "private": true,
   "packageManager": "yarn@3.2.4",
   "engines": {
-    "node": "^16.15"
+    "node": "^18.0.0"
   },
   "simple-git-hooks": {
     "pre-commit": "yarn lint-staged"
