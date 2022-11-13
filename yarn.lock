@@ -1468,6 +1468,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rollup/plugin-replace@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "@rollup/plugin-replace@npm:4.0.0"
+  dependencies:
+    "@rollup/pluginutils": ^3.1.0
+    magic-string: ^0.25.7
+  peerDependencies:
+    rollup: ^1.20.0 || ^2.0.0
+  checksum: b61701e612661a46da06ca88f390c3839b586708abc0329a476411b90aa8ac59fe94437ede4c3fe53fea268b3054ea9d7d4ee851d7bd0cb7a5f06906002067cb
+  languageName: node
+  linkType: hard
+
 "@rollup/pluginutils@npm:^3.1.0":
   version: 3.1.0
   resolution: "@rollup/pluginutils@npm:3.1.0"
@@ -5232,7 +5244,7 @@ fsevents@~2.3.2:
     typescript: 4.8.4
     vite: 3.1.8
     vite-plugin-checker: 0.4.9
-    vite-plugin-pwa: 0.13.1
+    vite-plugin-pwa: 0.13.3
     vite-plugin-windicss: 1.8.8
     vue: 3.2.41
     vue-tsc: 1.0.9
@@ -8147,10 +8159,11 @@ typescript@4.3.4:
   languageName: node
   linkType: hard
 
-"vite-plugin-pwa@npm:0.13.1":
-  version: 0.13.1
-  resolution: "vite-plugin-pwa@npm:0.13.1"
+"vite-plugin-pwa@npm:0.13.3":
+  version: 0.13.3
+  resolution: "vite-plugin-pwa@npm:0.13.3"
   dependencies:
+    "@rollup/plugin-replace": ^4.0.0
     debug: ^4.3.4
     fast-glob: ^3.2.11
     pretty-bytes: ^6.0.0
@@ -8161,7 +8174,7 @@ typescript@4.3.4:
     vite: ^3.1.0
     workbox-build: ^6.5.4
     workbox-window: ^6.5.4
-  checksum: 705bb4593cbdfef0ea375af420fd46cdb301a3298abe41e80aa6ec08e793112960179d14c567f3c7c4d0bdde0702b4b1864a3aff23ceaedf7687d649172e5e62
+  checksum: be1e8699e2fb4fea98454d20c8df4bcbd828aecb2b714a1251405fde4dc9ac9c95520b33fdfc1a3d91d51f9d920501d93f57f4f0a2f1361ba38785c86e4756a4
   languageName: node
   linkType: hard
 
