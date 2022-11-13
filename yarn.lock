@@ -2046,31 +2046,31 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vueuse/core@npm:9.3.1":
-  version: 9.3.1
-  resolution: "@vueuse/core@npm:9.3.1"
+"@vueuse/core@npm:9.5.0":
+  version: 9.5.0
+  resolution: "@vueuse/core@npm:9.5.0"
   dependencies:
     "@types/web-bluetooth": ^0.0.16
-    "@vueuse/metadata": 9.3.1
-    "@vueuse/shared": 9.3.1
+    "@vueuse/metadata": 9.5.0
+    "@vueuse/shared": 9.5.0
     vue-demi: "*"
-  checksum: 36dacdfde462b46bcdb0ec0e8cb2c915d816922daa712b4ac6d992385ad7b42ea71b9ddcf54b46ba00f96b8d7e360741b43c20f1896e553900841d2a9cb0f480
+  checksum: 55bac9f1c8c5aa4f8f795f4bb9ea61754db6ec2f683081d804a9f474da63d0d3a01e863712583f70db7ab5f1a5bd1d52c40edb4c9addcf497c1b31c4f8fed714
   languageName: node
   linkType: hard
 
-"@vueuse/metadata@npm:9.3.1":
-  version: 9.3.1
-  resolution: "@vueuse/metadata@npm:9.3.1"
-  checksum: 2aec6683570afa1657d62e91353da2cb69472e46b3ed3551b5039347481aa13afa09d240f63b33707c9075713395f39993a88095f81a017a614bd3da1614a012
+"@vueuse/metadata@npm:9.5.0":
+  version: 9.5.0
+  resolution: "@vueuse/metadata@npm:9.5.0"
+  checksum: b832754a03682086214ad3f99daf31e78339f7c4d2661a1ffb1565eeceef41435b77780d4c83b4f42299ba037d0a77f6eecd8b6d7a4546aa6b75cb82644bb5bb
   languageName: node
   linkType: hard
 
-"@vueuse/shared@npm:9.3.1":
-  version: 9.3.1
-  resolution: "@vueuse/shared@npm:9.3.1"
+"@vueuse/shared@npm:9.5.0":
+  version: 9.5.0
+  resolution: "@vueuse/shared@npm:9.5.0"
   dependencies:
     vue-demi: "*"
-  checksum: ec56d197ba0a9b984e514c99237d4a613ab480de44fd9c33c781e2b9aee8ee80ff9a3c49c0bd9cb0cfae38f75e1d72a03a9eb737b50fb46cd30e1c8090d8474e
+  checksum: d7f697a489bdb6d5c590b19b31d59a5754c1b3b11278a2e186aed081a90fe79b434319e9122a470cc3e96637062bf63202adc08919d61e56d7f57c51c3282a48
   languageName: node
   linkType: hard
 
@@ -5226,7 +5226,7 @@ fsevents@~2.3.2:
     "@vercel/node": 2.6.2
     "@vitejs/plugin-vue": 3.2.0
     "@vue/compiler-sfc": 3.2.45
-    "@vueuse/core": 9.3.1
+    "@vueuse/core": 9.5.0
     "@windicss/animations": 1.0.8
     browserslist: 4.21.4
     bundlewatch: 0.3.3
