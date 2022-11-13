@@ -2676,10 +2676,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"canvas-confetti@npm:1.5.1":
-  version: 1.5.1
-  resolution: "canvas-confetti@npm:1.5.1"
-  checksum: e5932e34261615d629aac24aebad0472dd01c6cc3a3d6460ef37ab81eb533a2fdcec1cd842fcad6275f907fe378fc71cc90c91e1f997df63b0865ec2d5783ad8
+"canvas-confetti@npm:1.6.0":
+  version: 1.6.0
+  resolution: "canvas-confetti@npm:1.6.0"
+  checksum: be19e3be736ab28aa8af7b53cba9f4146f5714edadbf4d5a7d7b1899914dc59a8ac5574260fe6b7d9995c51df5787b0b707adfbb72dbacbc61fc03f9f2b25291
   languageName: node
   linkType: hard
 
@@ -5230,7 +5230,7 @@ fsevents@~2.3.2:
     "@windicss/animations": 1.0.8
     browserslist: 4.21.4
     bundlewatch: 0.3.3
-    canvas-confetti: 1.5.1
+    canvas-confetti: 1.6.0
     date-fns: 2.29.3
     dotaver: 1.0.1
     dotenv: 16.0.3
