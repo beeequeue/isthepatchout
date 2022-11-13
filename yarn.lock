@@ -3100,10 +3100,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"destr@npm:^1.1.1":
-  version: 1.1.1
-  resolution: "destr@npm:1.1.1"
-  checksum: 334886494cef39d39526061071b83384dee493b531a7a13f6705e92a168ebb072b45be4aba4179aaba88c4a32c3e35d8058d1357871179dbaf74890584199019
+"destr@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "destr@npm:1.2.0"
+  checksum: b8617f2aba0fc2eee3d77e696d16d50cd5a116af9c9b3149be5d90ff55c4aa4bce197eae75dd1776f054361cbb25ec1b69bab014808ab78fc5e6a5d14866d7e7
   languageName: node
   linkType: hard
 
@@ -5219,7 +5219,7 @@ fsevents@~2.3.2:
     fathom-client: 3.5.0
     lint-staged: 13.0.3
     myzod: 1.8.8
-    ohmyfetch: 0.4.20
+    ohmyfetch: 0.4.21
     p-queue: 6.6.2
     pino: 8.6.1
     pino-pretty: 9.1.1
@@ -6102,15 +6102,15 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"ohmyfetch@npm:0.4.20":
-  version: 0.4.20
-  resolution: "ohmyfetch@npm:0.4.20"
+"ohmyfetch@npm:0.4.21":
+  version: 0.4.21
+  resolution: "ohmyfetch@npm:0.4.21"
   dependencies:
-    destr: ^1.1.1
+    destr: ^1.2.0
     node-fetch-native: ^0.1.8
     ufo: ^0.8.6
-    undici: ^5.11.0
-  checksum: dfaffa9f38bdcd6926281aaab9689a9dcdf9181c8d56a45278d7f6ed81d3c0ba3eed60e24078798c9e144b4ad348c92481dfcfb5106115d6864b4408dc7050f6
+    undici: ^5.12.0
+  checksum: 28bc6dc507de37d2e818dc48a768716b24ef0d00830ea810f5d3d19e36f93d49281e91fe6a7b323555097fe0079b47c3bff05d736ea30445c3995dd5db43317b
   languageName: node
   linkType: hard
 
@@ -7988,12 +7988,12 @@ typescript@4.3.4:
   languageName: node
   linkType: hard
 
-"undici@npm:^5.11.0":
-  version: 5.11.0
-  resolution: "undici@npm:5.11.0"
+"undici@npm:^5.12.0":
+  version: 5.12.0
+  resolution: "undici@npm:5.12.0"
   dependencies:
     busboy: ^1.6.0
-  checksum: 20669ef4023d24a75e81ed8142829f525f16af14d61f833b5f19cfc6bed7c706adde343a190d764dcceb227eba3211222d2b194010462a2ca221a7da0487f563
+  checksum: fbc227704943c05aa3dc1630695e10309c17d0a535678594d136db107c50593248e9ace70e1ab77496a6c837bf14aa2ab3c501a7a6c45fb6277dbf0846e15ffe
   languageName: node
   linkType: hard
 
