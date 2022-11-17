@@ -24,7 +24,7 @@ CREATE EXTENSION IF NOT EXISTS "pg_graphql" WITH SCHEMA "extensions";
 
 
 --
--- Name: EXTENSION "pg_graphql"; Type: COMMENT; Schema: -; Owner: 
+-- Name: EXTENSION "pg_graphql"; Type: COMMENT; Schema: -; Owner:
 --
 
 -- COMMENT ON EXTENSION "pg_graphql" IS 'GraphQL support';
@@ -54,7 +54,7 @@ CREATE EXTENSION IF NOT EXISTS "pg_stat_statements" WITH SCHEMA "extensions";
 
 
 --
--- Name: EXTENSION "pg_stat_statements"; Type: COMMENT; Schema: -; Owner: 
+-- Name: EXTENSION "pg_stat_statements"; Type: COMMENT; Schema: -; Owner:
 --
 
 -- COMMENT ON EXTENSION "pg_stat_statements" IS 'track execution statistics of all SQL statements executed';
@@ -68,7 +68,7 @@ CREATE EXTENSION IF NOT EXISTS "pgcrypto" WITH SCHEMA "extensions";
 
 
 --
--- Name: EXTENSION "pgcrypto"; Type: COMMENT; Schema: -; Owner: 
+-- Name: EXTENSION "pgcrypto"; Type: COMMENT; Schema: -; Owner:
 --
 
 -- COMMENT ON EXTENSION "pgcrypto" IS 'cryptographic functions';
@@ -82,7 +82,7 @@ CREATE EXTENSION IF NOT EXISTS "pgjwt" WITH SCHEMA "extensions";
 
 
 --
--- Name: EXTENSION "pgjwt"; Type: COMMENT; Schema: -; Owner: 
+-- Name: EXTENSION "pgjwt"; Type: COMMENT; Schema: -; Owner:
 --
 
 -- COMMENT ON EXTENSION "pgjwt" IS 'JSON Web Token API for Postgresql';
@@ -96,7 +96,7 @@ CREATE EXTENSION IF NOT EXISTS "uuid-ossp" WITH SCHEMA "extensions";
 
 
 --
--- Name: EXTENSION "uuid-ossp"; Type: COMMENT; Schema: -; Owner: 
+-- Name: EXTENSION "uuid-ossp"; Type: COMMENT; Schema: -; Owner:
 --
 
 -- COMMENT ON EXTENSION "uuid-ossp" IS 'generate universally unique identifiers (UUIDs)';
@@ -580,60 +580,60 @@ GRANT ALL ON FUNCTION "extensions"."verify"("token" "text", "secret" "text", "al
 -- Name: FUNCTION "get_built_schema_version"(); Type: ACL; Schema: graphql; Owner: supabase_admin
 --
 
-GRANT ALL ON FUNCTION "graphql"."get_built_schema_version"() TO "postgres";
-GRANT ALL ON FUNCTION "graphql"."get_built_schema_version"() TO "anon";
-GRANT ALL ON FUNCTION "graphql"."get_built_schema_version"() TO "authenticated";
-GRANT ALL ON FUNCTION "graphql"."get_built_schema_version"() TO "service_role";
+-- GRANT ALL ON FUNCTION "graphql"."get_built_schema_version"() TO "postgres";
+-- GRANT ALL ON FUNCTION "graphql"."get_built_schema_version"() TO "anon";
+-- GRANT ALL ON FUNCTION "graphql"."get_built_schema_version"() TO "authenticated";
+-- GRANT ALL ON FUNCTION "graphql"."get_built_schema_version"() TO "service_role";
 
 
 --
 -- Name: FUNCTION "rebuild_on_ddl"(); Type: ACL; Schema: graphql; Owner: supabase_admin
 --
 
-GRANT ALL ON FUNCTION "graphql"."rebuild_on_ddl"() TO "postgres";
-GRANT ALL ON FUNCTION "graphql"."rebuild_on_ddl"() TO "anon";
-GRANT ALL ON FUNCTION "graphql"."rebuild_on_ddl"() TO "authenticated";
-GRANT ALL ON FUNCTION "graphql"."rebuild_on_ddl"() TO "service_role";
+-- GRANT ALL ON FUNCTION "graphql"."rebuild_on_ddl"() TO "postgres";
+-- GRANT ALL ON FUNCTION "graphql"."rebuild_on_ddl"() TO "anon";
+-- GRANT ALL ON FUNCTION "graphql"."rebuild_on_ddl"() TO "authenticated";
+-- GRANT ALL ON FUNCTION "graphql"."rebuild_on_ddl"() TO "service_role";
 
 
 --
 -- Name: FUNCTION "rebuild_on_drop"(); Type: ACL; Schema: graphql; Owner: supabase_admin
 --
 
-GRANT ALL ON FUNCTION "graphql"."rebuild_on_drop"() TO "postgres";
-GRANT ALL ON FUNCTION "graphql"."rebuild_on_drop"() TO "anon";
-GRANT ALL ON FUNCTION "graphql"."rebuild_on_drop"() TO "authenticated";
-GRANT ALL ON FUNCTION "graphql"."rebuild_on_drop"() TO "service_role";
+-- GRANT ALL ON FUNCTION "graphql"."rebuild_on_drop"() TO "postgres";
+-- GRANT ALL ON FUNCTION "graphql"."rebuild_on_drop"() TO "anon";
+-- GRANT ALL ON FUNCTION "graphql"."rebuild_on_drop"() TO "authenticated";
+-- GRANT ALL ON FUNCTION "graphql"."rebuild_on_drop"() TO "service_role";
 
 
 --
 -- Name: FUNCTION "rebuild_schema"(); Type: ACL; Schema: graphql; Owner: supabase_admin
 --
 
-GRANT ALL ON FUNCTION "graphql"."rebuild_schema"() TO "postgres";
-GRANT ALL ON FUNCTION "graphql"."rebuild_schema"() TO "anon";
-GRANT ALL ON FUNCTION "graphql"."rebuild_schema"() TO "authenticated";
-GRANT ALL ON FUNCTION "graphql"."rebuild_schema"() TO "service_role";
+-- GRANT ALL ON FUNCTION "graphql"."rebuild_schema"() TO "postgres";
+-- GRANT ALL ON FUNCTION "graphql"."rebuild_schema"() TO "anon";
+-- GRANT ALL ON FUNCTION "graphql"."rebuild_schema"() TO "authenticated";
+-- GRANT ALL ON FUNCTION "graphql"."rebuild_schema"() TO "service_role";
 
 
 --
 -- Name: FUNCTION "variable_definitions_sort"("variable_definitions" "jsonb"); Type: ACL; Schema: graphql; Owner: supabase_admin
 --
 
-GRANT ALL ON FUNCTION "graphql"."variable_definitions_sort"("variable_definitions" "jsonb") TO "postgres";
-GRANT ALL ON FUNCTION "graphql"."variable_definitions_sort"("variable_definitions" "jsonb") TO "anon";
-GRANT ALL ON FUNCTION "graphql"."variable_definitions_sort"("variable_definitions" "jsonb") TO "authenticated";
-GRANT ALL ON FUNCTION "graphql"."variable_definitions_sort"("variable_definitions" "jsonb") TO "service_role";
+-- GRANT ALL ON FUNCTION "graphql"."variable_definitions_sort"("variable_definitions" "jsonb") TO "postgres";
+-- GRANT ALL ON FUNCTION "graphql"."variable_definitions_sort"("variable_definitions" "jsonb") TO "anon";
+-- GRANT ALL ON FUNCTION "graphql"."variable_definitions_sort"("variable_definitions" "jsonb") TO "authenticated";
+-- GRANT ALL ON FUNCTION "graphql"."variable_definitions_sort"("variable_definitions" "jsonb") TO "service_role";
 
 
 --
 -- Name: FUNCTION "graphql"("operationName" "text", "query" "text", "variables" "jsonb", "extensions" "jsonb"); Type: ACL; Schema: graphql_public; Owner: supabase_admin
 --
 
-GRANT ALL ON FUNCTION "graphql_public"."graphql"("operationName" "text", "query" "text", "variables" "jsonb", "extensions" "jsonb") TO "postgres";
-GRANT ALL ON FUNCTION "graphql_public"."graphql"("operationName" "text", "query" "text", "variables" "jsonb", "extensions" "jsonb") TO "anon";
-GRANT ALL ON FUNCTION "graphql_public"."graphql"("operationName" "text", "query" "text", "variables" "jsonb", "extensions" "jsonb") TO "authenticated";
-GRANT ALL ON FUNCTION "graphql_public"."graphql"("operationName" "text", "query" "text", "variables" "jsonb", "extensions" "jsonb") TO "service_role";
+-- GRANT ALL ON FUNCTION "graphql_public"."graphql"("operationName" "text", "query" "text", "variables" "jsonb", "extensions" "jsonb") TO "postgres";
+-- GRANT ALL ON FUNCTION "graphql_public"."graphql"("operationName" "text", "query" "text", "variables" "jsonb", "extensions" "jsonb") TO "anon";
+-- GRANT ALL ON FUNCTION "graphql_public"."graphql"("operationName" "text", "query" "text", "variables" "jsonb", "extensions" "jsonb") TO "authenticated";
+-- GRANT ALL ON FUNCTION "graphql_public"."graphql"("operationName" "text", "query" "text", "variables" "jsonb", "extensions" "jsonb") TO "service_role";
 
 
 --
@@ -647,20 +647,20 @@ GRANT ALL ON TABLE "extensions"."pg_stat_statements" TO "dashboard_user";
 -- Name: TABLE "schema_version"; Type: ACL; Schema: graphql; Owner: supabase_admin
 --
 
-GRANT ALL ON TABLE "graphql"."schema_version" TO "postgres";
-GRANT ALL ON TABLE "graphql"."schema_version" TO "anon";
-GRANT ALL ON TABLE "graphql"."schema_version" TO "authenticated";
-GRANT ALL ON TABLE "graphql"."schema_version" TO "service_role";
+-- GRANT ALL ON TABLE "graphql"."schema_version" TO "postgres";
+-- GRANT ALL ON TABLE "graphql"."schema_version" TO "anon";
+-- GRANT ALL ON TABLE "graphql"."schema_version" TO "authenticated";
+-- GRANT ALL ON TABLE "graphql"."schema_version" TO "service_role";
 
 
 --
 -- Name: SEQUENCE "seq_schema_version"; Type: ACL; Schema: graphql; Owner: supabase_admin
 --
 
-GRANT ALL ON SEQUENCE "graphql"."seq_schema_version" TO "postgres";
-GRANT ALL ON SEQUENCE "graphql"."seq_schema_version" TO "anon";
-GRANT ALL ON SEQUENCE "graphql"."seq_schema_version" TO "authenticated";
-GRANT ALL ON SEQUENCE "graphql"."seq_schema_version" TO "service_role";
+-- GRANT ALL ON SEQUENCE "graphql"."seq_schema_version" TO "postgres";
+-- GRANT ALL ON SEQUENCE "graphql"."seq_schema_version" TO "anon";
+-- GRANT ALL ON SEQUENCE "graphql"."seq_schema_version" TO "authenticated";
+-- GRANT ALL ON SEQUENCE "graphql"."seq_schema_version" TO "service_role";
 
 
 --
