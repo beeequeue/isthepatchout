@@ -1825,10 +1825,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/build-utils@npm:5.5.9":
-  version: 5.5.9
-  resolution: "@vercel/build-utils@npm:5.5.9"
-  checksum: 2df8921587255f24fae62c8f49db05a4782eb9111c7585dcc23c2bd4d7744973ff53c9c32401cf8f5c45679549e4274e560cbffd329524d2556393bbd317ed4d
+"@vercel/build-utils@npm:5.6.0":
+  version: 5.6.0
+  resolution: "@vercel/build-utils@npm:5.6.0"
+  checksum: 18f657dc5c1a0bfb6b14fedee525b1d590b7a7f875b05b2be983956ffef29fabbb6f1219ef4191b812028cb37030d1af4943e71b6e856f770f7e644273b7b68d
   languageName: node
   linkType: hard
 
@@ -1839,13 +1839,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/node@npm:2.6.4":
-  version: 2.6.4
-  resolution: "@vercel/node@npm:2.6.4"
+"@vercel/node@npm:2.7.0":
+  version: 2.7.0
+  resolution: "@vercel/node@npm:2.7.0"
   dependencies:
     "@edge-runtime/vm": 2.0.0
     "@types/node": 14.18.33
-    "@vercel/build-utils": 5.5.9
+    "@vercel/build-utils": 5.6.0
     "@vercel/node-bridge": 3.1.2
     "@vercel/static-config": 2.0.6
     edge-runtime: 2.0.0
@@ -1854,7 +1854,7 @@ __metadata:
     node-fetch: 2.6.7
     ts-node: 8.9.1
     typescript: 4.3.4
-  checksum: 52056d171fb3c13aae91cf1c5e5edac4d9ef1a1db34ff72cfd40f25428b3817ddaf4229dfb7ee0e2abb2c4f6df13608ecceddefc21b1a5d018d0ca21eb46d27f
+  checksum: bd105a2a0985ff13343b1730b29cd4a3b87ecf9da2ff1d84ab304f5c76fff3b858778ec7465f6ac41a2268aec75679b533b1d613bbf97cca924ab7bbd47cd60c
   languageName: node
   linkType: hard
 
@@ -5223,7 +5223,7 @@ fsevents@~2.3.2:
     "@supabase/supabase-js": 2.1.1
     "@types/canvas-confetti": 1.6.0
     "@types/node": 16.18.3
-    "@vercel/node": 2.6.4
+    "@vercel/node": 2.7.0
     "@vitejs/plugin-vue": 3.2.0
     "@vue/compiler-sfc": 3.2.45
     "@vueuse/core": 9.6.0
