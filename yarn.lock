@@ -3617,16 +3617,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild-plugin-browserslist@npm:0.5.2":
-  version: 0.5.2
-  resolution: "esbuild-plugin-browserslist@npm:0.5.2"
+"esbuild-plugin-browserslist@npm:0.5.3":
+  version: 0.5.3
+  resolution: "esbuild-plugin-browserslist@npm:0.5.3"
   dependencies:
     debug: ^4.3.4
     zod: ^3.19.1
   peerDependencies:
     browserslist: ^4.21.4
-    esbuild: ~0.15.12
-  checksum: 98954a8d42e4c18484ed895ae21d4f73037529c4f78ea36b0d82dbc3fc9f8205ec30ce80b617de394c3013c8cd499a5fc790b678a21da3a2e68db10e66d5cd1b
+    esbuild: ~0.15.16
+  checksum: 8ae662e1982a9acde1a7e29009a925f99bc6f9e8365ce49eb036bb170fedfa12d764bee4b084291fd3da86b5b4fd0e8a41d9c2e3d1c38496e4f9e45b42ed93c8
   languageName: node
   linkType: hard
 
@@ -5234,7 +5234,7 @@ fsevents@~2.3.2:
     date-fns: 2.29.3
     dotaver: 1.0.1
     dotenv: 16.0.3
-    esbuild-plugin-browserslist: 0.5.2
+    esbuild-plugin-browserslist: 0.5.3
     eslint: 8.29.0
     fathom-client: 3.5.0
     lint-staged: 13.1.0
