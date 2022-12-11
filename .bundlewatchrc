@@ -18,5 +18,5 @@
       "maxSize": "58kb"
     }
   ],
-  "normalizeFilenames": "^.+?(\\.\\w+?)?\\.\\w+$"
+  "normalizeFilenames": "^.+?(\\-\\w+?)?\\.\\w+$"
 }
