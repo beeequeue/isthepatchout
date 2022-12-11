@@ -14,9 +14,9 @@
       "maxSize": "10kb"
     },
     {
-      "path": "./dist/assets/index.*.js",
+      "path": "./dist/assets/index-*.js",
       "maxSize": "58kb"
     }
   ],
-  "normalizeFilenames": "^.+?(\\.\\w+?)?\\.\\w+$"
+  "normalizeFilenames": "^.+?(\\-\\w+?)?\\.\\w+$"
 }
