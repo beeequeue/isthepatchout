@@ -5072,7 +5072,7 @@ fsevents@~2.3.2:
     simple-icons: 7.21.0
     tailwindcss: 3.2.4
     typescript: 4.9.4
-    vite: 4.0.1
+    vite: 4.0.2
     vite-plugin-checker: 0.4.9
     vite-plugin-pwa: 0.14.0
     vite-plugin-windicss: 1.8.10
@@ -8031,9 +8031,9 @@ typescript@4.3.4:
   languageName: node
   linkType: hard
 
-"vite@npm:4.0.1":
-  version: 4.0.1
-  resolution: "vite@npm:4.0.1"
+"vite@npm:4.0.2":
+  version: 4.0.2
+  resolution: "vite@npm:4.0.2"
   dependencies:
     esbuild: ^0.16.3
     fsevents: ~2.3.2
@@ -8065,7 +8065,7 @@ typescript@4.3.4:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: c51bd7cb955973cce1c63e6d29ac25ea6f8920db6de2ca97f285c80cf9607649d87254d1fabd9aa5920149572a6220686b9e3bf6fd0851f7c86ec8522bba0098
+  checksum: b259782d83f293289f1cd7802cc525c75691fd45a1ded74e58365b5bff8f93f255daad4480269cda1660bf831f628b7a7224c9f591f039b5c0ccf351a8ee04ee
   languageName: node
   linkType: hard
 
