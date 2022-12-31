@@ -1748,9 +1748,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/supabase-js@npm:2.2.2":
-  version: 2.2.2
-  resolution: "@supabase/supabase-js@npm:2.2.2"
+"@supabase/supabase-js@npm:2.2.3":
+  version: 2.2.3
+  resolution: "@supabase/supabase-js@npm:2.2.3"
   dependencies:
     "@supabase/functions-js": ^2.0.0
     "@supabase/gotrue-js": ^2.6.1
@@ -1758,7 +1758,7 @@ __metadata:
     "@supabase/realtime-js": ^2.1.0
     "@supabase/storage-js": ^2.1.0
     cross-fetch: ^3.1.5
-  checksum: aa08583f470fa32de3fda18d102f437d002b4b74a3e1a9546cc46d0e125e9d71625bad827ea00bbd371e573e46420af8268e464a2cca68a747b1b3def905b3cb
+  checksum: 49f6b226668ae7505fa21458718ca6c23d179891635c392bdc0351314d9fc845565e545be513f2687a7195083341b9b05c42ab9a7ecef1a4d6fcc28d6b31cc54
   languageName: node
   linkType: hard
 
@@ -5042,7 +5042,7 @@ fsevents@~2.3.2:
     "@hapi/boom": 10.0.0
     "@ivanv/vue-collapse-transition": 1.0.2
     "@sentry/node": 7.28.1
-    "@supabase/supabase-js": 2.2.2
+    "@supabase/supabase-js": 2.2.3
     "@types/canvas-confetti": 1.6.0
     "@types/node": 16.18.11
     "@vercel/node": 2.8.2
