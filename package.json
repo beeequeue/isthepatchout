@@ -30,7 +30,7 @@
   },
   "resolutions": {
     "@types/node": "16.18.11",
-    "esbuild": "0.16.12",
+    "esbuild": "0.16.13",
     "node-fetch": "npm:node-fetch-native@1.0.1"
   },
   "dependencies": {
