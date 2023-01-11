@@ -1766,13 +1766,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/realtime-js@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "@supabase/realtime-js@npm:2.1.0"
+"@supabase/realtime-js@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "@supabase/realtime-js@npm:2.3.1"
   dependencies:
     "@types/phoenix": ^1.5.4
     websocket: ^1.0.34
-  checksum: 839ba208a61c8049fd3dc0be6fac1bc6cd5b8985d0ae412598dfc350f705c40066d0446381a92081a7dc1da4900d9dfa78e97e034a501da4019ae587a56549af
+  checksum: f5458904e42eb06e500af251c60d7f90a6bbfcae84eb4b279878faec95055d4dc6b8d4abf58e70e53dad8f9a50e0db710f07ecc310682de18bacccf5b79151fd
   languageName: node
   linkType: hard
 
@@ -1785,17 +1785,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@supabase/supabase-js@npm:2.2.3":
-  version: 2.2.3
-  resolution: "@supabase/supabase-js@npm:2.2.3"
+"@supabase/supabase-js@npm:2.4.0":
+  version: 2.4.0
+  resolution: "@supabase/supabase-js@npm:2.4.0"
   dependencies:
     "@supabase/functions-js": ^2.0.0
     "@supabase/gotrue-js": ^2.6.1
     "@supabase/postgrest-js": ^1.1.1
-    "@supabase/realtime-js": ^2.1.0
+    "@supabase/realtime-js": ^2.3.1
     "@supabase/storage-js": ^2.1.0
     cross-fetch: ^3.1.5
-  checksum: 49f6b226668ae7505fa21458718ca6c23d179891635c392bdc0351314d9fc845565e545be513f2687a7195083341b9b05c42ab9a7ecef1a4d6fcc28d6b31cc54
+  checksum: 55265b2af206773c1e9344a685134bff36c12efe1a04fb92e997a4fb99cedc805f7900636491839734483675ece17c5a594551a3070768b8a1af05cc79d99b88
   languageName: node
   linkType: hard
 
@@ -5148,7 +5148,7 @@ fsevents@~2.3.2:
     "@hapi/boom": 10.0.0
     "@ivanv/vue-collapse-transition": 1.0.2
     "@sentry/node": 7.30.0
-    "@supabase/supabase-js": 2.2.3
+    "@supabase/supabase-js": 2.4.0
     "@types/canvas-confetti": 1.6.0
     "@types/node": 16.18.11
     "@vercel/node": 2.8.5
