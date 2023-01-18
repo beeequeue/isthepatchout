@@ -5172,7 +5172,7 @@ fsevents@~2.3.2:
     pino: 8.8.0
     pino-pretty: 9.1.1
     prettier: 2.8.3
-    remeda: 1.5.0
+    remeda: 1.6.0
     rollup-plugin-visualizer: 5.9.0
     simple-git-hooks: 2.8.1
     simple-icons: 7.21.0
@@ -6849,10 +6849,10 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"remeda@npm:1.5.0":
-  version: 1.5.0
-  resolution: "remeda@npm:1.5.0"
-  checksum: 6d63052e5351828add6c12077f0786dfda6beeca8d114d78e152dffbac3ed9f9be002ea6b0a4014c90d855720795687be3d57a9716233660fa2a3e7236c976f9
+"remeda@npm:1.6.0":
+  version: 1.6.0
+  resolution: "remeda@npm:1.6.0"
+  checksum: 82a8dad40fafef41cde8ae7b09c30e61c1ba0ade15a43523b53be50c72d2b19ff08a58dadfe3ca324f1d4b62590ea65ab2aad699c678a464d48da35e474b6703
   languageName: node
   linkType: hard
 
