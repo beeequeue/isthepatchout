@@ -2064,28 +2064,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/build-utils@npm:5.8.3":
-  version: 5.8.3
-  resolution: "@vercel/build-utils@npm:5.8.3"
-  checksum: 44fa75adc15f06392ae5613efc024e48856145648f8cfc3e6cc992357edf9a19d7bde39ad62b9756f313b767ca2732de7a5469c982ef3ed1f35be01eb7646010
+"@vercel/build-utils@npm:5.9.0":
+  version: 5.9.0
+  resolution: "@vercel/build-utils@npm:5.9.0"
+  checksum: 612663c38c8e28845369edfc1b1020fd3583b4234e9027bf2d9295396c34bd4e4a7421226cc9966f6bde345ba9f9afbb99658ec4a016150a2781993af7041c04
   languageName: node
   linkType: hard
 
-"@vercel/node-bridge@npm:3.1.8":
-  version: 3.1.8
-  resolution: "@vercel/node-bridge@npm:3.1.8"
-  checksum: fb9deb351e084cadb71508d285e40392b525094ce5cf192716ccde65b0128487b339f1e700c56bb4e7709e84b6e2a6a751817266c5cdf667e1cc8a3c4ef973de
+"@vercel/node-bridge@npm:3.1.9":
+  version: 3.1.9
+  resolution: "@vercel/node-bridge@npm:3.1.9"
+  checksum: 24a486bd8af2ee4898253d61de8deb36b9eca138ef69a4003e51d72c249331da03a757f91171a395080955cb9b83752727ee5813d1f9761317e551c9a58a30c1
   languageName: node
   linkType: hard
 
-"@vercel/node@npm:2.8.11":
-  version: 2.8.11
-  resolution: "@vercel/node@npm:2.8.11"
+"@vercel/node@npm:2.8.13":
+  version: 2.8.13
+  resolution: "@vercel/node@npm:2.8.13"
   dependencies:
     "@edge-runtime/vm": 2.0.0
     "@types/node": 14.18.33
-    "@vercel/build-utils": 5.8.3
-    "@vercel/node-bridge": 3.1.8
+    "@vercel/build-utils": 5.9.0
+    "@vercel/node-bridge": 3.1.9
     "@vercel/static-config": 2.0.11
     edge-runtime: 2.0.0
     esbuild: 0.14.47
@@ -2093,7 +2093,7 @@ __metadata:
     node-fetch: 2.6.7
     ts-node: 10.9.1
     typescript: 4.3.4
-  checksum: 45be82a604d8e1a7464481c247febc5dd266ac5e5202fb2a81f54158c4927c6369f458a68bf987f430608f0c0a2dfd1536cd51a5167b39f0ce20e0f1925a4f8f
+  checksum: c4ae44f66927c0aa879d3cfe0e1d224980aa6c6e8d9098b0efc51a1ca971b68319fbe23bf51d0193786b2d2f217df3b20fe9374fd0a4ce027cb1afd9dc59ea35
   languageName: node
   linkType: hard
 
@@ -5151,7 +5151,7 @@ fsevents@~2.3.2:
     "@supabase/supabase-js": 2.4.0
     "@types/canvas-confetti": 1.6.0
     "@types/node": 16.18.11
-    "@vercel/node": 2.8.11
+    "@vercel/node": 2.8.13
     "@vitejs/plugin-vue": 4.0.0
     "@vue/compiler-sfc": 3.2.45
     "@vueuse/core": 9.11.0
