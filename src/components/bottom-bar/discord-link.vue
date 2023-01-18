@@ -1,13 +1,13 @@
 <template>
   <Clickable is="a" :href="url" rel="noopener" class="flex items-center p-2 m-2px">
-    <Icon :icon="discordIcon.svg" class="fill-gray-100 mr-2" />
+    <Icon :icon="discordIcon" class="fill-gray-100 mr-2" />
 
     Get notified in Discord
   </Clickable>
 </template>
 
 <script lang="ts" setup>
-import { siDiscord as discordIcon } from "simple-icons/icons"
+import discordIcon from "simple-icons/icons/discord.svg?raw"
 
 import Clickable from "../clickable.vue"
 

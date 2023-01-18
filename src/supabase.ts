@@ -7,6 +7,8 @@ import { SupabaseClient } from "@supabase/supabase-js"
 import { mutations } from "./state"
 import type { Database, Patch } from "./types"
 
+const table = "patches" as const
+
 export const supabase = new SupabaseClient<Database>(
   import.meta.env.VITE_SUPABASE_URL,
   import.meta.env.VITE_SUPABASE_PUBLIC_KEY,
@@ -14,7 +16,7 @@ export const supabase = new SupabaseClient<Database>(
 
 export const fetchLatestPatch = async () => {
   const result = await supabase
-    .from("patches")
+    .from(table)
     .select()
     .not("releasedAt", "is", null)
     .order("number", { ascending: false })
@@ -33,7 +35,7 @@ export const initChangeDetection = (latestPatch: Patch): RealtimeChannel => {
     }
   }
 
-  const channel = supabase.channel("public:patches")
+  const channel = supabase.channel(`public:${table}`)
 
   channel
     .on(
@@ -41,7 +43,7 @@ export const initChangeDetection = (latestPatch: Patch): RealtimeChannel => {
       {
         event: "INSERT",
         schema: "public",
-        table: "patches",
+        table,
       },
       handler,
     )

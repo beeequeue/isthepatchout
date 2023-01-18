@@ -66,11 +66,11 @@ style worker stroke:orange
 
 ## Development
 
-Requires Node ^16, Supabase CLI, Vercel CLI
+Requires Node ^18, Supabase CLI, Vercel CLI
 
 ### Setup
 
-1. Install dependencies: `$ yarn`
+1. Install dependencies: `$ pnpm i`
 1. Set up a local supabase instance: `$ supabase start`
 1. Set up the `.env` file
    1. Create the file: `$ cp .env.example .env`
