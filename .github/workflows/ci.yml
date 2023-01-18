@@ -87,3 +87,8 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - run: pnpm build
+
+      - run: pnpm bundlewatch
+        env:
+          BUNDLEWATCH_GITHUB_TOKEN: ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}
+          CI_COMMIT_SHA: ${{ github.event.pull_request.head.sha }}
