@@ -10,6 +10,7 @@ specifiers:
   '@hapi/boom': 10.0.0
   '@ivanv/vue-collapse-transition': 1.0.2
   '@sentry/node': 7.31.1
+  '@supabase/realtime-js': 2.3.1
   '@supabase/supabase-js': 2.4.0
   '@types/canvas-confetti': 1.6.0
   '@types/node': 16.18.11
@@ -37,11 +38,11 @@ specifiers:
   remeda: 1.6.0
   rollup-plugin-visualizer: 5.9.0
   simple-git-hooks: 2.8.1
-  simple-icons: 7.21.0
+  simple-icons: 8.2.0
   tailwindcss: 3.2.4
   typescript: 4.9.4
   vite: 4.0.4
-  vite-plugin-checker: 0.4.9
+  vite-plugin-checker: 0.5.3
   vite-plugin-pwa: 0.14.1
   vite-plugin-windicss: 1.8.10
   vue: 3.2.45
@@ -51,13 +52,14 @@ specifiers:
 
 dependencies:
   '@ivanv/vue-collapse-transition': 1.0.2
+  '@supabase/realtime-js': 2.3.1
   '@supabase/supabase-js': 2.4.0
   '@vueuse/core': 9.11.0_vue@3.2.45
   canvas-confetti: 1.6.0
   date-fns: 2.29.3
   dotaver: 1.0.1
   fathom-client: 3.5.0
-  simple-icons: 7.21.0
+  simple-icons: 8.2.0
   vue: 3.2.45
   workbox-precaching: 6.5.4
 
@@ -89,7 +91,7 @@ devDependencies:
   tailwindcss: 3.2.4
   typescript: 4.9.4
   vite: 4.0.4_@types+node@16.18.11
-  vite-plugin-checker: 0.4.9_vite@4.0.4
+  vite-plugin-checker: 0.5.3_f44pu4hq42tn7dlrkrczp53h7a
   vite-plugin-pwa: 0.14.1_vite@4.0.4
   vite-plugin-windicss: 1.8.10_vite@4.0.4
   vue-tsc: 1.0.24_typescript@4.9.4
@@ -5467,8 +5469,8 @@ packages:
     requiresBuild: true
     dev: true
 
-  /simple-icons/7.21.0:
-    resolution: {integrity: sha512-Omy/5NjPJrwNl1Q0KzMOVuARfKP4Y+DET2gJ9VyJtWyw75HLWviYszbSZsw1x3BOwBUroRwWkCGi81HPu1M29g==}
+  /simple-icons/8.2.0:
+    resolution: {integrity: sha512-W4awmfHa4a+XF3iPS0MEIM6KF+iUgkCaf3/ISRq5UWhdiYxAs4uvF8eQ/RsDsau1/Z540otcvq9AKoPuUZqvog==}
     engines: {node: '>=0.12.18'}
     dev: false
 
@@ -6059,23 +6061,47 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite-plugin-checker/0.4.9_vite@4.0.4:
-    resolution: {integrity: sha512-Oii9mTum8bqZovWejcR739kCqST32oG6LdB/XMdwcLVzmcjq0gf1iVDIedVzJJ7t6GLQAYgjNwvB0fuMiT3tlg==}
-    hasBin: true
+  /vite-plugin-checker/0.5.3_f44pu4hq42tn7dlrkrczp53h7a:
+    resolution: {integrity: sha512-upPESKsQTypC2S7LPjxu9HknOymNSToAAHTYSFHb0at5GKLcN1QGMAR5Hb+7KqZclGMVniXAj7QdhZv+fTx83Q==}
+    engines: {node: '>=14.16'}
     peerDependencies:
-      vite: ^2.0.0 || ^3.0.0-0
+      eslint: '>=7'
+      meow: ^9.0.0
+      optionator: ^0.9.1
+      stylelint: '>=13'
+      typescript: '*'
+      vite: '>=2.0.0'
+      vls: '*'
+      vti: '*'
+    peerDependenciesMeta:
+      eslint:
+        optional: true
+      meow:
+        optional: true
+      optionator:
+        optional: true
+      stylelint:
+        optional: true
+      typescript:
+        optional: true
+      vls:
+        optional: true
+      vti:
+        optional: true
     dependencies:
       '@babel/code-frame': 7.18.6
       ansi-escapes: 4.3.2
       chalk: 4.1.2
       chokidar: 3.5.3
       commander: 8.3.0
+      eslint: 8.32.0
       fast-glob: 3.2.12
       lodash.debounce: 4.0.8
       lodash.pick: 4.4.0
       npm-run-path: 4.0.1
       strip-ansi: 6.0.1
       tiny-invariant: 1.3.1
+      typescript: 4.9.4
       vite: 4.0.4_@types+node@16.18.11
       vscode-languageclient: 7.0.0
       vscode-languageserver: 7.0.0
