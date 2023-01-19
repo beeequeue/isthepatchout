@@ -30,7 +30,7 @@
   },
   "resolutions": {
     "@types/node": "18.11.18",
-    "esbuild": "0.17.2",
+    "esbuild": "0.17.3",
     "node-fetch": "npm:node-fetch-native@1.0.1"
   },
   "dependencies": {
@@ -42,7 +42,7 @@
     "date-fns": "2.29.3",
     "dotaver": "1.0.1",
     "fathom-client": "3.5.0",
-    "simple-icons": "8.2.0",
+    "simple-icons": "8.3.0",
     "vue": "3.2.45",
     "workbox-precaching": "6.5.4"
   },
@@ -52,7 +52,7 @@
     "@sentry/node": "7.31.1",
     "@types/canvas-confetti": "1.6.0",
     "@types/node": "18.11.18",
-    "@vercel/node": "2.8.13",
+    "@vercel/node": "2.8.14",
     "@vitejs/plugin-vue": "4.0.0",
     "@vue/compiler-sfc": "3.2.45",
     "@windicss/animations": "1.0.8",
