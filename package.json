@@ -6,7 +6,7 @@
   "repository": "https://github.com/BeeeQueue/isthepatchout",
   "license": "MIT",
   "private": true,
-  "packageManager": "pnpm@7.25.1",
+  "packageManager": "pnpm@7.26.0",
   "engines": {
     "node": "^18"
   },
@@ -49,7 +49,7 @@
   "devDependencies": {
     "@beequeue/eslint-plugin": "1.1.2",
     "@hapi/boom": "10.0.0",
-    "@sentry/node": "7.32.1",
+    "@sentry/node": "7.33.0",
     "@types/canvas-confetti": "1.6.0",
     "@types/node": "18.11.18",
     "@vercel/node": "2.8.15",
