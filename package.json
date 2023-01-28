@@ -30,13 +30,13 @@
   },
   "resolutions": {
     "@types/node": "18.11.18",
-    "esbuild": "0.17.4",
+    "esbuild": "0.17.5",
     "node-fetch": "npm:node-fetch-native@1.0.1"
   },
   "dependencies": {
     "@ivanv/vue-collapse-transition": "1.0.2",
-    "@supabase/realtime-js": "2.3.1",
-    "@supabase/supabase-js": "2.4.1",
+    "@supabase/realtime-js": "2.4.0",
+    "@supabase/supabase-js": "2.5.0",
     "@vueuse/core": "9.11.1",
     "canvas-confetti": "1.6.0",
     "date-fns": "2.29.3",
@@ -68,7 +68,7 @@
     "pino": "8.8.0",
     "pino-pretty": "9.1.1",
     "prettier": "2.8.3",
-    "remeda": "1.6.0",
+    "remeda": "1.6.1",
     "rollup-plugin-visualizer": "5.9.0",
     "simple-git-hooks": "2.8.1",
     "tailwindcss": "3.2.4",
