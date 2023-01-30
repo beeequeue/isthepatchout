@@ -31,8 +31,8 @@ dependencies:
     specifier: 3.5.0
     version: 3.5.0
   simple-icons:
-    specifier: 8.3.0
-    version: 8.3.0
+    specifier: 8.4.0
+    version: 8.4.0
   vue:
     specifier: 3.2.45
     version: 3.2.45
@@ -5519,8 +5519,8 @@ packages:
     requiresBuild: true
     dev: true
 
-  /simple-icons@8.3.0:
-    resolution: {integrity: sha512-tDoLmETYVaNdoHpmxqkd3O7YlW9yjh0q7/EKrXlfclQfaL6ijMmSKvUBtwN++IQlVTKc7jYyKLXm2yNqOAm40A==}
+  /simple-icons@8.4.0:
+    resolution: {integrity: sha512-vDaxR7CFRwkqBkYVhTli4rKS0/TdAUVvaCuQ3AKQbV8N+TYYy8LKaeJdXwOo5RlJZdUzsnHChaktcYhIk8vRow==}
     engines: {node: '>=0.12.18'}
     dev: false
 
