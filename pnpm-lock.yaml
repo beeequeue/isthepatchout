@@ -13,8 +13,8 @@ dependencies:
     specifier: 2.6.0
     version: 2.6.0
   '@supabase/supabase-js':
-    specifier: 2.5.0
-    version: 2.5.0
+    specifier: 2.7.0
+    version: 2.7.0
   '@vueuse/core':
     specifier: 9.12.0
     version: 9.12.0(vue@3.2.45)
@@ -48,8 +48,8 @@ devDependencies:
     specifier: 10.0.0
     version: 10.0.0
   '@sentry/node':
-    specifier: 7.34.0
-    version: 7.34.0
+    specifier: 7.35.0
+    version: 7.35.0
   '@types/canvas-confetti':
     specifier: 1.6.0
     version: 1.6.0
@@ -78,8 +78,8 @@ devDependencies:
     specifier: 16.0.3
     version: 16.0.3
   esbuild-plugin-browserslist:
-    specifier: 0.6.0
-    version: 0.6.0(browserslist@4.21.5)
+    specifier: 0.7.0
+    version: 0.7.0(browserslist@4.21.5)
   eslint:
     specifier: 8.33.0
     version: 8.33.0
@@ -1786,22 +1786,22 @@ packages:
       rollup: 3.10.0
     dev: true
 
-  /@sentry/core@7.34.0:
-    resolution: {integrity: sha512-J1oxsYZX1N0tkEcaHt/uuDqk6zOnaivyampp+EvBsUMCdemjg7rwKvawlRB0ZtBEQu3HAhi8zecm03mlpWfCDw==}
+  /@sentry/core@7.35.0:
+    resolution: {integrity: sha512-j+UJaWDUyLCWOTKMrDFivy/rH5QuSvPK9TsOmYOIFctSKfp+e9Ap0cPRPXNObwim2YTpN4wpl7TqDGDANTKhuQ==}
     engines: {node: '>=8'}
     dependencies:
-      '@sentry/types': 7.34.0
-      '@sentry/utils': 7.34.0
+      '@sentry/types': 7.35.0
+      '@sentry/utils': 7.35.0
       tslib: 1.14.1
     dev: true
 
-  /@sentry/node@7.34.0:
-    resolution: {integrity: sha512-VM4XeydRdgeaNTRe8kwqYg2oNPddVyY74PlCFEFnPEN1NccycNuwiFno68kNrApeqxxLlTTmzkJy0BWo16x2Yg==}
+  /@sentry/node@7.35.0:
+    resolution: {integrity: sha512-uenomjlwSk1zX4gyNV6DdJFQXgDzzdLUcTCFWoO2D3sDqCGiJO6fmRXX+kVVanYcRXfKg14ko5uelfCj6pq9BQ==}
     engines: {node: '>=8'}
     dependencies:
-      '@sentry/core': 7.34.0
-      '@sentry/types': 7.34.0
-      '@sentry/utils': 7.34.0
+      '@sentry/core': 7.35.0
+      '@sentry/types': 7.35.0
+      '@sentry/utils': 7.35.0
       cookie: 0.4.2
       https-proxy-agent: 5.0.1
       lru_map: 0.3.3
@@ -1810,16 +1810,16 @@ packages:
       - supports-color
     dev: true
 
-  /@sentry/types@7.34.0:
-    resolution: {integrity: sha512-K+OeHIrl35PSYn6Zwqe4b8WWyAJQoI5NeWxHVkM7oQTGJ1YLG4BvLsR+UiUXnKdR5krE4EDtEA5jLsDlBEyPvw==}
+  /@sentry/types@7.35.0:
+    resolution: {integrity: sha512-gy1PhwYvER/F80N+ZI06PjMk55xAZ4P+r3jomsMnOXQBWzx2VEEpc2fS/3B21wymxSl+mjh+5sUlk/JpxxOQvQ==}
     engines: {node: '>=8'}
     dev: true
 
-  /@sentry/utils@7.34.0:
-    resolution: {integrity: sha512-VIHHXEBw0htzqxnU8A7WkXKvmsG2pZVqHlAn0H9W/yyFQtXMuP1j1i0NsjADB/3JXUKK83kTNWGzScXvp0o+Jg==}
+  /@sentry/utils@7.35.0:
+    resolution: {integrity: sha512-xB/uVNXrfSwQj5fZsYOHr70ORq9qNT+9FAoUGffAQUyVjRhXG27KxsstK1Rv2yt+FBCHY06e3vE4K9B4zwSe7Q==}
     engines: {node: '>=8'}
     dependencies:
-      '@sentry/types': 7.34.0
+      '@sentry/types': 7.35.0
       tslib: 1.14.1
     dev: true
 
@@ -1829,8 +1829,8 @@ packages:
       cross-fetch: 3.1.5
     dev: false
 
-  /@supabase/gotrue-js@2.8.0:
-    resolution: {integrity: sha512-IWWm4wGKyhIgOVGdScQKacnd1eHVfHkNjl0ZQ5Kj2jf8LlL8jp1KOWLzKGTQK6Ib6EzKeFdWIATqKCYsCxt2Dw==}
+  /@supabase/gotrue-js@2.10.2:
+    resolution: {integrity: sha512-tzfPtEPnLfeghxDvSS28/AiWgBcwNPjG70Tn1owlB2mumsf4xkTfXiZBYUjtCCL65/bUncs8Pbive4tL+vfIgA==}
     dependencies:
       cross-fetch: 3.1.5
     dev: false
@@ -1856,11 +1856,11 @@ packages:
       cross-fetch: 3.1.5
     dev: false
 
-  /@supabase/supabase-js@2.5.0:
-    resolution: {integrity: sha512-8GwMdtx1pOBtNfFryZ/3zZ5erfhz1eA133q4IyvXqXvqxp4uHyjZuJDEhA6HTpdIH0nMAdWZpny1APx7Vrrchw==}
+  /@supabase/supabase-js@2.7.0:
+    resolution: {integrity: sha512-0Ry6rcxeya0VRbPh6fHfgPcmH7X9gMILon7/PWoVJSjYsQntv7EGUNNeHtLutBlm8St74s5Q4sjsqJOPslDG4Q==}
     dependencies:
       '@supabase/functions-js': 2.0.0
-      '@supabase/gotrue-js': 2.8.0
+      '@supabase/gotrue-js': 2.10.2
       '@supabase/postgrest-js': 1.2.0
       '@supabase/realtime-js': 2.6.0
       '@supabase/storage-js': 2.2.0
@@ -3200,12 +3200,12 @@ packages:
       ext: 1.7.0
     dev: false
 
-  /esbuild-plugin-browserslist@0.6.0(browserslist@4.21.5):
-    resolution: {integrity: sha512-GQ/0CCwkvKG4E43f+TQn9t5psNpSoPV3oPSK/cruYVMESZjJOa+UhnzaOwtJKnW+ucHsK1rv2IKB7e/iHIdPVw==}
+  /esbuild-plugin-browserslist@0.7.0(browserslist@4.21.5):
+    resolution: {integrity: sha512-A+BN2a9XWsEAfsyr03XAc1tZt3h82UkZWx4ZYbozcucq0wnkPcBKOwTG+UM678qlCxbHmBwrlIu7M0WywtiI2A==}
     engines: {node: '>=14'}
     peerDependencies:
-      browserslist: ^4.21.4
-      esbuild: ~0.16.1
+      browserslist: ^4.21.5
+      esbuild: ~0.17.5
     dependencies:
       browserslist: 4.21.5
       debug: 4.3.4
