@@ -43,7 +43,7 @@
     "dotaver": "1.0.1",
     "fathom-client": "3.5.0",
     "simple-icons": "8.4.0",
-    "vue": "3.2.45",
+    "vue": "3.2.47",
     "workbox-precaching": "6.5.4"
   },
   "devDependencies": {
@@ -52,9 +52,9 @@
     "@sentry/node": "7.35.0",
     "@types/canvas-confetti": "1.6.0",
     "@types/node": "18.11.18",
-    "@vercel/node": "2.8.17",
+    "@vercel/node": "2.9.0",
     "@vitejs/plugin-vue": "4.0.0",
-    "@vue/compiler-sfc": "3.2.45",
+    "@vue/compiler-sfc": "3.2.47",
     "@windicss/animations": "1.0.8",
     "browserslist": "4.21.5",
     "bundlewatch": "0.3.3",
