@@ -30,7 +30,7 @@
   },
   "resolutions": {
     "@types/node": "18.13.0",
-    "esbuild": "0.17.7",
+    "esbuild": "0.17.8",
     "node-fetch": "npm:node-fetch-native@1.0.1"
   },
   "dependencies": {
@@ -49,10 +49,10 @@
   "devDependencies": {
     "@beequeue/eslint-plugin": "1.1.2",
     "@hapi/boom": "10.0.1",
-    "@sentry/node": "7.37.1",
+    "@sentry/node": "7.37.2",
     "@types/canvas-confetti": "1.6.0",
     "@types/node": "18.13.0",
-    "@vercel/node": "2.9.2",
+    "@vercel/node": "2.9.3",
     "@vitejs/plugin-vue": "4.0.0",
     "@vue/compiler-sfc": "3.2.47",
     "@windicss/animations": "1.0.8",
