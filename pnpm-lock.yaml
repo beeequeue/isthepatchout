@@ -57,8 +57,8 @@ devDependencies:
     specifier: 18.13.0
     version: 18.13.0
   '@vercel/node':
-    specifier: 2.9.3
-    version: 2.9.3
+    specifier: 2.9.4
+    version: 2.9.4
   '@vitejs/plugin-vue':
     specifier: 4.0.0
     version: 4.0.0(vite@4.1.1)(vue@3.2.47)
@@ -2082,20 +2082,20 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@vercel/build-utils@6.2.2:
-    resolution: {integrity: sha512-xpexr6GQ8NPo1NHrA1VBpVEapmM+vfkViVtGRjvSYMVrIXZumSCYg8ZJiixn43RwNnGUnPPMD33FZXuGiQXU6g==}
+  /@vercel/build-utils@6.2.3:
+    resolution: {integrity: sha512-69LN45TIl5vgu0IiuVX6M/un4FiReAgSQR9z6xuDBhLJLiDcnWQ/wx+XemZuVPO62cOYm9jjp8QHWXIsIec/IQ==}
     dev: true
 
   /@vercel/node-bridge@3.1.11:
     resolution: {integrity: sha512-LGbj+kPGgRnIlKo3949z01mLbHVi4BnRE7V5R6+J4E3f7xpQ12I9Wek10V7ivLB+LyS1+ATdjasdXAF4HOhqQw==}
     dev: true
 
-  /@vercel/node@2.9.3:
-    resolution: {integrity: sha512-BexOx3i1ZM3wizWgS/hlqWxA5+S79ZLfvgnsT6MKv7s9okYsSDpi4w5hMpv8/TTvrxGA6VlbquuHo5irm6NJcQ==}
+  /@vercel/node@2.9.4:
+    resolution: {integrity: sha512-O4pPnUUPI6hZGynxbI2fk8GloybZMO5dbGyicuK3WA+73LPxF+Xgaf8U5VmIc3NNwZqnEfJAA2Bhcnr23zpNYg==}
     dependencies:
       '@edge-runtime/vm': 2.0.0
       '@types/node': 18.13.0
-      '@vercel/build-utils': 6.2.2
+      '@vercel/build-utils': 6.2.3
       '@vercel/node-bridge': 3.1.11
       '@vercel/static-config': 2.0.12
       edge-runtime: 2.0.0
