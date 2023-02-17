@@ -31,7 +31,7 @@
   "resolutions": {
     "@types/node": "18.13.0",
     "esbuild": "0.17.8",
-    "node-fetch": "npm:node-fetch-native@1.0.1"
+    "node-fetch": "npm:node-fetch-native@1.0.2"
   },
   "dependencies": {
     "@ivanv/vue-collapse-transition": "1.0.2",
@@ -52,7 +52,7 @@
     "@sentry/node": "7.37.2",
     "@types/canvas-confetti": "1.6.0",
     "@types/node": "18.13.0",
-    "@vercel/node": "2.9.5",
+    "@vercel/node": "2.9.6",
     "@vitejs/plugin-vue": "4.0.0",
     "@vue/compiler-sfc": "3.2.47",
     "@windicss/animations": "1.0.8",
@@ -71,13 +71,13 @@
     "remeda": "1.6.1",
     "rollup-plugin-visualizer": "5.9.0",
     "simple-git-hooks": "2.8.1",
-    "tailwindcss": "3.2.6",
+    "tailwindcss": "3.2.7",
     "typescript": "4.9.5",
     "vite": "4.1.1",
     "vite-plugin-checker": "0.5.5",
     "vite-plugin-pwa": "0.14.4",
     "vite-plugin-windicss": "1.8.10",
-    "vue-tsc": "1.1.0",
+    "vue-tsc": "1.1.2",
     "windicss": "3.5.6"
   }
 }
