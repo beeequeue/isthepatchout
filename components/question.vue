@@ -24,7 +24,7 @@
 import { DotaPatchType, DotaVersion } from "dotaver"
 import { computed } from "vue"
 
-import type { Patch } from "../types"
+import type { Patch } from "@/types"
 
 const props = defineProps<{
   recentlyReleased: boolean

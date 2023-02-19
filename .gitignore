@@ -1,11 +1,12 @@
 .idea
+.DS_Store
 
 node_modules
-
-.DS_Store
-dist
-.env
+sw.*
 
 .vercel
-
-stats.html
+.nuxt
+.nitro
+.cache
+.output
+.env

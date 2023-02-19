@@ -17,7 +17,7 @@
 <script lang="ts" setup>
 import { ref } from "vue"
 
-import arrowSvg from "../assets/arrow-up.svg?raw"
+import arrowSvg from "@/assets/arrow-up.svg?raw"
 
 import Icon from "./bottom-bar/icon.vue"
 import Clickable from "./clickable.vue"

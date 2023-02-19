@@ -5,7 +5,7 @@
 import confetti from "canvas-confetti"
 import { watch } from "vue"
 
-import { state } from "../state"
+import { state } from "@/state"
 
 const particleCount = window.innerWidth > 600 ? 10 : 4
 

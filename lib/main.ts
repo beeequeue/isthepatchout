@@ -27,5 +27,3 @@ if (import.meta.env.PROD && "serviceWorker" in navigator) {
 }
 
 app.mount("#app")
-
-document.querySelector("#background")?.classList.add("!opacity-100")

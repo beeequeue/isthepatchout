@@ -15,12 +15,8 @@ import { ref, watch } from "vue"
 
 import type { RealtimeChannel } from "@supabase/realtime-js"
 
-import BottomBar from "./components/bottom-bar/bottom-bar.vue"
-import Content from "./components/content.vue"
-import FadeTransition from "./components/fade-transition.vue"
-import LoadingState from "./components/loading-state.vue"
-import { state } from "./state"
-import { fetchLatestPatch, initChangeDetection, removeChannel } from "./supabase"
+import { state } from "@/lib/state"
+import { fetchLatestPatch, initChangeDetection, removeChannel } from "@/lib/supabase"
 
 void fetchLatestPatch()
 const channel = ref<RealtimeChannel | null>(null)
@@ -41,6 +37,8 @@ watch(
   },
   { deep: true },
 )
+
+document.querySelector("#background")?.classList.add("!opacity-100")
 </script>
 
 <style scoped>

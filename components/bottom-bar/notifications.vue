@@ -13,9 +13,11 @@
 <script lang="ts" setup>
 import { computed } from "vue"
 
-import alertSvg from "../../assets/alert.svg?raw"
-import noAlertSvg from "../../assets/no-alert.svg?raw"
-import { usePushNotifications } from "../../hooks/use-push-notifications"
+import { usePushNotifications } from "@/../../hooks/use-push-notifications"
+
+import alertSvg from "@/assets/alert.svg?raw"
+import noAlertSvg from "@/assets/no-alert.svg?raw"
+
 import ToggleButton from "../toggle-button.vue"
 
 import Icon from "./icon.vue"

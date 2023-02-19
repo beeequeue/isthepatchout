@@ -11,7 +11,7 @@
       <Icon :icon="settingsSvg" class="h-8 w-8 p-0" />
     </Clickable>
 
-    <Notifications />
+    <!-- <Notifications />-->
 
     <DiscordLink />
 
@@ -22,7 +22,8 @@
 <script lang="ts" setup>
 import { ref } from "vue"
 
-import settingsSvg from "../../assets/settings.svg?raw"
+import settingsSvg from "@/assets/settings.svg?raw"
+
 import Clickable from "../clickable.vue"
 
 import DiscordLink from "./discord-link.vue"

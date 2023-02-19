@@ -1,8 +1,4 @@
-import { ref, watch } from "vue"
-
-import { useLocalStorage } from "@vueuse/core"
-
-import { LocalStorageKey } from "../constants"
+import { LocalStorageKey } from "@/constants"
 
 import { useServiceWorker } from "./use-service-worker"
 

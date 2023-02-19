@@ -27,7 +27,7 @@ import { computed } from "vue"
 
 import CollapseTransition from "@ivanv/vue-collapse-transition"
 
-import { state } from "../state"
+import { state } from "@/state"
 
 import Answer from "./answer.vue"
 import Celebration from "./celebration.vue"

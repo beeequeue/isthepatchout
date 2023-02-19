@@ -2,7 +2,7 @@ import { DotaVersion } from "dotaver"
 
 import { SupabaseClient } from "@supabase/supabase-js"
 
-import type { Database, Patch } from "../src/types"
+import type { Database, Patch } from "@/lib/types"
 
 import type { PatchNoteListItem } from "./_dota"
 import { Logger } from "./_logger"
