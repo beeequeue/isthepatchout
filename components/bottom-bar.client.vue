@@ -18,9 +18,12 @@
 </template>
 
 <script lang="ts" setup>
+import DiscordLink from "./bottom-bar/discord-link.vue"
+import GitHubLink from "./bottom-bar/github-link.vue"
+
 const windowSize = useWindowSize()
 const isMobile = computed(() => windowSize.width.value < 768)
-const open = ref(!isMobile)
+const open = ref(!isMobile.value)
 </script>
 
 <style scoped>
