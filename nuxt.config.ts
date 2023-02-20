@@ -26,7 +26,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     vapidPrivateKey: "",
     gcmApiKey: "",
-    checkToken: null as string | null,
+    checkToken: "",
     discordClientId: "",
     discordClientSecret: "",
 
