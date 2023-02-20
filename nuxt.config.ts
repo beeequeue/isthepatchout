@@ -96,6 +96,7 @@ export default defineNuxtConfig({
   },
   fontMetrics: {
     fonts: ["Rubik", { family: "Radiance", src: "fonts/Radiance-SemiBold.woff2" }],
+    fallbacks: ["Helvetica"],
   },
 
   typescript: { strict: true, shim: false },
