@@ -16,7 +16,7 @@
       </div>
     </transition>
 
-    <celebration :patch="patch" />
+    <!--    <celebration :patch="patch" />-->
 
     <links v-if="props.recentlyReleased && links" :links="links" />
   </section>
