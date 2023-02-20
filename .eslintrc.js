@@ -9,11 +9,9 @@ module.exports = {
     "plugin:@beequeue/vue",
     "plugin:@beequeue/typescript",
   ],
-  globals: {
-    defineProps: "readonly",
-    defineEmits: "readonly",
-  },
   rules: {
+    "no-undef": "off",
+    "unicorn/prefer-module": "off",
     "@typescript-eslint/naming-convention": "off",
     "vue/multi-word-component-names": "off",
   },

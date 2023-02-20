@@ -3,9 +3,9 @@
   "compilerOptions": {
     "noEmit": true,
     "sourceMap": true,
-    "esModuleInterop": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "types": ["nuxt-windicss"]
   }

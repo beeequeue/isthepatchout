@@ -1,48 +1,32 @@
 <template>
   <main class="grid justify-items-center items-center h-1/1">
-    <FadeTransition>
-      <LoadingState v-if="state.loading" key="loading" />
+    <background-image />
 
-      <Content v-else key="main" />
-    </FadeTransition>
+    <content :patch="patch" :recently-released="recentlyReleased" />
 
-    <BottomBar />
+    <bottom-bar />
   </main>
 </template>
 
 <script lang="ts" setup>
-import { ref, watch } from "vue"
+import { Database } from "@/lib/types"
 
-import type { RealtimeChannel } from "@supabase/realtime-js"
+const { initChangeDetection } = useChangeDetection()
+const supabase = useSupabaseClient<Database>()
 
-import { state } from "@/lib/state"
-import { fetchLatestPatch, initChangeDetection, removeChannel } from "@/lib/supabase"
-
-void fetchLatestPatch()
-const channel = ref<RealtimeChannel | null>(null)
-
-watch(
-  () => state.latestPatch,
-  (newPatch, _, onCleanup) => {
-    if (newPatch != null) {
-      channel.value = initChangeDetection(newPatch)
-
-      // eslint-disable-next-line @typescript-eslint/no-misused-promises
-      onCleanup(() => {
-        void removeChannel(channel.value as RealtimeChannel)
-      })
-    } else if (channel.value != null) {
-      void removeChannel(channel.value as RealtimeChannel)
-    }
-  },
-  { deep: true },
+const { data } = await useAsyncData("patch", async () =>
+  supabase
+    .from("patches")
+    .select()
+    .order("number", { ascending: false })
+    .limit(1)
+    .maybeSingle(),
 )
 
-document.querySelector("#background")?.classList.add("!opacity-100")
-</script>
-
-<style scoped>
-main {
-  grid-template-rows: 1fr auto;
+if (data.value != null && data.value.data != null) {
+  initChangeDetection(data.value.data)
 }
-</style>
+
+const patch = computed(() => data.value?.data ?? null)
+const recentlyReleased = computed(() => isRecentlyReleased(data.value?.data))
+</script>

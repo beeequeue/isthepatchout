@@ -9,9 +9,11 @@ import type { Database, Patch } from "./types"
 
 const table = "patches" as const
 
+const config = useRuntimeConfig()
+
 export const supabase = new SupabaseClient<Database>(
-  import.meta.env.VITE_SUPABASE_URL,
-  import.meta.env.VITE_SUPABASE_PUBLIC_KEY,
+  config.public.subabaseUrl,
+  config.public.subabasPublicKey,
 )
 
 export const fetchLatestPatch = async () => {

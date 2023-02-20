@@ -14,7 +14,9 @@ const urlBase64ToUint8Array = (base64String: string) => {
   return outputArray
 }
 
-const applicationServerKey = urlBase64ToUint8Array(import.meta.env.VITE_VAPID_PUBLIC_KEY)
+const config = useRuntimeConfig()
+
+const applicationServerKey = urlBase64ToUint8Array(config.public.vapidPublicKey)
 
 const registration = ref<ServiceWorkerRegistration>()
 

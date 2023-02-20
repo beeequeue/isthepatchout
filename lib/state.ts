@@ -1,5 +1,6 @@
-import { differenceInDays } from "date-fns"
 import { reactive } from "vue"
+
+import { isRecentlyReleased } from "~/utils/patch"
 
 import type { Patch } from "./types"
 
@@ -9,9 +10,6 @@ export const state = reactive({
   recentlyReleased: false,
   releasedBeforeOpen: false,
 })
-
-const isRecentlyReleased = (patch: Patch) =>
-  differenceInDays(Date.now(), new Date(patch.releasedAt!)) < 7
 
 export const mutations = {
   updateInitialData: (latestPatch: Patch) => {

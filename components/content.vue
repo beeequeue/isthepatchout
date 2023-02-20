@@ -1,38 +1,34 @@
 <template>
   <section class="flex flex-shrink flex-col items-center">
-    <Question
-      v-if="state.latestPatch != null"
-      :recently-released="state.recentlyReleased"
-      :latest-patch="state.latestPatch"
+    <question
+      v-if="props.patch != null"
+      :recently-released="props.recentlyReleased"
+      :latest-patch="patch"
     />
 
-    <Answer :released="state.recentlyReleased" />
+    <answer :released="props.recentlyReleased" />
 
-    <CollapseTransition :duration="500">
-      <div v-if="!state.recentlyReleased" class="text-center">
+    <transition :duration="500">
+      <div v-if="!props.recentlyReleased" class="text-center">
         No need to refresh the page.
         <br />
         It will update as soon as we see a new update!
       </div>
-    </CollapseTransition>
+    </transition>
 
-    <Celebration />
+    <celebration :patch="patch" />
 
-    <Links v-if="state.recentlyReleased && links" :links="links" />
+    <links v-if="props.recentlyReleased && links" :links="links" />
   </section>
 </template>
 
 <script lang="ts" setup>
-import { computed } from "vue"
+import { Patch } from "@/lib/types"
 
-import CollapseTransition from "@ivanv/vue-collapse-transition"
+const props = defineProps<{
+  patch: Patch | null
+  recentlyReleased: boolean
+}>()
 
-import { state } from "@/state"
-
-import Answer from "./answer.vue"
-import Celebration from "./celebration.vue"
-import Links from "./links.vue"
-import Question from "./question.vue"
-
-const links = computed(() => state.latestPatch?.links ?? null)
+const links = computed(() => props.patch?.links ?? null)
 </script>

@@ -1,9 +1,9 @@
 /* eslint-disable no-undef,import/no-extraneous-dependencies */
 import { defineConfig } from "vite-plugin-windicss"
-// @ts-ignore: Missing types
-import Animations from "@windicss/animations"
-
 import colors from "windicss/colors"
+
+// @ts-ignore: Missing types
+import Animations from "@windicss/plugin-animations"
 
 export default defineConfig({
   corePlugins: {

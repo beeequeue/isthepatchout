@@ -1,4 +1,4 @@
-import { LocalStorageKey } from "@/constants"
+import { LocalStorageKey } from "@/lib/constants"
 
 import { useServiceWorker } from "./use-service-worker"
 
@@ -20,6 +20,7 @@ const askForPermissions = async () => {
   }
 }
 
+const config = useRuntimeConfig()
 const { registration, applicationServerKey } = useServiceWorker()
 const subscription = ref<PushSubscription | null>(null)
 const subscribing = ref(false)
@@ -29,7 +30,7 @@ const manuallyDisabled = useLocalStorage(LocalStorageKey.ManuallyDisabled, false
 const registerNewSubscription = async () => {
   const subscriptionData = JSON.parse(JSON.stringify(subscription.value))
 
-  await fetch(`${import.meta.env.VITE_API_URL}/api/subscription`, {
+  await fetch(`${config.public.apiUrl}/api/subscription`, {
     method: "POST",
     // eslint-disable-next-line @typescript-eslint/naming-convention
     headers: { "content-type": "application/json" },
@@ -48,7 +49,7 @@ const unsubscribe = async () => {
   subscription.value = null
 
   const params = new URLSearchParams({ endpoint })
-  await fetch(`${import.meta.env.VITE_API_URL}/api/subscription?${params.toString()}`, {
+  await fetch(`${config.public.apiUrl}/api/subscription?${params.toString()}`, {
     method: "DELETE",
   })
 }
@@ -57,7 +58,7 @@ const getIsSubscriptionValid = async (endpoint: string): Promise<boolean> => {
   const params = new URLSearchParams({ endpoint })
 
   const response = await fetch(
-    `${import.meta.env.VITE_API_URL}/api/subscription?${params.toString()}`,
+    `${config.public.apiUrl}/api/subscription?${params.toString()}`,
   )
 
   if (
@@ -80,7 +81,7 @@ const getIsSubscriptionValid = async (endpoint: string): Promise<boolean> => {
 watch(
   registration,
   () => {
-    if (import.meta.env.PROD && registration.value == null) return
+    if (config.public.PROD && registration.value == null) return
 
     loading.value = false
   },
