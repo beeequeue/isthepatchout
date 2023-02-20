@@ -1,10 +1,8 @@
 import type { FetchError } from "ofetch"
-import PQueueDefault from "p-queue"
+import PQueue from "p-queue"
 import { isError } from "remeda"
 
 import { Logger } from "./logger"
-
-const PQueue = (PQueueDefault as unknown as { default: typeof PQueueDefault }).default
 
 const dotaApiScheduler = new PQueue({
   concurrency: 3,
@@ -35,7 +33,7 @@ const request = () =>
 export const getPatchList = async () => {
   Logger.info("Fetching patch list...")
 
-  const response = await dotaApiScheduler.add(request)
+  const response = await dotaApiScheduler.add(request, { throwOnTimeout: true })
 
   if (isError(response)) {
     Logger.error("Request failed", response.response)
