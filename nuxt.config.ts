@@ -52,7 +52,6 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "nuxt-security",
     "nuxt-windicss",
-    "@nuxt/devtools",
     "@nuxtjs/google-fonts",
     "@nuxtjs/fontaine",
     "@nuxtjs/supabase",
