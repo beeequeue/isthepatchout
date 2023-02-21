@@ -33,6 +33,6 @@ const nextPatches = computed(() => [
 ])
 
 const relevantPatches = computed(() =>
-  recentlyReleased ? [DotaVersion.parse(patch.value!.id)] : nextPatches.value,
+  recentlyReleased.value ? [currentPatch.value] : nextPatches.value,
 )
 </script>

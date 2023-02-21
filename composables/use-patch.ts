@@ -1,6 +1,8 @@
 import { Database, Patch } from "~/lib/types"
 
 const patch = ref<Patch | null>(null)
+
+const releasedBeforeOpening = ref(false)
 const recentlyReleased = computed(() => isRecentlyReleased(patch.value))
 
 export const usePatch = () => {
@@ -18,6 +20,10 @@ export const usePatch = () => {
 
     if (result.error.value == null && result.data.value?.error == null) {
       patch.value = result.data.value!.data
+
+      if (isRecentlyReleased(patch.value)) {
+        releasedBeforeOpening.value = true
+      }
     }
 
     return result
@@ -25,11 +31,13 @@ export const usePatch = () => {
 
   const updatePatch = (newPatch: Patch) => {
     patch.value = newPatch
+    releasedBeforeOpening.value = false
   }
 
   return {
     patch,
     recentlyReleased,
+    releasedBeforeOpening,
 
     fetchPatch,
     updatePatch,

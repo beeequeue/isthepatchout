@@ -5,7 +5,7 @@
 <script lang="ts" setup>
 import confetti from "canvas-confetti"
 
-const { patch, recentlyReleased } = usePatch()
+const { patch, recentlyReleased, releasedBeforeOpening } = usePatch()
 
 const particleCount = window.innerWidth > 600 ? 10 : 4
 
@@ -25,7 +25,7 @@ const fireConfetti = () => {
 }
 
 watch(recentlyReleased, (isRecent) => {
-  if (/*state.releasedBeforeOpen ||*/ !isRecent) return
+  if (releasedBeforeOpening.value || !isRecent) return
 
   document.title = `${patch.value!.id} is out!`
 
