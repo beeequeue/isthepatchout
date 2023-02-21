@@ -23,6 +23,10 @@ declare module "@nuxt/schema" {
 const env = process.env.VERCEL_ENV as "production" | "development" | undefined
 
 export default defineNuxtConfig({
+  nitro: {
+    preset: "vercel",
+  },
+
   runtimeConfig: {
     vapidPrivateKey: "",
     gcmApiKey: "",
