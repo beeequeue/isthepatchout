@@ -1,6 +1,10 @@
 /* eslint-disable @typescript-eslint/consistent-type-definitions */
+import { readFileSync } from "fs"
+
 import type SecurityModule from "nuxt-security"
 import { defineNuxtConfig } from "nuxt/config"
+
+import type { ModuleOptions, NuxtModule } from "@nuxt/schema"
 
 import "nuxt-icon"
 import "nuxt-security"
@@ -9,8 +13,6 @@ import "@nuxtjs/google-fonts"
 import "@nuxtjs/fontaine"
 import "@nuxtjs/supabase"
 import "@vueuse/nuxt"
-
-import type { ModuleOptions, NuxtModule } from "@nuxt/schema"
 
 type GetOptions<T> = T extends NuxtModule<infer O> ? O : ModuleOptions
 
@@ -21,6 +23,8 @@ declare module "@nuxt/schema" {
 }
 
 const env = process.env.VERCEL_ENV as "production" | "development" | undefined
+
+const baseCss = readFileSync("./assets/base.css", "utf8")
 
 export default defineNuxtConfig({
   nitro: { preset: "vercel" },
@@ -62,13 +66,32 @@ export default defineNuxtConfig({
     envPrefix: ["VITE_", "VERCEL_"],
   },
 
-  css: ["@/assets/base.css"],
   app: {
     head: {
       title: "Is the Patch Out Yet?",
       meta: [{ name: "theme-color", content: "#111111" }],
-      link: [{ rel: "preconnect", href: process.env.SUPABASE_URL }],
+      link: [
+        { rel: "preconnect", href: process.env.SUPABASE_URL },
+        { rel: "preload", href: "/background.svg", as: "image" },
+        {
+          rel: "preload",
+          href: "/fonts/Rubik-Regular.woff2",
+          as: "font",
+          type: "font/woff2",
+        },
+        {
+          rel: "preload",
+          href: "/fonts/Radiance-SemiBold.woff2",
+          as: "font",
+          type: "font/woff2",
+        },
+      ],
       htmlAttrs: { lang: "en" },
+      style: [
+        {
+          children: baseCss,
+        },
+      ],
     },
   },
 
