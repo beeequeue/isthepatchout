@@ -48,6 +48,7 @@
     "@nuxtjs/pwa": "3.3.5",
     "@nuxtjs/supabase": "0.3.1",
     "@supabase/realtime-js": "2.6.0",
+    "@total-typescript/ts-reset": "0.3.7",
     "@types/canvas-confetti": "1.6.0",
     "@types/node": "18.14.1",
     "@vueuse/nuxt": "9.13.0",

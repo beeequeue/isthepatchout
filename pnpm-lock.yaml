@@ -49,6 +49,9 @@ devDependencies:
   '@supabase/realtime-js':
     specifier: 2.6.0
     version: 2.6.0
+  '@total-typescript/ts-reset':
+    specifier: 0.3.7
+    version: 0.3.7
   '@types/canvas-confetti':
     specifier: 1.6.0
     version: 1.6.0
@@ -1958,6 +1961,10 @@ packages:
     engines: {node: '>= 10'}
     dev: true
     optional: true
+
+  /@total-typescript/ts-reset@0.3.7:
+    resolution: {integrity: sha512-yXt2BRRVCJVvzWaxac5n0nCXzIrQEBE/MeYlNQ8/Iq7UeelNmm/AdnUAu18ilSS893mbEQ4u6whPt/HvOPc4rw==}
+    dev: true
 
   /@trysound/sax@0.2.0:
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}

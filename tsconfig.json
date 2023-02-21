@@ -7,6 +7,6 @@
     "noUnusedParameters": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "types": ["nuxt-windicss"]
+    "types": ["nuxt-windicss", "@total-typescript/ts-reset"]
   }
 }
