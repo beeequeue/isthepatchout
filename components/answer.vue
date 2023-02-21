@@ -10,12 +10,12 @@
       enter-from-class="transform -translate-x-full opacity-0"
       leave-to-class="transform translate-x-full opacity-0"
     >
-      <div v-if="released" key="true">Yes!</div>
+      <div v-if="recentlyReleased" key="true">Yes!</div>
       <div v-else key="false">No.</div>
     </transition>
   </div>
 </template>
 
 <script lang="ts" setup>
-defineProps<{ released: boolean }>()
+const { recentlyReleased } = usePatch()
 </script>

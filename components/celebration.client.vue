@@ -1,11 +1,11 @@
-<template></template>
+<template>
+  <span v-if="false" />
+</template>
 
 <script lang="ts" setup>
 import confetti from "canvas-confetti"
 
-import { Patch } from "@/lib/types"
-
-const props = defineProps<{ patch: Patch }>()
+const { patch, recentlyReleased } = usePatch()
 
 const particleCount = window.innerWidth > 600 ? 10 : 4
 
@@ -24,15 +24,12 @@ const fireConfetti = () => {
   })
 }
 
-watch(
-  () => isRecentlyReleased(props.patch),
-  (isRecent) => {
-    if (/*state.releasedBeforeOpen ||*/ !isRecent) return
+watch(recentlyReleased, (isRecent) => {
+  if (/*state.releasedBeforeOpen ||*/ !isRecent) return
 
-    // document.title = `${state.latestPatch!.id} is out!`
+  document.title = `${patch.value!.id} is out!`
 
-    const interval = setInterval(fireConfetti, 100)
-    setTimeout(() => clearInterval(interval), 30_000)
-  },
-)
+  const interval = setInterval(fireConfetti, 100)
+  setTimeout(() => clearInterval(interval), 30_000)
+})
 </script>

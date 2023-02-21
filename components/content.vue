@@ -1,34 +1,25 @@
 <template>
   <section class="flex flex-shrink flex-col items-center">
-    <question
-      v-if="props.patch != null"
-      :recently-released="props.recentlyReleased"
-      :latest-patch="patch"
-    />
+    <question />
 
-    <answer :released="props.recentlyReleased" />
+    <answer />
 
     <transition :duration="500">
-      <div v-if="!props.recentlyReleased" class="text-center">
+      <div v-if="!recentlyReleased" class="text-center">
         No need to refresh the page.
         <br />
         It will update as soon as we see a new update!
       </div>
     </transition>
 
-    <!--    <celebration :patch="patch" />-->
+    <celebration />
 
-    <links v-if="props.recentlyReleased && links" :links="links" />
+    <links v-if="recentlyReleased && links != null" :links="links" />
   </section>
 </template>
 
 <script lang="ts" setup>
-import { Patch } from "@/lib/types"
+const { patch, recentlyReleased } = usePatch()
 
-const props = defineProps<{
-  patch: Patch | null
-  recentlyReleased: boolean
-}>()
-
-const links = computed(() => props.patch?.links ?? null)
+const links = computed(() => patch.value?.links ?? null)
 </script>

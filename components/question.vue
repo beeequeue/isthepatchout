@@ -1,5 +1,6 @@
 <template>
   <div
+    v-if="patch != null"
     class="flex flex-col md:flex-row md:items-center md:gap-2 text-2xl md:text-4xl font-serif text-center"
   >
     Is
@@ -22,22 +23,16 @@
 
 <script lang="ts" setup>
 import { DotaPatchType, DotaVersion } from "dotaver"
-import { computed } from "vue"
 
-import type { Patch } from "@/lib/types"
+const { patch, recentlyReleased } = usePatch()
 
-const props = defineProps<{
-  recentlyReleased: boolean
-  latestPatch: Patch
-}>()
-
-const currentPatch = computed(() => DotaVersion.parse(props.latestPatch.id))
+const currentPatch = computed(() => DotaVersion.parse(patch.value!.id))
 const nextPatches = computed(() => [
   currentPatch.value.next(DotaPatchType.Minor),
   currentPatch.value.next(DotaPatchType.Patch),
 ])
 
 const relevantPatches = computed(() =>
-  props.recentlyReleased ? [DotaVersion.parse(props.latestPatch.id)] : nextPatches.value,
+  recentlyReleased ? [DotaVersion.parse(patch.value!.id)] : nextPatches.value,
 )
 </script>
