@@ -43,6 +43,7 @@
   },
   "devDependencies": {
     "@beequeue/eslint-plugin": "1.1.2",
+    "@morev/vue-transitions": "2.3.6",
     "@nuxtjs/fontaine": "0.2.4",
     "@nuxtjs/google-fonts": "3.0.0-1",
     "@nuxtjs/pwa": "3.3.5",

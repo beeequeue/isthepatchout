@@ -20,8 +20,6 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from "vue"
-
 const props = defineProps<{ links: string[] }>()
 
 const prettifyName = (str: string) =>

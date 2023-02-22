@@ -6,14 +6,6 @@ import { defineNuxtConfig } from "nuxt/config"
 
 import type { ModuleOptions, NuxtModule } from "@nuxt/schema"
 
-import "nuxt-icon"
-import "nuxt-security"
-import "nuxt-windicss"
-import "@nuxtjs/google-fonts"
-import "@nuxtjs/fontaine"
-import "@nuxtjs/supabase"
-import "@vueuse/nuxt"
-
 type GetOptions<T> = T extends NuxtModule<infer O> ? O : ModuleOptions
 
 declare module "@nuxt/schema" {
@@ -54,6 +46,7 @@ export default defineNuxtConfig({
     "nuxt-icon",
     "nuxt-security",
     "nuxt-windicss",
+    "@morev/vue-transitions/nuxt",
     "@nuxtjs/google-fonts",
     "@nuxtjs/fontaine",
     "@nuxtjs/supabase",

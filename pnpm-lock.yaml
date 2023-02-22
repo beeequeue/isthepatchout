@@ -34,6 +34,9 @@ devDependencies:
   '@beequeue/eslint-plugin':
     specifier: 1.1.2
     version: 1.1.2(eslint@8.35.0)(prettier@2.8.4)(typescript@4.9.5)
+  '@morev/vue-transitions':
+    specifier: 2.3.6
+    version: 2.3.6(vue@3.2.47)
   '@nuxtjs/fontaine':
     specifier: 0.2.4
     version: 0.2.4
@@ -1336,6 +1339,30 @@ packages:
       semver: 7.3.8
       tar: 6.1.13
     transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  /@morev/utils@2.0.5:
+    resolution: {integrity: sha512-vO1UrNllQL0vKCBOw3pPbV2252Sku7iENsArpwJgTyBFjwNOyO8dtg/5WthQb8YMHnV3FZ+QnRPnmFJOh95VjA==}
+    dependencies:
+      fast-copy: 3.0.1
+      fast-equals: 4.0.3
+      ohash: 1.0.0
+      type-fest: 3.6.1
+    dev: true
+
+  /@morev/vue-transitions@2.3.6(vue@3.2.47):
+    resolution: {integrity: sha512-a6nOExEDVHD11wjpX5r/PJf8u9ziSwrlp16SaNJl2Gyehp6UlEkFx0aZJNZhSWnn7gOaQFzJvIqfx82p9tzqxA==}
+    hasBin: true
+    requiresBuild: true
+    peerDependencies:
+      vue: ^2.6.14 || >=3
+    dependencies:
+      '@morev/utils': 2.0.5
+      '@nuxt/kit': 3.2.3
+      vue: 3.2.47
+    transitivePeerDependencies:
+      - rollup
       - supports-color
     dev: true
 
@@ -4353,6 +4380,10 @@ packages:
 
   /fast-diff@1.2.0:
     resolution: {integrity: sha512-xJuoT5+L99XlZ8twedaRf6Ax2TgQVxvgZOYoPKqZufmJib0tL2tegPBOZb1pVNgIhlqDlA0eO0c3wBvQcmzx4w==}
+    dev: true
+
+  /fast-equals@4.0.3:
+    resolution: {integrity: sha512-G3BSX9cfKttjr+2o1O22tYMLq0DPluZnYtq1rXumE1SpL/F/SLIfHx08WYQoWSIpeMYf8sRbJ8++71+v6Pnxfg==}
     dev: true
 
   /fast-glob@3.2.12:

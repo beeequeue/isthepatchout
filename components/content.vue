@@ -4,22 +4,24 @@
 
     <answer />
 
-    <transition :duration="500">
+    <transition-expand :duration="500">
       <div v-if="!recentlyReleased" class="text-center">
         No need to refresh the page.
         <br />
         It will update as soon as we see a new update!
       </div>
-    </transition>
+
+      <patch-links v-else-if="recentlyReleased && links != null" :links="links" />
+    </transition-expand>
 
     <celebration />
-
-    <links v-if="recentlyReleased && links != null" :links="links" />
   </section>
 </template>
 
 <script lang="ts" setup>
 const { patch, recentlyReleased } = usePatch()
 
-const links = computed(() => patch.value?.links ?? null)
+const links = computed(() =>
+  patch.value?.links?.length ?? 0 ? patch.value!.links : null,
+)
 </script>
