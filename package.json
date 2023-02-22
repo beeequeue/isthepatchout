@@ -64,6 +64,7 @@
     "nuxt-security": "0.10.2",
     "nuxt-windicss": "2.6.0",
     "ofetch": "1.0.1",
+    "pino-http": "8.3.3",
     "pino-pretty": "9.4.0",
     "prettier": "2.8.4",
     "simple-git-hooks": "2.8.1",

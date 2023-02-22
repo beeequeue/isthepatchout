@@ -1,4 +1,4 @@
-import { defineEventHandler } from "h3"
+import { defineEventHandler, setResponseStatus } from "h3"
 
 import { serverSupabase } from "~/server/composables/supabase"
 
@@ -13,4 +13,6 @@ export default defineEventHandler(async (event) => {
   const { deleteSubscription } = serverSupabase(event)
 
   await deleteSubscription(endpoint)
+
+  setResponseStatus(event, 200)
 })

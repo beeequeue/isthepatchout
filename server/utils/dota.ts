@@ -40,7 +40,7 @@ export const getPatchList = async () => {
     return null
   }
 
-  Logger.debug(response?.patches?.slice(-5))
+  Logger.debug(response?.patches?.slice(-5), "Found patches:")
 
   return response.patches
 }
