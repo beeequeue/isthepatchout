@@ -48,14 +48,14 @@ const prettyLinks = computed(() =>
     transform: translateX(-100%);
   }
   80% {
-    transform: translateX(100%);
+    transform: translateX(101%);
   }
   100% {
-    transform: translateX(100%);
+    transform: translateX(101%);
   }
 }
 
 .animate-link {
-  animation: link 2s infinite;
+  animation: link 1.5s infinite;
 }
 </style>
