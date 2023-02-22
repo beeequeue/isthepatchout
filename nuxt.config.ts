@@ -50,8 +50,8 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "@nuxtjs/fontaine",
     "@nuxtjs/supabase",
+    "@vite-pwa/nuxt",
     "@vueuse/nuxt",
-    // "@nuxtjs/pwa",
   ],
 
   sourcemap: true,
@@ -91,6 +91,37 @@ export default defineNuxtConfig({
   experimental: {
     emitRouteChunkError: "reload",
   },
+  pwa: {
+    registerType: "autoUpdate",
+    strategies: "injectManifest",
+    srcDir: "sw",
+    filename: "sw.ts",
+    base: "/",
+    registerWebManifestInRouteRules: true,
+    client: {
+      installPrompt: true,
+      periodicSyncForUpdates: 3600,
+    },
+    injectRegister: false,
+    includeManifestIcons: false,
+    injectManifest: {
+      globPatterns: ["**/*.{png,svg,ico}"],
+      globIgnores: ["manifest**.webmanifest"],
+    },
+    manifest: {
+      name: "Is the Patch Out?",
+      short_name: "isthepatchout",
+      ["gcm_sender_id" as any]: process.env.NUXT_PUBLIC_VAPID_PUBLIC_KEY as string,
+      background_color: "#111",
+      theme_color: "#111",
+      display: "standalone",
+      orientation: "portrait",
+    },
+    devOptions: {
+      enabled: true,
+      type: "module",
+    },
+  },
   security: {
     headers: {
       xXSSProtection: false,
@@ -116,8 +147,10 @@ export default defineNuxtConfig({
     fonts: ["Rubik", { family: "Radiance", src: "fonts/Radiance-SemiBold.woff2" }],
     fallbacks: ["Helvetica"],
   },
-
-  typescript: { strict: true, shim: false },
+  typescript: {
+    strict: true,
+    shim: false,
+  },
 })
 
 // VitePWA({

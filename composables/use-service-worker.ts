@@ -1,5 +1,3 @@
-import { ref } from "vue"
-
 // https://www.npmjs.com/package/web-push#using-vapid-key-for-applicationserverkey
 const urlBase64ToUint8Array = (base64String: string) => {
   const padding = "=".repeat((4 - (base64String.length % 4)) % 4)
@@ -14,17 +12,15 @@ const urlBase64ToUint8Array = (base64String: string) => {
   return outputArray
 }
 
-const config = useRuntimeConfig()
-
-const applicationServerKey = urlBase64ToUint8Array(config.public.vapidPublicKey)
-
 const registration = ref<ServiceWorkerRegistration>()
 
 void navigator.serviceWorker.ready.then((newRegistration) => {
   registration.value = newRegistration
 })
 
-export const useServiceWorker = () => {
+export const useServiceWorker = (vapidPublicKey: string) => {
+  const applicationServerKey = urlBase64ToUint8Array(vapidPublicKey)
+
   return {
     applicationServerKey,
     registration,

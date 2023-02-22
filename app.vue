@@ -15,6 +15,8 @@
     <client-only-empty>
       <bottom-bar />
     </client-only-empty>
+
+    <vite-pwa-manifest />
   </main>
 </template>
 

@@ -1,9 +1,9 @@
 <template>
   <ToggleButton circle :checked="subscribed" class="text-base" @change="handleChange">
     <IconCSS
-      class="h-5 w-5 mr-2 hover:fill-gray-100 animate-infinite animate-slow transition-all"
+      class="mr-2 hover:fill-gray-100 animate-infinite animate-slow transition-all"
       :class="iconClasses"
-      :name="subscribed ? 'pajamas:notifications' : 'pajamas:notifications-off'"
+      :name="subscribed ? 'tabler:bell-off' : 'tabler:bell-filled'"
     />
 
     {{ subscribed ? "Disable" : "Enable" }} push notifications
@@ -11,8 +11,10 @@
 </template>
 
 <script lang="ts" setup>
+const config = useRuntimeConfig()
+
 const { supported, loading, subscribing, subscribed, askForPermissions, unsubscribe } =
-  usePushNotifications()
+  usePushNotifications(config.public.apiUrl, config.public.vapidPublicKey)
 
 const iconClasses = computed(() => ({
   /* eslint-disable @typescript-eslint/naming-convention */

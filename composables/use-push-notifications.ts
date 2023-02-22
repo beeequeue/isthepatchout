@@ -1,6 +1,8 @@
-import { LocalStorageKey } from "@/lib/constants"
+import { LocalStorageKey } from "~/lib/constants"
 
-import { useServiceWorker } from "./use-service-worker"
+type ApiResponse<T extends Record<string, unknown>> = T & {
+  ok: boolean
+}
 
 const loading = ref(true)
 
@@ -20,105 +22,98 @@ const askForPermissions = async () => {
   }
 }
 
-const config = useRuntimeConfig()
-const { registration, applicationServerKey } = useServiceWorker()
 const subscription = ref<PushSubscription | null>(null)
 const subscribing = ref(false)
 const subscribed = ref(false)
 const manuallyDisabled = useLocalStorage(LocalStorageKey.ManuallyDisabled, false)
 
-const registerNewSubscription = async () => {
-  const subscriptionData = JSON.parse(JSON.stringify(subscription.value))
+export const usePushNotifications = (baseUrl: string, vapidPublicKey: string) => {
+  const { registration, applicationServerKey } = useServiceWorker(vapidPublicKey)
 
-  await fetch(`${config.public.apiUrl}/api/subscription`, {
-    method: "POST",
-    // eslint-disable-next-line @typescript-eslint/naming-convention
-    headers: { "content-type": "application/json" },
-    body: JSON.stringify(subscriptionData),
-  })
-}
+  const registerNewSubscription = async () => {
+    const subscriptionData = JSON.parse(JSON.stringify(subscription.value))
 
-const unsubscribe = async () => {
-  if (subscription.value == null) return
+    await $fetch(`${baseUrl}/api/subscription`, {
+      method: "POST",
+      body: JSON.stringify(subscriptionData),
+    })
+  }
 
-  const { endpoint } = subscription.value
+  const unsubscribe = async () => {
+    if (subscription.value == null) return
 
-  await subscription.value.unsubscribe()
-  manuallyDisabled.value = true
-  subscribed.value = false
-  subscription.value = null
+    const { endpoint } = subscription.value
 
-  const params = new URLSearchParams({ endpoint })
-  await fetch(`${config.public.apiUrl}/api/subscription?${params.toString()}`, {
-    method: "DELETE",
-  })
-}
+    await subscription.value.unsubscribe()
+    manuallyDisabled.value = true
+    subscribed.value = false
+    subscription.value = null
 
-const getIsSubscriptionValid = async (endpoint: string): Promise<boolean> => {
-  const params = new URLSearchParams({ endpoint })
+    const params = new URLSearchParams({ endpoint })
+    await $fetch(`${baseUrl}/api/subscription?${params.toString()}`, {
+      method: "DELETE",
+    })
+  }
 
-  const response = await fetch(
-    `${config.public.apiUrl}/api/subscription?${params.toString()}`,
+  const getIsSubscriptionValid = async (endpoint: string): Promise<boolean> => {
+    const params = new URLSearchParams({ endpoint })
+
+    try {
+      const data = await $fetch<ApiResponse<{ exists: boolean }>>(
+        `${baseUrl}/api/subscription?${params.toString()}`,
+        { responseType: "json" },
+      )
+
+      return data.exists
+    } catch (error) {
+      throw new Error(`Couldn't fetch subscription status.`, {
+        cause: error,
+      })
+    }
+  }
+
+  watch(
+    registration,
+    () => {
+      if (/*config.public.PROD &&*/ registration.value == null) return
+
+      loading.value = false
+    },
+    { immediate: true },
   )
 
-  if (
-    !response.ok ||
-    !response.headers.get("content-type")?.includes("application/json")
-  ) {
-    throw new Error(`Couldn't fetch subscription status (${response.statusText})`)
-  }
+  watch([permissionsGranted, registration, manuallyDisabled], async () => {
+    if (!permissionsGranted.value || registration.value == null) return
 
-  const data = await response.json()
-  if (!data.ok) {
-    throw new Error(
-      `Couldn't fetch subscription status\n${JSON.stringify(data, null, 2)}`,
-    )
-  }
+    subscription.value = await registration.value.pushManager.getSubscription()
 
-  return data.exists
-}
+    if (subscription.value != null) {
+      subscribed.value = await getIsSubscriptionValid(subscription.value.endpoint)
 
-watch(
-  registration,
-  () => {
-    if (config.public.PROD && registration.value == null) return
+      if (subscribed.value) return
+    }
 
-    loading.value = false
-  },
-  { immediate: true },
-)
+    if (manuallyDisabled.value) return
 
-watch([permissionsGranted, registration, manuallyDisabled], async () => {
-  if (!permissionsGranted.value || registration.value == null) return
+    subscription.value = await registration.value.pushManager.subscribe({
+      userVisibleOnly: true,
+      applicationServerKey,
+    })
 
-  subscription.value = await registration.value.pushManager.getSubscription()
+    subscribing.value = true
 
-  if (subscription.value != null) {
-    subscribed.value = await getIsSubscriptionValid(subscription.value.endpoint)
+    await registerNewSubscription()
 
-    if (subscribed.value) return
-  }
-
-  if (manuallyDisabled.value) return
-
-  subscription.value = await registration.value.pushManager.subscribe({
-    userVisibleOnly: true,
-    applicationServerKey,
+    subscribing.value = false
+    subscribed.value = true
   })
 
-  subscribing.value = true
-
-  await registerNewSubscription()
-
-  subscribing.value = false
-  subscribed.value = true
-})
-
-export const usePushNotifications = () => ({
-  supported,
-  loading,
-  subscribed,
-  subscribing,
-  askForPermissions,
-  unsubscribe,
-})
+  return {
+    supported,
+    loading,
+    subscribed,
+    subscribing,
+    askForPermissions,
+    unsubscribe,
+  }
+}
