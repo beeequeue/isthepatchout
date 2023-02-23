@@ -59,6 +59,7 @@ export default defineNuxtConfig({
   sourcemap: true,
   vite: {
     build: {
+      minify: true,
       target: resolveToEsbuildTarget(browserslist(), {
         printUnknownTargets: false,
       }),
