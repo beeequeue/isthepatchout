@@ -1,6 +1,4 @@
 /* eslint-disable @typescript-eslint/consistent-type-definitions */
-import { readFileSync } from "fs"
-
 import browserslist from "browserslist"
 import { resolveToEsbuildTarget } from "esbuild-plugin-browserslist"
 import type SecurityModule from "nuxt-security"
@@ -18,10 +16,8 @@ declare module "@nuxt/schema" {
 
 const env = process.env.VERCEL_ENV as "production" | "development" | undefined
 
-const baseCss = readFileSync("./assets/base.css", "utf8")
-
 export default defineNuxtConfig({
-  // nitro: { preset: "vercel" },
+  nitro: { preset: "vercel" },
 
   runtimeConfig: {
     vapidPrivateKey: "",
@@ -67,6 +63,7 @@ export default defineNuxtConfig({
     envPrefix: ["VITE_", "VERCEL_"],
   },
 
+  css: ["assets/base.css"],
   app: {
     head: {
       title: "Is the Patch Out Yet?",
@@ -76,23 +73,12 @@ export default defineNuxtConfig({
         { rel: "preload", href: "/background.svg", as: "image" },
         {
           rel: "preload",
-          href: "/fonts/Rubik-Regular.woff2",
-          as: "font",
-          type: "font/woff2",
-        },
-        {
-          rel: "preload",
           href: "/fonts/Radiance-SemiBold.woff2",
           as: "font",
           type: "font/woff2",
         },
       ],
       htmlAttrs: { lang: "en" },
-      style: [
-        {
-          children: baseCss,
-        },
-      ],
     },
   },
 
@@ -146,13 +132,13 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     preconnect: true,
-    prefetch: true,
+    preload: true,
     families: {
       Rubik: [400],
     },
   },
   fontMetrics: {
-    fonts: ["Rubik", { family: "Radiance", src: "fonts/Radiance-SemiBold.woff2" }],
+    fonts: ["Rubik"],
     fallbacks: ["Helvetica"],
   },
   typescript: {
