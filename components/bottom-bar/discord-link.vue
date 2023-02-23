@@ -9,7 +9,6 @@
 <script lang="ts" setup>
 const config = useRuntimeConfig()
 
-/* eslint-disable @typescript-eslint/naming-convention */
 const searchParams = new URLSearchParams({
   scope: "webhook.incoming",
   response_type: "code",

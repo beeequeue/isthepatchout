@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/naming-convention */
 import type { Database } from "./types.generated"
 
 export type { Database }

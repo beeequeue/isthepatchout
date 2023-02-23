@@ -17,11 +17,9 @@ const { supported, loading, subscribing, subscribed, askForPermissions, unsubscr
   usePushNotifications(config.public.apiUrl, config.public.vapidPublicKey)
 
 const iconClasses = computed(() => ({
-  /* eslint-disable @typescript-eslint/naming-convention */
   "animate-heartBeat": subscribing.value,
   "grayed-out": !supported || loading.value,
   "fill-gray-400": !subscribed.value,
-  /* eslint-enable */
   shine: subscribed.value,
 }))
 
