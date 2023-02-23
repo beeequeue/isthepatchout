@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/consistent-type-definitions */
 import { readFileSync } from "fs"
 
+import browserslist from "browserslist"
+import { resolveToEsbuildTarget } from "esbuild-plugin-browserslist"
 import type SecurityModule from "nuxt-security"
 import { defineNuxtConfig } from "nuxt/config"
 
@@ -19,7 +21,7 @@ const env = process.env.VERCEL_ENV as "production" | "development" | undefined
 const baseCss = readFileSync("./assets/base.css", "utf8")
 
 export default defineNuxtConfig({
-  nitro: { preset: "vercel" },
+  // nitro: { preset: "vercel" },
 
   runtimeConfig: {
     vapidPrivateKey: "",
@@ -56,6 +58,11 @@ export default defineNuxtConfig({
 
   sourcemap: true,
   vite: {
+    build: {
+      target: resolveToEsbuildTarget(browserslist(), {
+        printUnknownTargets: false,
+      }),
+    },
     envPrefix: ["VITE_", "VERCEL_"],
   },
 
