@@ -127,6 +127,8 @@ export default defineNuxtConfig({
   googleFonts: {
     preconnect: true,
     preload: true,
+    display: "swap",
+    subsets: ["latin"],
     families: {
       Rubik: [400],
     },
