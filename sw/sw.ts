@@ -37,3 +37,5 @@ self.addEventListener("notificationclick" as any, (e: NotificationEvent) => {
 
   e.notification.close()
 })
+
+console.log((self as any).__WB_MANIFEST)
