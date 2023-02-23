@@ -1,0 +1,40 @@
+{
+  "headers": [
+    {
+      "source": "(.*)/sw.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "(.*)\\.woff2?",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2419200, stale-while-revalidate=4838400"
+        }
+      ]
+    },
+    {
+      "source": "(.*)\\.svg",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=2419200"
+        }
+      ]
+    },
+    {
+      "source": "(.*)\\.mp3",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, stale-while-revalidate=2419200"
+        }
+      ]
+    }
+  ]
+}
