@@ -71,12 +71,6 @@ export default defineNuxtConfig({
       link: [
         { rel: "preconnect", href: process.env.SUPABASE_URL },
         { rel: "preload", href: "/background.svg", as: "image" },
-        {
-          rel: "preload",
-          href: "/fonts/Radiance-SemiBold.woff2",
-          as: "font",
-          type: "font/woff2",
-        },
       ],
       htmlAttrs: { lang: "en" },
     },
