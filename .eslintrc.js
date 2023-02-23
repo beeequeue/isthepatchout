@@ -12,6 +12,7 @@ module.exports = {
   ],
   rules: {
     "no-undef": "off",
+    "no-console": "error",
     "unicorn/prefer-module": "off",
     "@typescript-eslint/naming-convention": "off",
     "vue/multi-word-component-names": "off",
