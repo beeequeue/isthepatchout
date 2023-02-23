@@ -1,5 +1,11 @@
 <template>
-  <ToggleButton circle :checked="subscribed" class="text-base" @change="handleChange">
+  <toggle-button
+    v-if="supported"
+    circle
+    :checked="subscribed"
+    class="text-base"
+    @change="handleChange"
+  >
     <IconCSS
       class="mr-2 hover:fill-gray-100 animate-infinite animate-slow transition-all"
       :class="iconClasses"
@@ -7,7 +13,7 @@
     />
 
     {{ subscribed ? "Disable" : "Enable" }} push notifications
-  </ToggleButton>
+  </toggle-button>
 </template>
 
 <script lang="ts" setup>
