@@ -2,6 +2,7 @@ import { defineEventHandler, readBody, setResponseStatus } from "h3"
 import z, { Infer } from "myzod"
 
 import { serverSupabase } from "~/server/composables/supabase"
+import { okResponse } from "~/server/utils"
 
 const Input = z.object(
   {
@@ -40,4 +41,6 @@ export default defineEventHandler(async (event) => {
   await upsertSubscription(result)
 
   setResponseStatus(event, 201)
+
+  return okResponse
 })

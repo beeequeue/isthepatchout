@@ -2,7 +2,7 @@ import { defineEventHandler, getHeader, H3Event } from "h3"
 
 import { serverSupabase } from "~/server/composables/supabase"
 
-import { formatPatchData } from "../utils"
+import { formatPatchData, okResponse } from "../utils"
 import { getPatchList } from "../utils/dota"
 
 const config = useRuntimeConfig()
@@ -40,7 +40,7 @@ export default defineEventHandler(async (event) => {
   try {
     await checkAndUpdatePatches(event)
 
-    return { result: "ok" }
+    return okResponse
   } catch (error: unknown) {
     throw createError({ cause: error })
   }

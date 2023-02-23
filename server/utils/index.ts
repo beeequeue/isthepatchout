@@ -4,6 +4,8 @@ import { Patch } from "~/lib/types"
 
 import { PatchNoteListItem } from "./dota"
 
+export const okResponse = { ok: true }
+
 export const formatPatchData = (data: PatchNoteListItem): Patch => {
   let links = [`https://dota2.com/patches/${data.patch_number}`]
 

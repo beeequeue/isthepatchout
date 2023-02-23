@@ -1,6 +1,7 @@
-import { defineEventHandler, setResponseStatus } from "h3"
+import { defineEventHandler } from "h3"
 
 import { serverSupabase } from "~/server/composables/supabase"
+import { okResponse } from "~/server/utils"
 
 export default defineEventHandler(async (event) => {
   const query = getQuery(event)
@@ -14,5 +15,5 @@ export default defineEventHandler(async (event) => {
 
   await deleteSubscription(endpoint)
 
-  setResponseStatus(event, 200)
+  return okResponse
 })

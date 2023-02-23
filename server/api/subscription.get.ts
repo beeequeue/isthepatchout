@@ -1,6 +1,7 @@
 import { defineEventHandler } from "h3"
 
 import { serverSupabase } from "~/server/composables/supabase"
+import { okResponse } from "~/server/utils"
 
 export default defineEventHandler(async (event) => {
   const query = getQuery(event)
@@ -13,5 +14,8 @@ export default defineEventHandler(async (event) => {
   const { doesSubscriptionExist } = serverSupabase(event)
 
   const exists = await doesSubscriptionExist(endpoint)
-  return { exists }
+  return {
+    ...okResponse,
+    exists,
+  }
 })
