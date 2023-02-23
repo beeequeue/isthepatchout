@@ -1,3 +1,4 @@
+import { identity } from "remeda"
 import type { PushEventPatch } from "~/lib/types"
 
 enum NotificationAction {
@@ -38,4 +39,4 @@ self.addEventListener("notificationclick" as any, (e: NotificationEvent) => {
   e.notification.close()
 })
 
-console.log((self as any).__WB_MANIFEST)
+identity((self as any).__WB_MANIFEST)

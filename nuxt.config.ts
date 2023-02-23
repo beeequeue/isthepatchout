@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/consistent-type-definitions */
+import path from "path"
+
 import browserslist from "browserslist"
 import { resolveToEsbuildTarget } from "esbuild-plugin-browserslist"
 import type SecurityModule from "nuxt-security"
@@ -78,31 +80,31 @@ export default defineNuxtConfig({
     emitRouteChunkError: "reload",
   },
   pwa: {
-    registerType: "autoUpdate",
-    strategies: "injectManifest",
     srcDir: "sw",
     filename: "sw.ts",
+    outDir: path.resolve(__dirname, ".vercel", "output", "static"),
     base: "/",
+
+    strategies: "injectManifest",
+    injectRegister: "inline",
+    includeManifestIcons: false,
     registerWebManifestInRouteRules: true,
+    minify: true,
+
     client: {
       installPrompt: true,
       periodicSyncForUpdates: 3600,
     },
-    injectRegister: false,
-    includeManifestIcons: false,
-    injectManifest: {
-      globPatterns: ["**/*.{png,svg,ico}"],
-      globIgnores: ["manifest**.webmanifest"],
-    },
+
     manifest: {
       name: "Is the Patch Out?",
       short_name: "isthepatchout",
       ["gcm_sender_id" as any]: process.env.NUXT_PUBLIC_VAPID_PUBLIC_KEY as string,
       background_color: "#111",
       theme_color: "#111",
-      display: "standalone",
       orientation: "portrait",
     },
+
     devOptions: {
       enabled: true,
       type: "module",
