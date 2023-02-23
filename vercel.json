@@ -1,15 +1,6 @@
 {
   "headers": [
     {
-      "source": "(.*).{woff,woff2}",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=2419200, stale-while-revalidate=4838400"
-        }
-      ]
-    },
-    {
       "source": "(.*).svg",
       "headers": [
         {
