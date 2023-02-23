@@ -60,7 +60,6 @@ export default defineNuxtConfig({
         printUnknownTargets: false,
       }),
     },
-    envPrefix: ["VITE_", "VERCEL_"],
   },
 
   css: ["assets/base.css"],
