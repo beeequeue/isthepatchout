@@ -11,8 +11,6 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue"
-
 defineProps<{ is?: string; round?: boolean }>()
 
 const clicked = ref(false)

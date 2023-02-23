@@ -14,5 +14,6 @@ module.exports = {
     "unicorn/prefer-module": "off",
     "@typescript-eslint/naming-convention": "off",
     "vue/multi-word-component-names": "off",
+    "vue/no-undef-components": "off",
   },
 }
