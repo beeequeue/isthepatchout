@@ -46,7 +46,6 @@ export default defineNuxtConfig({
     "nuxt-windicss",
     "@morev/vue-transitions/nuxt",
     "@nuxtjs/google-fonts",
-    "@nuxtjs/fontaine",
     "@nuxtjs/supabase",
     "@vite-pwa/nuxt",
     "@vueuse/nuxt",
@@ -129,10 +128,6 @@ export default defineNuxtConfig({
     families: {
       Rubik: [400],
     },
-  },
-  fontMetrics: {
-    fonts: ["Rubik"],
-    fallbacks: ["Helvetica"],
   },
   typescript: {
     strict: true,
