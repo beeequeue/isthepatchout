@@ -1,3 +1,4 @@
+/** @type import("eslint-define-config").ESLintConfig */
 module.exports = {
   root: true,
   ignorePatterns: ["node_modules", ".output", ".nuxt"],
