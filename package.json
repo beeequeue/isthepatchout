@@ -29,7 +29,7 @@
     "typecheck": "tsc --project api/tsconfig.json && vue-tsc --project tsconfig.json"
   },
   "resolutions": {
-    "@types/node": "18.14.0",
+    "@types/node": "18.14.1",
     "esbuild": "0.17.10",
     "node-fetch": "npm:node-fetch-native@1.0.2"
   },
@@ -51,7 +51,7 @@
     "@hapi/boom": "10.0.1",
     "@sentry/node": "7.38.0",
     "@types/canvas-confetti": "1.6.0",
-    "@types/node": "18.14.0",
+    "@types/node": "18.14.1",
     "@vercel/node": "2.9.7",
     "@vitejs/plugin-vue": "4.0.0",
     "@vue/compiler-sfc": "3.2.47",
