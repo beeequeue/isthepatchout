@@ -33,6 +33,8 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - run: pnpm lint --format compact
+        env:
+          NODE_OPTIONS: "--max-old-space-size=8192"
 
   typecheck:
     runs-on: ubuntu-latest
