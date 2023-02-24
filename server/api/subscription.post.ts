@@ -37,7 +37,6 @@ export default defineEventHandler(async (event) => {
 
   const { upsertSubscription } = serverSupabase(event)
 
-  // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
   await upsertSubscription(result)
 
   setResponseStatus(event, 201)

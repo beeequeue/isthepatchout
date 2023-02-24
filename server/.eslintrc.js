@@ -1,6 +1,6 @@
-/* eslint-disable unicorn/prefer-module */
 const path = require("path")
 
+/** @type import("eslint-define-config").ESLintConfig */
 module.exports = {
   env: {
     es2021: true,
@@ -15,6 +15,9 @@ module.exports = {
     project: path.resolve(__dirname, "../tsconfig.json"),
   },
   rules: {
+    "no-undef": "off",
+    "no-console": "error",
+    "unicorn/prefer-module": "off",
     "import/no-extraneous-dependencies": [
       "off",
       {
