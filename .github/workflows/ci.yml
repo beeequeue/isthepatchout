@@ -32,6 +32,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - run: pnpm nuxi prepare
       - run: pnpm lint --format compact
         env:
           NODE_OPTIONS: "--max-old-space-size=8192"
