@@ -3,8 +3,8 @@ import path from "path"
 
 import browserslist from "browserslist"
 import { resolveToEsbuildTarget } from "esbuild-plugin-browserslist"
-import type SecurityModule from "nuxt-security"
 import { defineNuxtConfig } from "nuxt/config"
+import type SecurityModule from "nuxt-security"
 
 import type { ModuleOptions, NuxtModule } from "@nuxt/schema"
 

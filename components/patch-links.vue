@@ -28,7 +28,9 @@ const prettifyName = (str: string) =>
 const getLinkName = (link: string): string => {
   if (/dota2\.com\/patches/.test(link)) return "Patch notes"
 
-  const [, patchName] = /dota2\.com\/(\w+)/.exec(link) ?? []
+  const { patchName } = /dota2\.com\/(?<patchName>\w+)/.exec(link) as RegExpExecArray & {
+    patchName?: string
+  }
   if (patchName != null) return prettifyName(patchName)
 
   return link
