@@ -6,7 +6,7 @@
   "repository": "https://github.com/BeeeQueue/isthepatchout",
   "license": "MIT",
   "private": true,
-  "packageManager": "pnpm@7.27.1",
+  "packageManager": "pnpm@8.0.0-alpha.0",
   "engines": {
     "node": "^18"
   },
@@ -38,7 +38,7 @@
     "dotaver": "1.0.1",
     "fathom-client": "3.5.0",
     "p-queue": "7.3.4",
-    "pino": "8.10.0",
+    "pino": "8.11.0",
     "remeda": "1.6.2"
   },
   "devDependencies": {
@@ -65,7 +65,7 @@
     "nuxt-windicss": "2.6.0",
     "ofetch": "1.0.1",
     "pino-http": "8.3.3",
-    "pino-pretty": "9.3.0",
+    "pino-pretty": "9.4.0",
     "prettier": "2.8.4",
     "simple-git-hooks": "2.8.1",
     "typescript": "4.9.5",
