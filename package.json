@@ -21,7 +21,7 @@
   "scripts": {
     "dev": "nuxi dev",
     "build": "nuxi build",
-    "lint": "eslint .",
+    "lint": "eslint {components,composables,lib,plugins,server,sw,utils}",
     "postinstall": "simple-git-hooks",
     "psql": "PGPASSWORD=postgres psql -h localhost -p 54322 -U postgres -f",
     "serve": "nuxi preview",
