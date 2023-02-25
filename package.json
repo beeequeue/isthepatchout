@@ -47,7 +47,7 @@
     "workbox-precaching": "6.5.4"
   },
   "devDependencies": {
-    "@beequeue/eslint-plugin": "1.1.2",
+    "@beequeue/eslint-plugin": "2.0.0",
     "@hapi/boom": "10.0.1",
     "@sentry/node": "7.38.0",
     "@types/canvas-confetti": "1.6.0",
