@@ -1,5 +1,5 @@
 <template>
-  <main class="flex justify-center items-center h-1/1">
+  <main class="flex justify-center items-center h-1/1 p-5 text-center">
     <background-image />
 
     <content v-if="patch != null" />
