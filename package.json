@@ -6,7 +6,7 @@
   "repository": "https://github.com/BeeeQueue/isthepatchout",
   "license": "MIT",
   "private": true,
-  "packageManager": "pnpm@7.27.1",
+  "packageManager": "pnpm@7.28.0",
   "engines": {
     "node": "^18"
   },
@@ -68,7 +68,7 @@
     "pino": "8.11.0",
     "pino-pretty": "9.4.0",
     "prettier": "2.8.4",
-    "remeda": "1.6.2",
+    "remeda": "1.8.0",
     "rollup-plugin-visualizer": "5.9.0",
     "simple-git-hooks": "2.8.1",
     "tailwindcss": "3.2.7",

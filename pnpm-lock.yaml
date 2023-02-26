@@ -105,8 +105,8 @@ devDependencies:
     specifier: 2.8.4
     version: 2.8.4
   remeda:
-    specifier: 1.6.2
-    version: 1.6.2
+    specifier: 1.8.0
+    version: 1.8.0
   rollup-plugin-visualizer:
     specifier: 5.9.0
     version: 5.9.0
@@ -5327,8 +5327,8 @@ packages:
       jsesc: 0.5.0
     dev: true
 
-  /remeda@1.6.2:
-    resolution: {integrity: sha512-4/gci8Crgp6l0ATZEvu/FxHJPjDUMZZ1vhSIROHNNx/cXi77ar/7Cj2Z8Bysd0Vs824QFRfcIKqOxqH+pKDW1Q==}
+  /remeda@1.8.0:
+    resolution: {integrity: sha512-zhrGQbeIVJhXArg8/USMkZQeD36rr62SAt96bw5aOBjo7V399rOn7FrgQRG5WfxO9zME09vOtOs5nx1UsZ/80A==}
     dev: true
 
   /require-directory@2.1.1:
