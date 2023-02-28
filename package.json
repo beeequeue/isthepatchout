@@ -42,14 +42,14 @@
     "date-fns": "2.29.3",
     "dotaver": "1.0.1",
     "fathom-client": "3.5.0",
-    "simple-icons": "8.5.0",
+    "simple-icons": "8.6.0",
     "vue": "3.2.47",
     "workbox-precaching": "6.5.4"
   },
   "devDependencies": {
     "@beequeue/eslint-plugin": "1.1.2",
     "@hapi/boom": "10.0.1",
-    "@sentry/node": "7.38.0",
+    "@sentry/node": "7.39.0",
     "@types/canvas-confetti": "1.6.0",
     "@types/node": "18.14.2",
     "@vercel/node": "2.9.8",
