@@ -87,8 +87,8 @@ devDependencies:
     specifier: 13.1.2
     version: 13.1.2
   myzod:
-    specifier: 1.8.8
-    version: 1.8.8
+    specifier: 1.9.0
+    version: 1.9.0
   ohmyfetch:
     specifier: 0.4.21
     version: 0.4.21
@@ -4683,8 +4683,8 @@ packages:
     resolution: {integrity: sha512-YVE1mIJ4VpUMqZObFndk9CJu6DBJR/GB13p3tXuNbwD4XExaI5EOuRl6BHeIDxIqXZVxSfAC+y6U1Z/IxCfKUg==}
     dev: true
 
-  /myzod@1.8.8:
-    resolution: {integrity: sha512-DMXQjmnqvHxDPWkWLVz40FXm/3W95PnZMeLJiM5ickVqcFLeWlgOa4CDhV8PJ9rViiC1WvZoQJRCmMF6pzTTPA==}
+  /myzod@1.9.0:
+    resolution: {integrity: sha512-ELgwn+UhQ0H9zkbZ0HteGEkL0hG9VpbO0KtXXw/Bcewq+D2VadYUP9w0vOOJnxtzB2PA/Mh3Lnt7J8ogo8f3bQ==}
     dev: true
 
   /nanoid@3.3.4:
