@@ -57,8 +57,8 @@ devDependencies:
     specifier: 18.14.2
     version: 18.14.2
   '@vercel/node':
-    specifier: 2.9.8
-    version: 2.9.8
+    specifier: 2.9.10
+    version: 2.9.10
   '@vitejs/plugin-vue':
     specifier: 4.0.0
     version: 4.0.0(vite@4.1.4)(vue@3.2.47)
@@ -87,8 +87,8 @@ devDependencies:
     specifier: 13.1.2
     version: 13.1.2
   myzod:
-    specifier: 1.9.0
-    version: 1.9.0
+    specifier: 1.10.0
+    version: 1.10.0
   ohmyfetch:
     specifier: 0.4.21
     version: 0.4.21
@@ -2087,21 +2087,21 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@vercel/build-utils@6.3.1:
-    resolution: {integrity: sha512-mFd6QZJX1SaweTa9BB+zO6OyGeQWsk+z0LFhsSblnWue2wjmeZ3z3TBt8V/Wlae5NMg4+E2AFcDf/lr3ENeCfg==}
+  /@vercel/build-utils@6.3.2:
+    resolution: {integrity: sha512-wUYa8eUyTg1jPGRCrjpIxJm1r6hQE7ccbECWzDCAikuWG4iadS2zWrF7bsAcuUj7fTMf8sNFhmsknTJgyN3B3g==}
     dev: true
 
-  /@vercel/node-bridge@3.1.12:
-    resolution: {integrity: sha512-RYMYzyR/QyT+1JeOHBtBxwDc8XszYbChq0b18uqt4/PQ8rUWdcHMUkUoNjScB6RmqScX+vTzYj8eLS8UfHxnaQ==}
+  /@vercel/node-bridge@3.1.14:
+    resolution: {integrity: sha512-TAbo0rwBenmWywcEup+5lZgr6ILPPq55P33JRX+oJJuTxYib0NqVj47gEvLTxaj3MoJFgp0iDlC9A0uAf4ykxQ==}
     dev: true
 
-  /@vercel/node@2.9.8:
-    resolution: {integrity: sha512-GqRqUmdT5/l8XY68ulUJKgijCrWw/p2sgxzrq5Mj40B2nOC5CQa0HLLiNd/Q+jnIrrJkdBpB1xeVkebEv1mgng==}
+  /@vercel/node@2.9.10:
+    resolution: {integrity: sha512-rpl0dkJVQpPgIPvAG2hIuxwIIUoxRFqGwMVqqsp6r9sr2Y03q+t2UtPSGOyBRpE+0JdYV2GzcRcgiPQi3Udi7w==}
     dependencies:
       '@edge-runtime/vm': 2.0.0
       '@types/node': 18.14.2
-      '@vercel/build-utils': 6.3.1
-      '@vercel/node-bridge': 3.1.12
+      '@vercel/build-utils': 6.3.2
+      '@vercel/node-bridge': 3.1.14
       '@vercel/static-config': 2.0.13
       edge-runtime: 2.0.0
       esbuild: 0.17.10
@@ -4683,8 +4683,8 @@ packages:
     resolution: {integrity: sha512-YVE1mIJ4VpUMqZObFndk9CJu6DBJR/GB13p3tXuNbwD4XExaI5EOuRl6BHeIDxIqXZVxSfAC+y6U1Z/IxCfKUg==}
     dev: true
 
-  /myzod@1.9.0:
-    resolution: {integrity: sha512-ELgwn+UhQ0H9zkbZ0HteGEkL0hG9VpbO0KtXXw/Bcewq+D2VadYUP9w0vOOJnxtzB2PA/Mh3Lnt7J8ogo8f3bQ==}
+  /myzod@1.10.0:
+    resolution: {integrity: sha512-f/r6a37bymBrgAhfESPidVy0/V0j4+p1hshvT+Hp2bwNNyKWWatiPGnievRg74srXw1gVacf6DPaHfpPD0B/zw==}
     dev: true
 
   /nanoid@3.3.4:
