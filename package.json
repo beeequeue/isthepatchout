@@ -29,14 +29,14 @@
     "typecheck": "tsc --project api/tsconfig.json && vue-tsc --project tsconfig.json"
   },
   "resolutions": {
-    "@types/node": "18.14.2",
+    "@types/node": "18.14.4",
     "esbuild": "0.17.10",
     "node-fetch": "npm:node-fetch-native@1.0.2"
   },
   "dependencies": {
     "@ivanv/vue-collapse-transition": "1.0.2",
     "@supabase/realtime-js": "2.6.0",
-    "@supabase/supabase-js": "2.8.0",
+    "@supabase/supabase-js": "2.10.0",
     "@vueuse/core": "9.13.0",
     "canvas-confetti": "1.6.0",
     "date-fns": "2.29.3",
@@ -49,9 +49,9 @@
   "devDependencies": {
     "@beequeue/eslint-plugin": "1.1.2",
     "@hapi/boom": "10.0.1",
-    "@sentry/node": "7.39.0",
+    "@sentry/node": "7.40.0",
     "@types/canvas-confetti": "1.6.0",
-    "@types/node": "18.14.2",
+    "@types/node": "18.14.4",
     "@vercel/node": "2.9.10",
     "@vitejs/plugin-vue": "4.0.0",
     "@vue/compiler-sfc": "3.2.47",
