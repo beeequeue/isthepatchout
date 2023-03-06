@@ -6,7 +6,7 @@
   "repository": "https://github.com/BeeeQueue/isthepatchout",
   "license": "MIT",
   "private": true,
-  "packageManager": "pnpm@7.28.0",
+  "packageManager": "pnpm@7.29.0",
   "engines": {
     "node": "^18"
   },
@@ -29,8 +29,8 @@
     "typecheck": "tsc --project api/tsconfig.json && vue-tsc --project tsconfig.json"
   },
   "resolutions": {
-    "@types/node": "18.14.4",
-    "esbuild": "0.17.10",
+    "@types/node": "18.14.6",
+    "esbuild": "0.17.11",
     "node-fetch": "npm:node-fetch-native@1.0.2"
   },
   "dependencies": {
@@ -51,7 +51,7 @@
     "@hapi/boom": "10.0.1",
     "@sentry/node": "7.40.0",
     "@types/canvas-confetti": "1.6.0",
-    "@types/node": "18.14.4",
+    "@types/node": "18.14.6",
     "@vercel/node": "2.9.10",
     "@vitejs/plugin-vue": "4.0.0",
     "@vue/compiler-sfc": "3.2.47",
@@ -68,7 +68,7 @@
     "pino": "8.11.0",
     "pino-pretty": "9.4.0",
     "prettier": "2.8.4",
-    "remeda": "1.8.0",
+    "remeda": "1.8.1",
     "rollup-plugin-visualizer": "5.9.0",
     "simple-git-hooks": "2.8.1",
     "tailwindcss": "3.2.7",
