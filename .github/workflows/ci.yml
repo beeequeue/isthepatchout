@@ -32,7 +32,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - run: pnpm nuxi prepare
       - run: pnpm lint --format compact
+        env:
+          NODE_OPTIONS: "--max-old-space-size=8192"
 
   typecheck:
     runs-on: ubuntu-latest
@@ -87,8 +90,3 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - run: pnpm build
-
-      - run: pnpm bundlewatch
-        env:
-          BUNDLEWATCH_GITHUB_TOKEN: ${{ secrets.BUNDLEWATCH_GITHUB_TOKEN }}
-          CI_COMMIT_SHA: ${{ github.event.pull_request.head.sha }}

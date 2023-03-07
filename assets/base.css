@@ -1,0 +1,33 @@
+html {
+  background-color: #0c0c0c;
+}
+
+html,
+body,
+#__nuxt {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#__nuxt {
+  color: #eee;
+  text-shadow: 3px 3px 6px #000000cc, 0 0 5px #000000c0;
+  user-select: none;
+}
+
+#__nuxt button {
+  color: #eee;
+  font-family: Rubik, "Rubik override", sans-serif;
+}
+
+@font-face {
+  font-family: "Radiance";
+  src: url("/assets/fonts/Radiance-SemiBold.woff2") format("woff2"),
+  url("/assets/fonts/Radiance-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}

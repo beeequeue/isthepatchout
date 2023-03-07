@@ -1,22 +1,28 @@
+const path = require("path")
+
 /** @type import("eslint-define-config").ESLintConfig */
 module.exports = {
-  root: true,
-  ignorePatterns: ["node_modules", ".output", ".nuxt"],
   env: {
     es2021: true,
-    browser: true,
+    node: true,
   },
   extends: [
     "plugin:@beequeue/base",
-    "plugin:@beequeue/vue",
+    "plugin:@beequeue/node",
     "plugin:@beequeue/typescript",
   ],
+  parserOptions: {
+    project: path.resolve(__dirname, "../tsconfig.json"),
+  },
   rules: {
     "no-undef": "off",
     "no-console": "error",
     "unicorn/prefer-module": "off",
-    "@typescript-eslint/naming-convention": "off",
-    "vue/multi-word-component-names": "off",
-    "vue/no-undef-components": "off",
+    "import/no-extraneous-dependencies": [
+      "off",
+      {
+        devDependencies: ["**/*"],
+      },
+    ],
   },
 }
