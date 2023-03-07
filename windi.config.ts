@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { defineConfig } from "vite-plugin-windicss"
 import colors from "windicss/colors"
 import { PluginUtils } from "windicss/types/interfaces"
