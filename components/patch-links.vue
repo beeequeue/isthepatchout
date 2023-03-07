@@ -5,13 +5,11 @@
         <div
           class="relative py-1 px-2 mb-1 text-3xl color-primary-400 text-center overflow-hidden"
         >
-          <span>
-            {{ name }}
-          </span>
+          <span>{{ name }}</span>
 
           <span
             class="absolute left-0 bottom-0 right-0 transform translate-x-full border-b-2 border-primary-400 animate-link"
-            :class="`!animate-delay-${500 * i}ms`"
+            :class="`!animate-delay-${250 * i}ms`"
           />
         </div>
       </a>

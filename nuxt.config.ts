@@ -63,7 +63,7 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ["assets/base.css"],
+  css: ["virtual:windi.css", "assets/base.css"],
   app: {
     head: {
       title: "Is the Patch Out Yet?",
