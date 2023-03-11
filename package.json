@@ -28,7 +28,7 @@
     "typecheck": "nuxi typecheck"
   },
   "resolutions": {
-    "@types/node": "18.14.6",
+    "@types/node": "18.15.0",
     "node-fetch": "npm:node-fetch-native@1.0.2"
   },
   "dependencies": {
@@ -44,13 +44,13 @@
   "devDependencies": {
     "@beequeue/eslint-plugin": "2.0.1",
     "@morev/vue-transitions": "2.3.6",
-    "@nuxtjs/google-fonts": "3.0.0-1",
+    "@nuxtjs/google-fonts": "3.0.0",
     "@nuxtjs/supabase": "0.3.1",
     "@supabase/realtime-js": "2.6.0",
-    "@total-typescript/ts-reset": "0.3.7",
+    "@total-typescript/ts-reset": "0.4.2",
     "@types/canvas-confetti": "1.6.0",
-    "@types/node": "18.14.6",
-    "@vite-pwa/nuxt": "0.0.6",
+    "@types/node": "18.15.0",
+    "@vite-pwa/nuxt": "0.0.7",
     "@vueuse/nuxt": "9.13.0",
     "@windicss/plugin-animations": "1.0.9",
     "browserslist": "4.21.5",
@@ -62,7 +62,7 @@
     "myzod": "1.10.0",
     "nuxt": "3.2.3",
     "nuxt-icon": "0.3.2",
-    "nuxt-security": "0.11.0",
+    "nuxt-security": "0.12.0",
     "nuxt-windicss": "2.6.0",
     "ofetch": "1.0.1",
     "pino-http": "8.3.3",
