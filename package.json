@@ -51,7 +51,7 @@
     "@types/canvas-confetti": "1.6.0",
     "@types/node": "18.15.0",
     "@vite-pwa/nuxt": "0.0.7",
-    "@vueuse/nuxt": "9.13.0",
+    "@vueuse/nuxt": "10.0.2",
     "@windicss/plugin-animations": "1.0.9",
     "browserslist": "4.21.5",
     "dotenv": "16.0.3",
