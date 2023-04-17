@@ -6,7 +6,7 @@
   "repository": "https://github.com/BeeeQueue/isthepatchout",
   "license": "MIT",
   "private": true,
-  "packageManager": "pnpm@8.0.0-beta.0",
+  "packageManager": "pnpm@8.2.0",
   "engines": {
     "node": "^18"
   },
@@ -32,7 +32,7 @@
     "node-fetch": "npm:node-fetch-native@1.0.2"
   },
   "dependencies": {
-    "@vueuse/core": "9.13.0",
+    "@vueuse/core": "10.0.2",
     "canvas-confetti": "1.6.0",
     "date-fns": "2.29.3",
     "dotaver": "1.0.1",
@@ -51,7 +51,7 @@
     "@types/canvas-confetti": "1.6.0",
     "@types/node": "18.15.0",
     "@vite-pwa/nuxt": "0.0.7",
-    "@vueuse/nuxt": "9.13.0",
+    "@vueuse/nuxt": "10.0.2",
     "@windicss/plugin-animations": "1.0.9",
     "browserslist": "4.21.5",
     "dotenv": "16.0.3",
