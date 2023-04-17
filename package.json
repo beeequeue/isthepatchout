@@ -42,7 +42,7 @@
     "remeda": "1.8.1"
   },
   "devDependencies": {
-    "@beequeue/eslint-plugin": "2.0.1",
+    "@beequeue/eslint-plugin": "2.1.0",
     "@morev/vue-transitions": "2.3.6",
     "@nuxtjs/google-fonts": "3.0.0",
     "@nuxtjs/supabase": "0.3.1",
@@ -56,9 +56,9 @@
     "browserslist": "4.21.5",
     "dotenv": "16.0.3",
     "esbuild-plugin-browserslist": "0.7.0",
-    "eslint": "8.37.0",
-    "eslint-define-config": "1.17.0",
-    "lint-staged": "13.2.0",
+    "eslint": "8.38.0",
+    "eslint-define-config": "1.18.0",
+    "lint-staged": "13.2.1",
     "myzod": "1.10.0",
     "nuxt": "3.2.3",
     "nuxt-icon": "0.3.2",
