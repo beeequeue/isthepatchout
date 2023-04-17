@@ -32,7 +32,7 @@
     "node-fetch": "npm:node-fetch-native@1.0.2"
   },
   "dependencies": {
-    "@vueuse/core": "9.13.0",
+    "@vueuse/core": "10.0.2",
     "canvas-confetti": "1.6.0",
     "date-fns": "2.29.3",
     "dotaver": "1.0.1",
