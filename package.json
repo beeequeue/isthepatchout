@@ -6,7 +6,7 @@
   "repository": "https://github.com/BeeeQueue/isthepatchout",
   "license": "MIT",
   "private": true,
-  "packageManager": "pnpm@8.0.0-beta.0",
+  "packageManager": "pnpm@8.2.0",
   "engines": {
     "node": "^18"
   },
@@ -32,7 +32,7 @@
     "node-fetch": "npm:node-fetch-native@1.0.2"
   },
   "dependencies": {
-    "@vueuse/core": "9.13.0",
+    "@vueuse/core": "10.0.2",
     "canvas-confetti": "1.6.0",
     "date-fns": "2.29.3",
     "dotaver": "1.0.1",
