@@ -77,7 +77,7 @@ export default defineNuxtConfig({
   },
 
   experimental: {
-    emitRouteChunkError: "reload",
+    emitRouteChunkError: "automatic",
   },
   pwa: {
     srcDir: "sw",
