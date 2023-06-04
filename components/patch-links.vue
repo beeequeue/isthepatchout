@@ -21,7 +21,7 @@
 const props = defineProps<{ links: string[] }>()
 
 const prettifyName = (str: string) =>
-  `${str[0].toUpperCase()}${str.slice(1)}`.replace(/-_/g, " ")
+  `${str[0].toUpperCase()}${str.slice(1)}`.replaceAll("-_", " ")
 
 const getLinkName = (link: string): string => {
   if (/dota2\.com\/patches/.test(link)) return "Patch notes"
