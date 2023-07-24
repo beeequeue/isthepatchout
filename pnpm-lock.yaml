@@ -23,6 +23,9 @@ dependencies:
   fathom-client:
     specifier: 3.5.0
     version: 3.5.0
+  fetch-unfiller:
+    specifier: 0.0.2
+    version: 0.0.2
   p-queue:
     specifier: 7.3.4
     version: 7.3.4
@@ -5086,6 +5089,16 @@ packages:
       node-domexception: 1.0.0
       web-streams-polyfill: 3.2.1
     dev: true
+
+  /fetch-unfiller@0.0.2:
+    resolution: {integrity: sha512-sYZiZc/oR4msazTeyHHlxHxQsn1lUAZkzr/MpL9orMbIq6qzh4/Kon3Fc2+9HbnTtSF8qZT9HoMHdYSIplcYcg==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      '@types/node-fetch': ^2 || ^3
+    peerDependenciesMeta:
+      '@types/node-fetch':
+        optional: true
+    dev: false
 
   /figures@5.0.0:
     resolution: {integrity: sha512-ej8ksPF4x6e5wvK9yevct0UCXh8TTFlWGVLlgjZuoBH1HwjIfKE/IdL5mq89sFA7zELi1VhKpmtDnrs7zWyeyg==}

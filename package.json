@@ -36,6 +36,7 @@
     "date-fns": "2.30.0",
     "dotaver": "1.0.1",
     "fathom-client": "3.5.0",
+    "fetch-unfiller": "0.0.2",
     "p-queue": "7.3.4",
     "pino": "8.14.1",
     "remeda": "1.19.0"
