@@ -26,17 +26,18 @@ const prettifyName = (str: string) =>
 const getLinkName = (link: string): string => {
   if (/dota2\.com\/patches/.test(link)) return "Patch notes"
 
-  const { groups } = /dota2\.com\/(?<patchName>\w+)/.exec(link) as RegExpExecArray
+  const { groups } = /dota2\.com\/(?<patchName>\w+)/.exec(link)!
   if (groups?.patchName != null) return prettifyName(groups.patchName)
 
   return link
 }
 
-const prettyLinks = computed(() =>
-  props.links?.map((link) => ({
-    name: getLinkName(link),
-    url: link,
-  })),
+const prettyLinks = computed(
+  () =>
+    props.links?.map((link) => ({
+      name: getLinkName(link),
+      url: link,
+    })),
 )
 </script>
 

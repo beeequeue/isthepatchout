@@ -105,7 +105,7 @@ export default defineNuxtConfig({
     manifest: {
       name: "Is the Patch Out?",
       short_name: "isthepatchout",
-      ["gcm_sender_id" as any]: process.env.NUXT_PUBLIC_VAPID_PUBLIC_KEY as string,
+      ["gcm_sender_id" as never]: process.env.NUXT_PUBLIC_VAPID_PUBLIC_KEY!,
       background_color: "#111",
       theme_color: "#111",
       orientation: "portrait",
