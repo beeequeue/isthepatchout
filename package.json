@@ -25,6 +25,7 @@
     "postinstall": "simple-git-hooks",
     "psql": "PGPASSWORD=postgres psql -h localhost -p 54322 -U postgres -f",
     "serve": "nuxi preview",
+    "supabase:start": "supabase start -x storage-api,imgproxy,inbucket,studio,deno-relay,edge-runtime,logflare",
     "typecheck": "nuxi typecheck"
   },
   "resolutions": {
