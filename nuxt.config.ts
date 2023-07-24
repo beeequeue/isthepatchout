@@ -61,6 +61,12 @@ export default defineNuxtConfig({
         printUnknownTargets: false,
       }),
     },
+    resolve: {
+      alias: {
+        "node-fetch": "fetch-unfiller/node",
+        "cross-fetch": "fetch-unfiller/node",
+      },
+    },
   },
 
   css: ["virtual:windi.css", "assets/base.css"],
