@@ -42,7 +42,7 @@
     "remeda": "1.19.0"
   },
   "devDependencies": {
-    "@beequeue/eslint-plugin": "2.1.1",
+    "@beequeue/eslint-plugin": "3.0.1",
     "@morev/vue-transitions": "2.3.6",
     "@nuxtjs/google-fonts": "3.0.1",
     "@nuxtjs/supabase": "0.3.7",
