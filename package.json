@@ -42,7 +42,7 @@
     "remeda": "1.24.0"
   },
   "devDependencies": {
-    "@beequeue/eslint-plugin": "2.1.1",
+    "@beequeue/eslint-plugin": "3.0.1",
     "@morev/vue-transitions": "2.3.6",
     "@nuxtjs/google-fonts": "3.0.2",
     "@nuxtjs/supabase": "0.3.8",
@@ -67,10 +67,10 @@
     "ofetch": "1.1.1",
     "pino-http": "8.3.3",
     "pino-pretty": "10.1.0",
-    "prettier": "2.8.8",
+    "prettier": "3.0.0",
     "simple-git-hooks": "2.9.0",
     "typescript": "5.1.6",
-    "vite": "4.4.6",
+    "vite": "4.4.7",
     "vue": "3.3.4",
     "vue-tsc": "1.8.6"
   }

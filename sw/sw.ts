@@ -4,7 +4,7 @@ enum NotificationAction {
   ViewReleaseNotes = "view-release-notes",
 }
 
-self.addEventListener("push" as any, (e: PushEvent) => {
+self.addEventListener("push" as never, (e: PushEvent) => {
   if (e.data == null) {
     throw new Error("Got no data in push event")
   }
@@ -27,7 +27,7 @@ self.addEventListener("push" as any, (e: PushEvent) => {
   }
 })
 
-self.addEventListener("notificationclick" as any, (e: NotificationEvent) => {
+self.addEventListener("notificationclick" as never, (e: NotificationEvent) => {
   const target = e.currentTarget as ServiceWorkerGlobalScope
   const data = e.notification.data as PushEventPatch
 
@@ -38,5 +38,5 @@ self.addEventListener("notificationclick" as any, (e: NotificationEvent) => {
   e.notification.close()
 })
 
-// eslint-disable-next-line no-console
+// eslint-disable-next-line no-console,@typescript-eslint/no-explicit-any
 console.debug((self as any).__WB_MANIFEST)
