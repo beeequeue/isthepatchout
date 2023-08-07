@@ -45,7 +45,7 @@
     "@beequeue/eslint-plugin": "3.0.1",
     "@morev/vue-transitions": "2.3.6",
     "@nuxtjs/google-fonts": "3.0.2",
-    "@nuxtjs/supabase": "0.3.8",
+    "@nuxtjs/supabase": "1.0.2",
     "@supabase/realtime-js": "2.7.3",
     "@total-typescript/ts-reset": "0.4.2",
     "@types/canvas-confetti": "1.6.0",
