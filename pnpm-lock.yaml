@@ -83,8 +83,8 @@ devDependencies:
     specifier: 8.46.0
     version: 8.46.0
   eslint-define-config:
-    specifier: 1.22.0
-    version: 1.22.0
+    specifier: 1.23.0
+    version: 1.23.0
   lint-staged:
     specifier: 13.2.3
     version: 13.2.3
@@ -4499,8 +4499,8 @@ packages:
       eslint: 8.46.0
     dev: true
 
-  /eslint-define-config@1.22.0:
-    resolution: {integrity: sha512-pckNJppFwC4AX+AGK63aa4sX5BluPwWwHES3fq/ER0jDR2U2czwlngg38B4EQ2ibvofufc+R5QfmdPKI6+74vQ==}
+  /eslint-define-config@1.23.0:
+    resolution: {integrity: sha512-4mMyu0JuBkQHsCtR+42irIQdFLmLIW+pMAVcyOV/gZRL4O1R8iuH0eMG3oL3Cbi1eo9fDAfT5CIHVHgdyxcf6w==}
     engines: {node: ^16.13.0 || >=18.0.0, npm: '>=7.0.0', pnpm: '>= 8.6.0'}
     dev: true
 
