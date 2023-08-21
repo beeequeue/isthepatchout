@@ -28,7 +28,7 @@
     "typecheck": "nuxi typecheck"
   },
   "resolutions": {
-    "@types/node": "18.17.5"
+    "@types/node": "18.17.6"
   },
   "dependencies": {
     "@vueuse/core": "10.3.0",
@@ -39,7 +39,7 @@
     "fetch-unfiller": "0.0.2",
     "p-queue": "7.3.4",
     "pino": "8.15.0",
-    "remeda": "1.24.0"
+    "remeda": "1.24.1"
   },
   "devDependencies": {
     "@beequeue/eslint-plugin": "3.0.1",
@@ -47,15 +47,15 @@
     "@nuxtjs/google-fonts": "3.0.2",
     "@nuxtjs/supabase": "0.3.8",
     "@supabase/realtime-js": "2.7.3",
-    "@total-typescript/ts-reset": "0.4.2",
+    "@total-typescript/ts-reset": "0.5.1",
     "@types/canvas-confetti": "1.6.0",
-    "@types/node": "18.17.5",
+    "@types/node": "18.17.6",
     "@vite-pwa/nuxt": "0.1.0",
     "@vueuse/nuxt": "10.3.0",
     "@windicss/plugin-animations": "1.0.9",
     "browserslist": "4.21.10",
     "dotenv": "16.3.1",
-    "esbuild-plugin-browserslist": "0.8.1",
+    "esbuild-plugin-browserslist": "0.9.0",
     "eslint": "8.47.0",
     "eslint-define-config": "1.23.0",
     "lint-staged": "14.0.0",
@@ -67,7 +67,7 @@
     "ofetch": "1.1.1",
     "pino-http": "8.4.0",
     "pino-pretty": "10.2.0",
-    "prettier": "3.0.1",
+    "prettier": "3.0.2",
     "simple-git-hooks": "2.9.0",
     "typescript": "5.1.6",
     "vite": "4.4.9",
