@@ -85,6 +85,9 @@ export default defineNuxtConfig({
   experimental: {
     emitRouteChunkError: "automatic",
   },
+  supabase: {
+    redirect: false,
+  },
   pwa: {
     srcDir: "sw",
     filename: "sw.ts",
