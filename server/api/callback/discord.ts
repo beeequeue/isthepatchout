@@ -1,6 +1,5 @@
 import { defineEventHandler, sendRedirect } from "h3"
 import z from "myzod"
-
 import { serverSupabase } from "~/server/composables/supabase"
 
 const Input = z.object(
