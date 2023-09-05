@@ -84,6 +84,7 @@ export default defineNuxtConfig({
 
   experimental: {
     emitRouteChunkError: "automatic",
+    headNext: true,
   },
   supabase: {
     redirect: false,

@@ -6521,7 +6521,7 @@ packages:
     hasBin: true
     peerDependencies:
       '@parcel/watcher': ^2.1.0
-      '@types/node': ^14.18.0 || >=16.10.0
+      '@types/node': 18.17.14
     peerDependenciesMeta:
       '@parcel/watcher':
         optional: true
