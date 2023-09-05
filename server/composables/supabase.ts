@@ -1,6 +1,5 @@
 import { serverSupabaseServiceRole } from "#supabase/server"
 import { H3Event } from "h3"
-
 import { Database, Patch } from "~/lib/types"
 import type { UpdateSubscriptionInput } from "~/server/api/subscription.post"
 import { Logger } from "~/server/utils/logger"

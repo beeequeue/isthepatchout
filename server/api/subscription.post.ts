@@ -1,6 +1,5 @@
 import { defineEventHandler, readBody, setResponseStatus } from "h3"
 import z, { Infer } from "myzod"
-
 import { serverSupabase } from "~/server/composables/supabase"
 import { okResponse } from "~/server/utils"
 

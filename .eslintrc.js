@@ -1,7 +1,7 @@
 /** @type import("eslint-define-config").ESLintConfig */
 module.exports = {
   root: true,
-  ignorePatterns: ["node_modules", ".output", ".nuxt"],
+  ignorePatterns: ["node_modules", ".output", ".nuxt", "windi.config.ts"],
   env: {
     es2021: true,
     browser: true,

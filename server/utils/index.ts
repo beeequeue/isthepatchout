@@ -1,5 +1,4 @@
 import { DotaVersion } from "dotaver"
-
 import { Patch } from "~/lib/types"
 
 import { PatchNoteListItem } from "./dota"

@@ -1,5 +1,4 @@
 import { defineEventHandler } from "h3"
-
 import { serverSupabase } from "~/server/composables/supabase"
 import { okResponse } from "~/server/utils"
 
