@@ -6,7 +6,7 @@
   "repository": "https://github.com/BeeeQueue/isthepatchout",
   "license": "MIT",
   "private": true,
-  "packageManager": "pnpm@8.7.6",
+  "packageManager": "pnpm@8.8.0",
   "engines": {
     "node": "^18"
   },
@@ -29,17 +29,17 @@
     "typecheck": "nuxi typecheck"
   },
   "resolutions": {
-    "@types/node": "18.17.19"
+    "@types/node": "18.18.1"
   },
   "dependencies": {
     "@vueuse/core": "10.4.1",
-    "canvas-confetti": "1.6.0",
+    "canvas-confetti": "1.6.1",
     "date-fns": "2.30.0",
     "dotaver": "1.0.1",
     "fathom-client": "3.5.0",
     "fetch-unfiller": "0.0.2",
     "p-queue": "7.4.1",
-    "pino": "8.15.1",
+    "pino": "8.15.3",
     "remeda": "1.27.0"
   },
   "devDependencies": {
@@ -47,21 +47,21 @@
     "@morev/vue-transitions": "2.3.6",
     "@nuxtjs/google-fonts": "3.0.2",
     "@nuxtjs/supabase": "1.1.2",
-    "@supabase/realtime-js": "2.7.4",
+    "@supabase/realtime-js": "2.8.0",
     "@total-typescript/ts-reset": "0.5.1",
     "@types/canvas-confetti": "1.6.1",
-    "@types/node": "18.17.19",
+    "@types/node": "18.18.1",
     "@vite-pwa/nuxt": "0.1.1",
     "@vueuse/nuxt": "10.4.1",
     "@windicss/plugin-animations": "1.0.9",
-    "browserslist": "4.21.11",
+    "browserslist": "4.22.1",
     "dotenv": "16.3.1",
     "esbuild-plugin-browserslist": "0.9.0",
     "eslint": "8.50.0",
     "eslint-define-config": "1.23.0",
     "lint-staged": "14.0.1",
     "myzod": "1.10.2",
-    "nuxt": "3.7.3",
+    "nuxt": "3.7.4",
     "nuxt-icon": "0.5.0",
     "nuxt-security": "0.14.4",
     "nuxt-windicss": "2.6.1",
@@ -73,7 +73,7 @@
     "typescript": "5.2.2",
     "vite": "4.4.9",
     "vue": "3.3.4",
-    "vue-tsc": "1.8.13"
+    "vue-tsc": "1.8.15"
   },
   "pnpm": {
     "overrides": {
