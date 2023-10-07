@@ -43,7 +43,7 @@
     "remeda": "1.27.0"
   },
   "devDependencies": {
-    "@beequeue/eslint-plugin": "3.0.1",
+    "@beequeue/eslint-plugin": "4.0.0",
     "@morev/vue-transitions": "2.3.6",
     "@nuxtjs/google-fonts": "3.0.2",
     "@nuxtjs/supabase": "1.1.2",
@@ -87,7 +87,8 @@
       "object.fromentries": "npm:@nolyfill/object.fromentries@latest",
       "object.hasown": "npm:@nolyfill/object.hasown@latest",
       "object.values": "npm:@nolyfill/object.values@latest",
-      "string.prototype.matchall": "npm:@nolyfill/string.prototype.matchall@latest"
+      "string.prototype.matchall": "npm:@nolyfill/string.prototype.matchall@latest",
+      "es-iterator-helpers": "npm:@nolyfill/es-iterator-helpers@latest"
     }
   }
 }
