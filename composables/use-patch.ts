@@ -9,6 +9,7 @@ export const usePatch = () => {
   const supabase = useSupabaseClient<Database>()
 
   const fetchPatch = async () => {
+    // eslint-disable-next-line @typescript-eslint/require-await
     const result = await useAsyncData("patch", async () =>
       supabase
         .from("patches")
