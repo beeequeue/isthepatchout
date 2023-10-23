@@ -29,7 +29,7 @@
     "typecheck": "nuxi typecheck"
   },
   "resolutions": {
-    "@types/node": "18.18.5"
+    "@types/node": "18.18.6"
   },
   "dependencies": {
     "@vueuse/core": "10.5.0",
@@ -47,10 +47,10 @@
     "@morev/vue-transitions": "2.3.6",
     "@nuxtjs/google-fonts": "3.0.2",
     "@nuxtjs/supabase": "1.1.3",
-    "@supabase/realtime-js": "2.8.0",
+    "@supabase/realtime-js": "2.8.1",
     "@total-typescript/ts-reset": "0.5.1",
-    "@types/canvas-confetti": "1.6.1",
-    "@types/node": "18.18.5",
+    "@types/canvas-confetti": "1.6.2",
+    "@types/node": "18.18.6",
     "@vite-pwa/nuxt": "0.1.1",
     "@vueuse/nuxt": "10.5.0",
     "@windicss/plugin-animations": "1.0.9",
@@ -61,7 +61,7 @@
     "eslint-define-config": "1.24.1",
     "lint-staged": "14.0.1",
     "myzod": "1.10.2",
-    "nuxt": "3.7.4",
+    "nuxt": "3.8.0",
     "nuxt-icon": "0.5.0",
     "nuxt-security": "0.14.4",
     "nuxt-windicss": "2.6.1",
@@ -72,7 +72,7 @@
     "simple-git-hooks": "2.9.0",
     "typescript": "5.2.2",
     "vite": "4.4.11",
-    "vue": "3.3.4",
+    "vue": "3.3.6",
     "vue-tsc": "1.8.19"
   },
   "pnpm": {
