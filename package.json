@@ -59,7 +59,7 @@
     "esbuild-plugin-browserslist": "0.10.0",
     "eslint": "8.53.0",
     "eslint-define-config": "1.24.1",
-    "lint-staged": "15.0.2",
+    "lint-staged": "15.1.0",
     "myzod": "1.10.2",
     "nuxt": "3.8.1",
     "nuxt-icon": "0.6.5",
