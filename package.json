@@ -38,7 +38,7 @@
     "dotaver": "1.0.1",
     "fathom-client": "3.6.0",
     "fetch-unfiller": "0.0.2",
-    "p-queue": "7.4.1",
+    "p-queue": "8.0.1",
     "pino": "8.17.2",
     "remeda": "1.33.0"
   },
