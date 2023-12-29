@@ -127,11 +127,8 @@ export default defineNuxtConfig({
       contentSecurityPolicy: false,
     },
     rateLimiter: {
-      value: {
-        interval: "minute",
-        tokensPerInterval: 60,
-      },
-      route: "",
+      interval: "minute",
+      tokensPerInterval: 60,
     },
   },
   googleFonts: {
