@@ -51,6 +51,7 @@
     "@total-typescript/ts-reset": "0.5.1",
     "@types/canvas-confetti": "1.6.4",
     "@types/node": "18.19.3",
+    "@vercel/speed-insights": "1.0.2",
     "@vite-pwa/nuxt": "0.4.0",
     "@vueuse/nuxt": "10.7.1",
     "@windicss/plugin-animations": "1.0.9",

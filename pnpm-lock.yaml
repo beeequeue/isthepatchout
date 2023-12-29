@@ -75,6 +75,9 @@ devDependencies:
   '@types/node':
     specifier: 18.19.3
     version: 18.19.3
+  '@vercel/speed-insights':
+    specifier: 1.0.2
+    version: 1.0.2
   '@vite-pwa/nuxt':
     specifier: 0.4.0
     version: 0.4.0(rollup@2.79.1)(vite@5.0.10)(workbox-build@7.0.0)(workbox-window@7.0.0)
@@ -3218,6 +3221,11 @@ packages:
     transitivePeerDependencies:
       - encoding
       - supports-color
+    dev: true
+
+  /@vercel/speed-insights@1.0.2:
+    resolution: {integrity: sha512-y5HWeB6RmlyVYxJAMrjiDEz8qAIy2cit0fhBq+MD78WaUwQvuBnQlX4+5MuwVTWi46bV3klaRMq83u9zUy1KOg==}
+    requiresBuild: true
     dev: true
 
   /@vite-pwa/nuxt@0.4.0(rollup@2.79.1)(vite@5.0.10)(workbox-build@7.0.0)(workbox-window@7.0.0):

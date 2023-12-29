@@ -1,4 +1,6 @@
 <template>
+  <SpeedInsights />
+
   <main class="flex justify-center items-center h-1/1 p-5 text-center">
     <background-image />
 
@@ -21,6 +23,8 @@
 </template>
 
 <script lang="ts" setup>
+import { SpeedInsights } from "@vercel/speed-insights/nuxt"
+
 const { patch, fetchPatch } = usePatch()
 
 await fetchPatch()
