@@ -32,12 +32,11 @@ const getLinkName = (link: string): string => {
   return link
 }
 
-const prettyLinks = computed(
-  () =>
-    props.links?.map((link) => ({
-      name: getLinkName(link),
-      url: link,
-    })),
+const prettyLinks = computed(() =>
+  props.links?.map((link) => ({
+    name: getLinkName(link),
+    url: link,
+  })),
 )
 </script>
 
