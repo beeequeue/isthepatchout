@@ -66,7 +66,7 @@ style worker stroke:orange
 
 ## Development
 
-Requires Node ^18, Supabase CLI, Vercel CLI
+Requires Node ^20, Supabase CLI, Vercel CLI
 
 ### Setup
 
