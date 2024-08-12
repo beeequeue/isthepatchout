@@ -1,6 +1,6 @@
 <template>
   <Clickable is="a" :href="url" rel="noopener" class="flex items-center p-2 m-2px">
-    <IconCSS name="simple-icons:discord" class="fill-gray-100 mr-2" />
+    <Icon name="simple-icons:discord" class="fill-gray-100 mr-2" />
 
     Get notified in Discord
   </Clickable>
