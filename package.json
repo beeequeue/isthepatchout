@@ -62,7 +62,7 @@
     "eslint-define-config": "2.1.0",
     "lint-staged": "15.2.8",
     "myzod": "1.11.0",
-    "nuxt": "3.10.3",
+    "nuxt": "3.12.4",
     "nuxt-icon": "0.6.8",
     "nuxt-security": "1.2.1",
     "nuxt-windicss": "3.0.1",
