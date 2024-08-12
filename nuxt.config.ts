@@ -80,6 +80,7 @@ export default defineNuxtConfig({
       link: [
         { rel: "preconnect", href: process.env.SUPABASE_URL },
         { rel: "preload", href: "/background.svg", as: "image" },
+        { rel: "manifest", href: "/manifest.webmanifest" },
       ],
       htmlAttrs: { lang: "en" },
     },

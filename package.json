@@ -29,6 +29,9 @@
     "supabase:start": "supabase start -x storage-api,imgproxy,inbucket,studio,deno-relay,edge-runtime,logflare",
     "typecheck": "nuxi typecheck"
   },
+  "resolutions": {
+    "esbuild": "0.23.0"
+  },
   "dependencies": {
     "@vueuse/core": "10.11.1",
     "canvas-confetti": "1.9.3",
@@ -51,12 +54,12 @@
     "@types/canvas-confetti": "1.6.4",
     "@types/node": "20.14.15",
     "@vercel/speed-insights": "1.0.10",
-    "@vite-pwa/nuxt": "0.5.0",
+    "@vite-pwa/nuxt": "0.9.1",
     "@vueuse/nuxt": "10.11.1",
     "@windicss/plugin-animations": "1.0.9",
     "browserslist": "4.23.3",
     "dotenv": "16.4.5",
-    "esbuild-plugin-browserslist": "0.11.1",
+    "esbuild-plugin-browserslist": "0.14.0",
     "eslint": "9.9.0",
     "lint-staged": "15.2.8",
     "myzod": "1.11.0",
