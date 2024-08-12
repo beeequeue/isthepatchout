@@ -1,5 +1,6 @@
 import { defineEventHandler, readBody, setResponseStatus } from "h3"
-import z, { Infer } from "myzod"
+import type { Infer } from "myzod"
+import z from "myzod"
 
 import { serverSupabase } from "~/server/composables/supabase"
 import { okResponse } from "~/server/utils"
@@ -24,7 +25,7 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: "Body isn't JSON" })
   }
 
-  const body = await readBody<unknown>(event)
+  const body = await readBody<never>(event)
   const result = Input.try(body)
   if (result instanceof z.ValidationError) {
     throw createError({

@@ -1,12 +1,13 @@
 {
   "name": "isthepatchout",
+  "type": "module",
   "version": "0.0.0",
   "author": "BeeeQueue <adam@haglund.dev>",
   "homepage": "https://isthepatchout.com",
   "repository": "https://github.com/BeeeQueue/isthepatchout",
   "license": "MIT",
   "private": true,
-  "packageManager": "pnpm@9.1.0",
+  "packageManager": "pnpm@9.7.0",
   "engines": {
     "node": "^20"
   },
@@ -29,68 +30,55 @@
     "typecheck": "nuxi typecheck"
   },
   "resolutions": {
-    "@types/node": "20.11.24"
+    "esbuild": "0.23.0"
   },
   "dependencies": {
-    "@vueuse/core": "10.9.0",
-    "canvas-confetti": "1.9.2",
-    "date-fns": "3.3.1",
+    "@vueuse/core": "10.11.1",
+    "canvas-confetti": "1.9.3",
+    "date-fns": "3.6.0",
     "dotaver": "1.0.1",
-    "fathom-client": "3.6.0",
+    "fathom-client": "3.7.2",
     "fetch-unfiller": "0.2.0",
     "p-queue": "8.0.1",
-    "pino": "9.3.2",
-    "remeda": "1.46.2"
+    "pino": "9.3.2"
   },
   "devDependencies": {
-    "@beequeue/eslint-plugin": "4.0.1",
+    "@antfu/eslint-config": "2.25.1",
     "@morev/vue-transitions": "2.3.6",
-    "@nuxtjs/google-fonts": "3.1.3",
-    "@nuxtjs/supabase": "1.1.6",
-    "@supabase/realtime-js": "2.9.3",
+    "@nuxt/eslint": "0.5.0",
+    "@nuxt/icon": "1.4.5",
+    "@nuxtjs/google-fonts": "3.2.0",
+    "@nuxtjs/supabase": "1.3.5",
+    "@supabase/realtime-js": "2.10.2",
     "@total-typescript/ts-reset": "0.5.1",
     "@types/canvas-confetti": "1.6.4",
-    "@types/node": "20.11.24",
+    "@types/node": "20.14.15",
     "@vercel/speed-insights": "1.0.10",
-    "@vite-pwa/nuxt": "0.5.0",
-    "@vueuse/nuxt": "10.9.0",
+    "@vite-pwa/nuxt": "0.9.1",
+    "@vueuse/nuxt": "10.11.1",
     "@windicss/plugin-animations": "1.0.9",
-    "browserslist": "4.23.0",
+    "browserslist": "4.23.3",
     "dotenv": "16.4.5",
-    "esbuild-plugin-browserslist": "0.11.1",
-    "eslint": "8.57.0",
-    "eslint-define-config": "2.1.0",
+    "esbuild-plugin-browserslist": "0.14.0",
+    "eslint": "9.9.0",
     "lint-staged": "15.2.8",
     "myzod": "1.11.0",
-    "nuxt": "3.10.3",
-    "nuxt-icon": "0.6.8",
-    "nuxt-security": "1.2.1",
+    "nuxt": "3.12.4",
+    "nuxt-security": "2.0.0-rc.9",
     "nuxt-windicss": "3.0.1",
-    "ofetch": "1.3.3",
+    "ofetch": "1.3.4",
     "pino-http": "10.2.0",
-    "pino-pretty": "11.0.0",
-    "prettier": "3.2.5",
-    "simple-git-hooks": "2.10.0",
+    "pino-pretty": "11.2.2",
+    "prettier": "3.3.3",
+    "simple-git-hooks": "2.11.1",
     "typescript": "5.3.3",
-    "vue": "3.4.21",
-    "vue-tsc": "2.0.7"
+    "vue": "3.4.37",
+    "vue-tsc": "2.0.29"
   },
   "pnpm": {
     "overrides": {
-      "array-includes": "npm:@nolyfill/array-includes@latest",
-      "array.prototype.flat": "npm:@nolyfill/array.prototype.flat@latest",
-      "array.prototype.flatmap": "npm:@nolyfill/array.prototype.flatmap@latest",
-      "array.prototype.tosorted": "npm:@nolyfill/array.prototype.tosorted@latest",
-      "es-iterator-helpers": "npm:@nolyfill/es-iterator-helpers@latest",
-      "has": "npm:@nolyfill/has@latest",
-      "hasown": "npm:@nolyfill/hasown@latest",
-      "isarray": "npm:@nolyfill/isarray@latest",
-      "object.assign": "npm:@nolyfill/object.assign@latest",
-      "object.entries": "npm:@nolyfill/object.entries@latest",
-      "object.fromentries": "npm:@nolyfill/object.fromentries@latest",
-      "object.hasown": "npm:@nolyfill/object.hasown@latest",
-      "object.values": "npm:@nolyfill/object.values@latest",
-      "string.prototype.matchall": "npm:@nolyfill/string.prototype.matchall@latest"
+      "is-core-module": "npm:@nolyfill/is-core-module@^1",
+      "string.prototype.matchall": "npm:@nolyfill/string.prototype.matchall@^1"
     }
   }
 }

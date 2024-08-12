@@ -6,7 +6,7 @@
     class="text-base"
     @change="handleChange"
   >
-    <IconCSS
+    <Icon
       class="mr-2 hover:fill-gray-100 animate-infinite animate-slow transition-all"
       :class="iconClasses"
       :name="subscribed ? 'tabler:bell-off' : 'tabler:bell-filled'"

@@ -9,7 +9,7 @@
     "esModuleInterop": true,
 
     "verbatimModuleSyntax": false,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,
     "noUnusedParameters": true,
     "forceConsistentCasingInFileNames": true,
     "types": ["@total-typescript/ts-reset"]

@@ -1,4 +1,4 @@
-import { Database, Patch } from "~/lib/types"
+import type { Database, Patch } from "~/lib/types"
 
 const patch = ref<Patch | null>(null)
 
@@ -9,7 +9,6 @@ export const usePatch = () => {
   const supabase = useSupabaseClient<Database>()
 
   const fetchPatch = async () => {
-    // eslint-disable-next-line @typescript-eslint/require-await
     const result = await useAsyncData("patch", async () =>
       supabase
         .from("patches")

@@ -1,8 +1,7 @@
 import { DotaVersion } from "dotaver"
 
-import { Patch } from "~/lib/types"
-
-import { PatchNoteListItem } from "./dota"
+import type { PatchNoteListItem } from "./dota"
+import type { Patch } from "~/lib/types"
 
 export const okResponse = { ok: true }
 

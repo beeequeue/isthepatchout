@@ -22,6 +22,6 @@
 const { patch, recentlyReleased } = usePatch()
 
 const links = computed(() =>
-  patch.value?.links?.length ?? 0 ? patch.value!.links : null,
+  (patch.value?.links?.length ?? 0) ? patch.value!.links : null,
 )
 </script>

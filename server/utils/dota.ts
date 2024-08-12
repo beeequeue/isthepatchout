@@ -1,6 +1,5 @@
 import type { FetchError } from "ofetch"
 import PQueue from "p-queue"
-import { isError } from "remeda"
 
 import { Logger } from "./logger"
 
@@ -23,7 +22,7 @@ export type PatchNoteListData = {
   success: boolean
 }
 
-const request = () =>
+const request = async () =>
   $fetch<PatchNoteListData>("https://www.dota2.com/datafeed/patchnoteslist", {
     responseType: "json",
     headers: { Host: "www.dota2.com" },
@@ -35,7 +34,7 @@ export const getPatchList = async () => {
 
   const response = await dotaApiScheduler.add(request, { throwOnTimeout: true })
 
-  if (isError(response)) {
+  if (response instanceof Error) {
     Logger.error("Request failed", response.response)
     return null
   }

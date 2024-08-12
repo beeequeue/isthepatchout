@@ -6,7 +6,7 @@
     target="_blank"
     class="flex items-center p-2 m-2px"
   >
-    <IconCSS name="simple-icons:github" class="fill-gray-100 mr-2" />
+    <Icon name="simple-icons:github" class="fill-gray-100 mr-2" />
 
     Source code
   </Clickable>

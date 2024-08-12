@@ -3,9 +3,9 @@ import type {
   RealtimePostgresInsertPayload,
 } from "@supabase/realtime-js"
 
-import { Database, Patch } from "@/lib/types"
+import type { Database, Patch } from "@/lib/types"
 
-const table = "patches" as const
+const table = "patches"
 
 export const useChangeDetection = () => {
   const supabase = useSupabaseClient<Database>()
@@ -14,7 +14,6 @@ export const useChangeDetection = () => {
   const { patch, updatePatch } = usePatch()
 
   const initChangeDetection = () => {
-    // eslint-disable-next-line unicorn/consistent-function-scoping
     const handler = (payload: RealtimePostgresInsertPayload<Patch>) => {
       if (payload.new.releasedAt != null && payload.new.number >= patch.value!.number) {
         updatePatch(payload.new)

@@ -44,7 +44,7 @@ export default defineEventHandler(async (event) => {
       response.webhook.id,
     )
 
-    return sendRedirect(event, `${config.public.apiUrl}?discord=true`, 302)
+    return await sendRedirect(event, `${config.public.apiUrl}?discord=true`, 302)
   } catch (error: unknown) {
     Logger.error(error, "Failed to add Discord webhook")
 
