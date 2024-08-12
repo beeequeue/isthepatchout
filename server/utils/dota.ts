@@ -1,6 +1,5 @@
 import type { FetchError } from "ofetch"
 import PQueue from "p-queue"
-import { isError } from "remeda"
 
 import { Logger } from "./logger"
 
@@ -35,7 +34,7 @@ export const getPatchList = async () => {
 
   const response = await dotaApiScheduler.add(request, { throwOnTimeout: true })
 
-  if (isError(response)) {
+  if (response instanceof Error) {
     Logger.error("Request failed", response.response)
     return null
   }
