@@ -44,17 +44,18 @@ export default defineNuxtConfig({
 
   modules: [
     "@nuxt/eslint",
-    "nuxt-icon",
-    "nuxt-security",
-    "nuxt-windicss",
-    "@morev/vue-transitions/nuxt",
+    "@nuxt/icon",
     "@nuxtjs/google-fonts",
     "@nuxtjs/supabase",
     "@vite-pwa/nuxt",
     "@vueuse/nuxt",
+    "nuxt-security",
+    "nuxt-windicss",
+    "@morev/vue-transitions/nuxt",
   ],
 
   sourcemap: true,
+
   vite: {
     build: {
       minify: true,
@@ -71,6 +72,7 @@ export default defineNuxtConfig({
   },
 
   css: ["virtual:windi.css", "assets/base.css"],
+
   app: {
     head: {
       title: "Is the Patch Out Yet?",
@@ -87,9 +89,11 @@ export default defineNuxtConfig({
     emitRouteChunkError: "automatic",
     headNext: true,
   },
+
   supabase: {
     redirect: false,
   },
+
   pwa: {
     srcDir: "sw",
     filename: "sw.ts",
@@ -121,6 +125,7 @@ export default defineNuxtConfig({
       type: "module",
     },
   },
+
   security: {
     headers: {
       xXSSProtection: false,
@@ -132,6 +137,7 @@ export default defineNuxtConfig({
       tokensPerInterval: 60,
     },
   },
+
   googleFonts: {
     preconnect: true,
     preload: true,
@@ -141,13 +147,17 @@ export default defineNuxtConfig({
       Rubik: [400],
     },
   },
+
   typescript: {
     strict: true,
     shim: false,
   },
+
   eslint: {
     config: {
       standalone: false,
     },
   },
+
+  compatibilityDate: "2024-08-12",
 })

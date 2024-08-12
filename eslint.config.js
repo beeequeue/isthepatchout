@@ -9,6 +9,8 @@ export default withNuxt(
     vue: {
       overrides: {
         "vue/block-order": "off",
+        "vue/html-self-closing": "off",
+        "vue/singleline-html-element-content-newline": "off",
       },
     },
     typescript: {

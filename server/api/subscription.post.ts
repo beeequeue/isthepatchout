@@ -25,7 +25,7 @@ export default defineEventHandler(async (event) => {
     throw createError({ statusCode: 400, statusMessage: "Body isn't JSON" })
   }
 
-  const body = await readBody<unknown>(event)
+  const body = await readBody<never>(event)
   const result = Input.try(body)
   if (result instanceof z.ValidationError) {
     throw createError({
