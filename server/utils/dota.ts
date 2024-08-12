@@ -22,7 +22,7 @@ export type PatchNoteListData = {
   success: boolean
 }
 
-const request = () =>
+const request = async () =>
   $fetch<PatchNoteListData>("https://www.dota2.com/datafeed/patchnoteslist", {
     responseType: "json",
     headers: { Host: "www.dota2.com" },

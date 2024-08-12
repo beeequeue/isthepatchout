@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/consistent-type-definitions */
+/* eslint-disable ts/consistent-type-definitions */
 import path from "path"
 
 import browserslist from "browserslist"
@@ -43,6 +43,7 @@ export default defineNuxtConfig({
   },
 
   modules: [
+    "@nuxt/eslint",
     "nuxt-icon",
     "nuxt-security",
     "nuxt-windicss",
@@ -143,5 +144,10 @@ export default defineNuxtConfig({
   typescript: {
     strict: true,
     shim: false,
+  },
+  eslint: {
+    config: {
+      standalone: false,
+    },
   },
 })

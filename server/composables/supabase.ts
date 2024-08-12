@@ -1,7 +1,7 @@
+import type { H3Event } from "h3"
 import { serverSupabaseServiceRole } from "#supabase/server"
-import { H3Event } from "h3"
 
-import { Database, Patch } from "~/lib/types"
+import type { Database, Patch } from "~/lib/types"
 import type { UpdateSubscriptionInput } from "~/server/api/subscription.post"
 import { Logger } from "~/server/utils/logger"
 
@@ -24,7 +24,7 @@ export const serverSupabase = (event: H3Event) => {
       throw new Error(knownPatchesError.message)
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-unnecessary-type-assertion
+    // eslint-disable-next-line ts/no-unnecessary-type-assertion
     const knownPatchIds = new Set(knownPatches!.map((patch) => patch.id))
     const newPatches = patches.filter((patch) => !knownPatchIds.has(patch.id))
 

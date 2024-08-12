@@ -11,11 +11,11 @@
       <IconCSS name="pajamas:settings" class="h-8 w-8 p-0" />
     </clickable>
 
-    <notifications />
+    <Notifications />
 
-    <discord-link />
+    <DiscordLink />
 
-    <git-hub-link />
+    <GitHubLink />
   </nav>
 </template>
 

@@ -1,6 +1,3 @@
-/* eslint-disable unicorn/no-abusive-eslint-disable */
-/* eslint-disable */
-
 export type Json = string | number | boolean | null | { [key: string]: Json } | Json[]
 
 export interface Database {

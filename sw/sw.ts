@@ -38,5 +38,4 @@ self.addEventListener("notificationclick" as never, (e: NotificationEvent) => {
   e.notification.close()
 })
 
-// eslint-disable-next-line no-console,@typescript-eslint/no-explicit-any
 console.debug((self as any).__WB_MANIFEST)

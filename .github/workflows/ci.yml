@@ -35,7 +35,7 @@ jobs:
       - run: pnpm nuxi prepare
       - run: pnpm lint --format compact
         env:
-          NODE_OPTIONS: "--max-old-space-size=8192"
+          NODE_OPTIONS: --max-old-space-size=8192
 
   typecheck:
     runs-on: ubuntu-latest
