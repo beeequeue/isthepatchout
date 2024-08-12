@@ -40,7 +40,7 @@
     "fetch-unfiller": "0.2.0",
     "p-queue": "8.0.1",
     "pino": "9.3.2",
-    "remeda": "1.46.2"
+    "remeda": "2.10.1"
   },
   "devDependencies": {
     "@beequeue/eslint-plugin": "4.0.1",
