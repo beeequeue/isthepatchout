@@ -62,6 +62,12 @@ export const serverSupabase = (event: H3Event) => {
     endpoint,
     keys: { auth, p256dh },
   }: UpdateSubscriptionInput) => {
+    const { data: latestPatch } = await supabase
+      .from("patches")
+      .select("number")
+      .order("number", { ascending: false })
+      .limit(1)
+
     const { error } = await supabase.from("subscriptions").upsert(
       {
         type: "push",
@@ -69,7 +75,7 @@ export const serverSupabase = (event: H3Event) => {
         auth,
         extra: p256dh,
         environment: config.public.env,
-        lastNotified: 0,
+        lastNotified: latestPatch![0].number,
       },
       { onConflict: "endpoint" },
     )
@@ -99,6 +105,12 @@ export const serverSupabase = (event: H3Event) => {
     guildId: string,
     id: string,
   ) => {
+    const { data: latestPatch } = await supabase
+      .from("patches")
+      .select("number")
+      .order("number", { ascending: false })
+      .limit(1)
+
     const { error } = await supabase.from("subscriptions").upsert(
       {
         type: "discord",
@@ -106,7 +118,7 @@ export const serverSupabase = (event: H3Event) => {
         auth: guildId,
         extra: id,
         environment: config.public.env,
-        lastNotified: 0,
+        lastNotified: latestPatch![0].number,
       },
       { onConflict: "endpoint" },
     )
