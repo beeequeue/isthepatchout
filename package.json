@@ -77,8 +77,8 @@
   },
   "pnpm": {
     "overrides": {
-      "is-core-module": "npm:@nolyfill/is-core-module@^1",
-      "string.prototype.matchall": "npm:@nolyfill/string.prototype.matchall@^1"
+      "is-core-module": "npm:@nolyfill/is-core-module@1.0.39",
+      "string.prototype.matchall": "npm:@nolyfill/string.prototype.matchall@1.0.28"
     }
   }
 }
