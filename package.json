@@ -43,7 +43,7 @@
     "pino": "9.3.2"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "2.27.3",
+    "@antfu/eslint-config": "3.12.1",
     "@morev/vue-transitions": "2.3.6",
     "@nuxt/eslint": "0.5.7",
     "@nuxt/icon": "1.4.5",
