@@ -14,7 +14,9 @@ body,
 
 #__nuxt {
   color: #eee;
-  text-shadow: 3px 3px 6px #000000cc, 0 0 5px #000000c0;
+  text-shadow:
+    3px 3px 6px #000000cc,
+    0 0 5px #000000c0;
   user-select: none;
 }
 
@@ -25,8 +27,9 @@ body,
 
 @font-face {
   font-family: "Radiance";
-  src: url("/assets/fonts/Radiance-SemiBold.woff2") format("woff2"),
-  url("/assets/fonts/Radiance-SemiBold.woff") format("woff");
+  src:
+    url("/assets/fonts/Radiance-SemiBold.woff2") format("woff2"),
+    url("/assets/fonts/Radiance-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;

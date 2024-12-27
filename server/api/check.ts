@@ -1,9 +1,10 @@
 import type { H3Event } from "h3"
 import { defineEventHandler, getHeader } from "h3"
 
+import { serverSupabase } from "~/server/composables/supabase"
+
 import { formatPatchData, okResponse } from "../utils"
 import { getPatchList } from "../utils/dota"
-import { serverSupabase } from "~/server/composables/supabase"
 
 const config = useRuntimeConfig()
 const authorizationHeader = `Bearer ${config.checkToken}` as const
