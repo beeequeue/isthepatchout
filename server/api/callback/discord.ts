@@ -1,23 +1,20 @@
 import { defineEventHandler, sendRedirect } from "h3"
-import z from "myzod"
+import * as v from "valibot"
 
 import { serverSupabase } from "~/server/composables/supabase"
 
-const Input = z.object(
-  {
-    code: z.string(),
-    guild_id: z.string(),
-  },
-  { allowUnknown: false },
-)
+const InputSchema = v.strictObject({
+  code: v.string(),
+  guild_id: v.string(),
+})
 
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig()
   const query = getQuery(event)
 
-  const result = Input.try(query)
-  if (result instanceof z.ValidationError) {
-    throw createError({ statusCode: 400, message: result.message })
+  const result = v.safeParse(InputSchema, query)
+  if (!result.success) {
+    throw createError({ statusCode: 400, message: result.issues[0].message })
   }
 
   const response = await $fetch<{ webhook: { id: string; url: string } }>(
@@ -30,7 +27,7 @@ export default defineEventHandler(async (event) => {
         grant_type: "authorization_code",
         client_id: config.discordClientId,
         client_secret: config.discordClientSecret,
-        code: result.code,
+        code: result.output.code,
         redirect_uri: `${config.public.apiUrl}/api/callback/discord`,
       }),
     },
@@ -40,7 +37,7 @@ export default defineEventHandler(async (event) => {
     const { registerDiscordWebhook } = serverSupabase(event)
     await registerDiscordWebhook(
       response.webhook.url,
-      result.guild_id,
+      result.output.guild_id,
       response.webhook.id,
     )
 

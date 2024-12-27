@@ -1,23 +1,19 @@
 import { defineEventHandler, readBody, setResponseStatus } from "h3"
-import type { Infer } from "myzod"
-import z from "myzod"
+import * as v from "valibot"
 
 import { serverSupabase } from "~/server/composables/supabase"
 import { okResponse } from "~/server/utils"
 
-const Input = z.object(
-  {
-    endpoint: z.string().pattern(/^https:\/\//),
-    keys: z.object({
-      auth: z.string().min(10),
-      p256dh: z.string().min(10),
-    }),
-    expirationTime: z.number().nullable(),
-  },
-  { allowUnknown: false },
-)
+const InputSchema = v.strictObject({
+  endpoint: v.pipe(v.string(), v.regex(/^https:\/\//)),
+  keys: v.strictObject({
+    auth: v.pipe(v.string(), v.minLength(10)),
+    p256dh: v.pipe(v.string(), v.minLength(10)),
+  }),
+  expirationTime: v.nullable(v.number()),
+})
 
-export type UpdateSubscriptionInput = Infer<typeof Input>
+export type UpdateSubscriptionInput = v.InferOutput<typeof InputSchema>
 
 export default defineEventHandler(async (event) => {
   const contentType = getHeader(event, "content-type")
@@ -26,19 +22,20 @@ export default defineEventHandler(async (event) => {
   }
 
   const body = await readBody<never>(event)
-  const result = Input.try(body)
-  if (result instanceof z.ValidationError) {
+  const result = v.safeParse(InputSchema, body)
+  if (!result.success) {
     throw createError({
       statusCode: 400,
-      statusMessage: result.message,
-      data: result.collectedErrors,
-      cause: result,
+      statusMessage: "Bad request",
+      data: Object.fromEntries(
+        result.issues.map((issue) => [issue.path?.join("."), issue.message]),
+      ),
     })
   }
 
   const { upsertSubscription } = serverSupabase(event)
 
-  await upsertSubscription(result)
+  await upsertSubscription(result.output)
 
   setResponseStatus(event, 201)
 
