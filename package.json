@@ -30,10 +30,11 @@
     "typecheck": "nuxi typecheck"
   },
   "resolutions": {
-    "esbuild": "0.23.0"
+    "esbuild": "0.24.1",
+    "vite": "6.0.6"
   },
   "dependencies": {
-    "@vueuse/core": "10.11.1",
+    "@vueuse/core": "12.2.0",
     "canvas-confetti": "1.9.3",
     "date-fns": "3.6.0",
     "dotaver": "1.0.1",
@@ -44,9 +45,11 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "3.12.1",
-    "@morev/vue-transitions": "2.3.6",
+    "@iconify-json/simple-icons": "1.2.17",
+    "@iconify-json/tabler": "1.2.13",
+    "@morev/vue-transitions": "3.0.5",
     "@nuxt/eslint": "0.7.4",
-    "@nuxt/icon": "1.4.5",
+    "@nuxt/icon": "1.10.3",
     "@nuxtjs/google-fonts": "3.2.0",
     "@nuxtjs/supabase": "1.4.5",
     "@supabase/realtime-js": "2.11.2",
@@ -54,16 +57,16 @@
     "@types/canvas-confetti": "1.9.0",
     "@types/node": "22.10.2",
     "@vercel/speed-insights": "1.0.10",
-    "@vite-pwa/nuxt": "0.9.1",
-    "@vueuse/nuxt": "10.11.1",
+    "@vite-pwa/nuxt": "0.10.6",
+    "@vueuse/nuxt": "12.2.0",
     "@windicss/plugin-animations": "1.0.9",
-    "browserslist": "4.23.3",
-    "dotenv": "16.4.5",
-    "esbuild-plugin-browserslist": "0.14.0",
+    "browserslist": "4.24.3",
+    "dotenv": "16.4.7",
+    "esbuild-plugin-browserslist": "0.15.0",
     "eslint": "9.17.0",
     "lint-staged": "15.2.11",
-    "nuxt": "3.12.4",
-    "nuxt-security": "2.0.0-rc.9",
+    "nuxt": "3.15.0",
+    "nuxt-security": "2.1.5",
     "nuxt-windicss": "3.0.1",
     "ofetch": "1.3.4",
     "pino-http": "10.2.0",
@@ -72,7 +75,7 @@
     "simple-git-hooks": "2.11.1",
     "typescript": "5.7.2",
     "valibot": "1.0.0-beta.9",
-    "vue": "3.4.37",
+    "vue": "3.5.13",
     "vue-tsc": "2.2.0"
   },
   "pnpm": {
