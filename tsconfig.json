@@ -4,14 +4,8 @@
     "noEmit": true,
     "sourceMap": true,
 
-    "module": "es2022",
-    "moduleResolution": "bundler",
-    "esModuleInterop": true,
-
-    "verbatimModuleSyntax": false,
     "noUnusedLocals": false,
     "noUnusedParameters": true,
-    "forceConsistentCasingInFileNames": true,
     "types": ["@total-typescript/ts-reset"]
   },
   "exclude": ["sw/**/*", "windi.config.ts"]
