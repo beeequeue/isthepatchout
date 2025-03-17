@@ -31,7 +31,7 @@
   },
   "resolutions": {
     "esbuild": "0.25.0",
-    "vite": "6.2.1"
+    "vite": "6.2.2"
   },
   "dependencies": {
     "@vueuse/core": "12.5.0",
