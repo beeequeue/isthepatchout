@@ -65,7 +65,7 @@
     "esbuild-plugin-browserslist": "0.15.0",
     "eslint": "9.22.0",
     "lint-staged": "15.5.0",
-    "nuxt": "3.15.3",
+    "nuxt": "3.16.0",
     "nuxt-security": "2.1.5",
     "nuxt-windicss": "3.0.1",
     "ofetch": "1.4.1",
