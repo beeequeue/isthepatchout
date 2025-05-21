@@ -97,8 +97,8 @@ importers:
         specifier: 16.5.0
         version: 16.5.0
       esbuild-plugin-browserslist:
-        specifier: 0.16.0
-        version: 0.16.0(browserslist@4.24.5)(esbuild@0.25.4)
+        specifier: 1.0.1
+        version: 1.0.1(browserslist@4.24.5)(esbuild@0.25.4)
       eslint:
         specifier: 9.27.0
         version: 9.27.0(jiti@2.4.2)
@@ -3132,9 +3132,9 @@ packages:
     resolution: {integrity: sha512-FGgH2h8zKNim9ljj7dankFPcICIK9Cp5bm+c2gQSYePhpaG5+esrLODihIorn+Pe6FGJzWhXQotPv73jTaldXA==}
     engines: {node: '>= 0.4'}
 
-  esbuild-plugin-browserslist@0.16.0:
-    resolution: {integrity: sha512-vfwl1RmCa4D+wWoAxStz2g0O3wWGyUAv6mK9mfgF7X2UY3z/b/6ySTWoPu9nnKvBea6D3uk2zS1TOLt/b5qgLQ==}
-    engines: {node: '>=18'}
+  esbuild-plugin-browserslist@1.0.1:
+    resolution: {integrity: sha512-p+behK+qVxzKUDADf3FyMMpeXov+hoijAB9EetX57nX5wDqTZ7+8evnUDeEcE3kaKMVSHaJGmPv4jAI/qtsdBw==}
+    engines: {node: ^20.19.0 || ^22.12.0 || >23.0.0}
     peerDependencies:
       browserslist: ^4.21.8
       esbuild: 0.25.4
@@ -6427,6 +6427,9 @@ packages:
 
   zod@3.24.1:
     resolution: {integrity: sha512-muH7gBL9sI1nciMZV67X5fTKKBLtwpZ5VBp1vsOQzj1MhrBZ4wlVCm3gedKZWLp0Oyel8sIGfeiz54Su+OVT+A==}
+
+  zod@3.25.12:
+    resolution: {integrity: sha512-A8e9eiwm2L5YEupdjn1YcxL1ZDWuL3Bc4JKvLwUrpKZZtRUDOijR7XXsV5WMuUCZPc1tFYO5yfH14STI08MquA==}
 
   zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
@@ -10030,12 +10033,12 @@ snapshots:
     dependencies:
       es-errors: 1.3.0
 
-  esbuild-plugin-browserslist@0.16.0(browserslist@4.24.5)(esbuild@0.25.4):
+  esbuild-plugin-browserslist@1.0.1(browserslist@4.24.5)(esbuild@0.25.4):
     dependencies:
       browserslist: 4.24.5
-      debug: 4.4.0
+      debug: 4.4.1
       esbuild: 0.25.4
-      zod: 3.24.1
+      zod: 3.25.12
     transitivePeerDependencies:
       - supports-color
 
@@ -14000,5 +14003,7 @@ snapshots:
       readable-stream: 4.6.0
 
   zod@3.24.1: {}
+
+  zod@3.25.12: {}
 
   zwitch@2.0.4: {}
