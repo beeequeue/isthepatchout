@@ -45,7 +45,7 @@
     "pino": "9.7.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "4.13.1",
+    "@antfu/eslint-config": "4.13.2",
     "@iconify-json/simple-icons": "1.2.35",
     "@iconify-json/tabler": "1.2.18",
     "@morev/vue-transitions": "3.0.5",
@@ -80,6 +80,9 @@
     "vue-tsc": "2.2.10"
   },
   "pnpm": {
+    "onlyBuiltDependencies": [
+      "@morev/vue-transitions"
+    ],
     "overrides": {
       "is-core-module": "npm:@nolyfill/is-core-module@^1",
       "isarray": "npm:@nolyfill/isarray@^1",
