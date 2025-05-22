@@ -1,9 +1,11 @@
 {
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
   extends: [
     "config:js-app",
     "helpers:disableTypesNodeMajor",
     "schedule:earlyMondays",
     "group:allNonMajor",
+    "schedule:monthly",
   ],
   prHourlyLimit: 5,
   prConcurrentLimit: 5,
@@ -16,13 +18,40 @@
       matchManagers: ["npm"],
       automerge: true,
     },
+    // Build deps can be bundled together
     {
-      sourceUrlPrefixes: ["https://github.com/vitejs/vite"],
-      groupName: "Vite",
+      groupName: "build deps",
+      packagePatterns: [
+        "esbuild",
+        "ts(down|up)",
+        "roll(down|up)",
+        "(rs|web)pack",
+        "unplugin",
+      ],
     },
+    // Linting can be bunched together
     {
-      packagePatterns: ["lint", "!lint-staged"],
-      groupName: "Linting",
+      groupName: "dev deps",
+      packagePatterns: [
+        "^@tsconfig/",
+        "eslint",
+        "-staged$",
+        "prettier",
+        "typescript",
+        "simple-git-hooks",
+      ],
+      automerge: true,
+    },
+    // Don't touch nolyfill overrides
+    {
+      packagePatterns: ["@nolyfill/*", "@socketregistry/*"],
+      rangeStrategy: "replace",
+    },
+    // Pin GH Actions (action@hash #v0.0.0)
+    {
+      matchDepTypes: ["action"],
+      pinDigests: true,
+      prPriority: 999,
     },
   ],
 }
