@@ -65,6 +65,7 @@ export default defineNuxtConfig({
     },
     resolve: {
       alias: {
+        "readable-stream": "node:stream",
         "node-fetch": "fetch-unfiller/node",
         "cross-fetch": "fetch-unfiller/node",
       },
