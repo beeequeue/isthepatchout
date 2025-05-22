@@ -57,6 +57,9 @@ export default defineNuxtConfig({
   sourcemap: true,
 
   vite: {
+    define: {
+      NATIVE_WEBSOCKET_AVAILABLE: JSON.stringify(true),
+    },
     build: {
       minify: true,
       target: resolveToEsbuildTarget(browserslist(), {
