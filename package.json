@@ -40,7 +40,6 @@
     "date-fns": "4.1.0",
     "dotaver": "1.0.1",
     "fathom-client": "3.7.2",
-    "fetch-unfiller": "0.2.0",
     "p-queue": "8.1.0",
     "pino": "9.7.0"
   },

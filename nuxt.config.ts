@@ -63,13 +63,6 @@ export default defineNuxtConfig({
         printUnknownTargets: false,
       }),
     },
-    resolve: {
-      alias: {
-        "readable-stream": "node:stream",
-        "node-fetch": "fetch-unfiller/node",
-        "cross-fetch": "fetch-unfiller/node",
-      },
-    },
   },
 
   css: ["virtual:windi.css", "assets/base.css"],
