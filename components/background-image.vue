@@ -3,6 +3,15 @@
 </template>
 
 <style scoped>
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 #background {
   position: fixed;
   top: 0;
@@ -12,7 +21,8 @@
   pointer-events: none;
   background-image: url("/background.svg");
   opacity: 0;
-  transition: opacity 500ms;
-  transition-delay: 250ms;
+  animation: fadeIn 1500ms;
+  animation-delay: 175ms;
+  animation-fill-mode: forwards;
 }
 </style>
