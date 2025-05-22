@@ -57,14 +57,16 @@ export default defineNuxtConfig({
   sourcemap: true,
 
   vite: {
-    define: {
-      NATIVE_WEBSOCKET_AVAILABLE: JSON.stringify(true),
-    },
     build: {
       minify: true,
       target: resolveToEsbuildTarget(browserslist(), {
         printUnknownTargets: false,
       }),
+    },
+    resolve: {
+      alias: {
+        ws: path.resolve("./test.mjs"),
+      },
     },
   },
 
