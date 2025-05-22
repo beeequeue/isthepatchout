@@ -1,6 +1,5 @@
 <template>
   <NuxtPwaManifest />
-  <SpeedInsights />
 
   <main class="h-1/1 flex items-center justify-center p-5 text-center">
     <BackgroundImage />
@@ -22,8 +21,6 @@
 </template>
 
 <script lang="ts" setup>
-import { SpeedInsights } from "@vercel/speed-insights/nuxt"
-
 const { patch, fetchPatch } = usePatch()
 
 await fetchPatch()
