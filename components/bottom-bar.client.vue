@@ -5,7 +5,7 @@
   >
     <Clickable
       v-if="isMobile"
-      class="absolute top-0 right-0 -translate-y-full transform !rounded-full"
+      class="absolute right-0 top-0 -translate-y-full transform !rounded-full"
       @click="open = !open"
     >
       <Icon name="pajamas:settings" class="h-8 w-8 p-0" />

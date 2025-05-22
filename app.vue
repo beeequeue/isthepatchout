@@ -2,12 +2,12 @@
   <NuxtPwaManifest />
   <SpeedInsights />
 
-  <main class="flex justify-center items-center h-1/1 p-5 text-center">
+  <main class="h-1/1 flex items-center justify-center p-5 text-center">
     <BackgroundImage />
 
     <Content v-if="patch != null" />
 
-    <div v-else class="text-3xl font-bold text-danger-300 text-shadow-lg">
+    <div v-else class="text-danger-300 text-shadow-lg text-3xl font-bold">
       Could not find any patch data.
     </div>
 

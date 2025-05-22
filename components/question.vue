@@ -1,7 +1,7 @@
 <template>
   <div
     v-if="patch != null"
-    class="flex flex-col md:flex-row md:items-center md:gap-2 text-2xl md:text-4xl font-serif text-center"
+    class="flex flex-col text-center font-serif text-2xl md:flex-row md:items-center md:gap-2 md:text-4xl"
   >
     Is
 
@@ -12,7 +12,7 @@
     >
       <span v-if="i !== 0">{{ " " }}or{{ " " }}</span>
 
-      <span class="font-bold text-5xl md:text-7xl text-primary-500">
+      <span class="text-primary-500 text-5xl font-bold md:text-7xl">
         {{ patch?.toString() }}
       </span>
     </div>

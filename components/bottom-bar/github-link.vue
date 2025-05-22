@@ -4,9 +4,9 @@
     :href="pkgJson.repository"
     rel="noopener"
     target="_blank"
-    class="flex items-center p-2 m-2px"
+    class="m-2px flex items-center p-2"
   >
-    <Icon name="simple-icons:github" class="fill-gray-100 mr-2" />
+    <Icon name="simple-icons:github" class="mr-2 fill-gray-100" />
 
     Source code
   </Clickable>

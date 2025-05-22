@@ -7,7 +7,7 @@
     @change="handleChange"
   >
     <Icon
-      class="mr-2 hover:fill-gray-100 animate-infinite animate-slow transition-all"
+      class="animate-infinite animate-slow mr-2 transition-all hover:fill-gray-100"
       :class="iconClasses"
       :name="subscribed ? 'tabler:bell-off' : 'tabler:bell-filled'"
     />

@@ -5,7 +5,7 @@
     <answer />
 
     <transition-expand :duration="500">
-      <div v-if="!recentlyReleased" class="text-gray-400 mt-4">
+      <div v-if="!recentlyReleased" class="mt-4 text-gray-400">
         No need to refresh the page.
         <br />
         It will update as soon as we see a new update!

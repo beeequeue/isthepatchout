@@ -3,12 +3,12 @@
     <li v-for="({ url, name }, i) in prettyLinks" :id="name.toLowerCase()" :key="url">
       <a :href="url" target="_blank" rel="noopener">
         <div
-          class="relative py-1 px-2 mb-1 text-3xl color-primary-400 text-center overflow-hidden"
+          class="color-primary-400 relative mb-1 overflow-hidden px-2 py-1 text-center text-3xl"
         >
           <span>{{ name }}</span>
 
           <span
-            class="absolute left-0 bottom-0 right-0 transform translate-x-full border-b-2 border-primary-400 animate-link"
+            class="border-primary-400 animate-link absolute bottom-0 left-0 right-0 translate-x-full transform border-b-2"
             :class="`!animate-delay-${250 * i}ms`"
           />
         </div>

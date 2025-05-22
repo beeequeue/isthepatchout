@@ -12,10 +12,10 @@
     "node": "^22"
   },
   "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
+    "pre-commit": "node_modules/.bin/nano-staged"
   },
-  "lint-staged": {
-    "*.{js,ts,vue,html,json}": [
+  "nano-staged": {
+    "*.{js,jsx,ts,tsx,json,json5,yaml,yml,css,scss,md}": [
       "prettier --write"
     ]
   },
@@ -64,7 +64,7 @@
     "dotenv": "16.5.0",
     "esbuild-plugin-browserslist": "1.0.1",
     "eslint": "9.27.0",
-    "lint-staged": "16.0.0",
+    "nano-staged": "0.8.0",
     "nuxt": "3.17.4",
     "nuxt-security": "2.2.0",
     "nuxt-windicss": "3.0.1",
@@ -72,6 +72,7 @@
     "pino-http": "10.4.0",
     "pino-pretty": "13.0.0",
     "prettier": "3.5.3",
+    "prettier-plugin-tailwindcss": "0.6.11",
     "simple-git-hooks": "2.13.0",
     "typescript": "5.8.3",
     "valibot": "1.1.0",
