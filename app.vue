@@ -1,7 +1,7 @@
 <template>
   <NuxtPwaManifest />
 
-  <main class="h-1/1 flex items-center justify-center p-5 text-center">
+  <main class="h-1/1 flex items-center justify-center p-5 text-center -mt-2 md:mt-0">
     <BackgroundImage />
 
     <Content v-if="patch != null" />
