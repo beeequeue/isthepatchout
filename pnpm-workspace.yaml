@@ -1,0 +1,13 @@
+overrides:
+  "@supabase/realtime-js": 2.11.8
+  esbuild: 0.25.4
+  is-core-module: npm:@nolyfill/is-core-module@^1
+  isarray: npm:@nolyfill/isarray@^1
+  safe-buffer: npm:@nolyfill/safe-buffer@^1
+  safer-buffer: npm:@nolyfill/safer-buffer@^1
+  side-channel: npm:@nolyfill/side-channel@^1
+  string.prototype.matchall: npm:@nolyfill/string.prototype.matchall@^1
+  vite: 6.2.7
+
+onlyBuiltDependencies:
+  - "@morev/vue-transitions"
