@@ -16,6 +16,8 @@ export const serverSupabase = (event: H3Event) => {
   const upsertPatches = async (patches: Patch[]) => {
     Logger.info(`Received ${patches.length} patches to maybe insert...`)
 
+    // The client can only fetch up to 150 rows due to the Supabase config
+    // so if this starts failing it's why
     const { data: knownPatches, error: knownPatchesError } = await supabase
       .from("patches")
       .select("id")
@@ -23,6 +25,7 @@ export const serverSupabase = (event: H3Event) => {
       Logger.error(knownPatchesError)
       throw new Error(knownPatchesError.message)
     }
+    Logger.info(`Found ${knownPatches?.length ?? 0} known patches...`)
 
     // eslint-disable-next-line ts/no-unnecessary-type-assertion
     const knownPatchIds = new Set(knownPatches!.map((patch) => patch.id))
