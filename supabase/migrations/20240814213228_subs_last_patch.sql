@@ -1,1 +1,2 @@
-UPDATE public.subscriptions SET "lastNotified" = 73702;
+UPDATE public.subscriptions
+SET "lastNotified" = 73702;
