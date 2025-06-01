@@ -3,10 +3,7 @@ overrides:
   "@netlify/cli": "-"
   "@netlify/functions": "-"
   "@supabase/realtime-js": 2.11.8
-  "@vercel/nft": "-"
-  archiver: "-"
   ioredis: "-"
-  db0: "-"
   esbuild: 0.25.4
   is-core-module: npm:@nolyfill/is-core-module@^1
   isarray: npm:@nolyfill/isarray@^1
