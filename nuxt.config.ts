@@ -19,7 +19,7 @@ declare module "@nuxt/schema" {
 const env = process.env.VERCEL_ENV as "production" | "development" | undefined
 
 export default defineNuxtConfig({
-  nitro: { preset: "vercel" },
+  nitro: { preset: "node-server" },
 
   runtimeConfig: {
     vapidPrivateKey: "",
@@ -36,7 +36,6 @@ export default defineNuxtConfig({
       apiUrl: "http://localhost:3000",
       sentryDsn:
         "https://e4f5998ed2e349b985f2150cba13550e@o524049.ingest.sentry.io/5721085",
-      fathomSiteId: "FVADOKGJ",
       vapidPublicKey:
         "BMxxkM7nyik9wtBsK6wVnHxfsOgPVsA05QmW3AE5M8bPAVoAV9LGX3i26p-mZkDJd7zj7iZufOPdI7Cpd2IYs1M",
     },
