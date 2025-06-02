@@ -78,7 +78,7 @@ export const serverSupabase = (event: H3Event) => {
         auth,
         extra: p256dh,
         environment: config.public.env,
-        lastNotified: latestPatch![0].number,
+        lastNotified: latestPatch![0]!.number,
       },
       { onConflict: "endpoint" },
     )
@@ -121,7 +121,7 @@ export const serverSupabase = (event: H3Event) => {
         auth: guildId,
         extra: id,
         environment: config.public.env,
-        lastNotified: latestPatch![0].number,
+        lastNotified: latestPatch![0]!.number,
       },
       { onConflict: "endpoint" },
     )

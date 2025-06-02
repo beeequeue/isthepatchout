@@ -1,4 +1,5 @@
 import { differenceInDays } from "date-fns"
+
 import type { Patch } from "~~/lib/types"
 
 export const isRecentlyReleased = (patch: Patch | null | undefined) =>

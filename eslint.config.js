@@ -31,7 +31,7 @@ export default withNuxt(
           "error",
           {
             type: "natural",
-            internalPattern: ["^@/.+?", "^~/.+?", "^#[a-z]+/.+?"],
+            internalPattern: ["^@/.+?", "^~+/.+?", "^#[a-z]+/.+?"],
             newlinesBetween: "always",
             groups: [
               ["builtin", "builtin-type"],
