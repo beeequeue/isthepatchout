@@ -1,7 +1,7 @@
 import { defineEventHandler } from "h3"
 
-import { serverSupabase } from "~/server/composables/supabase"
-import { okResponse } from "~/server/utils"
+import { serverSupabase } from "~~/server/composables/supabase"
+import { okResponse } from "~~/server/utils"
 
 export default defineEventHandler(async (event) => {
   const query = getQuery(event)

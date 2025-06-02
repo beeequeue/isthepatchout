@@ -1,8 +1,8 @@
 import { defineEventHandler, readBody, setResponseStatus } from "h3"
 import * as v from "valibot"
 
-import { serverSupabase } from "~/server/composables/supabase"
-import { okResponse } from "~/server/utils"
+import { serverSupabase } from "~~/server/composables/supabase"
+import { okResponse } from "~~/server/utils"
 
 const InputSchema = v.strictObject({
   endpoint: v.pipe(v.string(), v.regex(/^https:\/\//)),

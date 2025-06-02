@@ -1,7 +1,7 @@
 import { defineEventHandler, sendRedirect } from "h3"
 import * as v from "valibot"
 
-import { serverSupabase } from "~/server/composables/supabase"
+import { serverSupabase } from "~~/server/composables/supabase"
 
 const InputSchema = v.strictObject({
   code: v.string(),

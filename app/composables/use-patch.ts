@@ -1,4 +1,4 @@
-import type { Database, Patch } from "~/lib/types"
+import type { Database, Patch } from "~~/lib/types"
 
 const patch = ref<Patch | null>(null)
 

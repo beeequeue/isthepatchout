@@ -58,7 +58,7 @@
     "esbuild-plugin-browserslist": "1.0.1",
     "eslint": "9.28.0",
     "nano-staged": "0.8.0",
-    "nuxt": "3.17.4",
+    "nuxt": "4.0.0-alpha.1",
     "nuxt-security": "2.2.0",
     "nuxt-windicss": "3.0.1",
     "ofetch": "1.4.1",

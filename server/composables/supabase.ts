@@ -1,9 +1,9 @@
 import type { H3Event } from "h3"
 
 import { serverSupabaseServiceRole } from "#supabase/server"
-import type { Database, Patch } from "~/lib/types"
-import type { UpdateSubscriptionInput } from "~/server/api/subscription.post"
-import { Logger } from "~/server/utils/logger"
+import type { Database, Patch } from "~~/lib/types"
+import type { UpdateSubscriptionInput } from "~~/server/api/subscription.post"
+import { Logger } from "~~/server/utils/logger"
 
 export const serverSupabase = (event: H3Event) => {
   const config = useRuntimeConfig()

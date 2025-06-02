@@ -1,5 +1,5 @@
 /* eslint-disable no-restricted-globals */
-import type { PushEventPatch } from "~/lib/types"
+import type { PushEventPatch } from "~~/lib/types"
 
 enum NotificationAction {
   ViewReleaseNotes = "view-release-notes",

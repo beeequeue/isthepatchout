@@ -8,6 +8,8 @@ import type SecurityModule from "nuxt-security"
 
 import type { ModuleOptions, NuxtModule } from "@nuxt/schema"
 
+import pkgJson from "./package.json" with { type: "json" }
+
 type GetOptions<T> = T extends NuxtModule<infer O> ? O : ModuleOptions
 
 declare module "@nuxt/schema" {
@@ -20,6 +22,10 @@ const env = process.env.VERCEL_ENV as "production" | "development" | undefined
 
 export default defineNuxtConfig({
   nitro: { preset: "vercel" },
+  experimental: {
+    emitRouteChunkError: "automatic",
+    headNext: true,
+  },
 
   runtimeConfig: {
     vapidPrivateKey: "",
@@ -55,7 +61,13 @@ export default defineNuxtConfig({
 
   sourcemap: true,
 
+  vue: {
+    propsDestructure: true,
+  },
   vite: {
+    define: {
+      REPOSITORY: JSON.stringify(pkgJson.repository),
+    },
     build: {
       minify: true,
       target: resolveToEsbuildTarget(browserslist(), {
@@ -82,11 +94,6 @@ export default defineNuxtConfig({
       ],
       htmlAttrs: { lang: "en" },
     },
-  },
-
-  experimental: {
-    emitRouteChunkError: "automatic",
-    headNext: true,
   },
 
   supabase: {
@@ -157,6 +164,4 @@ export default defineNuxtConfig({
       standalone: false,
     },
   },
-
-  compatibilityDate: "2024-08-12",
 })

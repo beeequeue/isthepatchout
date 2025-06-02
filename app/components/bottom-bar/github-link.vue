@@ -1,7 +1,7 @@
 <template>
   <Clickable
     is="a"
-    :href="pkgJson.repository"
+    :href="repositoryUrl"
     rel="noopener"
     target="_blank"
     class="m-2px flex items-center p-2"
@@ -13,5 +13,5 @@
 </template>
 
 <script lang="ts" setup>
-import pkgJson from "../../package.json"
+const repositoryUrl = REPOSITORY
 </script>

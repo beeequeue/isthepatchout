@@ -1,4 +1,4 @@
-import { LocalStorageKey } from "~/lib/constants"
+import { LocalStorageKey } from "~~/lib/constants"
 
 type ApiResponse<T extends Record<string, unknown>> = T & {
   ok: boolean

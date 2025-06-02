@@ -1,6 +1,6 @@
 import { DotaVersion } from "dotaver"
 
-import type { Patch } from "~/lib/types"
+import type { Patch } from "~~/lib/types"
 
 import type { PatchNoteListItem } from "./dota"
 
