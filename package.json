@@ -32,10 +32,10 @@
   "dependencies": {
     "@vueuse/core": "13.3.0",
     "canvas-confetti": "1.9.3",
-    "date-fns": "4.1.0",
     "dotaver": "1.0.1",
     "p-queue": "8.1.0",
-    "pino": "9.7.0"
+    "pino": "9.7.0",
+    "temporal-polyfill": "0.3.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "4.13.2",

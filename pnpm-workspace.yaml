@@ -1,6 +1,3 @@
-onlyBuiltDependencies:
-  - "@morev/vue-transitions"
-
 overrides:
   "@cloudflare/kv-asset-handler": "-"
   "@netlify/cli": "-"
@@ -20,3 +17,6 @@ overrides:
 
 patchedDependencies:
   "@unocss/nuxt": patches/@unocss__nuxt.patch
+
+onlyBuiltDependencies:
+  - "@morev/vue-transitions"
