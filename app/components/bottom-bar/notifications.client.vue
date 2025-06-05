@@ -6,10 +6,9 @@
     class="text-base"
     @change="handleChange"
   >
-    <Icon
+    <div
       class="animate-infinite animate-slow mr-2 transition-all hover:fill-gray-100"
       :class="iconClasses"
-      :name="subscribed ? 'tabler:bell-off' : 'tabler:bell-filled'"
     />
 
     {{ subscribed ? "Disable" : "Enable" }} push notifications
@@ -27,6 +26,8 @@ const iconClasses = computed(() => ({
   "grayed-out": !supported || loading.value,
   "fill-gray-400": !subscribed.value,
   shine: subscribed.value,
+  "i-tabler:bell-off": subscribed,
+  "i-tabler:bell-filled": !subscribed,
 }))
 
 const handleChange = () => {

@@ -1,0 +1,27 @@
+diff --git a/dist/index.mjs b/dist/index.mjs
+index cb6792065a7d6929987fe34d08f3942698a3dd02..35312a0d3cb014a33fb46557b0cd5fbf6be5a4c9 100644
+--- a/dist/index.mjs
++++ b/dist/index.mjs
+@@ -1,10 +1,9 @@
+ import { dirname, resolve } from 'node:path';
+ import process from 'node:process';
+ import { fileURLToPath } from 'node:url';
+-import { defineNuxtModule, addPluginTemplate, isNuxt2, addComponentsDir, addTemplate, findPath, isNuxt3, extendViteConfig, extendWebpackConfig } from '@nuxt/kit';
++import { defineNuxtModule, addPluginTemplate, isNuxt2, addComponentsDir, addTemplate, findPath, isNuxt3, extendViteConfig } from '@nuxt/kit';
+ import { createRecoveryConfigLoader } from '@unocss/config';
+ import VitePlugin from '@unocss/vite';
+-import WebpackPlugin from '@unocss/webpack';
+ import { cssIdRE } from '@unocss/core';
+ import presetAttributify from '@unocss/preset-attributify';
+ import presetIcons from '@unocss/preset-icons';
+@@ -134,10 +133,6 @@ export default mergeConfigs([${configPaths.map((_, index) => `cfg${index}`).join
+           mode: options.mode
+         }, unoConfig));
+       });
+-      extendWebpackConfig(async (config) => {
+-        config.plugins = config.plugins || [];
+-        config.plugins.unshift(WebpackPlugin({}, unoConfig));
+-      });
+     });
+     if (nuxt.options.dev) {
+       nuxt.hook("devtools:customTabs", (tabs) => {

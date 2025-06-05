@@ -8,5 +8,5 @@
     "noUnusedParameters": true,
     "types": ["@total-typescript/ts-reset"]
   },
-  "exclude": ["app/sw/**/*", "windi.config.ts"]
+  "exclude": ["app/sw/**/*", "unocss.config.ts"]
 }

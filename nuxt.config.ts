@@ -5,6 +5,7 @@ import browserslist from "browserslist"
 import { resolveToEsbuildTarget } from "esbuild-plugin-browserslist"
 import { defineNuxtConfig } from "nuxt/config"
 import type SecurityModule from "nuxt-security"
+import directives from "@unocss/transformer-directives"
 
 import type { ModuleOptions, NuxtModule } from "@nuxt/schema"
 
@@ -49,13 +50,12 @@ export default defineNuxtConfig({
 
   modules: [
     "@nuxt/eslint",
-    "@nuxt/icon",
     "@nuxtjs/google-fonts",
     "@nuxtjs/supabase",
     "@vite-pwa/nuxt",
     "@vueuse/nuxt",
     "nuxt-security",
-    "nuxt-windicss",
+    "@unocss/nuxt",
     "@morev/vue-transitions/nuxt",
   ],
 
@@ -81,7 +81,14 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ["virtual:windi.css", "assets/base.css"],
+  css: ["assets/base.css"],
+  unocss: {
+    icons: true,
+    wind: true,
+    webFonts: true,
+    preflight: true,
+    transformers: [directives()],
+  },
 
   app: {
     head: {
