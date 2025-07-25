@@ -98,8 +98,8 @@ importers:
         specifier: 4.25.0
         version: 4.25.0
       dotenv:
-        specifier: 16.5.0
-        version: 16.5.0
+        specifier: 17.2.1
+        version: 17.2.1
       esbuild-plugin-browserslist:
         specifier: 1.0.1
         version: 1.0.1(browserslist@4.25.0)(esbuild@0.25.4)
@@ -2854,6 +2854,10 @@ packages:
 
   dotenv@16.5.0:
     resolution: {integrity: sha512-m/C+AwOAr9/W1UOIZUo232ejMNnJAJtYQjUbHoNTBNTJSvqzzDh7vnrei3o3r3m9blf6ZoDkvcw0VmozNRFJxg==}
+    engines: {node: '>=12'}
+
+  dotenv@17.2.1:
+    resolution: {integrity: sha512-kQhDYKZecqnM0fCnzI5eIv5L4cAe/iRI+HqMbO/hbRdTAeXDG+M9FjipUxNfbARuEg4iHIbhnhs78BCHNbSxEQ==}
     engines: {node: '>=12'}
 
   duplexer@0.1.2:
@@ -8702,6 +8706,8 @@ snapshots:
   dotaver@1.0.1: {}
 
   dotenv@16.5.0: {}
+
+  dotenv@17.2.1: {}
 
   duplexer@0.1.2: {}
 

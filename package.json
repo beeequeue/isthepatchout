@@ -54,7 +54,7 @@
     "@vite-pwa/nuxt": "1.0.3",
     "@vueuse/nuxt": "13.3.0",
     "browserslist": "4.25.0",
-    "dotenv": "16.5.0",
+    "dotenv": "17.2.1",
     "esbuild-plugin-browserslist": "1.0.1",
     "eslint": "9.30.0",
     "nano-staged": "0.8.0",
