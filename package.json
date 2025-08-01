@@ -38,7 +38,7 @@
     "temporal-polyfill": "0.3.0"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "4.19.0",
+    "@antfu/eslint-config": "5.0.0",
     "@iconify-json/simple-icons": "1.2.36",
     "@iconify-json/tabler": "1.2.18",
     "@morev/vue-transitions": "3.0.5",
