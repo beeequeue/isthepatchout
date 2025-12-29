@@ -23,7 +23,7 @@ jobs:
         id: cache
         run: echo "path=$(pnpm store path)" >> $GITHUB_OUTPUT
 
-      - uses: actions/cache@5a3ec84eff668545956fd18022155c47e93e2684 # v4
+      - uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         with:
           path: ${{ steps.cache.outputs.path }}
           key: v1-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -55,7 +55,7 @@ jobs:
         id: cache
         run: echo "path=$(pnpm store path)" >> $GITHUB_OUTPUT
 
-      - uses: actions/cache@5a3ec84eff668545956fd18022155c47e93e2684 # v4
+      - uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         with:
           path: ${{ steps.cache.outputs.path }}
           key: v1-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -85,7 +85,7 @@ jobs:
         id: cache
         run: echo "path=$(pnpm store path)" >> $GITHUB_OUTPUT
 
-      - uses: actions/cache@5a3ec84eff668545956fd18022155c47e93e2684 # v4
+      - uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         with:
           path: ${{ steps.cache.outputs.path }}
           key: v1-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
