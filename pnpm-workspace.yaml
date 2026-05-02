@@ -1,3 +1,10 @@
+allowBuilds:
+  "@morev/vue-transitions": true
+  "@parcel/watcher": false
+  esbuild: false
+  simple-git-hooks: false
+  unrs-resolver: false
+
 overrides:
   "@cloudflare/kv-asset-handler": "-"
   "@netlify/cli": "-"
@@ -14,9 +21,3 @@ overrides:
   side-channel: npm:@nolyfill/side-channel@^1
   string.prototype.matchall: npm:@nolyfill/string.prototype.matchall@^1
   vite: 6.4.2
-
-patchedDependencies:
-  "@unocss/nuxt": patches/@unocss__nuxt.patch
-
-onlyBuiltDependencies:
-  - "@morev/vue-transitions"
