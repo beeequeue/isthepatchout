@@ -6,7 +6,7 @@ overrides:
   "@nuxt/schema": 4.0.0-alpha.1
   "@supabase/realtime-js": 2.11.8
   "@unocss/webpack": "-"
-  esbuild: 0.25.4
+  esbuild: 0.28.1
   ioredis: "-"
   is-core-module: npm:@nolyfill/is-core-module@^1
   isarray: npm:@nolyfill/isarray@^1
