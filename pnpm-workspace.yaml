@@ -2,9 +2,9 @@ overrides:
   "@cloudflare/kv-asset-handler": "-"
   "@netlify/cli": "-"
   "@netlify/functions": "-"
-  "@nuxt/kit": 4.0.0-alpha.1
-  "@nuxt/schema": 4.0.0-alpha.1
-  "@supabase/realtime-js": 2.11.8
+  "@nuxt/kit": 4.4.8
+  "@nuxt/schema": 4.4.8
+  "@supabase/realtime-js": 2.110.0
   "@unocss/webpack": "-"
   esbuild: 0.28.1
   ioredis: "-"
