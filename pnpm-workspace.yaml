@@ -13,7 +13,7 @@ overrides:
   safe-buffer: npm:@nolyfill/safe-buffer@^1
   side-channel: npm:@nolyfill/side-channel@^1
   string.prototype.matchall: npm:@nolyfill/string.prototype.matchall@^1
-  vite: 6.4.2
+  vite: 6.4.3
 
 patchedDependencies:
   "@unocss/nuxt": patches/@unocss__nuxt.patch
