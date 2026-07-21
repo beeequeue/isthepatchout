@@ -1,6 +1,6 @@
 <template>
   <div class="relative flex flex-col items-center">
-    <div class="whitespace-nowrap text-4xl font-bold opacity-20">Is the Patch Out?</div>
+    <div class="text-4xl font-bold whitespace-nowrap opacity-20">Is the Patch Out?</div>
 
     <div class="animate-intensifies blur-1 text-4xl filter">༼ つ ◕_◕ ༽つ</div>
   </div>

@@ -1,11 +1,11 @@
 import antfu from "@antfu/eslint-config"
+
 import withNuxt from "./.nuxt/eslint.config.mjs"
 
 export default withNuxt(
   antfu({
-    ignores: ["**/*.json", "**/*.config.ts"],
+    ignores: ["**/*.json", "**/*.config.ts", "**/request-logger.ts"],
     stylistic: false,
-    test: { overrides: { "test/no-import-node-test": "off" } },
     vue: {
       overrides: {
         "vue/block-order": "off",
@@ -14,35 +14,29 @@ export default withNuxt(
       },
     },
     typescript: {
-      tsconfigPath: "./tsconfig.json",
       overrides: {
         "no-console": "off",
-
-        "ts/no-use-before-define": "off",
+        "antfu/no-top-level-await": "off",
+        "import/consistent-type-specifier-style": ["error", "prefer-top-level"],
+        "node/prefer-global/process": "off",
         "ts/consistent-type-definitions": "off",
-        "ts/consistent-type-imports": ["error", { fixStyle: "inline-type-imports" }],
+        "ts/consistent-type-imports": [
+          "error",
+          { fixStyle: "inline-type-imports", disallowTypeAnnotations: false },
+        ],
         "ts/no-unsafe-argument": "off",
         "ts/no-unsafe-assignment": "off",
-
-        "node/prefer-global/process": "off",
-        "antfu/no-top-level-await": "off",
+        "ts/no-use-before-define": "off",
+        "unicorn/number-literal-case": "off",
+        "unused-imports/no-unused-vars": "off",
 
         "perfectionist/sort-imports": [
           "error",
           {
             type: "natural",
-            internalPattern: ["^@/.+?", "^~+/.+?", "^#[a-z]+/.+?"],
-            newlinesBetween: "always",
-            groups: [
-              ["builtin", "builtin-type"],
-              ["external", "external-type"],
-              ["internal", "internal-type"],
-              ["parent", "parent-type"],
-              ["sibling", "sibling-type"],
-              ["index", "index-type"],
-              "object",
-              "unknown",
-            ],
+            internalPattern: ["^[@~#]+/"],
+            newlinesBetween: 1,
+            groups: ["builtin", "external", "internal", "parent", "sibling", "index", "unknown"],
           },
         ],
       },

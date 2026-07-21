@@ -1,12 +1,10 @@
 <template>
-  <NuxtPwaManifest />
-
-  <main class="h-1/1 -mt-2 flex items-center justify-center p-5 text-center md:mt-0">
+  <main class="-mt-2 flex h-1/1 items-center justify-center p-5 text-center md:mt-0">
     <BackgroundImage />
 
     <Content v-if="patch != null" />
 
-    <div v-else class="text-danger-300 text-shadow-lg text-3xl font-bold">
+    <div v-else class="text-danger-300 text-3xl font-bold text-shadow-lg">
       Could not find any patch data.
     </div>
 

@@ -1,6 +1,6 @@
+import { serverSupabaseServiceRole } from "#supabase/server"
 import type { H3Event } from "h3"
 
-import { serverSupabaseServiceRole } from "#supabase/server"
 import type { Database, Patch } from "~~/lib/types"
 import type { UpdateSubscriptionInput } from "~~/server/api/subscription.post"
 import { Logger } from "~~/server/utils/logger"
@@ -27,7 +27,6 @@ export const serverSupabase = (event: H3Event) => {
     }
     Logger.info(`Found ${knownPatches?.length ?? 0} known patches...`)
 
-    // eslint-disable-next-line ts/no-unnecessary-type-assertion
     const knownPatchIds = new Set(knownPatches!.map((patch) => patch.id))
     const newPatches = patches.filter((patch) => !knownPatchIds.has(patch.id))
 
@@ -89,10 +88,7 @@ export const serverSupabase = (event: H3Event) => {
   }
 
   const deleteSubscription = async (endpoint: string) => {
-    const { error } = await supabase
-      .from("subscriptions")
-      .delete()
-      .eq("endpoint", endpoint)
+    const { error } = await supabase.from("subscriptions").delete().eq("endpoint", endpoint)
 
     if (error) {
       throw new Error(error.message)
@@ -103,11 +99,7 @@ export const serverSupabase = (event: H3Event) => {
   // -------------- DISCORD WEBHOOKS --------------
   // ----------------------------------------------
 
-  const registerDiscordWebhook = async (
-    endpoint: string,
-    guildId: string,
-    id: string,
-  ) => {
+  const registerDiscordWebhook = async (endpoint: string, guildId: string, id: string) => {
     const { data: latestPatch } = await supabase
       .from("patches")
       .select("number")

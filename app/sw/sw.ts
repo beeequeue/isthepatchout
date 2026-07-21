@@ -14,17 +14,12 @@ self.addEventListener("push" as never, (e: PushEvent) => {
   const data = e.data.json() as PushEventPatch
 
   if (data.type === "patch") {
-    void target.registration.showNotification(
-      `The ${data.id} patch notes have been released!`,
-      {
-        body: "Check them out!",
-        data,
-        actions: [
-          { title: "Open patch page", action: NotificationAction.ViewReleaseNotes },
-        ],
-        vibrate: [1000, 250, 1000, 250, 1000],
-      },
-    )
+    void target.registration.showNotification(`The ${data.id} patch notes have been released!`, {
+      body: "Check them out!",
+      data,
+      actions: [{ title: "Open patch page", action: NotificationAction.ViewReleaseNotes }],
+      vibrate: [1000, 250, 1000, 250, 1000],
+    })
   }
 })
 

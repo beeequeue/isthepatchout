@@ -1,7 +1,6 @@
-import { defineConfig } from "unocss"
-import { colors } from "unocss/preset-wind3"
+import { colors } from "@unocss/preset-wind3"
 
-export default defineConfig({
+export default {
   safelist: [
     "!animate-delay-250ms",
     "!animate-delay-500ms",
@@ -14,8 +13,8 @@ export default defineConfig({
   },
   theme: {
     fontFamily: {
-      sans: ["Rubik", "sans-serif"],
-      serif: ["Radiance", "serif"],
+      sans: "Rubik",
+      serif: "Radiance",
     },
     screens: {
       sm: "768px",
@@ -30,4 +29,4 @@ export default defineConfig({
       primary: colors.amber,
     },
   },
-})
+}

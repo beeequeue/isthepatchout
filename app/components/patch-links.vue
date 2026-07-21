@@ -2,13 +2,11 @@
   <ul class="mt-2 select-all">
     <li v-for="({ url, name }, i) in prettyLinks" :id="name.toLowerCase()" :key="url">
       <a :href="url" target="_blank" rel="noopener">
-        <div
-          class="color-primary-400 relative mb-1 overflow-hidden px-2 py-1 text-center text-3xl"
-        >
+        <div class="color-primary-400 relative mb-1 overflow-hidden px-2 py-1 text-center text-3xl">
           <span>{{ name }}</span>
 
           <span
-            class="border-primary-400 animate-link absolute bottom-0 left-0 right-0 translate-x-full transform border-b-2"
+            class="border-primary-400 animate-link absolute right-0 bottom-0 left-0 translate-x-full transform border-b-2"
             :class="`!animate-delay-${250 * i}ms`"
           />
         </div>

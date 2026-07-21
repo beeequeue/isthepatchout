@@ -31,10 +31,7 @@ const checkAndUpdatePatches = async (event: H3Event) => {
  * and add new patches to check in the future.
  */
 export default defineEventHandler(async (event) => {
-  if (
-    config.checkToken == null ||
-    getHeader(event, "authorization") !== authorizationHeader
-  ) {
+  if (config.checkToken == null || getHeader(event, "authorization") !== authorizationHeader) {
     throw createError({ statusCode: 403 })
   }
 

@@ -1,6 +1,8 @@
-import { Temporal } from "temporal-polyfill"
-
 import type { Patch } from "~~/lib/types"
+
+if (!("Temporal" in globalThis)) {
+  await import("temporal-polyfill-lite/global")
+}
 
 export const isRecentlyReleased = (patch: Patch | null | undefined): boolean => {
   if (patch == null) return false

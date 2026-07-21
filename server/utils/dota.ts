@@ -32,10 +32,10 @@ const request = async () =>
 export const getPatchList = async () => {
   Logger.info("Fetching patch list...")
 
-  const response = await dotaApiScheduler.add(request, { throwOnTimeout: true })
+  const response = await dotaApiScheduler.add(request)
 
   if (response instanceof Error) {
-    Logger.error("Request failed", response.response)
+    Logger.error(response.response, "Request failed")
     return null
   }
 

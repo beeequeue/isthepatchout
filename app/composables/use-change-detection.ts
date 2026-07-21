@@ -1,7 +1,4 @@
-import type {
-  RealtimeChannel,
-  RealtimePostgresInsertPayload,
-} from "@supabase/realtime-js"
+import type { RealtimeChannel, RealtimePostgresInsertPayload } from "@supabase/realtime-js"
 
 import type { Database, Patch } from "~~/lib/types"
 

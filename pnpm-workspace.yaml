@@ -5,19 +5,35 @@ allowBuilds:
   simple-git-hooks: false
   unrs-resolver: false
 
+dedupePeers: true
+dedupePeerDependents: true
+
+minimumReleaseAge: 1440
+minimumReleaseAgeExclude:
+  - "@speed-highlight/core@1.2.16"
+  - "@supabase/realtime-js@2.110.8"
+  - postcss-selector-parser@7.1.2
+
+savePrefix: ""
+shellEmulator: true
+
+trustPolicy: no-downgrade
+trustPolicyExclude:
+  - semver@6.3.1
 overrides:
   "@cloudflare/kv-asset-handler": "-"
+  "@eslint/config-inspector": "-"
   "@netlify/cli": "-"
   "@netlify/functions": "-"
-  "@nuxt/kit": 4.0.0-alpha.1
-  "@nuxt/schema": 4.0.0-alpha.1
-  "@supabase/realtime-js": 2.11.8
+  "@nuxt/kit": 4.5.0
+  "@supabase/realtime-js": 2.110.8
+  "@types/node": 26.1.0
   "@unocss/webpack": "-"
   esbuild: 0.28.1
   ioredis: "-"
   is-core-module: npm:@nolyfill/is-core-module@^1
   isarray: npm:@nolyfill/isarray@^1
+  rolldown: 1.2.0
   safe-buffer: npm:@nolyfill/safe-buffer@^1
   side-channel: npm:@nolyfill/side-channel@^1
   string.prototype.matchall: npm:@nolyfill/string.prototype.matchall@^1
-  vite: 6.4.2

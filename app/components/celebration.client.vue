@@ -30,6 +30,6 @@ watch(recentlyReleased, (isRecent) => {
   document.title = `${patch.value!.id} is out!`
 
   const interval = setInterval(fireConfetti, 100)
-  setTimeout(() => clearInterval(interval), 30_000)
+  setTimeout(clearInterval, 30_000, interval)
 })
 </script>

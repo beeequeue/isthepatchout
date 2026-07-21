@@ -21,7 +21,5 @@
 <script lang="ts" setup>
 const { patch, recentlyReleased } = usePatch()
 
-const links = computed(() =>
-  (patch.value?.links?.length ?? 0) ? patch.value!.links : null,
-)
+const links = computed(() => ((patch.value?.links?.length ?? 0) ? patch.value!.links : null))
 </script>

@@ -29,7 +29,7 @@ export default defineEventHandler(async (event) => {
       statusMessage: "Bad request",
       data: Object.fromEntries(
         result.issues.map((issue) => [issue.path?.join("."), issue.message]),
-      ),
+      ) as unknown,
     })
   }
 

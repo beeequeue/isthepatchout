@@ -1,11 +1,6 @@
 <template>
   <Clickable class="rounded-full" @click="emit('change')">
-    <input
-      hidden
-      type="checkbox"
-      name="notifications-enabled"
-      :value="checked.toString()"
-    />
+    <input hidden type="checkbox" name="notifications-enabled" :value="checked.toString()" />
 
     <slot :checked="checked" />
   </Clickable>

@@ -36,13 +36,7 @@
       "description": "https://supabase.com/docs/reference/auth",
       "type": "object",
       "additionalProperties": false,
-      "required": [
-        "site_url",
-        "additional_redirect_urls",
-        "jwt_expiry",
-        "enable_signup",
-        "email"
-      ],
+      "required": ["site_url", "additional_redirect_urls", "jwt_expiry", "enable_signup", "email"],
       "properties": {
         "site_url": {
           "description": "The base URL of your website. Used as an allow-list for redirects and for constructing URLs used in emails.",

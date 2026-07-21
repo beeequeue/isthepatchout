@@ -9,9 +9,7 @@
       enterFromClass="transform -translate-x-full opacity-0"
       leaveToClass="transform translate-x-full opacity-0"
     >
-      <div v-if="recentlyReleased" key="true" class="md:text-12xl duration-250 text-9xl">
-        Yes!
-      </div>
+      <div v-if="recentlyReleased" key="true" class="md:text-12xl text-9xl duration-250">Yes!</div>
       <div v-else key="false" class="text-10xl md:text-12xl duration-250">No.</div>
     </transition>
   </div>

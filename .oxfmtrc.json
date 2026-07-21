@@ -1,0 +1,13 @@
+{
+  "ignorePatterns": ["lib/types.generated.ts", "pnpm-lock.yaml"],
+  "semi": false,
+  "useTabs": false,
+  "sortImports": {
+    "type": "natural",
+    "newlinesBetween": true,
+    "internalPattern": ["~~/"],
+    "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "unknown"]
+  },
+  "sortPackageJson": false,
+  "sortTailwindcss": true
+}

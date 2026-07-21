@@ -35,11 +35,7 @@ export default defineEventHandler(async (event) => {
 
   try {
     const { registerDiscordWebhook } = serverSupabase(event)
-    await registerDiscordWebhook(
-      response.webhook.url,
-      result.output.guild_id,
-      response.webhook.id,
-    )
+    await registerDiscordWebhook(response.webhook.url, result.output.guild_id, response.webhook.id)
 
     return await sendRedirect(event, `${config.public.apiUrl}?discord=true`, 302)
   } catch (error: unknown) {

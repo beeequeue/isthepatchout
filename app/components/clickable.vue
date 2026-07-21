@@ -1,7 +1,7 @@
 <template>
   <component
     :is="is ?? 'button'"
-    class="clickable bg-trans border-trans transition-bg active:duration-50 flex cursor-pointer items-center overflow-hidden rounded-lg border-2 p-2 duration-500 focus-visible:bg-gray-800 active:bg-gray-800"
+    class="clickable bg-trans border-trans transition-bg flex cursor-pointer items-center overflow-hidden rounded-lg border-2 p-2 duration-500 focus-visible:bg-gray-800 active:bg-gray-800 active:duration-50"
     :class="{ clicked, 'rounded-full': round }"
     @mousedown="clicked = false"
     @click="clicked = true"
