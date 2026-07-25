@@ -1,12 +1,27 @@
 {
-  "extends": "./.nuxt/tsconfig.json",
+  "extends": [
+    "@tsconfig/node26/tsconfig.json",
+    "@tsconfig/strictest/tsconfig.json",
+    "$app/tsconfig"
+  ],
   "compilerOptions": {
-    "noEmit": true,
-    "sourceMap": true,
+    // Modules
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
 
-    "noUnusedLocals": false,
-    "noUnusedParameters": true,
-    "types": ["@total-typescript/ts-reset"]
+    // Lessen strictness
+    "noImplicitReturns": false,
+    "noPropertyAccessFromIndexSignature": false,
+    "exactOptionalPropertyTypes": false,
+
+    // Extra types
+    "lib": ["dom", "es2025", "esnext.temporal"]
   },
-  "exclude": ["app/sw/**/*", "unocss.config.ts"]
+  "exclude": [
+    "./src/service-worker",
+    "./build",
+    "./.svelte-kit/adapter-node",
+    "./.svelte-kit/generated",
+    "./.svelte-kit/output"
+  ]
 }

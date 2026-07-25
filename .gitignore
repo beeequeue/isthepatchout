@@ -1,11 +1,13 @@
-.idea
 .DS_Store
 
-node_modules
+/.data/
+/.svelte-kit/
+/build/
+/node_modules/
 
-.vercel
-.nuxt
-.nitro
-.cache
-.output
+.idea/
+!.idea/jsLibraryMappings.xml
+!.idea/template.iml
+!.idea/prettier.xml
+
 .env
