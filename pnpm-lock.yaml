@@ -1,123 +1,3 @@
----
-lockfileVersion: '9.0'
-
-importers:
-
-  .:
-    configDependencies: {}
-    packageManagerDependencies:
-      '@pnpm/exe':
-        specifier: 12.0.0-alpha.19
-        version: 12.0.0-alpha.19
-      pnpm:
-        specifier: 12.0.0-alpha.19
-        version: 12.0.0-alpha.19
-
-packages:
-
-  '@pnpm/exe.darwin-arm64@12.0.0-alpha.19':
-    resolution: {integrity: sha512-R0A9WtrD8w1iug7cxxkWjFCI1lB/gURBUcXLhSa3toIC9PNhonyuVTwNpIgUvm7WCShiIRUMQRtuaBBHbW21vQ==}
-    cpu: [arm64]
-    os: [darwin]
-
-  '@pnpm/exe.darwin-x64@12.0.0-alpha.19':
-    resolution: {integrity: sha512-jiKscL8jcKoeSf7qwVWpLzOqXK0ZNnlDbr5kFkwP9k18T3pLVhzk5iFL3WZEmYgo2rwDDdNyAIy+ZG11Fy90Tw==}
-    cpu: [x64]
-    os: [darwin]
-
-  '@pnpm/exe.linux-arm64-musl@12.0.0-alpha.19':
-    resolution: {integrity: sha512-xYncJzTYV+yudKycfe/7SZ7TP/hppLtJFlvLKL5uYt1SNjVds/IMQqV8TaNDnmDUlqlld0Xrtx1KJXa4EfOXyA==}
-    cpu: [arm64]
-    os: [linux]
-    libc: [musl]
-
-  '@pnpm/exe.linux-arm64@12.0.0-alpha.19':
-    resolution: {integrity: sha512-V4SvOnxjpRYXxoNxrIkTbZc24fAGri9lm2cqfD9GgWoARDA6amAymP64mcFL1JQ8D19PtZkNVV7FvVUhjnRsew==}
-    cpu: [arm64]
-    os: [linux]
-    libc: [glibc]
-
-  '@pnpm/exe.linux-x64-musl@12.0.0-alpha.19':
-    resolution: {integrity: sha512-/K+Sute5ag6oGLeff5kdAdvl6Pok3+w6WZWuDxprgU4Ds3pdRCJ0uaK6Pga4W5A+/gUKIc5CbMj5vWJcZkiRUg==}
-    cpu: [x64]
-    os: [linux]
-    libc: [musl]
-
-  '@pnpm/exe.linux-x64@12.0.0-alpha.19':
-    resolution: {integrity: sha512-lA5+IkSmDGftckmYEkW9jcluKPHi0DqiCffL/jguJOzsdR6hUb6APERE9V45udKgOpQP+GR3mnWGzkD9LRmkXQ==}
-    cpu: [x64]
-    os: [linux]
-    libc: [glibc]
-
-  '@pnpm/exe.win32-arm64@12.0.0-alpha.19':
-    resolution: {integrity: sha512-1d+yO16rY3JqWzO7hen7bjzdCUGX9kpUsR4FZqcJQWIWdOpLlBodp/8whOj5m7pg9ZkUUipY7Jhj56ojuPRF1g==}
-    cpu: [arm64]
-    os: [win32]
-
-  '@pnpm/exe.win32-x64@12.0.0-alpha.19':
-    resolution: {integrity: sha512-8WXhSxRs63O5p6IGwAC81CQy5yiliULQeXA6KrLtF+YyVzxI9FTTmLFVwTCwFoigkiosc2SC7Qkr/00G/cfOIQ==}
-    cpu: [x64]
-    os: [win32]
-
-  '@pnpm/exe@12.0.0-alpha.19':
-    resolution: {integrity: sha512-Qb3nAS1ydU7rwJy1BNjpMDQ5BLGAQ4+oUzRPCO8D8cuVq04WtXfu7sIjwQ29pGX1PvUYTovU18asvzaytadDgg==}
-    engines: {node: '>=18.*'}
-    hasBin: true
-
-  pnpm@12.0.0-alpha.19:
-    resolution: {integrity: sha512-bgTK3SxlO+IlEbFpQocu3XJ6VWggkbE5WVdYr2psgozP6qXUHzjlqMOHznsIxkqHq6sCKpzKYanEg+iA8nf0zg==}
-    engines: {node: '>=18.*'}
-    hasBin: true
-
-snapshots:
-
-  '@pnpm/exe.darwin-arm64@12.0.0-alpha.19':
-    optional: true
-
-  '@pnpm/exe.darwin-x64@12.0.0-alpha.19':
-    optional: true
-
-  '@pnpm/exe.linux-arm64-musl@12.0.0-alpha.19':
-    optional: true
-
-  '@pnpm/exe.linux-arm64@12.0.0-alpha.19':
-    optional: true
-
-  '@pnpm/exe.linux-x64-musl@12.0.0-alpha.19':
-    optional: true
-
-  '@pnpm/exe.linux-x64@12.0.0-alpha.19':
-    optional: true
-
-  '@pnpm/exe.win32-arm64@12.0.0-alpha.19':
-    optional: true
-
-  '@pnpm/exe.win32-x64@12.0.0-alpha.19':
-    optional: true
-
-  '@pnpm/exe@12.0.0-alpha.19':
-    optionalDependencies:
-      '@pnpm/exe.darwin-arm64': 12.0.0-alpha.19
-      '@pnpm/exe.darwin-x64': 12.0.0-alpha.19
-      '@pnpm/exe.linux-arm64': 12.0.0-alpha.19
-      '@pnpm/exe.linux-arm64-musl': 12.0.0-alpha.19
-      '@pnpm/exe.linux-x64': 12.0.0-alpha.19
-      '@pnpm/exe.linux-x64-musl': 12.0.0-alpha.19
-      '@pnpm/exe.win32-arm64': 12.0.0-alpha.19
-      '@pnpm/exe.win32-x64': 12.0.0-alpha.19
-
-  pnpm@12.0.0-alpha.19:
-    optionalDependencies:
-      '@pnpm/exe.darwin-arm64': 12.0.0-alpha.19
-      '@pnpm/exe.darwin-x64': 12.0.0-alpha.19
-      '@pnpm/exe.linux-arm64': 12.0.0-alpha.19
-      '@pnpm/exe.linux-arm64-musl': 12.0.0-alpha.19
-      '@pnpm/exe.linux-x64': 12.0.0-alpha.19
-      '@pnpm/exe.linux-x64-musl': 12.0.0-alpha.19
-      '@pnpm/exe.win32-arm64': 12.0.0-alpha.19
-      '@pnpm/exe.win32-x64': 12.0.0-alpha.19
-
----
 lockfileVersion: '9.0'
 
 settings:
@@ -2385,7 +2265,7 @@ snapshots:
       parse-gitignore: 2.0.0
       yaml-eslint-parser: 2.1.0
     optionalDependencies:
-      eslint-plugin-svelte: 3.22.0(eslint@10.7.0)
+      eslint-plugin-svelte: 3.22.0(eslint@10.7.0)(svelte@5.56.7)
       svelte-eslint-parser: 1.8.0(svelte@5.56.7)
     transitivePeerDependencies:
       - '@typescript-eslint/typescript-estree'
@@ -2830,37 +2710,6 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/eslint-plugin@8.65.0(eslint@10.7.0)':
-    dependencies:
-      '@eslint-community/regexpp': 4.12.2
-      '@typescript-eslint/scope-manager': 8.65.0
-      '@typescript-eslint/type-utils': 8.65.0(eslint@10.7.0)(typescript@6.0.3)
-      '@typescript-eslint/utils': 8.65.0(eslint@10.7.0)(typescript@6.0.3)
-      '@typescript-eslint/visitor-keys': 8.65.0
-      eslint: 10.7.0(jiti@2.7.0)
-      ignore: 7.0.6
-      natural-compare: 1.4.0
-      ts-api-utils: 2.5.0(typescript@6.0.3)
-    transitivePeerDependencies:
-      - supports-color
-    optional: true
-
-  '@typescript-eslint/eslint-plugin@8.65.0(eslint@10.7.0)(typescript@6.0.3)':
-    dependencies:
-      '@eslint-community/regexpp': 4.12.2
-      '@typescript-eslint/scope-manager': 8.65.0
-      '@typescript-eslint/type-utils': 8.65.0(eslint@10.7.0)(typescript@6.0.3)
-      '@typescript-eslint/utils': 8.65.0(eslint@10.7.0)(typescript@6.0.3)
-      '@typescript-eslint/visitor-keys': 8.65.0
-      eslint: 10.7.0(jiti@2.7.0)
-      ignore: 7.0.6
-      natural-compare: 1.4.0
-      ts-api-utils: 2.5.0(typescript@6.0.3)
-      typescript: 6.0.3
-    transitivePeerDependencies:
-      - supports-color
-    optional: true
-
   '@typescript-eslint/parser@8.65.0(eslint@10.7.0)(typescript@6.0.3)':
     dependencies:
       '@typescript-eslint/scope-manager': 8.65.0
@@ -3042,7 +2891,7 @@ snapshots:
       '@typescript-eslint/utils': 8.65.0(eslint@10.7.0)(typescript@6.0.3)
       eslint: 10.7.0(jiti@2.7.0)
     optionalDependencies:
-      '@typescript-eslint/eslint-plugin': 8.65.0(eslint@10.7.0)(typescript@6.0.3)
+      '@typescript-eslint/eslint-plugin': 8.65.0(@typescript-eslint/parser@8.65.0)(eslint@10.7.0)(typescript@6.0.3)
       typescript: 6.0.3
       vitest: 5.0.0-beta.6(@types/node@26.1.1)(vite@8.1.5)
     transitivePeerDependencies:
@@ -3336,23 +3185,6 @@ snapshots:
       regexp-ast-analysis: 0.7.1
       scslre: 0.3.0
 
-  eslint-plugin-svelte@3.22.0(eslint@10.7.0):
-    dependencies:
-      '@eslint-community/eslint-utils': 4.10.1(eslint@10.7.0)
-      '@jridgewell/sourcemap-codec': 1.5.5
-      eslint: 10.7.0(jiti@2.7.0)
-      esutils: 2.0.3
-      globals: 16.5.0
-      known-css-properties: 0.37.0
-      postcss: 8.5.22
-      postcss-load-config: 3.1.4(postcss@8.5.22)
-      postcss-safe-parser: 7.0.1(postcss@8.5.22)
-      semver: 7.8.5
-      svelte-eslint-parser: 1.8.0(svelte@5.56.7)
-    transitivePeerDependencies:
-      - ts-node
-    optional: true
-
   eslint-plugin-svelte@3.22.0(eslint@10.7.0)(svelte@5.56.7):
     dependencies:
       '@eslint-community/eslint-utils': 4.10.1(eslint@10.7.0)
@@ -3399,7 +3231,7 @@ snapshots:
     dependencies:
       eslint: 10.7.0(jiti@2.7.0)
     optionalDependencies:
-      '@typescript-eslint/eslint-plugin': 8.65.0(eslint@10.7.0)
+      '@typescript-eslint/eslint-plugin': 8.65.0(@typescript-eslint/parser@8.65.0)(eslint@10.7.0)(typescript@6.0.3)
 
   eslint-plugin-yml@3.6.0(eslint@10.7.0):
     dependencies:

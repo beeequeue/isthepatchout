@@ -6,7 +6,7 @@
   "repository": "https://github.com/BeeeQueue/isthepatchout",
   "license": "MIT",
   "private": true,
-  "packageManager": "pnpm@12.0.0-alpha.19",
+  "packageManager": "pnpm@11.17.0",
   "engines": {
     "node": "^26"
   },
