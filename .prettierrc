@@ -1,7 +1,0 @@
-{
-  "printWidth": 90,
-  "semi": false,
-  "htmlWhitespaceSensitivity": "ignore",
-  "trailingComma": "all",
-  "plugins": ["prettier-plugin-tailwindcss"]
-}

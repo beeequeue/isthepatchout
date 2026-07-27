@@ -1,0 +1,42 @@
+/* eslint-disable no-restricted-globals */
+
+// Disables access to DOM typings like `HTMLElement` which are not available
+// inside a service worker and instantiates the correct globals
+/// <reference no-default-lib="true"/>
+/// <reference lib="esnext" />
+/// <reference lib="webworker" />
+/// <reference types="$app/types" />
+
+import type { PushEventPatch } from "#/types.ts"
+
+// const ViewReleaseNotes = "view-release-notes"
+
+self.addEventListener("push" as never, (e: PushEvent) => {
+  if (e.data == null) {
+    throw new Error("Got no data in push event")
+  }
+
+  const target = e.currentTarget as ServiceWorkerGlobalScope
+  const data = e.data.json() as PushEventPatch
+
+  if (data.type === "patch") {
+    void target.registration.showNotification(`The ${data.id} patch notes have been released!`, {
+      body: "Check them out!",
+      data,
+      requireInteraction: true,
+      // actions: [{ title: "Open patch page", action: ViewReleaseNotes }],
+      // vibrate: [1000, 250, 1000, 250, 1000],
+    })
+  }
+})
+
+self.addEventListener("notificationclick" as never, (e: NotificationEvent) => {
+  const target = e.currentTarget as ServiceWorkerGlobalScope
+  const data = e.notification.data as PushEventPatch
+
+  if (data.links.length > 0) {
+    void target.clients.openWindow(data.links[0]!)
+  }
+
+  e.notification.close()
+})

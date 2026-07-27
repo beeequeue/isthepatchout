@@ -1,0 +1,12 @@
+{
+  "ignorePatterns": ["pnpm-lock.yaml"],
+  "semi": false,
+  "sortImports": {
+    "type": "natural",
+    "internalPattern": ["#/", "#lib/", "$app/"],
+    "groups": ["builtin", "external", "internal", "parent", "sibling", "index", "unknown"]
+  },
+  "sortPackageJson": false,
+  "sortTailwindcss": true,
+  "svelte": true
+}
