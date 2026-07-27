@@ -25,8 +25,8 @@ export const GET: RequestHandler = async ({ url }) => {
   try {
     const body = new URLSearchParams({
       grant_type: "authorization_code",
-      client_id: DISCORD_CLIENT_ID,
-      client_secret: DISCORD_CLIENT_SECRET,
+      client_id: DISCORD_CLIENT_ID!,
+      client_secret: DISCORD_CLIENT_SECRET!,
       code: result.output.code,
       redirect_uri: `${url.protocol}//${url.host}/callback/discord`,
     })
