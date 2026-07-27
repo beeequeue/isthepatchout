@@ -3,8 +3,6 @@ import * as v from "valibot"
 
 import { building } from "$app/env"
 
-const buildingSchema = v.optional(v.any())
-
 const vapidPublicKeySchema = v.pipe(
   v.string(),
   v.transform((data) => Uint8Array.fromBase64(data, { alphabet: "base64url" })),
@@ -19,17 +17,17 @@ const vapidPrivateKeySchema = v.pipe(
 
 export const variables = defineEnvVars({
   DISCORD_CLIENT_ID: {
-    schema: !building ? v.string() : buildingSchema,
+    schema: !building ? v.string() : v.optional(v.string()),
   },
   DISCORD_CLIENT_SECRET: {
-    schema: !building ? v.string() : buildingSchema,
+    schema: !building ? v.string() : v.optional(v.string()),
   },
 
   VAPID_PUBLIC_KEY: {
     public: true,
-    schema: !building ? vapidPublicKeySchema : buildingSchema,
+    schema: !building ? vapidPublicKeySchema : v.optional(vapidPublicKeySchema),
   },
   VAPID_PRIVATE_KEY: {
-    schema: !building ? vapidPrivateKeySchema : buildingSchema,
+    schema: !building ? vapidPrivateKeySchema : v.optional(vapidPrivateKeySchema),
   },
 })
