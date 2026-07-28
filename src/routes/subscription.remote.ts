@@ -20,6 +20,7 @@ export const subscribe = command(schema, async (incoming): Promise<boolean> => {
     incoming.keys.auth,
     incoming.keys.p256dh,
     import.meta.env.MODE,
+    Temporal.Now.instant().toString(),
   )
   return true
 })

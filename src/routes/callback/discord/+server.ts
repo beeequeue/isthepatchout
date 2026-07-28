@@ -46,6 +46,7 @@ export const GET: RequestHandler = async ({ url }) => {
       result.output.guild_id,
       response.data.webhook.id,
       import.meta.env.MODE,
+      Temporal.Now.instant().toString(),
     )
 
     redirect(303, "/")

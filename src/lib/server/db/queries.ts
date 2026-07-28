@@ -16,8 +16,8 @@ export const $subscription = {
   upsert: db.prepare(
     dedent(`
       INSERT INTO subscriptions
-        (type, endpoint, auth, extra, environment, "lastNotified")
-      VALUES (?, ?, ?, ?, ?, (SELECT COALESCE(MAX(number), 0) FROM patches))
+        (type, endpoint, auth, extra, environment, "lastNotified", "createdAt")
+      VALUES (?, ?, ?, ?, ?, (SELECT COALESCE(MAX(number), 0) FROM patches), ?)
       ON CONFLICT(endpoint) DO UPDATE SET auth  = excluded.auth,
                                           extra = excluded.extra
 
