@@ -41,6 +41,8 @@ as well as which patch number was last sent to the recipient.
 
 ## Architecture
 
+todo: update
+
 ```mermaid
 graph TD
 worker(Cloudflare Worker)
