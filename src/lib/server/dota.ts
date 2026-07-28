@@ -15,7 +15,7 @@ type PatchNoteListItem = {
 }
 
 type PatchNoteListData = {
-  patches: PatchNoteListItem[]
+  patches?: PatchNoteListItem[]
   success: boolean
 }
 
@@ -49,6 +49,7 @@ const client = xior.create({
 })
 client.plugins.use(retry({ retryInterval: 1000 }))
 
+let failures = 0
 export const getPatchList = async (): Promise<Patch[] | null> => {
   log.debug("dota", "Fetching patch list...")
 
@@ -65,6 +66,15 @@ export const getPatchList = async (): Promise<Patch[] | null> => {
     action: "dota",
     patches: response?.data?.patches?.slice(-5)?.map((p) => p.patch_name),
   })
+
+  if (response.data.patches == null) {
+    failures++
+    if (failures > 10) {
+      throw new Error(`No patches returned from dota2.com:\n${JSON.stringify(response.data)}`)
+    }
+
+    return null
+  }
 
   return response.data.patches.map(formatPatchData)
 }
