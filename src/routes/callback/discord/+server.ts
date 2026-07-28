@@ -45,7 +45,7 @@ export const GET: RequestHandler = async ({ url }) => {
       response.data.webhook.url,
       result.output.guild_id,
       response.data.webhook.id,
-      import.meta.env.MODE,
+      process.env.NODE_ENV ?? "development",
       Temporal.Now.instant().toString(),
     )
 

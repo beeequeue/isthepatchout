@@ -19,7 +19,7 @@ export const subscribe = command(schema, async (incoming): Promise<boolean> => {
     incoming.endpoint,
     incoming.keys.auth,
     incoming.keys.p256dh,
-    import.meta.env.MODE,
+    process.env.NODE_ENV ?? "development",
     Temporal.Now.instant().toString(),
   )
   return true
