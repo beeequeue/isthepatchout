@@ -51,7 +51,7 @@
     "@unocss/transformer-compile-class": "66.7.5",
     "@unocss/transformer-directives": "66.7.5",
     "@unocss/vite": "66.7.5",
-    "alleviate": "0.2.1",
+    "alleviate": "0.2.3",
     "canvas-confetti": "1.9.4",
     "croner": "10.0.1",
     "dotaver": "2.0.1",

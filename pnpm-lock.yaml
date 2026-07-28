@@ -80,8 +80,8 @@ importers:
         specifier: 66.7.5
         version: 66.7.5(vite@8.1.5)
       alleviate:
-        specifier: 0.2.1
-        version: 0.2.1
+        specifier: 0.2.3
+        version: 0.2.3
       canvas-confetti:
         specifier: 1.9.4
         version: 1.9.4
@@ -926,8 +926,8 @@ packages:
   ajv@6.15.0:
     resolution: {integrity: sha512-fgFx7Hfoq60ytK2c7DhnF8jIvzYgOMxfugjLOSMHjLIPgenqa7S7oaagATUq99mV6IYvN2tRmC0wnTYX6iPbMw==}
 
-  alleviate@0.2.1:
-    resolution: {integrity: sha512-Ro2OTG0vumPVzjmoTC5HdnW+NX9C9+T7cfswQ0nXAb5g/N2j6lsUHfZ+LT3IHAYm2DzQnyJT0LhF0TS1TUEWRQ==}
+  alleviate@0.2.3:
+    resolution: {integrity: sha512-wxE7NooBoTS6kNnBiUA+VAHCUe4h4dthpG3F5FUGET/vf1AidlX6pq7Pj9V+oTLpObE3S8w6icSmshb7kpPD+w==}
     engines: {node: ^22.11 || ^24 || ^26 || ^27}
 
   ansis@4.3.1:
@@ -2933,7 +2933,7 @@ snapshots:
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
 
-  alleviate@0.2.1: {}
+  alleviate@0.2.3: {}
 
   ansis@4.3.1: {}
 
