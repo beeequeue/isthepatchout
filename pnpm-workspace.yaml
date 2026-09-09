@@ -11,6 +11,8 @@ minimumReleaseAgeExclude:
   - "@sveltejs/adapter-node"
   - "@sveltejs/kit"
   - alleviate@0.2.3
+  # Renovate security update: vitest@5.0.0-rc.2
+  - vitest@5.0.0-rc.2
 
 overrides:
   "@antfu/eslint-config>@eslint/markdown": "-"
