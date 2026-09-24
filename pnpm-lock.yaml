@@ -33,10 +33,10 @@ importers:
         version: 1.2.91
       '@sveltejs/adapter-node':
         specifier: 6.0.0-next.6
-        version: 6.0.0-next.6(@sveltejs/kit@3.0.0-next.12)
+        version: 6.0.0-next.6(@sveltejs/kit@3.0.0-next.27)
       '@sveltejs/kit':
-        specifier: 3.0.0-next.12
-        version: 3.0.0-next.12(@sveltejs/vite-plugin-svelte@7.2.0)(svelte@5.56.7)(typescript@6.0.3)(vite@8.1.5)
+        specifier: 3.0.0-next.27
+        version: 3.0.0-next.27(@sveltejs/vite-plugin-svelte@7.2.0)(svelte@5.56.7)(typescript@6.0.3)(vite@8.1.5)
       '@sveltejs/vite-plugin-svelte':
         specifier: 7.2.0
         version: 7.2.0(svelte@5.56.7)(vite@8.1.5)
@@ -345,6 +345,9 @@ packages:
 
   '@jridgewell/sourcemap-codec@1.5.5':
     resolution: {integrity: sha512-cYQ9310grqxueWbl+WuIUIaiUaDcj7WOq5fVhEljNVgRfOUhY9fy2zTvfoqWsnebh8Sl70VScFbICvJnLKB0Og==}
+
+  '@jridgewell/sourcemap-codec@1.6.0':
+    resolution: {integrity: sha512-T7jf+5zgsZHwNJ4lvQ7/aezbyk0nNX+zJVWpmHA7VYsEx7a7qr5Rg5IbtJFqkgze5Y2sruq1RUY8Q837Od7iFw==}
 
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
@@ -703,9 +706,9 @@ packages:
     peerDependencies:
       '@sveltejs/kit': ^3.0.0-next.0
 
-  '@sveltejs/kit@3.0.0-next.12':
-    resolution: {integrity: sha512-/RV/FJZjI+yS9fCapqySCNl/dsdr9ubjAHHAl/z3B5R0Fpczw4U+yxkmFw8142xOMBnouf65W2kUa6m1osbMeQ==}
-    engines: {node: '>=22'}
+  '@sveltejs/kit@3.0.0-next.27':
+    resolution: {integrity: sha512-m2R6GvcMhiAbYVKhzRf5mzLSvcXEuy/H0Va72XvxfEl1ZglrSC/321GKYa6idDHPojuRzkyh9EB0jBZmAwf6+Q==}
+    engines: {node: '>=22.17'}
     hasBin: true
     peerDependencies:
       '@opentelemetry/api': ^1.0.0
@@ -1094,6 +1097,9 @@ packages:
 
   devalue@5.8.2:
     resolution: {integrity: sha512-DObPPAfdtFbXjxLqK8s2Xk9ZuWz5+ZoFEhC7J76es4GU/rEiXwHTmbImoCdyoCOcBH1UF3+Cz6Z2sYD4hyl5TA==}
+
+  devalue@5.9.4:
+    resolution: {integrity: sha512-sPAT4pztbu6586/hrhOnMKS17IJrvg12mXiSPSS3W5qDeN2RGgvZ0diZCm31dBbnevfVmujNO3IM2wrS4Y2Rhg==}
 
   diff-sequences@29.6.3:
     resolution: {integrity: sha512-EjePK1srD3P08o2j4f0ExnylqRs5B9tJjcp9t1krH2qRi8CCdsYfwe9JgSLurFBWwq4uOlipzfk5fHNvwFKr8Q==}
@@ -1660,6 +1666,9 @@ packages:
 
   magic-string@0.30.21:
     resolution: {integrity: sha512-vd2F4YUyEXKGcLHoq+TEyCjxueSeHnFxyyjNp80yg0XV4vUhnDer/lvvlqM/arB5bXQN5K2/3oinyCRyx8T2CQ==}
+
+  magic-string@1.4.1:
+    resolution: {integrity: sha512-8lyCu36ErXR0J9uaGKlKQoiLZKmtI63YGLE8G2o9jyRPdr4X47LusSOwgOJOzcVtp81fTAAjxR7BwKz682Jhow==}
 
   make-asynchronous@1.1.0:
     resolution: {integrity: sha512-ayF7iT+44LXdxJLTrTd3TLQpFDDvPCBxXxbv+pMUSuHA5Q8zyAfwkRP6aHHwNVFBUFWtxAHqwNJxF8vMZLAbVg==}
@@ -2435,6 +2444,8 @@ snapshots:
 
   '@jridgewell/sourcemap-codec@1.5.5': {}
 
+  '@jridgewell/sourcemap-codec@1.6.0': {}
+
   '@jridgewell/trace-mapping@0.3.31':
     dependencies:
       '@jridgewell/resolve-uri': 3.1.2
@@ -2631,21 +2642,20 @@ snapshots:
     dependencies:
       acorn: 8.17.0
 
-  '@sveltejs/adapter-node@6.0.0-next.6(@sveltejs/kit@3.0.0-next.12)':
+  '@sveltejs/adapter-node@6.0.0-next.6(@sveltejs/kit@3.0.0-next.27)':
     dependencies:
-      '@sveltejs/kit': 3.0.0-next.12(@sveltejs/vite-plugin-svelte@7.2.0)(svelte@5.56.7)(typescript@6.0.3)(vite@8.1.5)
+      '@sveltejs/kit': 3.0.0-next.27(@sveltejs/vite-plugin-svelte@7.2.0)(svelte@5.56.7)(typescript@6.0.3)(vite@8.1.5)
       rolldown: 1.2.0
 
-  '@sveltejs/kit@3.0.0-next.12(@sveltejs/vite-plugin-svelte@7.2.0)(svelte@5.56.7)(typescript@6.0.3)(vite@8.1.5)':
+  '@sveltejs/kit@3.0.0-next.27(@sveltejs/vite-plugin-svelte@7.2.0)(svelte@5.56.7)(typescript@6.0.3)(vite@8.1.5)':
     dependencies:
+      '@rolldown/pluginutils': 1.0.1
       '@standard-schema/spec': 1.1.0
-      '@sveltejs/acorn-typescript': 1.0.11(acorn@8.17.0)
       '@sveltejs/vite-plugin-svelte': 7.2.0(svelte@5.56.7)(vite@8.1.5)
-      acorn: 8.17.0
       cookie: 2.0.1
-      devalue: 5.8.2
+      devalue: 5.9.4
       esm-env: 1.2.2
-      magic-string: 0.30.21
+      magic-string: 1.4.1
       mrmime: 2.0.1
       sirv: 3.0.2
       svelte: 5.56.7(@typescript-eslint/types@8.65.0)
@@ -3048,6 +3058,8 @@ snapshots:
   detect-libc@2.1.2: {}
 
   devalue@5.8.2: {}
+
+  devalue@5.9.4: {}
 
   diff-sequences@29.6.3: {}
 
@@ -3557,6 +3569,10 @@ snapshots:
   magic-string@0.30.21:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
+
+  magic-string@1.4.1:
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.6.0
 
   make-asynchronous@1.1.0:
     dependencies:
