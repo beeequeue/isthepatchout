@@ -18,6 +18,7 @@
     "lib": ["dom", "es2025", "esnext.temporal"]
   },
   "exclude": [
+    "src/service-worker",
     "./src/service-worker",
     "./build",
     "./.svelte-kit/adapter-node",

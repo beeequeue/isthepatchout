@@ -7,10 +7,11 @@ dedupePeers: true
 dedupePeerDependents: true
 
 minimumReleaseAge: 4320
-minimumReleaseAgeExclude:
-  - "@sveltejs/adapter-node"
-  - "@sveltejs/kit"
-  - alleviate@0.2.3
+
+packageExtensions:
+  "@unocss/autocomplete":
+    dependencies:
+      "@unocss/core": "*"
 
 overrides:
   "@antfu/eslint-config>@eslint/markdown": "-"

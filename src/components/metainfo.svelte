@@ -4,7 +4,7 @@
 <div class="fixed top-1 right-1 left-1 flex justify-between">
   <a
     href="https://bsky.app/profile/haglund.dev"
-    rel="noopener"
+    rel="external noopener"
     target="_blank"
     class="text-#eee decoration-offset-4 m-0 flex items-center gap-2 p-2 font-sans"
   >
@@ -15,7 +15,7 @@
 
   <a
     href={REPOSITORY}
-    rel="noopener"
+    rel="external noopener"
     target="_blank"
     class="text-#eee decoration-offset-4 m-0 flex items-center gap-2 p-2 font-sans"
   >

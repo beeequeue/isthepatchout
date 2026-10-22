@@ -1,4 +1,4 @@
-FROM node:26-alpine AS base
+FROM platformatic/node-caged:26-alpine AS base
 
 WORKDIR /app
 
