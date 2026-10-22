@@ -258,8 +258,8 @@ importers:
         specifier: 3.23.1
         version: 3.23.1(eslint@10.13.0)(svelte@5.57.2)
       evlog:
-        specifier: 2.22.3
-        version: 2.22.3(ofetch@1.5.1)(vite@8.3.4)
+        specifier: 2.33.1
+        version: 2.33.1(ofetch@1.5.1)(vite@8.3.4)
       nano-staged:
         specifier: 1.0.2
         version: 1.0.2
@@ -285,8 +285,8 @@ importers:
         specifier: 6.0.3
         version: 6.0.3
       valibot:
-        specifier: 1.4.2
-        version: 1.4.2(typescript@6.0.3)
+        specifier: 1.5.0
+        version: 1.5.0(typescript@6.0.3)
       vite:
         specifier: 8.3.4
         version: 8.3.4(@types/node@26.6.5)(jiti@2.7.0)(yaml@2.9.0)
@@ -297,8 +297,8 @@ importers:
         specifier: 3.6.7
         version: 3.6.7
       xior:
-        specifier: 0.8.3
-        version: 0.8.3
+        specifier: 0.8.5
+        version: 0.8.5
 
 packages:
 
@@ -1433,30 +1433,35 @@ packages:
     resolution: {integrity: sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==}
     engines: {node: '>=0.10.0'}
 
-  evlog@2.22.3:
-    resolution: {integrity: sha512-xybbUKtV26ezgyagT0aZ6tigIjwQuc4mI0Fm52goospAdGAA4ApC+keC36Bsxt1Gm7vT8W429T3WIsqMc8nwMQ==}
+  evlog@2.33.1:
+    resolution: {integrity: sha512-raahjdFBFXWBYRD/SMuBs/pBAcarTlV/YzuIk/iWH/Snieo5mqh1a9epfo7DOKXq1OWpHqH4xXhVxWv1JIIg+w==}
     engines: {node: '>=18.0.0'}
+    hasBin: true
     peerDependencies:
-      '@nestjs/common': '>=11.1.28'
+      '@nestjs/common': '>=11.2.7'
+      '@nestjs/core': '>=11.2.7'
       '@nuxt/kit': ^4.4.2
-      '@orpc/server': '>=1.14.8'
-      '@tanstack/start-client-core': ^1.170.14
+      '@orpc/server': '>=1.15.4'
+      '@tanstack/start-client-core': ^1.170.34
       ai: '>=6.0.168 <8.0.0'
-      elysia: '>=1.4.29'
-      eve: '>=0.24.3'
+      effect: ^4.0.0
+      elysia: '>=1.4.30'
+      eve: '>=0.30.0'
       express: '>=5.2.1'
-      fastify: '>=5.10.0'
+      fastify: '>=5.12.5'
       h3: ^1.15.11
-      hono: '>=4.12.30'
-      next: '>=16.2.10'
+      hono: '>=4.13.12'
+      next: '>=16.3.8'
       nitro: ^3.0.260311-beta
       nitropack: ^2.13.4
       ofetch: ^1.5.1
-      react: '>=19.2.7'
-      react-router: '>=7.18.1'
+      react: '>=19.3.0'
+      react-router: '>=7.18.4'
       vite: ^7.0.0 || ^8.0.0
     peerDependenciesMeta:
       '@nestjs/common':
+        optional: true
+      '@nestjs/core':
         optional: true
       '@nuxt/kit':
         optional: true
@@ -1465,6 +1470,8 @@ packages:
       '@tanstack/start-client-core':
         optional: true
       ai:
+        optional: true
+      effect:
         optional: true
       elysia:
         optional: true
@@ -2244,8 +2251,8 @@ packages:
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
-  valibot@1.4.2:
-    resolution: {integrity: sha512-gjdCvJ6d3RyHAneqxMYMW9QMCwYMb3jpOO0IyHZV1bnRHFBHrX3VkIILt5XYR0WhwHiH7Mty8ovuPZ/O3gamrg==}
+  valibot@1.5.0:
+    resolution: {integrity: sha512-nil6AkP2TChWL43Z5uJ6GTxX01CUA+g8LWUM+N/rB9NBbkUMaUsi9PUNzlUPgoKASgmx9f7eGOYpJ04/fSa6FQ==}
     peerDependencies:
       typescript: '>=5'
     peerDependenciesMeta:
@@ -2391,8 +2398,8 @@ packages:
     resolution: {integrity: sha512-BN22B5eaMMI9UMtjrGd5g5eCYPpCPDUy0FJXbYsaT5zYxjFOckS53SQDE3pWkVoWpHXVb3BrYcEN4Twa55B5cA==}
     engines: {node: '>=0.10.0'}
 
-  xior@0.8.3:
-    resolution: {integrity: sha512-yHzIBnpGS3qhSjGnvi5IvLQVPlWXDYmvtaO6TfOaIUMes/6lFnoHL02cdHo5xPj3JUSfEts9Q3hTiVGfnHAh5w==}
+  xior@0.8.5:
+    resolution: {integrity: sha512-oAabZs2ZakveaGam4Mq2z1MvyIQKiyXYOc++MUEW5oK/8VftZ1NaxIjhELb4K+QKz2UqdTzstAm1XZnH3pp+Vg==}
 
   yaml-eslint-parser@2.1.0:
     resolution: {integrity: sha512-1zo9KRfp6vIAXBEhWAz09ex3hUwh3T+/6dGbGteHvNseA0Uk4FgQnPES55klZ6cDzSy9FpgKS0D/CoLUvCCj4w==}
@@ -3506,7 +3513,7 @@ snapshots:
 
   esutils@2.0.3: {}
 
-  evlog@2.22.3(ofetch@1.5.1)(vite@8.3.4):
+  evlog@2.33.1(ofetch@1.5.1)(vite@8.3.4):
     optionalDependencies:
       ofetch: 1.5.1
       vite: 8.3.4(@types/node@26.6.5)(jiti@2.7.0)(yaml@2.9.0)
@@ -4175,7 +4182,7 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
-  valibot@1.4.2(typescript@6.0.3):
+  valibot@1.5.0(typescript@6.0.3):
     optionalDependencies:
       typescript: 6.0.3
 
@@ -4256,7 +4263,7 @@ snapshots:
 
   word-wrap@1.2.5: {}
 
-  xior@0.8.3:
+  xior@0.8.5:
     dependencies:
       tiny-lru: 11.4.7
 
