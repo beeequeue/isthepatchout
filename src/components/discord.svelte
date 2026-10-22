@@ -11,6 +11,7 @@
 </script>
 
 <a
+  rel="external"
   href={url.toString()}
   class="bg-trans b-0 decoration-none text-#eee flex cursor-pointer items-center rounded-xl px-3 font-sans text-lg select-auto"
 >
