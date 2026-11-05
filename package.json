@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "9.5.1",
-    "@iconify-json/lucide": "1.2.146",
+    "@iconify-json/lucide": "1.2.149",
     "@iconify-json/simple-icons": "1.2.100",
     "@sveltejs/adapter-node": "6.0.0",
     "@sveltejs/kit": "3.1.0",
