@@ -186,8 +186,8 @@ importers:
         specifier: 9.5.1
         version: 9.5.1(@typescript-eslint/typescript-estree@8.71.2)(@typescript-eslint/utils@8.71.2)(eslint-plugin-svelte@3.23.1)(eslint@10.13.0)(jsonc-eslint-parser@3.3.0)(svelte-eslint-parser@1.8.0)(typescript@6.0.3)(vitest@5.0.5)
       '@iconify-json/lucide':
-        specifier: 1.2.146
-        version: 1.2.146
+        specifier: 1.2.152
+        version: 1.2.152
       '@iconify-json/simple-icons':
         specifier: 1.2.100
         version: 1.2.100
@@ -488,8 +488,8 @@ packages:
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
 
-  '@iconify-json/lucide@1.2.146':
-    resolution: {integrity: sha512-T7qetsZJ682CCVT2X8C5uYEF6G/mtSoPl8F87wvu1LbfeVt4RxdP03NtaAs4RrrAXbWHBLjKrb8cmMtDucoI5g==}
+  '@iconify-json/lucide@1.2.152':
+    resolution: {integrity: sha512-OQTsOaQ+kD8yhy5EATMD5QHe5O+XJVibExdaRCaXP3hvNPNkn6wVUcTrGA16yU2luqe0ImE4qP74WBK8JuwwNA==}
 
   '@iconify-json/simple-icons@1.2.100':
     resolution: {integrity: sha512-536pN2RCEQyy5bYwzayrs4e9egr8cmtVcbdSHLaQl/ULUsihzn1eZ0+Hhn50zgz9cbEotiynKsKQSEjFJ7qKmw==}
@@ -2592,7 +2592,7 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
-  '@iconify-json/lucide@1.2.146':
+  '@iconify-json/lucide@1.2.152':
     dependencies:
       '@iconify/types': 2.0.0
 
